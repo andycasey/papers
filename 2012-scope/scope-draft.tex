@@ -1,0 +1,115 @@
+%!TEX TS-program = pdflatex
+\documentclass{emulateapj}
+
+\shorttitle{The SCOPE package}
+\shortauthors{Casey}
+
+\begin{document}
+
+\title{The SCOPE package for automatic analysis of spectroscopic observations}
+
+
+\author{Andrew R. Casey\altaffilmark{1}}
+\altaffiltext{1}{Research School of Astronomy \& Astrophysics, Australian National University, Mount Stromlo Observatory, via Cotter Rd, Weston, ACT 2611, Australia; acasey@mso.anu.edu.au}
+
+\begin{abstract}
+\end{abstract}
+
+% introducion to big data, surveys
+% has caused a need to evolve the data techniques in use
+% it is important to maintain tangibility to the data when shifting to automatic methods
+
+% ccds helped lead the first photometric surveys
+% now we have all-sky surveys across all parts of the electromgnetic spectrum
+% spectroscopic surveys have particularly taken off, in both the stellar and galactic regime
+
+
+\keywords{Galaxy: halo, structure --- Individual: Virgo Overdensity --- Stars: K-giants}
+
+\section{Introduction}
+Astronomy is an exceptionally data-rich science. In recent decades the number of large scale surveys has only highlighted this fact. Astronomers are increasingly trying to automate traditional measurement techniques simply to keep up with the data acquisition rates. However, as the astronomical community transitions from traditional analysis techniques to automated methods, it is of critical importance that we retain tangibility with the data. 
+
+% Introduction (and motivation)
+% Overview
+% - introduction of chi^2 and general overview
+% - rough description of steps involved and their associated subsections where they are explained
+% - 
+
+
+% Methodology
+% - normalisation
+% - doppler correction
+% - Re-sampling the reference spectra
+% - photometric priors
+% - solution steps
+%   - decoupled and coupled methods
+
+% Usage
+
+% 
+
+
+% initially was just photometry, then low res spec, now high res spec + radio + 
+
+% large scale surveys
+% number of spectral grids + atmospheres available is growing so that it makes this sort of analysis easier
+% even in smaller-scale data sets, the learning curve is high (code) and the information is effectively lost
+% combinations of synthetic spectra + packages can be used in tandem, but there is some tangibility to the data lost. SCOPE is designed not to be a black-box
+% we outline the details of the scope package and provide extensive examples and tutorials on setting up recipes and then applying them to massive data sets
+% intention to largely dampen the learning curve such that more information can be extracted from existing spectra at little extra cost
+% repeatedly shown that extra information can be extracted from large surveys when atmospheric parameters are available (hubble telescope data archives, FEROS data set)
+
+
+\section{Overview}
+SCOPE determines the parameters of observed spectra by comparing them against a set of spectra with well-defined parameters. Normally the reference spectra are synthetic, but SCOPE does not enforce such constraints \--- a well-sampled observed library with trusted, homogeneously derived parameters will suffice. Parameters are determined by minimising the $\chi^2$ value,
+
+\begin{equation}
+\chi^2 = \frac{1}{N-M}\sum\limits_{i=0}^{N}\frac{(F_i - f_i)^2}{\sigma_i}
+\end{equation}
+
+\noindent{}between the observed ($f_i$) and the reference ($F_i$) flux, where $M$ is the number of degrees of freedom, $N$ is the number of flux points and $\sigma_i$ is the uncertainty in the observed flux. A $\chi^2$ value is determined against every reference spectra in order to avoid local minima.
+
+The normalisation of both observations and reference spectra is critically important, simply by definition of the $\chi^2$ parameter. Observations (and reference spectra) are normalised (Section \ref{sec:normalisation}), and doppler corrected (Section \ref{sec:doppler-corrected) before any $\chi^2$ comparison is made. Reference spectra are assumed to be at rest frame.
+
+Prior to comparison, the standards 
+
+
+
+SCOPE is completely configurable. Parameters can be measured using the entire spectral regions, or only pre-selected regions which you know will be astrophysically sensitive to that parameter (e.g. Fe lines for stellar metallicity). Solution steps are provided which completely control how a parameter should be measured, and what constraints should be placed on this measurement.
+
+\subsection{Dimensions and Parameters}
+
+An important distinction must be made early on regarding the vernacular employed within this paper, and SCOPE itself. Dimensions are defined as the orthogonal axes of the reference grid, and parameters are values which we wish to measure on the observed spectrum. Usually, these two terms are largely interchangeable: we want to measure effective temperature of our observed spectrum, so the effective temperature of the minimum $\chi^2$ point is our observed temperature. The distinction becomes clear when we wish to measure multiple parameters on the same dimension. 
+
+An example of such a scenario is when we may want to measure the effective temperature using multiple spectral regions. The H$\beta$ Balmer line at $\Lambda$ is an excellent discriminant of effective temperature \citep{Barklem}, and one may want to compare the H-$\beta$ temperature derived and the temperature when using a global spectrum fit. SCOPE easily allows for such tests. The techniques of setting up such tests within SCOPE are described in Section \ref{sec:solution-steps}, but it is important to clearly distinguish between parameters and dimensions.
+
+\subsection{De-coupled, Pseudo-Coupled and Coupled methods}
+
+
+
+
+
+% SCOPE basics: x^2
+% comparison against a set of spectra with "expected" values
+% introduce dimensions/parameters, be explicit that scope doesn't care what they are
+\subsection{Normalisation}
+\subsection{Doppler corrections}
+\subsection{Grid sampling}
+\subsection{Multidimensional interpolation}
+
+\section{Defining a recipe}
+% scope is very much GIGO
+% intention is to test a recipe until it is robust against your calibrators
+% existing recipes in the literature and online (including the model atmospheres, line lists, etc)
+
+\subsection{Introducing photometric priors}
+\label{sec:photometric-priors}
+
+\subsection{Optimisation algorithms}
+
+
+\bibliographystyle{apj}
+\bibliography{bibliography}
+
+
+\end{document}

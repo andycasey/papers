@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/VOTable/v1.1">
+  <COOSYS ID="J2000" equinox="J2000." epoch="J2000." system="eq_FK5"/>
+  <DESCRIPTION>VOTable generated from the original AAS Journal Machine Readable Table</DESCRIPTION>
+  <RESOURCE ID="aj273658t3_votable">
+   <DESCRIPTION>Spectroscopy of Bright QUEST RR Lyrae Stars: Velocity Substructures toward Virgo  (Vivas A.K. et al.)</DESCRIPTION>
+  <LINK href="http://dx.doi.org/10.1088/0004-6256/136/4/1645"/>
+   <TABLE ID="aj273658t3">
+    <DESCRIPTION>Position, Distance, Velocity and Metallicity of the 43 RRLS</DESCRIPTION>
+    <FIELD name="ID" ID="col1" ucd="meta.id" datatype="int" width="3" precision="0" unit="---">
+     <DESCRIPTION>QUEST Identification number</DESCRIPTION>
+    </FIELD>
+    <FIELD name="RAdeg" ID="col2" ucd="pos.eq.ra" datatype="float" width="10" precision="6" unit="deg">
+     <DESCRIPTION>Right Ascension in decimal degrees (J2000)</DESCRIPTION>
+    </FIELD>
+    <FIELD name="DEdeg" ID="col3" ucd="pos.eq.dec" datatype="float" width="9" precision="6" unit="deg">
+     <DESCRIPTION>Declination in decimal degrees (J2000)</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Vmag" ID="col4" ucd="phot.mag;em.opt.V" datatype="float" width="5" precision="2" unit="mag">
+     <DESCRIPTION>Extinction corrected mean V band magnitude</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Type" ID="col5" ucd="meta.note" datatype="char" arraysize="2*" unit="---">
+     <DESCRIPTION>Type of RR Lyrae star </DESCRIPTION>
+    </FIELD>
+    <FIELD name="Per" ID="col6" ucd="time.period" datatype="float" width="7" precision="5" unit="d">
+     <DESCRIPTION>Period</DESCRIPTION>
+    </FIELD>
+    <FIELD name="HJD0" ID="col7" ucd="time.epoch;pos.heliocentric" datatype="float" width="12" precision="4" unit="d">
+     <DESCRIPTION>Heliocentric Julian Date at maximum light </DESCRIPTION>
+    </FIELD>
+    <FIELD name="Dis" ID="col8" ucd="pos.distance" datatype="float" width="4" precision="1" unit="kpc">
+     <DESCRIPTION>Distance from the Sun</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Num" ID="col9" ucd="meta.number" datatype="int" width="1" precision="0" unit="---">
+     <DESCRIPTION>Number of spectra available</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Nfit" ID="col10" ucd="meta.number" datatype="int" width="1" precision="0" unit="---">
+     <DESCRIPTION>Number of pectra used to fit radial velocity curve</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Vgamma" ID="col11" ucd="phys.veloc" datatype="int" width="4" precision="0" unit="km/s">
+     <DESCRIPTION>Systemic velocity </DESCRIPTION>
+    </FIELD>
+    <FIELD name="sigfit" ID="col12" ucd="stat.error;spect.dopplerVeloc" datatype="int" width="2" precision="0" unit="km/s">
+     <DESCRIPTION>? Error in fit of radial velocity curve</DESCRIPTION>
+    </FIELD>
+    <FIELD name="e_Vgamma" ID="col13" ucd="stat.error;phys.veloc" datatype="int" width="2" precision="0" unit="km/s">
+     <DESCRIPTION>The 1{sigma} error in Vgamma</DESCRIPTION>
+    </FIELD>
+    <FIELD name="Vgsr" ID="col14" ucd="phys.veloc" datatype="int" width="4" precision="0" unit="km/s">
+     <DESCRIPTION>Velocity in galactic rest frame  </DESCRIPTION>
+    </FIELD>
+    <FIELD name="[Fe/H]" ID="col15" ucd="phys.abund.Fe" datatype="float" width="5" precision="2" unit="[-]">
+     <DESCRIPTION>? Metallicity</DESCRIPTION>
+    </FIELD>
+    <DATA>
+      <TABLEDATA>
+         <TR><TD>151</TD><TD>169.625160</TD><TD>-0.764498</TD><TD>14.78</TD><TD>c </TD><TD>0.29370</TD><TD>2451611.7002</TD><TD> 7.0</TD><TD>2</TD><TD>2</TD><TD>  90</TD><TD>28</TD><TD>28</TD><TD> -35</TD><TD>-1.32</TD></TR> 
+         <TR><TD>157</TD><TD>171.487530</TD><TD>-0.161508</TD><TD>14.39</TD><TD>ab</TD><TD>0.70840</TD><TD>2451571.8154</TD><TD> 5.9</TD><TD>2</TD><TD>2</TD><TD> 142</TD><TD>22</TD><TD>22</TD><TD>  22</TD><TD>-1.67</TD></TR> 
+         <TR><TD>160</TD><TD>172.957305</TD><TD>-2.240574</TD><TD>15.43</TD><TD>ab</TD><TD>0.67619</TD><TD>2451582.7058</TD><TD> 9.4</TD><TD>2</TD><TD>1</TD><TD> 217</TD><TD>  </TD><TD>20</TD><TD>  93</TD><TD>-2.52</TD></TR> 
+         <TR><TD>161</TD><TD>173.844930</TD><TD>-0.895030</TD><TD>15.40</TD><TD>ab</TD><TD>0.60699</TD><TD>2451255.6642</TD><TD> 9.3</TD><TD>2</TD><TD>2</TD><TD>  18</TD><TD> 7</TD><TD>15</TD><TD>-100</TD><TD>-1.71</TD></TR> 
+         <TR><TD>174</TD><TD>180.397425</TD><TD>-0.234712</TD><TD>15.97</TD><TD>c </TD><TD>0.40123</TD><TD>2451571.8431</TD><TD>12.2</TD><TD>2</TD><TD>2</TD><TD>-202</TD><TD>42</TD><TD>42</TD><TD>-306</TD><TD>-1.85</TD></TR> 
+         <TR><TD>178</TD><TD>181.517325</TD><TD>-2.215837</TD><TD>15.14</TD><TD>ab</TD><TD>0.69926</TD><TD>2452002.6145</TD><TD> 8.3</TD><TD>2</TD><TD>2</TD><TD>  77</TD><TD> 6</TD><TD>14</TD><TD> -31</TD><TD>-2.08</TD></TR> 
+         <TR><TD>180</TD><TD>181.911345</TD><TD>-0.752715</TD><TD>15.92</TD><TD>c </TD><TD>0.40166</TD><TD>2451646.7103</TD><TD>11.8</TD><TD>2</TD><TD>2</TD><TD> 236</TD><TD>14</TD><TD>14</TD><TD> 133</TD><TD>-1.26</TD></TR> 
+         <TR><TD>181</TD><TD>182.001690</TD><TD>-1.209358</TD><TD>15.79</TD><TD>c </TD><TD>0.30791</TD><TD>2451260.7317</TD><TD>11.2</TD><TD>2</TD><TD>2</TD><TD>-101</TD><TD> 7</TD><TD>11</TD><TD>-205</TD><TD>-1.80</TD></TR> 
+         <TR><TD>184</TD><TD>182.315625</TD><TD>-1.912237</TD><TD>15.56</TD><TD>ab</TD><TD>0.50414</TD><TD>2451550.8755</TD><TD>10.1</TD><TD>2</TD><TD>1</TD><TD> 191</TD><TD>  </TD><TD>20</TD><TD>  85</TD><TD>-1.95</TD></TR> 
+         <TR><TD>186</TD><TD>182.883600</TD><TD>-1.876625</TD><TD>14.84</TD><TD>c </TD><TD>0.26802</TD><TD>2451614.7703</TD><TD> 7.2</TD><TD>1</TD><TD>1</TD><TD> 221</TD><TD>  </TD><TD>16</TD><TD> 117</TD><TD>-1.38</TD></TR> 
+         <TR><TD>187</TD><TD>183.064590</TD><TD>-1.353572</TD><TD>15.25</TD><TD>ab</TD><TD>0.46667</TD><TD>2451617.8147</TD><TD> 8.7</TD><TD>2</TD><TD>1</TD><TD> 180</TD><TD>  </TD><TD>20</TD><TD>  77</TD><TD>-1.57</TD></TR> 
+         <TR><TD>188</TD><TD>183.865935</TD><TD>-0.882259</TD><TD>16.01</TD><TD>ab</TD><TD>0.52248</TD><TD>2451550.9022</TD><TD>12.4</TD><TD>2</TD><TD>1</TD><TD> 355</TD><TD>  </TD><TD>21</TD><TD> 256</TD><TD>-1.49</TD></TR> 
+         <TR><TD>201</TD><TD>187.016205</TD><TD>-1.248437</TD><TD>15.23</TD><TD>c </TD><TD>0.39530</TD><TD>2451260.7051</TD><TD> 8.6</TD><TD>2</TD><TD>2</TD><TD>  50</TD><TD> 9</TD><TD> 9</TD><TD> -44</TD><TD>-1.95</TD></TR> 
+         <TR><TD>203</TD><TD>187.294020</TD><TD>-1.566516</TD><TD>15.07</TD><TD>c </TD><TD>0.39420</TD><TD>2451585.7908</TD><TD> 8.0</TD><TD>1</TD><TD>1</TD><TD>  28</TD><TD>  </TD><TD>16</TD><TD> -66</TD><TD>-1.40</TD></TR> 
+         <TR><TD>212</TD><TD>190.415970</TD><TD>-1.830196</TD><TD>13.97</TD><TD>ab</TD><TD>0.60637</TD><TD>2451582.7239</TD><TD> 4.8</TD><TD>3</TD><TD>3</TD><TD>  81</TD><TD>15</TD><TD>15</TD><TD>  -7</TD><TD>-2.10</TD></TR> 
+         <TR><TD>214</TD><TD>190.603950</TD><TD>-0.200775</TD><TD>14.49</TD><TD>c </TD><TD>0.36103</TD><TD>2451257.7913</TD><TD> 6.1</TD><TD>1</TD><TD>1</TD><TD> 120</TD><TD>  </TD><TD>16</TD><TD>  37</TD><TD>-1.67</TD></TR> 
+         <TR><TD>216</TD><TD>190.963530</TD><TD>-1.387184</TD><TD>14.95</TD><TD>ab</TD><TD>0.73799</TD><TD>2451587.8042</TD><TD> 7.6</TD><TD>3</TD><TD>2</TD><TD>   6</TD><TD> 9</TD><TD>14</TD><TD> -80</TD><TD>-1.62</TD></TR> 
+         <TR><TD>218</TD><TD>191.123790</TD><TD>-2.080497</TD><TD>14.53</TD><TD>ab</TD><TD>0.58132</TD><TD>2451574.9038</TD><TD> 6.2</TD><TD>2</TD><TD>2</TD><TD> 136</TD><TD> 6</TD><TD>15</TD><TD>  48</TD><TD>-1.72</TD></TR> 
+         <TR><TD>219</TD><TD>191.208945</TD><TD>-0.844272</TD><TD>14.79</TD><TD>c </TD><TD>0.24788</TD><TD>2451643.6936</TD><TD> 7.0</TD><TD>2</TD><TD>2</TD><TD> -63</TD><TD> 2</TD><TD> 7</TD><TD>-146</TD><TD>-1.24</TD></TR> 
+         <TR><TD>222</TD><TD>191.700375</TD><TD>-2.121856</TD><TD>15.44</TD><TD>ab</TD><TD>0.61229</TD><TD>2451620.7461</TD><TD> 9.5</TD><TD>3</TD><TD>3</TD><TD>  50</TD><TD>22</TD><TD>22</TD><TD> -36</TD><TD>-1.81</TD></TR> 
+         <TR><TD>227</TD><TD>193.036515</TD><TD>-0.492039</TD><TD>15.47</TD><TD>ab</TD><TD>0.56249</TD><TD>2452000.7208</TD><TD> 9.6</TD><TD>4</TD><TD>3</TD><TD> 302</TD><TD> 8</TD><TD> 9</TD><TD> 224</TD><TD>-1.61</TD></TR> 
+         <TR><TD>229</TD><TD>193.185945</TD><TD>-0.420114</TD><TD>15.41</TD><TD>c </TD><TD>0.40009</TD><TD>2451606.7985</TD><TD> 9.4</TD><TD>2</TD><TD>2</TD><TD>  -8</TD><TD> 8</TD><TD>11</TD><TD> -85</TD><TD>-2.20</TD></TR> 
+         <TR><TD>230</TD><TD>193.385760</TD><TD>-2.141432</TD><TD>14.08</TD><TD>ab</TD><TD>0.54389</TD><TD>2451617.8481</TD><TD> 5.1</TD><TD>3</TD><TD>2</TD><TD> 120</TD><TD>11</TD><TD>15</TD><TD>  37</TD><TD>-1.67</TD></TR> 
+         <TR><TD>232</TD><TD>193.775250</TD><TD>-0.095003</TD><TD>15.99</TD><TD>ab</TD><TD>0.56246</TD><TD>2451574.9107</TD><TD>12.2</TD><TD>2</TD><TD>2</TD><TD> 224</TD><TD>18</TD><TD>18</TD><TD> 148</TD><TD>-1.67</TD></TR> 
+         <TR><TD>241</TD><TD>195.806880</TD><TD>-1.372690</TD><TD>14.57</TD><TD>c </TD><TD>0.21904</TD><TD>2451253.7068</TD><TD> 6.4</TD><TD>1</TD><TD>1</TD><TD>  90</TD><TD>  </TD><TD>16</TD><TD>  16</TD><TD>-0.59</TD></TR> 
+         <TR><TD>251</TD><TD>197.962185</TD><TD>-2.163515</TD><TD>13.59</TD><TD>c </TD><TD>0.40687</TD><TD>2451997.8182</TD><TD> 4.1</TD><TD>2</TD><TD>2</TD><TD> 129</TD><TD> 7</TD><TD>11</TD><TD>  57</TD><TD>-1.70</TD></TR> 
+         <TR><TD>263</TD><TD>200.791560</TD><TD>-2.082002</TD><TD>15.20</TD><TD>ab</TD><TD>0.57583</TD><TD>2451587.8414</TD><TD> 8.5</TD><TD>3</TD><TD>1</TD><TD> 165</TD><TD>  </TD><TD>20</TD><TD> 101</TD><TD>-1.82</TD></TR> 
+         <TR><TD>264</TD><TD>200.816295</TD><TD>-1.337753</TD><TD>15.05</TD><TD>ab</TD><TD>0.57120</TD><TD>2451586.8151</TD><TD> 8.0</TD><TD>2</TD><TD>2</TD><TD>  -6</TD><TD>12</TD><TD>15</TD><TD> -68</TD><TD>-1.63</TD></TR> 
+         <TR><TD>267</TD><TD>201.750375</TD><TD>-0.915700</TD><TD>14.94</TD><TD>ab</TD><TD>0.56140</TD><TD>2451606.8434</TD><TD> 7.6</TD><TD>2</TD><TD>1</TD><TD> 274</TD><TD>  </TD><TD>20</TD><TD> 215</TD><TD>-1.70</TD></TR> 
+         <TR><TD>268</TD><TD>201.802560</TD><TD>-1.274906</TD><TD>14.89</TD><TD>ab</TD><TD>0.61063</TD><TD>2451971.8809</TD><TD> 7.4</TD><TD>2</TD><TD>2</TD><TD>  49</TD><TD> 8</TD><TD>14</TD><TD> -11</TD><TD>-1.81</TD></TR> 
+         <TR><TD>276</TD><TD>203.967840</TD><TD>-0.618444</TD><TD>15.21</TD><TD>ab</TD><TD>0.54814</TD><TD>2451984.8014</TD><TD> 8.5</TD><TD>3</TD><TD>1</TD><TD> -10</TD><TD>  </TD><TD>20</TD><TD> -62</TD><TD>-1.33</TD></TR> 
+         <TR><TD>284</TD><TD>206.059350</TD><TD>-0.668475</TD><TD>15.06</TD><TD>c </TD><TD>0.28906</TD><TD>2451612.7875</TD><TD> 8.0</TD><TD>1</TD><TD>1</TD><TD> -24</TD><TD>  </TD><TD>16</TD><TD> -71</TD><TD>-1.57</TD></TR> 
+         <TR><TD>286</TD><TD>206.338995</TD><TD>-0.029731</TD><TD>14.32</TD><TD>ab</TD><TD>0.54720</TD><TD>2451610.7573</TD><TD> 5.7</TD><TD>2</TD><TD>2</TD><TD>  23</TD><TD> 8</TD><TD>14</TD><TD> -22</TD><TD>-1.53</TD></TR> 
+         <TR><TD>301</TD><TD>209.255340</TD><TD>-2.089619</TD><TD>15.84</TD><TD>ab</TD><TD>0.61443</TD><TD>2451606.8581</TD><TD>11.4</TD><TD>2</TD><TD>2</TD><TD> 271</TD><TD>15</TD><TD>15</TD><TD> 228</TD><TD>-1.59</TD></TR> 
+         <TR><TD>307</TD><TD>211.658790</TD><TD>-1.842100</TD><TD>14.50</TD><TD>ab</TD><TD>0.48372</TD><TD>2451255.7667</TD><TD> 6.2</TD><TD>3</TD><TD>3</TD><TD> 128</TD><TD> 8</TD><TD>12</TD><TD>  91</TD><TD>-1.51</TD></TR> 
+         <TR><TD>719</TD><TD>178.900800</TD><TD>-2.902139</TD><TD>15.40</TD><TD>ab</TD><TD>0.54570</TD><TD>2452667.7900</TD><TD> 9.3</TD><TD>2</TD><TD>2</TD><TD>  65</TD><TD> 7</TD><TD>11</TD><TD> -50</TD><TD>-2.07</TD></TR> 
+         <TR><TD>720</TD><TD>179.175495</TD><TD>-3.469664</TD><TD>15.40</TD><TD>ab</TD><TD>0.59114</TD><TD>2453004.8673</TD><TD> 9.3</TD><TD>3</TD><TD>3</TD><TD> 357</TD><TD>12</TD><TD>12</TD><TD> 241</TD><TD>-1.64</TD></TR> 
+         <TR><TD>734</TD><TD>184.395435</TD><TD>-4.098378</TD><TD>15.98</TD><TD>ab</TD><TD>0.62379</TD><TD>2451939.8068</TD><TD>12.2</TD><TD>1</TD><TD>1</TD><TD> 311</TD><TD>  </TD><TD>15</TD><TD> 204</TD><TD>     </TD></TR> 
+         <TR><TD>736</TD><TD>185.764755</TD><TD>-3.587748</TD><TD>15.18</TD><TD>ab</TD><TD>0.57381</TD><TD>2451965.8183</TD><TD> 8.5</TD><TD>2</TD><TD>2</TD><TD> 215</TD><TD>13</TD><TD>15</TD><TD> 112</TD><TD>-1.30</TD></TR> 
+         <TR><TD>750</TD><TD>189.487275</TD><TD>-3.635530</TD><TD>15.87</TD><TD>ab</TD><TD>0.59615</TD><TD>2451939.8276</TD><TD>11.6</TD><TD>1</TD><TD>1</TD><TD> 321</TD><TD>  </TD><TD>21</TD><TD> 226</TD><TD>-1.29</TD></TR> 
+         <TR><TD>751</TD><TD>190.901505</TD><TD>-3.346265</TD><TD>15.87</TD><TD>ab</TD><TD>0.52229</TD><TD>2452700.7973</TD><TD>11.6</TD><TD>1</TD><TD>1</TD><TD> 276</TD><TD>  </TD><TD>15</TD><TD> 185</TD><TD>     </TD></TR> 
+         <TR><TD>753</TD><TD>191.088405</TD><TD>-2.585367</TD><TD>15.79</TD><TD>ab</TD><TD>0.58941</TD><TD>2452726.6611</TD><TD>11.2</TD><TD>1</TD><TD>1</TD><TD> -89</TD><TD>  </TD><TD>16</TD><TD>-178</TD><TD>     </TD></TR> 
+         <TR><TD>757</TD><TD>193.380465</TD><TD>-3.940664</TD><TD>14.45</TD><TD>ab</TD><TD>0.65494</TD><TD>2452672.8564</TD><TD> 6.0</TD><TD>1</TD><TD>1</TD><TD>-113</TD><TD>  </TD><TD>21</TD><TD>-201</TD><TD>-2.19</TD></TR> 
+      </TABLEDATA>
+    </DATA>
+   </TABLE>
+  </RESOURCE>
+</VOTABLE>
+

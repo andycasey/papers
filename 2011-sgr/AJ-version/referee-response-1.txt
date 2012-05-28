@@ -1,0 +1,132 @@
+
+Firstly, the authors wish to thank the referee for their constructive comments. Apologies for the delay in responding to feedback.
+                                                                                                                                
+
+Introduction:
+
+1) Some references to the substructures alluded to in the first sentence should be provided.
+
+Added reference to the Helmi 2008 review paper (2008A&ARv..15..145H), and references therein.
+
+2) The term "admits" would more appropriately be replaced with "emphasizes".
+
+Corrected in the revised manuscript.
+
+Section 2. Target Selection
+
+1) Some explicit statement should be included to the effect that, while the selection box favors a metal poor population at 40 kpc, it will also contain (and not be significantly biased against) similar metal poor stars at half that distance (e.g. the VSS).
+
+Added "This selection box favors a metal-poor population at Sgr stream-like distances ($\sim40$ kpc) but will also contain similarly metal-poor stars at VOD/VSS distances ($\sim20$ kpc) without being significantly biased."
+
+2) Some reference should be made to Table 1, and reasons given for choosing the particular fields observed. Are these fields part of a larger survey, or were they optimized for the VOD/VSS?
+
+Edited to include this reference, and noted that fields were chosen to be within the VOD/Sgr region.
+
+Section 3. Observations
+
+1) The spectral resolution in the red arm (where the Ca lines of interest are) should be provided.
+
+Added (R = 4400) in the revised manuscript.
+
+2) Note that the reddening maps of Schlegel et al. (1998) have been significantly recalibrated by Schafly et al. (2010, 2011). These corrections (~14%) should be taken into account.
+
+Corrections made using Schlafly (2010, 2011) corrections and assuming a Fitzpatrick (1999) profile where $R_V$ = 3.1 - these changes are also reflected in the manuscript.
+
+Section 4. Dwarf/Giant separation
+
+1) The colors in Figure 2 are somewhat difficult to sort out. Colors distinguishable by 99% of the population include black, white, and the primary colors (blue, red, and yellow) and, when it is necessary to resort to colors,  these should always be used first.
+
+Primary colors have been used to identify metallicity, and the size of these points has been increased for clarity.
+
+
+Section 6. Metallicities
+
+1) "ascertained" is better replaced with "measured".
+
+Corrected in the revised manuscript.
+
+
+Section 7.1 Substructure Identification
+
+1) The Gaussian halo distribution in Figure 3 doesn't look properly normalized. I.e. the area under the curve appears to be less than that under the histogram of observational velocities.  If corrected, then features B and C would then appear to be considerably less significant, though the simulation results will be unchanged.
+
+The referee is correct in that the area under the curve is less than the area under the histogram of observational velocities. This is because the Gaussian distribution is meant to represent the underlying halo population present. Originally we have started with a Gaussian sample of 178 giants and we have removed significant (> 2.5 sigma) kinematic deviations (substructure) from the population, resulting in the Gaussian shown. This is noted in the figure caption, however it has been made more explicit;
+
+"The Gaussian represents the halo contribution; it is normalised such that the integral equals the number of observed stars excluding those outside a 2.5-$\sigma$ excess."
+
+2) The term "bandwidth" for the width or sigma of a normal distribution is not really appropriate. This should simply be called "width" or "sigma", both here and in Section 7.2.1
+
+Corrected in Sections 7.1 and 7.2.1.
+
+3) The simulation plot (Figure 4) is interesting, but somewhat difficult to interpret. For one thing, it is difficult to see individual data points superposed on the differently colored grid blocks. This figure should include a separate panel showing just the data points by themselves. Having done that, it is probably not necessary to show them superimposed on the simulations. Here again color is an issue. From context, I infer that the black (or very dark) blocks show regions in [Fe/H] vs V_GSR where the simulations rarely or never produced any stars. But this isn't clear from the color-bar, both ends of which are very dark. Moreover, the red through white through blue scaling is, to my eye, somewhat non-monotonic. In this instance, a grey scale plot would be much more readily interpreted, with very light indicating numerous simulation counts, and very dark indicating infrequent occurrences.
+
+This plot has been separated into two panels as described, and is now in greyscale (and is noticeably easier to interpret).
+
+Section 7.2.1
+
+1) B_odot and Lambda_odot should be defined here (in words), rather than forcing the reader to consult LM10.
+
+Added; "The $10^5$ Sgr debris particles are represented along the best-fit great-circle ($\Lambda_\odot$, $B_\odot$) where the longitudinal coordinate $\Lambda_\odot$ is zero in the direction of the Sgr core and increases along the trailing debris."
+
+2) The scaling of the LM10 models should be described.  Should the particles correspond to the Sgr stream star for star? Or does each particle represent some number of stars, presumably scattered around each particle's position?  The upshot is that, while one can make arguments about relative likelihood, I don't think one can make definitive statements based on the fact that only 2 particles (stars) are found in the observed region using a prolate model. If each particle represents hundreds or thousands of stars, then Sgr stars could still outnumber all other halo stars in this region, and the population found here might well be consistent with the model. It might be interesting to examine the distribution of Sgr giants among the four observed fields. Are they distributed more or less uniformly, or is there a significant gradient? If not, this may be an additional reason to discount the prolate model, though not a conclusive one.
+
+This has been addressed in the revised manuscript; "These $10^5$ particles are proportional to the stream density, implying a negligible stream concentration in this observable region. When the number of field configurations is accounted for, our observed Sgr K-giants are uniformly distributed across the fields."
+
+3) Once again, Figure 6 is a bit difficult to interpret due to the colors used. Black, blue, red, and yellow would be much easier for virtually all readers.
+
+Altered.
+
+4) "forecast" is better replaced with "predict".
+
+Corrected in the revised manuscript.
+
+5) I am unclear as to why the K giants with highly negative velocities in the spherical and oblate models are "early". This should be explained or deleted.
+
+The term was implying earlier (younger) K-giants, however the sentence did not contribute significant weight to the reasoning for why extremely negative velocity stars are not found. The sentence has been deleted.
+
+6) I am puzzled by the "kinematic disruption may result from bifurcation". Should this have been the other way around? And in the following sentence, I don't think the authors can reasonably say that an unmodeled disruption scenario would yield "precisely" the broadening they see in their data.
+
+Corrected, and removed the assumption about the unmodeled disruption scenario.
+
+Section 7.2.2
+
+1) The metallicity histogram in Figure 8 shows all stars with V_GSR < 0. However, in the text the authors refine their mean metallicity estimate using "only stars attributed to Feature A". How is this attribution made? By velocity? What limits? Is it the gray region in Figure 3? The limits should be explicitly indicated.
+
+The region has been explicitly stated; "... the stars attributed to Feature A (as defined by the shaded region in Figure \ref{fig:velocity-histogram}, between $-140 < V_{gsr} < -30$ km s$^{-1}$) this ..."
+
+2) One thing that isn't clear from Figure 4 (for the reasons given above) is what happens if one plots a velocity histogram for the stars in Figure 8 with [Fe/H] < -1.8.  Do they still show a bias towards highly negative velocities, or could they largely be halo contaminants?
+
+The velocity histogram of our Figure 8 members with [Fe/H] < -1.8 peaks at $V_{gsr}$ = -115 km/s, and are generally biased towards highly negative velocities. This has been addressed in the revised manuscript: "Although there may be some halo contamination in our sample, in general our more metal-poor Feature A members have higher negative velocities, indicative of Sgr stream membership."
+
+3) I think the last paragraph of this section is too understated. The target selection criteria certainly would have excluded the highest metallicity members of the stream. At a minimum, "slightly biased" should be "somewhat biased".
+
+Corrected in the revised manuscript. It is also acknowledged in Sections 2 and 9 that our selection methodology is likely biased.
+
+4) Section 7.3 - "calculated" should be "measured".
+
+Corrected in the revised manuscript.
+
+5) Concerning the spread in metallicity in the VSS indicating a dwarf galaxy rather than an isolated cluster, this is no longer such a convincing argument. We now know of several globular clusters with multiple populations.
+
+Mentioned in the revised manuscript; "This led \citet{Duffau;et-al_2006} to infer the progenitor of the VSS was likely a dSph galaxy, as a large dispersion in $\mbox{[m/H]}$ indicates self-enrichment and implies the structure is a galaxy and not an isolated stellar cluster \--- although some globular clusters are also now known to contain sizeable dispersions in $\mbox{[m/H]}$."
+
+6) The last sentence in the first paragraph should be expanded. How many stars are identified with the VSS, and what fraction of all stars with similar velocities does this represent?
+
+Corrected in the revised manuscript.
+
+Section 8
+
+1) Some mention should be made in the abstract of the discovery of the carbon stars, if only to enable other researchers to search for and find this work.
+
+Added 'carbon' to the star keywords and added "We also present data on five carbon stars which were discovered in our sample." as the final sentence in the abstract.
+
+Section 9
+
+1) The statement "a prolate dark halo predicts no debris" should be amended to something like "relatively little debris". Similarly, unless some argument can be made concerning the scaling of the models or the distribution of Sgr stars among the observed fields, it is presumptuous to conclude that "we would not expect Sgr debris to dominate our sample".
+
+Amended:
+"A prolate dark halo predicts relatively little debris in our observed fields. If the spheroid is prolate and LJM05 presents an accurate representation, Sgr debris may not dominate our sample (as it does so) even if we were $\Delta{}B_\odot\sim10^\circ$ closer to the great circle best-fit."
+
+2) I think the last half of the last sentence is true, but perhaps not the first half. As noted above, looking at the velocity distribution of the most metal poor stars is required before one can conclude that they're not just halo contaminants.
+
+Addressed in Section 7.2.2 of the revised manuscript and edited the final sentence: "These observations also demonstrate that the Sagittarius stream likely hosts a substantially larger abundance range than previously undiscovered, including a previously uncovered metal-poor population of K-giants."

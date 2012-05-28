@@ -1,0 +1,9 @@
+Author's Comments:
+
+1) In the second paragraph of Section 6, the authors state that "our positive kinematic space is primarily composed of VOD members." This is at odds with both Figure 3, and with the discussion of Feature C in Section 7.1 and 7.4. This sentence should be amended accordingly.
+
+The text in question has been altered accordingly; "...and our positive kinematic space primarily comprises VOD and VSS members."
+
+2) There appears to be some text missing at the start of the first sentence in Section 7.2. I suspect the missing text is along the lines of "Our observed fields"...
+
+Indeed, the referee is correct. This has been corrected in the updated text. My apologies for this careless oversight.

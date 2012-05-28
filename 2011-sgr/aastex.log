@@ -1,0 +1,274 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=latex 2010.7.27)  23 AUG 2011 17:45
+entering extended mode
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**aastex.tex
+(./aastex.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
+rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
+lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
+ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/aastex/aastex.cls
+Document Class: aastex 2005/06/22 5.2/AAS markup document class
+Class aastex Info: Original \LaTeX2.09 style by Chris Biemesderfer (chris@seago
+at.com). Adapted to \LaTeXe by A. Ogawa (ogawa@teleport.com) on input line 83.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2009/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count87
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read1
+)
+\@slugcmmntwidth=\dimen105
+\abstract@box=\box26
+\c@editornote=\count88
+\c@cureqno=\count89
+\tnotemarkskip=\skip45
+\@abovenoteskip=\dimen106
+\pt@box=\box27
+\pt@width=\dimen107
+\pt@line=\count90
+\pt@column=\count91
+\pt@nlines=\count92
+\pt@ncol=\count93
+\pt@page=\count94
+\tabbaseskip=\dimen108
+\pt@tmpcapwidth=\dimen109
+\spew@tblnotesbox=\box28
+\restof@tblnotesbox=\box29
+\noteheight=\dimen110
+\pt@tabnoteminht=\dimen111
+\firsttabskip=\dimen112
+\captionbox=\box30
+\pt@reduceline=\dimen113
+\extra@vspace=\dimen114
+\c@plate=\count95
+\my@footins=\box31
+)
+(./aastex.aux)
+\openout1 = `aastex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+AAS 2-column preprint substyle, v5.2 <12 Dec 2003>.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 17.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+File: ./figures/cmd.eps Graphic file (type eps)
+
+<./figures/cmd.eps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Page 1 of table 2 has been set to width 187.55063pt with 62 lines per page 
+
+Overfull \hbox (469.75499pt too wide) in paragraph at lines 87--93
+ [][][] 
+ []
+
+[3]
+File: ./figures/dwarfgiants.eps Graphic file (type eps)
+ <./figures/dwarfgiants.eps> [4]
+Overfull \hbox (3.03273pt too wide) in alignment at lines 140--143
+ [][][] []
+ []
+
+[5]
+File: ./figures/velocity-halo.eps Graphic file (type eps)
+ <./figures/velocity-halo.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/montecarlo.eps Graphic file (type eps)
+<./figures/montecarlo.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./figures/belokurov2006.eps Graphic file (type eps)
+<./figures/belokurov2006.eps> [6]
+Underfull \hbox (badness 1502) in paragraph at lines 244--244
+[]\OT1/cmr/m/it/10 Comparing Sagit-tar-ius De-bris to Dark
+ []
+
+[7]
+File: ./figures/lawspatial.eps Graphic file (type eps)
+ <./figures/lawspatial.eps>
+Underfull \hbox (badness 1931) in paragraph at lines 259--260
+[]\OT1/cmr/m/n/10 In com-par-i-son the tri-axial, spher-i-cal and
+ []
+
+File: ./figures/lawvelcompare-bw.eps Graphic file (type eps)
+<./figures/lawvelcompare-bw.eps> [8] [9] [10]
+File: ./figures/fehhist.eps Graphic file (type eps)
+ <./figures/fehhist.eps> [11]
+File: ./figures/carbonstarcolor.eps Graphic file (type eps)
+
+<./figures/carbonstarcolor.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.16377pt too wide) detected at line 459
+ [] 
+ []
+
+
+Overfull \hbox (3.16377pt too wide) detected at line 463
+ [] 
+ []
+
+Page 1 of table 3 has been set to width 472.91876pt with 62 lines per page 
+
+Underfull \hbox (badness 1953) in paragraph at lines 465--466
+[]\OT1/cmr/m/n/10 There is 2MASS pho-tom-e-try avail-able for
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 465--466
+\OT1/cmr/m/n/10 J125410.80-032744.0 and J125416.52-031437.6)
+ []
+
+[12]
+Underfull \hbox (badness 1248) in paragraph at lines 472--473
+\OT1/cmr/m/n/10 of Streams', where sig-nif-i-cant sub-struc-ture is
+ []
+
+
+Overfull \hbox (4.93927pt too wide) in paragraph at lines 510--511
+[]\OT1/cmr/m/n/10 ARC ac-knowl-edges the fi-nan-cial sup-port through
+ []
+
+[13]
+Underfull \hbox (badness 1107) in paragraph at lines 514--515
+\OT1/cmr/m/n/10 pro-vided by the Al-fred P. Sloan Foun-da-tion,
+ []
+
+(./aastex.bbl
+Underfull \hbox (badness 1028) in paragraph at lines 516--1
+\OT1/cmr/m/n/10 Portsmouth, Prince-ton Uni-ver-sity, the United
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 20--22
+[]\OT1/cmr/m/n/10 Bellazzini, M., Cor-renti, M., Fer-raro, F. R.,
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 31--33
+[]\OT1/cmr/m/n/10 Bonifacio, P., Sbor-done, L., Mar-coni, G.,
+ []
+
+[14] [15]) [16
+
+] (./aastex.aux) ) 
+Here is how much of TeX's memory you used:
+ 2059 strings out of 493849
+ 27346 string characters out of 3149230
+ 90851 words of memory out of 3000000
+ 5330 multiletter control sequences out of 15000+200000
+ 12127 words of font info for 49 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 32i,12n,26p,28497b,341s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on aastex.dvi (16 pages, 81764 bytes).
