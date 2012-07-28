@@ -60,7 +60,6 @@ OSS 3    & 10 47 30.3 & $-$00 01 22.6 & 0.71 & 1.156 & 49 & $226.35 \pm 1.27$ & 
 OSS 4    & 10 49 08.3 &    00 01 59.3 & ? & 1.881 & 48 & $227.50 \pm 2.05$ & Poor seeing.\\
 OSS 5    & 10 50 33.7 &    00 12 18.3 & ? & 1.295 & 31 & $249.01 \pm 2.58$ & Poor seeing. \\
 HR 6141  & 16 30 12.3 & $-$25 06 52.0 & ? & 1.003 & 406 & - & Telluric std.
-
 \enddata
 \tablenotetext{a}{S/N measured at 600 nm for each target.}
 \end{deluxetable*}
@@ -76,7 +75,7 @@ HR 6141  & 16 30 12.3 & $-$25 06 52.0 & ? & 1.003 & 406 & - & Telluric std.
 The data were reduced using the latest version of the MIKE pipeline outlined in \citet{Kelson;2003}. For comparison we also reduced our HD 59984 spectra using standard methods in \textsc{IRAF} and found no noteworthy difference between the reduced products. Individual frames for each object were co-added before analysis. We carefully normalised every echelle order using cubic splines. Overlapping normalised orders on each CCD were stitched together, such that a continuous normalised spectra from each CCD remains. We do not include line measurements that are susceptible to telluric absorption, so no telluric corrections were made.
 
 \subsection{Radial Velocities}
-We measured radial velocities for every target by cross-correlating each normalised red  spectrum with a synthetic template. Our synthetic template was generated in \textsc{MOOG}\footnotemark{a}\footnotetext{Sneden's website} using a \citet{Castelli-Kurucz;2004} model atmospheres with $T_{eff} = 4500$ K, $\log{g} = 2.5$, [Fe/H] = -1.5, [$\alpha$/Fe] = 0.0 and no convective overshoot. The line list of \citet{Kirby;et-al_2008} was employed to generate spectra between $845$ nm $< \Lambda < 870$ nm. Both the blue and red co-added, normalised frames were shifted to rest before equivalent width measurements. A number of radial velocity and halo standards were observed during this program, and our heliocentric velocities agree excellently with literature values (Table \ref{tab:observed-targets}).
+We measured radial velocities for every target by cross-correlating each normalised red  spectrum with a synthetic template. Our synthetic template was generated in \textsc{MOOG} using a \citet{Castelli-Kurucz;2004} model atmospheres with $T_{eff} = 4500$ K, $\log{g} = 2.5$, [Fe/H] = -1.5, [$\alpha$/Fe] = 0.0 and no convective overshoot. The line list of \citet{Kirby;et-al_2008} was employed to generate spectra between $845$ nm $< \Lambda < 870$ nm. Both the blue and red co-added, normalised frames were shifted to rest before equivalent width measurements. A number of radial velocity and halo standards were observed during this program, and our heliocentric velocities agree excellently with literature values (Table \ref{tab:observed-targets}).
 
 \subsection{Line Measurements}
 
@@ -84,6 +83,7 @@ We measured radial velocities for every target by cross-correlating each normali
 
 
 \subsection{Stellar Parameters}
+
 
 HD59984 5750 K, 1.55 vt, 3.55 logg -0.95,+0.40,
 ================================================
@@ -105,8 +105,76 @@ Fe II lambda
 Slope, Offset, Corr: 1.41e-04, 5.91, 0.36
 
 
-OSS 2: JMK = 0.633
+OSS 1:
+161.71091670000001 -0.2216389
+SDSS DR 8 closest source is 3.793" away, and 17.47 mag in g
+ugriz: 18.823 17.467 16.934 16.712 16.597
+No reddenning corrected for, Jester 2005 transformations
+UBVRI = 18.06255 17.88487 17.14253 16.68055 16.24855
+B -V = 0.74
+Estimating a [Fe/H] = -1.9 and using Alonso et al 1999 eq 4 yields 4986 K
+
+With the red arm only:
+5110 / 1.20 / 3.10 / -1.14 / 0.40
+(with [Fe/H] = -1.14, the estimated temp from photometry is 5014 K)
+
+Fe I Abundance 6.42 +/- 0.19 (106 lines)
+S, O, C: 0.00, 6.41, 0.01
+
+Reduced EW S, O, C: 0.10, 6.87, 0.08
+
+Lambda S, O, C: 9.41e-05, 5.89, 0.28
+
+Fe II Abundance: 6.44 +/- 0.17 (8 lines)
+
+Reduced EW S, O, C: -0.09, 6.01, -0.09
+
+Lamba S, O, C: 1.64e-04, 5.53, 0.53
+
+Wiith the red and blue, starting at 5000K, -1.9
+
+5070 / 1.6 / 2.9 / -1.4 / 0.40
+
+Fe I Abundance: 6.15 +/- 0.25 (117 lines)
+SOC: 0.01, 6.12, 0.03
+
+Reduced EW SOC: 0.00, 6.12, 0.00
+Lambda SOC: 1.41e-04, 5.42, 0.42
+
+Fe II Abundance: 6.14 +/- 0.19 (19 lines)
+
+Reduced EW SOC: -0.04, 5.95, -0.05
+Lambda SOC: 1.09e-04, 5.61, 0.41
+
+Followed from this (USING RED AND BLUE data) and excluded outliers.
+
+4040 / 1.4 / 2.8 / -1.2 / 0.40 ("FINAL" files) <-- doesn't quite fit on isochrone, but close-ish
+Fe I abundance: 6.24 +/- 0.16 (149 lines)
+SOC: 0.02, 6.18, 0.13
+REW SOC: 0.03, 6.39, 0.04
+Lambda SOC: 0.81e-05, 5.78, 0.38
+
+Fe II abundance: 6.19 +/- 0.16 (15 lines)
+REW SOC: 0.03, 6.33, 0.04
+Lambda SOC: 1.08e-04, 5.65, 0.46
+
+
+
+
+
+ALPHA ELEMENTS Mg, Si, Ca, Ti
+==============
+
+
+
+
+
+
+OSS 2: JMK = 0.633 (no reddenning correction)
 4571.9947676752899 K using Alonso 1999 paper
+SDSS (DR8) u g r i z -- searched at 161.8240417 0.4185833, found source 2.05" away
+18.063 16.252 15.479, 15.146, 14.950
+
 inspected all profiles + saved only Fe ones that were good in red + blue
 ================================================
 4600 K, 1.85, 0.80, -1.77, 0.40
@@ -130,9 +198,195 @@ Fe II REW S, O, C: 0.03, 5.84, 0.05
 
 Fe II Lambda: 2.1e-05, 5.58, 0.09
 
+=================================
+Incorporating isochrones in:
+4550 K / 1.85 / 0.8 / -1.80 / 0.40
+
+Fe I Abundance: 5.71 +/- 0.16 (112 lines)
+Fe I EPS S, O, C: 0.01, 5.66, 0.10
+
+Fe I REW S, O, C: -0.03, 5.54, -0.04
+
+Fe I Lambda: 8.01e-06, 5.66, 0.03
+
+Fe II Abundance: 5.75 +/- 0.10 (8 lines)
+
+Fe II REW S, O, C: 0.35, 7.52, 0.68
+
+Fe II Lambda = -1.29e-04, 6.48, -0.70
+
+Loaded in all local line list from OSS2/os_4_all_global_auto.moogew
+
+ALPHA ELEMENTS
+Ne, Mg, Si, S, Ar, Ca, Ti
+
+
+Ne I, II -- no lines present in line list
+
+Mg I: 5.90 +/- 0.10 (6 lines), Solar 7.60 +/- 0.04
+Inspected all six line profiles; they look perfect.
+SOC: 0.05, 5.74, 0.35 // 0.00, 5.93, 0.00 // 3.03e-05, 5.77, 0.15
+[Mg I/Fe] = 0.10 +/- 0.10
+
+Si
+5565 very small but clean (6 mA)
+4102 is great
+3095 is a bit blended
+Si I: 5.66 +/- 0.26 (3 lines), Solar 7.51 +/- 0.03
+Inspected the three lines we have, they don't look fantastic...  3095 could go..
+SOC -0.14, 6.14, -0.78 // 0.29, 7.12, 0.92
+[Si I/Fe] = -0.05 +/- 0.26
+
+S I, II -- no lines present in line list: they are mainly in the infrared
+
+Ar I, II -- no lines present in line list
+
+Ca I: 4.79 +/- 0.12 (17 lines), Solar 6.34 +/- 0.04
+Inspected all the lines I have; they all look reasonable. Outliers could be confidently excluded.
+SOC: // 0.48, 7.08, 0.77 // -9.21e-05, 5.30, -0.51
+[Ca I/Fe] = 0.25 +/- 0.12
+
+Ti I: 3.00 +/- 0.16 (20 lines), Solar 4.95 +/- 0.05
+Inspected all the lines, excluded some dodgey measurements and duplicates, then clipped outliers.
+SOC: // -0.04, 2.83, -0.04 // 6.68e-05, 2.69, 0.18
+[Ti I/Fe] = -0.15 +/- 0.16
+
+Ti II: 3.19 +/- 0.14 (23 lines), Solar 4.95 +/- 0.05
+Inspected all the lines, excluded some dodgey measurements & duplicates then clipped outliers.
+SOC: 0.00, 3.23, 0.01 // 0.22, 4.27, 0.28 // -4.71e-05, 3.44, -0.13
+[Te II/Fe] = 0.04 +/- 0.14
+
+Na I: 4.21 +/- 0.05 (3 lines), Solar 6.24 +/- 0.04
+Inspected all three line profiles; they look perfect.
+SOC: -0.06, 4.23, -0.96 // 0.11, 4.71, 0.95
+[Na I/Fe] = -0.23 +/- 0.05
 
 
 
+OSS 3: 161.8761667 -0.0229444
+Not in 2mass (3 arcsecond cone)
+SDSS  Closest point is 2.85 arcseconds away at 17.4 mag in g
+u g r i z (SDSS DR 8)
+18.881 17.400 16.748 16.497 16.316
+Using Alonso et al 1999 eq 4 relation, and Jester 2005 transformations:
+UBVRI = 18.13946 17.86428 17.00532 16.51173 16.05073
+BMV = 0.85895999999999972
+Tried inital guess of [Fe/H] as = -1.9 gives 4719 K, giving -1.7 gives 4735 K
+using -1.9 guess and starting at 4719 K
+
+
+
+
+Best so far (before excluding outliers)
+4800 K, 1.90, 1.70, -1.87, 0.40
+
+after outliers
+4810, 1.85, 1.70, -1.87, 0.40
+
+Fe I 5.68 +/- 0.18 (181 lines)
+Abundances
+S, O, C: 0.00, 5.67, 0.03
+
+Reduced EW
+S, O, C: -0.06, 5.38, -0.08
+
+Lambda S, O, C: 8.33e-05, 5.25, 0.34
+
+Fe II 5.67 +/- 0.23 (26 lines)
+
+Reduced EW S, O, C: 0.07, 6.00, 0.09
+
+Lambda S, O, C: 1.44e-04, 4.95, 0.40
+
+
+===============
+with isochrones
+4780 / 1.7 / 1.55 / -1.80 / +0.40
+
+Fe I abundance 5.74 +/- 0.13 (112 lines)
+S, O, C: 0.00 5.73 0.03
+Reduced EW SOC: 0.03 5.86 0.04
+Lambda SOC: 3.11e-05, 5.57, 0.13
+
+Fe II abundances 5.69 +/- 0.19 (8 lines)
+Reduced EW SOC: -0.14, 5.03, -0.16
+Lambda SOC: 1.73e-04, 4.75, 0.49
+
+
+
+OSS 4
+162.2845417 0.0331389
+In SDSS DR8 found closest 16.4 gmag star at 1.113 arcseconds away
+u g r i z
+17.935 16.440 15.770 15.465 15.299
+no redenning, jester transform, assume -1.9 feh and using B-V ~ 0.88
+Alonso et al 1999 eq 4
+initial start teff = 4693 K
+
+an emp???
+
+4550 /  1.9 / 0.8 / -2.7 / 0.4
+
+Fe I Abundance 4.75 +/- 0.19 (150 lines)
+S, O, C: 0.00, 4.76, 0.01
+
+REW S, O, C: 0.04, 4.95, 0.07
+
+Lambda S, O, C: 4.11e-06, 4.74, 0.01
+
+Fe II Abundance 4.78 +/- 0.16 (18 lines)
+
+REW S, O, C: -0.06, 4.51, -0.09
+
+Lambda S, O, C: 9.90e-05, 4.32, 0.33
+
+Using isochrones:
+
+4670 / 1.95 / 1.10 / -2.70 / +0.40
+Fe I Abundance 4.84 +/- 0.24 (168)
+-0.01, 4.88, -0.03
+0.01, 4.93, 0.02
+5e-5, 4.61, 0.15
+
+Fe II Abundance 4.87 +/- 0.21 (21)
+-0.01, 4.84, -0.01
+1.09e-04 4.37 0.27
+
+=============
+4580 K / 2.05 / 0.80 / -2.79 / +0.40
+( doesn't quite sit on the expected isochrone)
+
+Fe I abundance: 4.75 +/- 0.17 (128 lines)
+-0.01 / 4.77 / -0.05
+0.03 / 4.88 / 0.04
+9.62e-06 / 4.70 / 0.40
+
+Fe II abundance: 4.77 +/- 0.15 (15 lines)
+-0.01 / 4.69 / -0.02
+
+6.49e-05 / 4.44 / 0.15
+
+OSS 5
+162.6405417 0.2050833
+SDSS DR8 nearest target is 1.196" away at 18th magnitude in g
+ugriz = 19.628 17.997 17.338 17.065 16.908
+No reddenning correction and using Jester 2005:
+UBVRI = 18.85619 18.46401 17.59819 17.08062 16.59762
+bmv = 0.87
+
+Guessing [Fe/H] = -1.9 yields Teff = 4709 K
+Arbitrarily chosing lines only redward of 4400 A
+
+5200 / 2.0 / 2.9 / -0.95 / 0.40
+
+Fe I 6.60 +/- 0.22 (90 lines)
+0.00, 6.62, 0.01
+0.00, 6.65, 0.00
+9.2e-5, 6.12, 0.27
+
+Fe II 6.60 +/- 0.35 (17 lines)
+0.12, 7.14, 0.07
+9.81e-05, 6.09, 0.20
 
 \subsubsection{Effective Temperature}
 
