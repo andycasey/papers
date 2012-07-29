@@ -159,7 +159,7 @@ REW SOC: 0.03, 6.33, 0.04
 Lambda SOC: 1.08e-04, 5.65, 0.46
 
 
-ALPHA ELEMENTS Mg, Si, Ca, Ti <-> (12, 
+ALPHA ELEMENTS Mg, Si, Ca, Ti
 ==============
 
 
@@ -294,8 +294,6 @@ Tried inital guess of [Fe/H] as = -1.9 gives 4719 K, giving -1.7 gives 4735 K
 using -1.9 guess and starting at 4719 K
 
 
-
-
 Best so far (before excluding outliers)
 4800 K, 1.90, 1.70, -1.87, 0.40
 
@@ -330,6 +328,55 @@ Lambda SOC: 3.11e-05, 5.57, 0.13
 Fe II abundances 5.69 +/- 0.19 (8 lines)
 Reduced EW SOC: -0.14, 5.03, -0.16
 Lambda SOC: 1.73e-04, 4.75, 0.49
+
+FINAL (this was done blindly too because I actually thought I was analysing OSS4)
+=====
+4780 / 1.7 / 1.55 / -1.79 / +0.40 <--> fits well on isochrone, saved as "FINAL"
+
+Fe I abundance: 5.71 +/- 0.12 (154 lines)
+SOC: 0.00, 5.70, 0.04 // -0.03, 5.57, -0.05 // 3.21e-05, 5.55, 0.20
+
+Fe II abundance: 5.71 +/- 0.16 (20 lines)
+SOC: // 0.03, 5.84, 0.04 // 6.42e-05, 5.39, 0.25
+
+ALPHA ABUNDANCES Mg, Si, Ca, Ti
+================
+
+Mg I: 5.95 +/- 0.05 (5 lines), Solar 7.60 +/- 0.04
+I inspected all the lines and clipped outliers.
+SOC: -0.01, 5.95, -.18 // 0.11, 6.44, 0.84 // -9.34e-05, 6.40, -0.72
+[Mg I/Fe] = 0.14 +/- 0.05
+
+Si I: 6.25 +/- 0.05 (2 lines), Solar 7.51 +/- 0.03
+excluded no lines:
+5565 line is not present
+5701 line is present, blended and not measured by code -- I measured it by hand
+5772 line is not present
+The two lines we have look really good.
+After I measured the line at 5701 and put them in:
+Si I: 6.20 +/- 0.16 (3 lines), Solar 7.51 +/- 0.03
+SOC: -0.03, 6.25, -0.27 // 0.22, 7.25, 0.65 // -5.47e-05, 6.42, -0.26
+[Si I/Fe] = 0.48 +/- 0.16
+
+Ca I: 4.87 +/- 0.09 (18 lines), Solar 6.34 +/- 0.04
+I inspected all the lines and clipped outliers.
+SOC: // 0.15, 5.61, 0.30 // 3.62e-05, 4.66, 0.30
+[Ca I/Fe] = 0.32 +/- 0.09
+
+Ti I: 3.13 +/- 0.09 (23 lines), Solar 4.95 +/- 0.05
+I inspected all the lines + clipped outliers
+SOC: // -0.01, 3.10, -0.02 // -5.4e-06, 3.18, -0.02
+[Ti I/Fe] = -0.03 +/- 0.09
+
+Ti II: 3.36 +/- 0.09 (24 lines), Solar 4.95 +/- 0.05
+I inspected all the lines + clipped outliers
+SOC: -0.04, 3.42, -0.16 // 0.08, 3.74, 0.18 //-1.35e-05, 3.43, -0.06
+[Ti II/Fe] = 0.20 +/- 0.09
+
+Na: 4.42 +/- 0.07 (3 lines), Solar 6.24 +/- 0.04
+SOC: -0.07, 4.43, -1.00 // 0.15, 5.09, 0.99
+[Na I/Fe] = -0.03 +/- 0.07
+
 
 
 
@@ -371,6 +418,7 @@ Fe II Abundance 4.87 +/- 0.21 (21)
 -0.01, 4.84, -0.01
 1.09e-04 4.37 0.27
 
+FINAL
 =============
 4580 K / 2.05 / 0.80 / -2.79 / +0.40
 ( doesn't quite sit on the expected isochrone)
@@ -385,6 +433,53 @@ Fe II abundance: 4.77 +/- 0.15 (15 lines)
 
 6.49e-05 / 4.44 / 0.15
 
+FINAL WITH EXCLUSIONS
+=====================
+4580 K / 2.05 / 0.80 / -2.75 / +0.40
+
+Fe I abundance: 4.74 +/- 0.11 (89 lines)
+SOC: 0.00, 4.75, -0.05 // -0.01, 4.70, -0.02 // 9.19e-06, 4.70, 0.06
+
+Fe II abundance: 4.77 +/- 0.12 (13 lines)
+SOC: // 0.00, 4.74, -0.01 // 1.16e-04, 4.21, 0.34
+
+Saved as "FINAL" <-> adopting these values
+
+ALPHA ELEMENTS
+==============
+
+Mg I: 5.11 +/- 0.13 (7 lines), Solar 7.60 +/- 0.04
+Inspected all lines, kept good ones then removed two spurious outliers.
+SOC: -0.02, 5.14, -0.19 // -0.14, 4.44, -0.31 // 1.54e-04, 4.39, 0.74
+[Mg I/Fe] = 0.26 +/- 0.13
+
+Si I: 5.38 +/- 0.03 (3 lines), Solar 7.51 +/- 0.03
+Inspected all lines and removed one outlier.
+SOC: -0.01, 5.43, -0.72 // 0.02, 5.50, 0.54 // -2.42e-05, 5.50,-0.65
+[Si I/Fe] = 0.62 +/- 0.03
+
+Ca I: 3.75 +/- 0.09 (9 lines), Solar 6.34 +/- 0.04
+Inspected all lines as usual
+SOC: // // 2.84e-05, 3.60, 0.26
+[Ca I/Fe] = 0.16 +/- 0.10
+
+Na I: 3.69 +/- 0.04 (2 lines), Solar 6.24 +/- 0.04
+Inspected both lines (they were all that was measured) & they are very clean.
+SOC: // // //
+[Na I/Fe] = 0.20 +/- 0.04
+
+Ti I: 2.28 +/- 0.15 (13 lines), Solar 4.95 +/- 0.05
+Inspected lines as always; these lines were more difficult to measure than usual.
+SOC: // 0.09, 2.70, 0.14 // -1.08e-04, 2.75, -0.24
+[Ti I/Fe] = 0.08 +/- 0.15
+
+Ti II: 2.31 +/- 0.09 (24 lines), Solar 4.95 +/- 0.05
+SOC: 0.00, 2.31, -0.02 // 0.00, 2.32, 0.01 // 2.39e-05, 2.19, 0.12
+[Ti II/Fe] = 0.11 +/- 0.15
+
+Alphas saved as "ALPHA"
+
+
 OSS 5
 162.6405417 0.2050833
 SDSS DR8 nearest target is 1.196" away at 18th magnitude in g
@@ -394,9 +489,9 @@ UBVRI = 18.85619 18.46401 17.59819 17.08062 16.59762
 bmv = 0.87
 
 Guessing [Fe/H] = -1.9 yields Teff = 4709 K
-Arbitrarily chosing lines only redward of 4400 A
+Arbitrarily chosing lines only redward of 4400 A because S/N shit.
 
-5200 / 2.0 / 2.9 / -0.95 / 0.40
+5200 / 2.0 / 2.9 / -0.95 / 0.40 (fits perfectly on the isochrone)
 
 Fe I 6.60 +/- 0.22 (90 lines)
 0.00, 6.62, 0.01
@@ -406,6 +501,58 @@ Fe I 6.60 +/- 0.22 (90 lines)
 Fe II 6.60 +/- 0.35 (17 lines)
 0.12, 7.14, 0.07
 9.81e-05, 6.09, 0.20
+
+FINAL
+5250 / 1.85 / 3.00 / -0.80 / 0.40 (first perfectly on isochrone)
+
+Fe I: 6.68 +/- 0.18 (99 lines)
+-0.01, 6.72, -0.06
+0.00, 6.68, 0.00
+5.61e-05, 6.38, 0.19
+
+Fe II: 6.71 +/- 0.25 (14 lines)
+0.28, 8.07, 0.24
+5.55e-05, 6.42, 0.16
+
+USING THESE VALUES (saved as "results")
+
+NOTE: so because this spectra is so shitty i ignored all lines (Fe, alpha elements) blue ward of 4000 Angstroms EXCEPT for Silicon only because there are so few lines.
+
+ALPHA ELEMENTS
+==============
+
+Mg I: 6.70 +/- 0.15 (5 lines), Solar 7.60 +/- 0.04
+All inspected
+SOC: -0.05, 6.94, -0.61 // -1.48e-04, 7.49, -0.58
+[Mg I/Fe] = -0.10 +/- 0.15
+
+Na I: 5.17 +/- 0.13 (4 lines), Solar 6.24 +/- 0.04
+All inspected and look good.
+SOC: 0.11, 5.08, 0.96 // -0.36, 3.53, -0.97 // //
+[Na I/Fe] = -0.27 +/- 0.13
+
+
+Si I: 6.78 +/- 0.31 (4 lines), Solar 7.51 +/- 0.03
+Lines look okay, but spectrum is crappy.
+SOC: 0.12, 6.35, 0.59 // -0.07, 6.41, -0.14 // 1.92e-04, 5.82, 0.54
+[Si I/Fe] = 0.07 +/- 0.31
+
+
+Ca I: 5.77 +/- 0.12 (10 lines), Solar 6.34 +/- 0.04
+All lines inspected and look good.
+SOC: // // -1.49e-04, 6.68, -0.45
+[Ca I/Fe] = 0.23 +/- 0.12
+
+Ti I: 4.26 +/- 0.36 (15 lines), Solar 4.95 +/- 0.05
+Lines look good, excluded all outliers and it's still a bit crap. Lot of scatter!
+SOC: // 0.95, 8.88, 0.54 // 2.20e-04, 3.25, 0.24
+[Ti I/Fe] = 0.11 +/- 0.36
+
+Ti II: 4.28 +/- 0.19 (13 lines), Solar 4.95 +/- 0.05
+Lines are good; could have gotten rid of a few more outliers but chose not to.
+SOC: 0.04, 4.16, 0.13 // // 7.89e-05, 3.86, 0.16
+[Ti II/Fe] = 0.13 +/- 0.19
+
 
 \subsubsection{Effective Temperature}
 
