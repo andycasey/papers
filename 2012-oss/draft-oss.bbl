@@ -1,0 +1,51 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Bell} {et~al.}(2008){Bell}, {Zucker}, {Belokurov}, {Sharma},
+  {Johnston}, {Bullock}, {Hogg}, {Jahnke}, {de Jong}, {Beers}, {Evans},
+  {Grebel}, {Ivezi{\'c}}, {Koposov}, {Rix}, {Schneider}, {Steinmetz}, \&
+  {Zolotov}}]{Bell;et-al_2008}
+{Bell}, E.~F., {et~al.} 2008, \apj, 680, 295
+
+\bibitem[{{Belokurov} {et~al.}(2006){Belokurov}, {Zucker}, {Evans}, {Gilmore},
+  {Vidrih}, {Bramich}, {Newberg}, {Wyse}, {Irwin}, {Fellhauer}, {Hewett},
+  {Walton}, {Wilkinson}, {Cole}, {Yanny}, {Rockosi}, {Beers}, {Bell},
+  {Brinkmann}, {Ivezi{\'c}}, \& {Lupton}}]{Belokurov;et-al_2006}
+{Belokurov}, V., {et~al.} 2006, \apjl, 642, L137
+
+\bibitem[{{Belokurov} {et~al.}(2007){Belokurov}, {Evans}, {Irwin},
+  {Lynden-Bell}, {Yanny}, {Vidrih}, {Gilmore}, {Seabroke}, {Zucker},
+  {Wilkinson}, {Hewett}, {Bramich}, {Fellhauer}, {Newberg}, {Wyse}, {Beers},
+  {Bell}, {Barentine}, {Brinkmann}, {Cole}, {Pan}, \&
+  {York}}]{Belokurov;et-al_2007}
+---. 2007, \apj, 658, 337
+
+\bibitem[{{Casey} {et~al.}(2012){Casey}, {Keller}, \& {Da
+  Costa}}]{Casey;et-al_2012}
+{Casey}, A.~R., {Keller}, S.~C., \& {Da Costa}, G. 2012, \aj, 143, 88
+
+\bibitem[{{Francois}(1996)}]{Francois_1996}
+{Francois}, P. 1996, \aap, 313, 229
+
+\bibitem[{{Fulbright}(2000)}]{Fulbright_2000}
+{Fulbright}, J.~P. 2000, \aj, 120, 1841
+
+\bibitem[{{Gratton} {et~al.}(2000){Gratton}, {Sneden}, {Carretta}, \&
+  {Bragaglia}}]{Gratton;et-al_2000}
+{Gratton}, R.~G., {Sneden}, C., {Carretta}, E., \& {Bragaglia}, A. 2000, \aap,
+  354, 169
+
+\bibitem[{{Grillmair}(2006)}]{Grillmair_2006}
+{Grillmair}, C.~J. 2006, \apjl, 645, L37
+
+\bibitem[{{Newberg} {et~al.}(2010){Newberg}, {Willett}, {Yanny}, \&
+  {Xu}}]{Newberg;et-al_2010}
+{Newberg}, H.~J., {Willett}, B.~A., {Yanny}, B., \& {Xu}, Y. 2010, \apj, 711,
+  32
+
+\bibitem[{{Starkenburg} {et~al.}(2010){Starkenburg}, {Hill}, {Tolstoy},
+  {Gonz{\'a}lez Hern{\'a}ndez}, {Irwin}, {Helmi}, {Battaglia}, {Jablonka},
+  {Tafelmeyer}, {Shetrone}, {Venn}, \& {de Boer}}]{Starkenburg;et-al_2010}
+{Starkenburg}, E., {et~al.} 2010, \aap, 513, A34
+
+\end{thebibliography}
