@@ -1,0 +1,100 @@
+
+
+==========================================
+
+I have some smaller, but still important, comments here for Sections 1 - 2.  If the authors decide to re-resubmit with a more compelling argument for membership and/or with new data, then I will also provide a careful review of Sections 3-6.
+
+Abstract
+
+Please quote a measurement uncertainty on [Fe/H] here, and elsewhere
+in the text of the paper.
+
+** ANNA: what is it customary to quote here? Or random uncertainty was +/- 0.05; when taking into account uncertainty due to stellar parameters etc. it's +/- 0.2. I inserted a \pm XX to where it needs to be added - search and insert whichever value is appropriate.
+
+Introduction
+-----------
+Very minor: "field of streams" - I thought that the Field of Streams showed ~1/5
+of the sky, which wouldn't necessarily make it a particularly busy
+region of the sky.  Its probably typical?
+
+** Fair enough - text edited.
+
+Section 2
+--------
+"... and the dispersion is resolved and high - it is not a cold
+stream." - The measurement uncertainties on each data point are fairly
+high.  Is the dispersion actually resolved?  Please calculate
+measurement uncertainties on the stream's systemic velocity and
+velocity dispersion quoted in this section.  Please also provide a
+brief explanation of how these numbers are calculated.
+
+** Measurement uncertainties has been added to the values quoted. The mean and dispersion are simply calculated as the mean and standard deviation of the velocities, and uncertainties calculated by standard error propagation based on the uncertainties in velocity. When considering both samples together the dispersion is 10.3 +/- 1.2 km/s, which we argue is indeed resolved. 
+
+When you state "photometric selection cut" - Do you mean the
+photometric selection to make it into the list of objects to be
+targeted?  Or do you mean the photometric selection to be counted as a
+Seg 1 member star?  If the latter, then are there stars just outside
+the photometric cut for Seg 1 membership that have photometry and
+velocity consistent with stream membership?
+
+** The former - the cut to make it into the list of objects to be targeted. This has been clarified in the text. (For stars in the field not targeted by either survey, we do of course not have any velocity information.)
+
+I'm confused by the fourth paragraph of Section 2:
+
+1. How does the CMD in Figure 1 suggest that the stream is more
+  metal-rich than Seg 1?  Couldn't the difference in apparent
+  magnitudes between Segue 1's and the stream's main-sequence and
+  sub-giant branch just be explained by a difference in distance
+  modulus?  Is it that the MS of stream stars is slightly redder than
+  the MS of Segue 1 members?  If so, then please be specific that
+  this is the feature that suggests a relatively higher [Fe/H] for
+  the stream than for Segue 1 and please attempt to quantify how much
+  redder the stream stars may/may not be (while allowing m-M to be a
+  free parameter).
+
+** ANNA: This probably needs to be edited together with whatever argument you want to make for the stream star needing to be a member. Originally, I believe I was simply repeating the point made in S11, that the main sequence of the stream is better fit by a redder, more metal-rich isochrone. Nothing more complicated than that. 
+
+2.  In the Figure 1 CMD I see one candidate RGB star for the stream
+that is the subject of this paper. Is this single candidate star the
+feature being referred to by the sentence "The red giant branch of the
+stream is bluer than this sequence, however, and is better fit by
+e.g. the RGB of the more metal-poor cluster M92."?  Please also see my
+comment in the first half of this report that describes my concern
+about the apparent mis-match between the spectroscopic [Fe/H] of this
+star of -1.4 and its blue color relative to the M5 fiducial.
+
+** ANNA: That is indeed the very same star. And it needs to be addressed. Since both these refer to the "major issue" I haven't edited this part. 
+
+Figure 1
+
+This figure would be easier to interpret if a legend for the symbols
+was provided in the panels.
+
+** Legend is added.
+
+Spatial figure is said to correspond to the 2 degree FOV of the N10
+study, but there are no blue dots in most of the field.  Is that
+because stars were not targeted in that full field, or because stars
+were targeted but did not satisfy color cuts for Seg 1 membership?
+
+** ANNA: I'll have to defer this one to John or Rosie. I plotted all the stars in the list of observed targets they gave me.
+
+Are the axes on the spatial figures isotropic, or just the default
+ratios selected by IDL?  The cosine of 16 degrees is pretty close to
+1, so the figure looks a bit too stretched in the RA direction.
+
+** It was simply the default IDL ratio. The plots have now been changed to isotropic axis.
+
+
+Table 1
+
+Velocity measurement uncertainties must be included.  Apparent
+magnitudes shouldn't be quoted to thousandth of a magnitude precision;
+Please also include the measurement uncertainties.  Please also give a
+reference for the apparent magnitudes.
+
+** All photometry is from the Sloan Digital Sky Survey, as stated. Uncertainties in magnitudes and velocities (from S11) has been included in Table 1. 
+
+
+
+

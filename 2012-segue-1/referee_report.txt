@@ -1,0 +1,139 @@
+December 29, 2011
+
+Ms. Ragnhild Lunnan
+Harvard-Smithsonian Center for Astrophysics
+60 Garden Str.
+Mail Stop 10
+Cambridge, MA 02138
+
+
+Title: The 300 km s$^{-1}$ Stellar Stream Near Segue\,1: Insights From High-Resolution Spectroscopy of its Brightest Star
+
+
+Dear Ms. Lunnan,
+
+I have received the referee's report on your submission to The Astrophysical Journal, and append it below.
+
+I hope that you will agree with my assessment that the report is constructive in tone, but you will note that the referee asks that several substantive issues be addressed before the referee is able to recommend publication in the ApJ. Of particular importance is the concern of the referee that star that is the focus of your study might not be in fact a member of the Segue 1 stream.
+
+I hope that you and your co-authors will consider the report carefully. When you resubmit, please include adetailed cover letter indicating point-by-point your responses to the referee's report, and also indicating any other changes you have made tothe text.
+
+Click the link below to upload your revised manuscript, which will work one time.
+<http://apj.msubmit.net/cgi-bin/main.plex?el=A3Ew6FUU2A2XRw2F7A9hYgNgrxXLbzpWjrBeXpgZ>
+
+Alternatively, you can also log into your account at the EJ Press web site, http://apj.msubmit.net.  Please use your user's login name: ralunnan.  You can then ask for a new password via the Unknown/Forgotten Password link if you have forgotten your password.
+
+The policy of The Astrophysical Journal is to view manuscripts as withdrawn
+if no revised version is received within six months after the most recent
+referee's report goes to the authors.
+
+If you have any questions, please contact me.
+
+
+With best wishes,
+
+Butler Burton
+
+----------------------
+Prof. W. Butler Burton
+Associate Editor-in-Chief, The Astrophysical Journal
+Professor Emeritus, Leiden University
+National Radio Astronomy Observatory
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The text of the review is included below, after the double line.
+================================================================
+
+ Reviewer's Comments:
+In this paper, Lunnan et al. have analyzed a high-resolution spectrum of one candidate red giant branch member of a recently discovered MW halo stream/moving group.  The aim of this analysis is to to learn about the properties and origin of this stellar halo feature.  Using high-resolution spectroscopy to study the properties and origin of the Milky Way's dwarfs and streams is exciting.  Although the observations are time consuming, the unique insight provided by such observations are highly valuable and papers based on only 1 or 2 stars can contribute materially to the field.
+
+However, I have a major concern about the publishability of this
+paper: Is Segue1-11, the star that this paper is based upon, a certain stream member?  Unless Segue1-11 is a certain stream member, then I don't think the paper has enough new results to warrant publication at present.  I think that there is strong reason to believe that Segue1-11 is not necessarily a stream member.
+
+Of the 6 candidate stream stars with apparent r magnitude bright
+enough for high-resolution spectroscopic follow-up, the authors show (near the end of Section 2) that 5 cannot easily be explained in the context of the stream's color-magnitude diagram.  Although these stars have velocities consistent with stream membership, they don't appear to be RGB or BHB stars.  To me, the colors and magnitudes of these stars raise question as to their actual association with this stream. Based on my understanding of the current draft, it seems that the
+author may agree with this interpretation.  It is therefore reasonable to also have concern about the membership of the 6th star.  Although the candidate stream stars have high positive velocities relative to Galactic foreground, the probability that any individual star is a foreground interloper is far higher at relatively brighter apparent magnitudes where few (if any) members are expected in low luminosity systems but where thick disk and halo stars are common.
+
+Moreover, the color of Segue1-11 is blueward of the M5 fiducial
+at 18 kpc, the inferred distance to the stream.  In fact, it is as blue or bluer relative to this fiducial than the Segue 1 stars, which are confirmed to be metal-poor by medium resolution spectroscopy.  Is this color of Segue 1-11 consistent with its spectroscopic [Fe/H] of -1.4 and a distance similar to the bulk of the stream stars?
+
+Finally, as the authors demonstrate, the detailed abundances of
+Segue1-11 are similar to the abundances of many MW thick disk and halo stars - the primary contaminants of spectroscopic studies like these. In Section 5.2 the question is raised whether this is the "first stream with halo-like abundances".  Or, related to my concern, perhaps this star is actually a field halo star.
+
+Based on my understanding of the current draft, I think that the best way forward may be to hold off on publishing this work until
+1. multiple candidate stream stars can be observed with high-resolution spectroscopy and/or 2. medium resolution spectroscopy can be obtained over a larger footprint to measure the spatial distribution of the stream.  If the authors decide to proceed with this paper based on one star, then it will be critical that the paper is changed to provide compelling, quantitative, arguments that Segue1-11 is a certain member of the stream.
+
+==========================================
+
+I have some smaller, but still important, comments here for Sections 1 - 2.  If the authors decide to re-resubmit with a more compelling argument for membership and/or with new data, then I will also provide a careful review of Sections 3-6.
+
+Abstract
+
+Please quote a measurement uncertainty on [Fe/H] here, and elsewhere
+in the text of the paper.
+
+Introduction
+-----------
+Very minor: "field of streams" - I thought that the Field of Streams showed ~1/5
+of the sky, which wouldn't necessarily make it a particularly busy
+region of the sky.  Its probably typical?
+
+Section 2
+--------
+"... and the dispersion is resolved and high - it is not a cold
+stream." - The measurement uncertainties on each data point are fairly
+high.  Is the dispersion actually resolved?  Please calculate
+measurement uncertainties on the stream's systemic velocity and
+velocity dispersion quoted in this section.  Please also provide a
+brief explanation of how these numbers are calculated.
+
+When you state "photometric selection cut" - Do you mean the
+photometric selection to make it into the list of objects to be
+targeted?  Or do you mean the photometric selection to be counted as a
+Seg 1 member star?  If the latter, then are there stars just outside
+the photometric cut for Seg 1 membership that have photometry and
+velocity consistent with stream membership?
+
+I'm confused by the fourth paragraph of Section 2:
+
+1. How does the CMD in Figure 1 suggest that the stream is more
+  metal-rich than Seg 1?  Couldn't the difference in apparent
+  magnitudes between Segue 1's and the stream's main-sequence and
+  sub-giant branch just be explained by a difference in distance
+  modulus?  Is it that the MS of stream stars is slightly redder than
+  the MS of Segue 1 members?  If so, then please be specific that
+  this is the feature that suggests a relatively higher [Fe/H] for
+  the stream than for Segue 1 and please attempt to quantify how much
+  redder the stream stars may/may not be (while allowing m-M to be a
+  free parameter).
+
+2.  In the Figure 1 CMD I see one candidate RGB star for the stream
+that is the subject of this paper. Is this single candidate star the
+feature being referred to by the sentence "The red giant branch of the
+stream is bluer than this sequence, however, and is better fit by
+e.g. the RGB of the more metal-poor cluster M92."?  Please also see my
+comment in the first half of this report that describes my concern
+about the apparent mis-match between the spectroscopic [Fe/H] of this
+star of -1.4 and its blue color relative to the M5 fiducial.
+
+Figure 1
+
+This figure would be easier to interpret if a legend for the symbols
+was provided in the panels.
+
+Spatial figure is said to correspond to the 2 degree FOV of the N10
+study, but there are no blue dots in most of the field.  Is that
+because stars were not targeted in that full field, or because stars
+were targeted but did not satisfy color cuts for Seg 1 membership?
+
+Are the axes on the spatial figures isotropic, or just the default
+ratios selected by IDL?  The cosine of 16 degrees is pretty close to
+1, so the figure looks a bit too stretched in the RA direction.
+
+
+Table 1
+
+Velocity measurement uncertainties must be included.  Apparent
+magnitudes shouldn't be quoted to thousandth of a magnitude precision;
+Please also include the measurement uncertainties.  Please also give a
+reference for the apparent magnitudes.

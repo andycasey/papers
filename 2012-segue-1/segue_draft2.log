@@ -1,0 +1,575 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=latex 2010.7.27)  13 AUG 2012 18:40
+entering extended mode
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**segue_draft2.tex
+(./segue_draft2.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
+rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
+lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
+ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/emulateapj/emulateapj.cls
+Document Class: emulateapj 
+\bibbaselineskip=\skip41
+(/usr/local/texlive/2009/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4
+/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil [2009/07/07 4.1f]: portions licensed from W. E. Baxter (web at superscr
+ipt.com)
+LaTeX Info: Redefining \@centercr on input line 298.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 348.
+\eqncolsep=\skip42
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 423.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 754.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1785.
+Class revtex4-1 Info: Making \typeout \long on input line 1953.
+ltxfront [2009/10/06/20:20 4.1g]: Arthur Ogawa (after David P. Carlisle)
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid [2009/07/07 4.1f]: portions licensed from W. E. Baxter (web at superscr
+ipt.com)
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\pagesofar=\box32
+\footsofar=\box33
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5346.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip43
+\belowcaptionskip=\skip44
+\c@figure=\count91
+\fbox@1=\box34
+\c@table=\count92
+\fbox@2=\box35
+\c@video=\count93
+\fbox@4=\box36
+\@bibdataout=\write3
+\widetext@top=\box37
+\widetext@bot=\box38
+
+Class revtex4-1 Warning: No Society specified, using default society aps.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/revtex/aps4-1.rtx
+File: aps4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for documen
+tation)
+Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+)
+
+Class revtex4-1 Warning: No journal specified, using default pra.
+
+Class revtex4-1 Info: APS journal PRA selected on input line 7233.
+
+Class revtex4-1 Warning: No type size specified, using default 10.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for doc
+umentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2009/10/08:11:23 4.1g (http://publish.aps.org/revtex4/ for 
+documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+LaTeX Info: Redefining \frak on input line 99.
+LaTeX Info: Redefining \Bbb on input line 101.
+))
+(/usr/local/texlive/2009/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count95
+\LTcapwidth=\dimen104
+\LT@head=\box39
+\LT@firsthead=\box40
+\LT@foot=\box41
+\LT@lastfoot=\box42
+\LT@cols=\count96
+\LT@rows=\count97
+\c@LT@tables=\count98
+\c@LT@chunks=\count99
+\LT@p@ftn=\toks18
+)
+(/usr/local/texlive/2009/texmf-dist/tex/generic/epsf/epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
+\epsffilein=\read1
+\epsfframemargin=\dimen105
+\epsfframethickness=\dimen106
+\epsfrsize=\dimen107
+\epsftmp=\dimen108
+\epsftsize=\dimen109
+\epsfxsize=\dimen110
+\epsfysize=\dimen111
+\pspoints=\dimen112
+)
+\c@front@matter@foot@note=\count100
+\alt@affil@toks=\toks19
+\alt@affil@toks@count=\toks20
+\keys@width=\skip51
+\c@lastfootnote=\count101
+\c@remember@figure@num=\count102
+\c@remember@table@num=\count103
+\bibindent=\dimen113
+\plot@width=\skip52
+\c@table@save=\count104
+\table@note@skip=\skip53
+\deluxe@table@width=\skip54
+\@d@t@a=\skip55
+\c@deluxe@table@num=\count105
+\abovedeluxetableskip=\skip56
+\belowdeluxetableskip=\skip57
+\lastrowheight=\dimen114
+\DT@p@ftn=\toks21
+\pt@column=\count106
+\pt@ncol=\count107
+) (/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen115
+\epsfysize=\dimen116
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks22
+\ex@=\dimen117
+)
+LaTeX Info: Redefining \text on input line 53.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count108
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count109
+\leftroot@=\count110
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count111
+\DOTSCASE@=\count112
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box43
+\strutbox@=\box44
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count113
+\c@MaxMatrixCols=\count114
+\dotsspace@=\muskip11
+\c@parentequation=\count115
+\dspbrk@lvl=\count116
+\tag@help=\toks23
+\row@=\count117
+\column@=\count118
+\maxfields@=\count119
+\andhelp@=\toks24
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks25
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2009/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/local/texlive/2009/texmf-dist/tex/latex/ltxmisc/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box45
+)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 16.
+Class revtex4-1 Info: Patching longtable package on input line 16.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 16.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 16.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 16.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 16.
+
+(./segue_draft2.aux)
+\openout1 = `segue_draft2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+\openout3 = `segue_draft2Notes.bib'.
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 28.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1]
+Underfull \hbox (badness 5504) in paragraph at lines 62--63
+[]\OT1/cmr/m/n/10 There are six stream can-di-date stars brighter
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 62--63
+\OT1/cmr/m/n/10 than $\OML/cmm/m/it/10 r \OT1/cmr/m/n/10 = 19$, and thus pos-si
+-ble can-di-dates for
+ []
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 62--63
+\OT1/cmr/m/n/10 high-resolution spec-troscopy. Our cho-sen tar-get
+ []
+
+File: velhist.ps Graphic file (type eps)
+<velhist.ps>
+File: cm_2.ps Graphic file (type eps)
+ <cm_2.ps>
+File: coord1.ps Graphic file (type eps)
+ <coord1.ps>
+File: coord2.ps Graphic file (type eps)
+ <coord2.ps>
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+
+ []
+
+
+LaTeX Warning: Reference `tab:segobs' on page 2 undefined on input line 185.
+
+File: Mgspecs_fixed.eps Graphic file (type eps)
+<Mgspecs_fixed.eps>
+Overfull \hbox (10.80827pt too wide) in paragraph at lines 218--219
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+
+ []
+
+[2] [3]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 229.
+
+[4]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 229.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+File: isochrones_10Gyr.ps Graphic file (type eps)
+<isochrones_10Gyr.ps>
+Overfull \hbox (10.80827pt too wide) in paragraph at lines 260--261
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 267--276
+[]\OT1/cmr/m/n/10 Our abun-dance anal-y-sis uti-lizes one-dimensional
+ []
+
+[5]
+File: CH_synth.ps Graphic file (type eps)
+ <CH_synth.ps>
+Overfull \hbox (10.80827pt too wide) in paragraph at lines 334--335
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--335
+
+ []
+
+
+LaTeX Warning: Reference `tab:hipabund' on page 6 undefined on input line 346.
+
+File: sr4215_synth.ps Graphic file (type eps)
+<sr4215_synth.ps>
+File: ba6496_synth.ps Graphic file (type eps)
+ <ba6496_synth.ps>
+File: eu4129_synth.ps Graphic file (type eps)
+ <eu4129_synth.ps>
+File: la4333_synth.ps Graphic file (type eps)
+ <la4333_synth.ps>
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--363
+
+ []
+
+[6]
+
+LaTeX Warning: Reference `tab:seg11_sigma' on page 7 undefined on input line 37
+6.
+
+
+LaTeX Warning: Reference `tab:hipabund' on page 7 undefined on input line 378.
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 383--394
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 394--394
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 394--394
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 394--394
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 394--395
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 395--395
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 395--395
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.62895pt too wide) in alignment at lines 395--415
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Package natbib Warning: Citation `Norris2010' on page 7 undefined on input line
+ 427.
+
+Missing character: There is no Ð in font cmr10!
+[7]
+File: besancon.eps Graphic file (type eps)
+ <besancon.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+
+ []
+
+File: light_el.ps Graphic file (type eps)
+<light_el.ps>
+
+LaTeX Warning: Reference `tab:seg11_sigma' on page 8 undefined on input line 44
+0.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--440
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--440
+
+ []
+
+File: nc_el.ps Graphic file (type eps)
+<nc_el.ps>
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
+$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--449
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 487.
+
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 487.
+
+Underfull \hbox (badness 1237) in paragraph at lines 489--490
+ []\OT1/cmr/m/n/10 Another pos-si-bil-ity, sug-gested by Geha et al.
+ []
+
+[8]
+Underfull \hbox (badness 1184) in paragraph at lines 491--492
+ []\OT1/cmr/m/n/10 The Or-phan Stream (Be-lokurov et al. 2007a)
+ []
+
+
+Package natbib Warning: Citation `Freeman;Bland-Hawthorn2003' on page 9 undefin
+ed on input line 507.
+
+[9] [10] (./segue_draft2.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[11] (./segue_draft2.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4254 strings out of 493849
+ 54386 string characters out of 3149230
+ 173466 words of memory out of 3000000
+ 7465 multiletter control sequences out of 15000+200000
+ 12882 words of font info for 53 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 33i,10n,26p,182163b,460s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on segue_draft2.dvi (11 pages, 71980 bytes).

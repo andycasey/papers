@@ -1,0 +1,35 @@
+synth
+terminal       'x11' 
+standard_out   'Al_3944.syn.stdout' 
+summary_out    'Al_3944.syn.summary' 
+smoothed_out   'Al_3944.syn.spectra' 
+model_in       'FINALMODEL' 
+lines_in       'Al.list'
+observed_in    'boxcar.txt'
+atmosphere    1                        
+molecules     2                        
+lines         1                        
+flux/int      0                        
+plot          2                        
+isotopes      11   4                   
+106.00112  1.25 1.25 1.25 1.25         
+106.00113  5 5 5 5                     
+606.01212  1.25 1.25 1.25 1.25         
+606.01213  5 5 5 5                     
+607.01214  1.25 1.25 1.25 1.25         
+607.01314  5 5 5 5                     
+56.1134   41.24   41.24   41.24   41.24
+56.1135   15.19   15.19   15.19   15.19
+56.1136   12.73   12.73   12.73   12.73
+56.1137    8.92    8.92    8.92    8.92
+56.1138    1.39    1.39    1.39    1.39
+abundances    2    3
+         6    0.25    0.25   0.25
+        13   -1.50   -1.00   -0.50
+synlimits                              
+  3942.0  3946.0    0.01    1.00   
+plotpars      1                        
+  3942.0  3946.0    0.00    1.2  
+    3.0   0.000   0.000    1.00      
+   g        0.20     0.0     0.0     0.0     0.0 
+obspectrum     5  
