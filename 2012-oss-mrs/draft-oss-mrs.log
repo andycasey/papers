@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.7.27)  3 AUG 2012 14:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2010.7.27)  14 AUG 2012 15:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**draft-oss.tex
-(./draft-oss.tex
+**draft-oss-mrs.tex
+(./draft-oss-mrs.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
@@ -207,253 +207,211 @@ This is `epsf.tex' v2.7.3 <23 July 2005>
 \DT@p@ftn=\toks21
 \pt@column=\count107
 \pt@ncol=\count108
-) (/usr/local/texlive/2009/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks22
-\verbatim@line=\toks23
-\verbatim@in@stream=\read2
 )
-(/usr/local/texlive/2009/texmf-dist/tex/latex/oberdiek/pdflscape.sty
-Package: pdflscape 2008/08/11 v0.10 Landscape pages in PDF (HO)
+Class revtex4-1 Info: Patching LaTeX tabular. on input line 9.
+Class revtex4-1 Info: Patching longtable package on input line 9.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 9.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 9.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 9.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 9.
+ (./draft-oss-mrs.aux)
+\openout1 = `draft-oss-mrs.aux'.
 
-(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
-(/usr/local/texlive/2009/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in pdf mode detected.
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
 
-(/usr/local/texlive/2009/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
-))
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 10.
-Class revtex4-1 Info: Patching longtable package on input line 10.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 10.
-
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 10.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 10.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 10.
-
-(./draft-oss.aux
-
-LaTeX Warning: Label `tab:stellar-parameters' multiply defined.
-
-)
-\openout1 = `draft-oss.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
- (/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen115
 \scratchbox=\box43
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks22
 \MPscratchCnt=\count112
 \MPscratchDim=\dimen116
 \MPnumerator=\count113
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks23
 )
-\openout3 = `draft-ossNotes.bib'.
+\openout3 = `draft-oss-mrsNotes.bib'.
 
-
-
-Class revtex4-1 Warning: Assuming \noaffiliation for Andrew R. Casey\textsupers
-cript {1,2}, Stefan C. Keller\textsuperscript {1}, Frebel, Anna\textsuperscript
- {2}, Gary Da Costa\textsuperscript {1}, Elizabeth Maunder\textsuperscript {1}.
-
-
-LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
-(/usr/local/texlive/2009/texmf-dist/tex/latex/base/ulasy.fd
+LaTeX Font Info:    Try loading font information for U+lasy on input line 19.
+ (/usr/local/texlive/2009/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+LaTeX Font Info:    Try loading font information for U+msa on input line 19.
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 
 (/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
-Package natbib Warning: Citation `Keller;et-al_2007' on page 1 undefined on inp
-ut line 41.
+Class revtex4-1 Warning: Assuming \noaffiliation for Andrew R. Casey\textsupers
+cript {1,2}, Stefan C. Keller\textsuperscript {1}, Gary Da Costa\textsuperscrip
+t {1}, Elizabeth Maunder\textsuperscript {1}.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+ [1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<./figures/vgsr-histogram.pdf, id=19, 578.16pt x 433.62pt>
+File: ./figures/vgsr-histogram.pdf Graphic file (type pdf)
+
+<use ./figures/vgsr-histogram.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+$[]$
+ []
 
 
-Package natbib Warning: Citation `Jin;Lynden-Bell_2007' on page 1 undefined on 
-input line 53.
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
+
+ []
 
 
-Package natbib Warning: Citation `Fellhaur;et-al_2007' on page 1 undefined on i
-nput line 53.
-
-
-Package natbib Warning: Citation `Jin;Lynden-Bell_2007' on page 1 undefined on 
-input line 53.
-
-
-Package natbib Warning: Citation `Sales;et-al_2007' on page 1 undefined on inpu
-t line 57.
-
-
-Package natbib Warning: Citation `Keller;et-al_2012' on page 1 undefined on inp
-ut line 67.
-
-
-LaTeX Warning: Reference `sec:observations' on page 1 undefined on input line 6
-7.
-
-[1{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package natbib Warning: Citation `Keller;et-al_2012' on page 2 undefined on inp
-ut line 75.
-
-
-Package natbib Warning: Citation `Kelson;2003' on page 2 undefined on input lin
-e 123.
-
-
-Package natbib Warning: Citation `Castelli-Kurucz;2004' on page 2 undefined on 
-input line 127.
-
-
-Package natbib Warning: Citation `Kirby;et-al_2008' on page 2 undefined on inpu
-t line 127.
-
-
-LaTeX Warning: Reference `tab:line-list' on page 2 undefined on input line 136.
-
-
-
-LaTeX Warning: Reference `fig:hd59984-ew-comparison' on page 2 undefined on inp
-ut line 147.
-
-
-LaTeX Warning: Reference `fig:oss4-ew-comparison' on page 2 undefined on input 
-line 147.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
 
-Package natbib Warning: Citation `Norris;et-al_1996' on page 3 undefined on inp
-ut line 149.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 85.
 
 
-LaTeX Warning: Reference `fig:norris-ew-comparison' on page 3 undefined on inpu
-t line 151.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 85.
 
 
-Overfull \hbox (177.33472pt too wide) in paragraph at lines 167--218
- []$[]$ 
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<./figures/ew-mg.pdf, id=26, 578.16pt x 433.62pt>
+File: ./figures/ew-mg.pdf Graphic file (type pdf)
+ <use ./figures/ew-mg.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+$[]$
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 223--237
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+
+ []
+
+<./figures/cmd.pdf, id=27, 578.16pt x 433.62pt>
+File: ./figures/cmd.pdf Graphic file (type pdf)
+ <use ./figures/cmd.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+$[]$
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 237--237
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 237--237
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./figures/vgsr-histogram.pdf> <./figures/ew-mg.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 110.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 110.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+
+Overfull \hbox (21.31895pt too wide) in alignment at lines 131--131
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 237--237
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (21.31895pt too wide) in alignment at lines 131--131
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 237--238
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (21.31895pt too wide) in alignment at lines 131--131
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 238--238
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (21.31895pt too wide) in alignment at lines 131--132
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 238--238
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (21.31895pt too wide) in alignment at lines 132--132
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 238--282
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (21.31895pt too wide) in alignment at lines 132--132
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.65265pt too wide) in alignment at lines 282--283
- [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (22.98009pt too wide) in alignment at lines 132--140
+ [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (267.8509pt too wide) in paragraph at lines 223--283
- []$[]$ 
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 140.
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 153--154
+[]\OT1/cmr/m/n/10 ARC ac-knowl-edges the fi-nan-cial sup-port through
  []
 
-(./draft-oss.bbl [3])
+(./draft-oss-mrs.bbl [4 <./figures/cmd.pdf>])
 
-Package natbib Warning: There were undefined citations.
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-[4] (./draft-oss.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[5] (./draft-oss-mrs.aux) ) 
 Here is how much of TeX's memory you used:
- 3773 strings out of 493848
- 49156 string characters out of 3149207
- 225755 words of memory out of 3000000
- 7009 multiletter control sequences out of 15000+200000
+ 3760 strings out of 493848
+ 49297 string characters out of 3149207
+ 160409 words of memory out of 3000000
+ 7006 multiletter control sequences out of 15000+200000
  13175 words of font info for 54 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 35i,11n,29p,1455b,445s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
-></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
-2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/200
-9/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2009
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2009/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2009/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2009/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2009/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2009/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on draft-oss.pdf (4 pages, 238455 bytes).
+ 35i,10n,29p,1407b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2009/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
+b></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
+sr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on draft-oss-mrs.pdf (5 pages, 753783 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 241 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

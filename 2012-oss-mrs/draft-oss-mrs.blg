@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: draft-oss-mrs.aux
+The style file: apj.bst
+Database file #1: draft-oss-mrsNotes.bib
+Database file #2: bibliography.bib
+You've used 23 entries,
+            2988 wiz_defined-function locations,
+            810 strings with 11279 characters,
+and the built_in function-call counts, 11325 in all, are:
+= -- 850
+> -- 923
+< -- 6
++ -- 305
+- -- 282
+* -- 1084
+:= -- 2168
+add.period$ -- 23
+call.type$ -- 23
+change.case$ -- 143
+chr.to.int$ -- 23
+cite$ -- 23
+duplicate$ -- 427
+empty$ -- 626
+format.name$ -- 373
+if$ -- 2193
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 23
+newline$ -- 73
+num.names$ -- 92
+pop$ -- 154
+preamble$ -- 1
+purify$ -- 143
+quote$ -- 0
+skip$ -- 358
+stack$ -- 0
+substring$ -- 495
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 207
+warning$ -- 0
+while$ -- 72
+width$ -- 0
+write$ -- 233
