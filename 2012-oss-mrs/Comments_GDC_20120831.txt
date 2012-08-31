@@ -1,0 +1,163 @@
+Abstract:
+
+1st line - prefer "...properties of candidate K-gaint members..."
+
+Last line - prefer "We highlight likely members for..."
+
+Introduction:
+
+First two sentences are better combined as in "The Milky Way stellar halo has partly formed 
+through the accretion of satellites which are disrupted by tidal forces as they fall into the
+Milky Way's potential.
+
+a couple of lines further down - prefer "Stream kinematics are sensitive..."
+
+Next paragraph, 3rd line.  prefer change "unique" to "distinct" or "different" 
+
+few lines further down.  prefer "the parent object" rather than just "the parent"
+
+Next sentence. prefer "The stream extends past the celestial equator ... footprint but is not 
+detected in existing southern surveys..."   (can't help with the citation needed, which should
+be to the failure to detect the OS in southern surveys).
+
+4/5 lines up from bottom of column - prefer "...Orphan Stream itself..."
+
+2/3 lines at top of right hand column.  You have "and the low luminosity of stream members".
+I'm confused because you could be trying to say one of two different things: a) that the 
+Stream itself is of low total luminosity and so members are rare, or b) that the stream is 
+quite distant so that the apparent magnitudes of the member stars are faint (even though their
+luminosities might be high).  So this needs clarification. 
+
+Final para of Intro.  3rd line.  Strictly we haven't "published" yet, prefer "catalogued"
+
+Last 4 sentences - repetitive use of 'outline' and 'describe'.  And duplicate "following
+section" and "Section 2".  Prefer:
+In the following section we outline... selection.  In section 3 we describe the low
+resolution spectroscopic observations.  The data analysis, ... is discussed in \S 4 and
+in \S 5 the conclusions, predictions and future work are presented."
+
+Section 2.
+
+4th line, top of page 2, left column.  Don't need the "also" - "which makes it difficult".
+
+Last paragraph - as presented it comes across as a bit of a red herring.  May be replace with
+single sentence along the lines "The lack of 2MASS counterparts for the selected stars means 
+we cannot use the (J-H, H-K) diagram to aid the separation of candidate giants from 
+contaminating dwarfs."  At least don't build the expectation that you are going to do 
+something, which you don't then do.
+
+Section 3.  May be add "in the blue" in the second last line of the first para for symmetry.
+
+first line next para:  prefer "standard" to "supplied".
+
+4th line, top of right hand column.  Should indicate that the 3p-4s lines are in the blue
+spectra or give wavelengths.  Or at least separate "b" from Mg I - maybe just call it the 
+b-lines of Mg I in the blue?  (The "b" comes originally from Fraunhofer's description of the
+solar spectrum - he simply labeled things he saw as "D", "b", "H","K", etc.  We now know what
+these lines are, but he didn't).
+
+Figure 1.  I'm not sure I follow this figure, which seems to have alternating white and grey
+columns.  Surely they should be superposed - i.e. for a given velocity bin there is both an
+observed number of stars and a predicted number.  May be show the observed numbers as a 
+histogram and the model predictions as a series of linked points centred on the bin midpoints?
+
+Also, presumably all this applies to the combined data for both fields?  Not sure we actually
+say that anywhere.
+
+Last para of 4.1, second sentence.  Prefer "To isolate potential Orphan Stream members we
+have nominated..."
+
+4.2 - 1st sentence.  probably should give Battaglia & Starkenburg (2012) a ref at the end
+of this sentence.
+
+last line - maybe "weaker" rather than "narrower"?
+
+Sentence starting 4th last line of left column on page 3.  Uses "inclusive" twice.  May be
+something like - "Admittedly this selection criterion is not particularly strict, but..."
+
+3rd line, right hand column on page 3.  You have "As expected"  Not sure why I would expect
+the S/N at 5175 in the blue spectra to be lower than the S/N at 8807 in the red spectra.
+If anything I'd expect the opposite.  I'd suggest dropping the first two sentences and
+rephrasing it to say that the equivalent analysis on the Mg b-lines gives essentially
+similar results.  No real need to say which we did first.
+
+4.3 - first para.  A citation you could use for the stuff for stars fainter than g-g_HB ~ 0
+is Saviane et al (2012, A&A).  And I wouldn't say the situation is "dire", rather it's
+uncalibrated.  May be say that the application of the existing calibration becomes 
+significantly inappropriate (or something like that) for the fainter mags.
+
+Also, while I will have to think about this more, to me if the relation between line strength
+and luminosity flattens at fainter magnitudes - i.e. line strength doesn't decrease as much
+as you'd expect from brighter stars - then I think if you applied the calibration based on
+brighter stars then you'd get a higher metallicity than what the star actually is.
+Hopefully (if I'm right) this doesn't change anything.  What I've inferred is also consistent
+with the corrections applied in section 5.
+
+Figure 3 and the text in second para.  Indeed it does look like there are 4 candidates
+brighter than 17.1 (assuming you're plotting g_o vs (g-r)_0 as you said earlier all photometry
+is dereddened).  But looks to me like only 1 of the 4 is too metal-rich, the one at g ~ 17
+and g-r ~ 0.57.  But you say "Two stars...".  There is another red point at g ~17.2 and
+g-r ~ 0.5.  All I'm saying is the text and the figure need to agree.
+
+I could be picky and say that dSphs have wide abundance ranges and so a metal-richer object
+is just as likely to be a member as the metal-poor object, although it's not in the right
+place on the isochrone for the inferred metallicity.  But if it was younger, then it would be
+bluer without affecting the inferred line strength metallicity too much.  Lucky I'm not quite
+that picky but the referee might be.  Probably should quantify "slightly metal-rich than
+expected for the Stream".  And you're weighting the Newberg abundance result strongly.
+
+Citation for dSphs abundance dispersions could be Tafelmeyer et al 2010 or Tolstoy et al
+2009 ARAA.
+
+first line, left column, page 4.  You need to define what "over-represented" is in respect
+too.
+
+Next paragraph.  OK so it's getting late in the day, but the sentence "Assuming..." is
+confusing.  I think what you've done is correct the inferred metallicities from the line
+strengths for the 3 fainter circled green dots in Fig 3 by 0.1 dex and then average these
+3 corrected abundances with the value for the brightest circled green dot.  If that's correct
+then it needs to be clearer.  But might be better to say that for the brightest green
+circled dot, the abundance from the line strength is in good agreement with the isochrone
+value, and for the fainter three the inferred line strength abundance is also consistent
+with the isochrone, though the line strength abundances are less certain.
+Not clear to me that you can really apply a fixed offset.  And given the uncertainty in the
+offset for 3 or 4 stars used to get -1.74 +/- 0.05, I'd have to say I'm little sceptical 
+about the 0.05 listed error.  You might see if you can plot the stars in Fig. 4 of Saviane
+et al 2012 because the stars we observed fainter than V-V_HB = 0 are close in metallicity to 
+what you're inferring - i.e. might be able to get a direct abundance.
+
+A lot of things in this section are quite dependent on what the average metallicity of
+these 4 stars really is, so we need to be sure of the number.
+
+Last part of this paragraph.  How good is Newberg's abundance?  It might be that -2.1 and
+-1.75 aren't all that different.  I'd also be careful about inferring too much about BHB
+stars necessarily being a more metal-poor pop.  That may be true but there are plenty of
+globular clusters with [Fe/H] = -1.7 that have strong blue HBs.  HB morphology is a can
+of worms - metallicity and age are only two of many things that drive it.  
+
+Paragraph "If the Orphan Stream" in right hand column on page 4.  Careful again - when you
+same "more numerous" you could mean that the density of the stream is higher.  What I think
+you actually mean is that because the stream is closer, there will be more giants brighter
+than some apparent magnitude (i.e. more stars that can be observed at high dispersion).
+And of course this may not be true if the density of the stream is less in this region.
+
+Last paragraph "accompanying paper".  Are the papers really going to go in together (in which
+case why are they separate?)?  Better to use "forthcoming paper".
+
+Section 6 - acknowledgements are not normally a separate section.  Please also add the
+current SkyMapper DP grant to the list - DP120101237.
+
+Final point.  If you look at the V_GSR values for the 5 highly probable members in Table 1,
+then it is notable that the implied intrinsic velocity dispersion of the values is likely 
+very small.
+This is worth commenting on, probably at the end of Section 4.  The velocity of OSS6
+is sufficiently uncertain that it doesn't carry much weight but for these 5 stars
+and assuming the errors as given in a likelihood calculation, the mean velocity is 
+82 +/- 1.6 kms-1 and the intrinsic dispersion is 0.3 +/- 3.3 kms-1.  
+For the 4 stars with low errors the intrinsic dispersion is formally 0.0 +/- 2.4 kms-1.  
+At least in terms of these stars and the line of sight velocities this is a very cold stream 
+(implies motion mostly perpendicular to the line of sight?).  Definitely deserves mention.
+
+Done!
+
+-----------------
