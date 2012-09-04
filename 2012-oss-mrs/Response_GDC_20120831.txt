@@ -44,7 +44,9 @@ Stream itself is of low total luminosity and so members are rare, or b) that the
 quite distant so that the apparent magnitudes of the member stars are faint (even though their
 luminosities might be high).  So this needs clarification. 
 
->>
+>> Point taken. Changed to: "This is largely to be expected given the absence of multi-band
+>> photometry in the southern sky and the total low luminosity of the stream, making it
+>> difficult in reliably identifying Orphan Stream members from halo stars."
 
 Final para of Intro.  3rd line.  Strictly we haven't "published" yet, prefer "catalogued"
 
@@ -86,19 +88,21 @@ b-lines of Mg I in the blue?  (The "b" comes originally from Fraunhofer's descri
 solar spectrum - he simply labeled things he saw as "D", "b", "H","K", etc.  We now know what
 these lines are, but he didn't).
 
->> Separated "b" from Mg I throughout the text, and added the wavelength.
+>> Separated "b" from Mg I throughout the text (e.g. Mg I\,b), and added the wavelength.
 
 Figure 1.  I'm not sure I follow this figure, which seems to have alternating white and grey
 columns.  Surely they should be superposed - i.e. for a given velocity bin there is both an
 observed number of stars and a predicted number.  May be show the observed numbers as a 
 histogram and the model predictions as a series of linked points centred on the bin midpoints?
 
->> 
+>> Done. Please see revised plot and give your thoughts. 
 
 Also, presumably all this applies to the combined data for both fields?  Not sure we actually
 say that anywhere.
 
->>
+>> It does. Altered caption to address this and to describe the updated figure:
+>> "Galactocentric rest frame velocities for stars in both our observed fields (grey), and
+>> predicted Besan\c{c}on velocities which have been scaled to match our observed sample size."
 
 Last para of 4.1, second sentence.  Prefer "To isolate potential Orphan Stream members we
 have nominated..."
@@ -155,15 +159,13 @@ brighter stars then you'd get a higher metallicity than what the star actually i
 Hopefully (if I'm right) this doesn't change anything.  What I've inferred is also consistent
 with the corrections applied in section 5.
 
->> 
+>> I think this is taken care of with the new corrections in Section 5. 
 
 Figure 3 and the text in second para.  Indeed it does look like there are 4 candidates
 brighter than 17.1 (assuming you're plotting g_o vs (g-r)_0 as you said earlier all photometry
 is dereddened).  But looks to me like only 1 of the 4 is too metal-rich, the one at g ~ 17
 and g-r ~ 0.57.  But you say "Two stars...".  There is another red point at g ~17.2 and
-g-r ~ 0.5.  All I'm saying is the text and the figure need to agree.
-
->> 
+g-r ~ 0.5.  All I'm saying is the text and the figure need to agree. 
 
 I could be picky and say that dSphs have wide abundance ranges and so a metal-richer object
 is just as likely to be a member as the metal-poor object, although it's not in the right
@@ -195,7 +197,12 @@ Citation for dSphs abundance dispersions could be Tafelmeyer et al 2010 or Tolst
 first line, left column, page 4.  You need to define what "over-represented" is in respect
 too.
 
->>
+>> You're right. I guess I initially meant compared to the halo but that doesn't really make
+>> any sense when you think about how the halo was heirarchically formed.
+
+>> Changed to: " ... which are known to have a wide metallicity distribution function
+>> \citep{Tafelmayer;et-al_2010, Tolstoy;et-al_2009}, including populations of
+>> extremely metal-poor stars \citep{Kirby;et-al_2010,Frebel;et-al_2010}.
 
 Next paragraph.  OK so it's getting late in the day, but the sentence "Assuming..." is
 confusing.  I think what you've done is correct the inferred metallicities from the line
@@ -211,12 +218,64 @@ about the 0.05 listed error.  You might see if you can plot the stars in Fig. 4 
 et al 2012 because the stars we observed fainter than V-V_HB = 0 are close in metallicity to 
 what you're inferring - i.e. might be able to get a direct abundance.
 
->> 
+>> What you've described is exactly what I did. and the 0.05 is unrealistically small,
+>> especially given the 0.10 dex offset applied. I was going to discuss with the both
+>> of you about this and probably just end up adopting an uncertainty of ~+0.20 dex.
+
+>> For the halo stars at V - V_HB > 0 their V - V_HB and EW_8452 + EW_8662:
+
+>>           V - V_HB      EW_8452+8662
+>> OSS 3:      0.15            3.02
+>> OSS 6:      0.67            2.78
+>> OSS 7:      0.78            2.72
+
+>> OSS 6 & 7 fall at about the mid-point between NGC 6397 and NGC 6254 (M 10) on
+>> Saviane et al's figure 4 (p.s. Saviane has spelt you as "da Costa" twice in ADS entries :-))
+>> and OSS 3 falls slightly more metal-poor than NGC 6254
+
+>> If you take the Carretta et al 2009 scale (as an example):
+
+>> NGC 6397 has [Fe/H] = -1.99
+>> NGC 6254 has [Fe/H] = -1.57
+
+>> Then OSS 6 & 7 have a [Fe/H] ~ -1.78, or 0.13 & 0.15 dex more metal-poor than the Ca II
+>> line measurements indicate. OSS 3 would have a metallicity of ~ -1.65, which is about what
+>> the Ca II lines indicate ([Fe/H] = -1.62). Irrespective of which scale you employ for
+>> NGC 6397 and NGC 6254 from the Saviane paper, the metallicities of OSS 6 & 7 come out at
+>> around ~ -1.80.
+
+>> I have addressed this all in the text:
+
+>> Four of our most probable Orphan Stream members fall between these isochrones. The
+>> brightest of these green points has an abundance which is in good agreement with the
+>> isochrone value. The line strength abundances for the other three stars (OSS 3, 6 and
+>> 7 \-- see Table \ref{tab:oss-members}) are less certain, as these stars are fainter 
+>> than the horizontal branch. 
+
+>> We can ascertain abundance corrections for our stars fainter than the horizontal branch
+>> by comparing our $V-V_{\mbox{HB}}$ and $EW_{\lambda8452} + EW_{\lambda8662}$ with those
+>> measured by \citet{Saviane;et-al_2012} for globular clusters. Only two clusters had
+>> measured Ca \textsc{II} equivalent widths for stars fainter than the horizontal branch:
+>> NGC 6397 with $[\mbox{Fe/H}] = -1.99$ and NGC 6254 with $[\mbox{Fe/H}] = -1.57$ 
+>> \citep[both abundances from][]{Carretta;et-al_2009}. OSS 6 and OSS 7 lie at the mid-point
+>> between these cluster stars, implying an abundance of $[\mbox{Fe/H}] \sim -1.78$, or a 
+>> mean correction of $-0.14$ dex for OSS 6 and 7. Although OSS 3 is 0.15 magnitudes fainter
+>> than the horizontal branch, it has equivalent widths consistent with our inferred
+>> metallicity of $[\mbox{Fe/H}] = -1.62$, so no offset was applied. With corrections 
+>> included for OSS 6 and 7 we find a median stream metallicity from our four most probable
+>> stars of $[\mbox{Fe/H}] = -1.78 \pm 0.08$, which is slightly more metal-rich than the
+>> $[\mbox{Fe/H}] =-2.1$ found by \citet{Newberg;et-al_2010} from BHB stars. If we include
+>> our EMP candidate, the median decreases by 0.01 dex and the spread increases to 0.39\,dex."
+
+>> Will this require a new plot (e.g. adding OSS 3, 6, & 7 to Saviane et al 2012 Fig 4)
+>> or will it be sufficient to try to squeeze in the V - V_HB & EW_8452 & EW_8662 data
+>> into a Table? Or will neither be necessary?
 
 A lot of things in this section are quite dependent on what the average metallicity of
 these 4 stars really is, so we need to be sure of the number.
 
->>
+>> I re-plotted the CMD with a [Fe/H] = -1.78, 10 Gyr isochrone but I didn't shift the 
+>> distance to the stream at all, and things still fit very nicely. 
 
 Last part of this paragraph.  How good is Newberg's abundance?  It might be that -2.1 and
 -1.75 aren't all that different.  I'd also be careful about inferring too much about BHB
@@ -224,7 +283,8 @@ stars necessarily being a more metal-poor pop.  That may be true but there are p
 globular clusters with [Fe/H] = -1.7 that have strong blue HBs.  HB morphology is a can
 of worms - metallicity and age are only two of many things that drive it.  
 
->> 
+>> Granted. Removed the reference to "although this is to be expected,... as BHB stars
+>> .. older, more metal-poor population."
 
 Paragraph "If the Orphan Stream" in right hand column on page 4.  Careful again - when you
 same "more numerous" you could mean that the density of the stream is higher.  What I think
@@ -232,7 +292,11 @@ you actually mean is that because the stream is closer, there will be more giant
 than some apparent magnitude (i.e. more stars that can be observed at high dispersion).
 And of course this may not be true if the density of the stream is less in this region.
 
->> 
+>> Point taken. Changed to: "Thus, if our observations and analyses are repeated at
+>> $(271^\circ$, $38^\circ)$, we predict K giant stream members of brighter apparent
+>> magnitude will be recovered. If the stream density is similar to or higher than what we
+>> observe at $(l, b) = (250\,^\circ, 50\,^\circ)$ then more K giant members are likely
+>> to be recovered in the stripe 1540 field."
 
 Last paragraph "accompanying paper".  Are the papers really going to go in together (in which
 case why are they separate?)?  Better to use "forthcoming paper".
@@ -255,8 +319,31 @@ For the 4 stars with low errors the intrinsic dispersion is formally 0.0 +/- 2.4
 At least in terms of these stars and the line of sight velocities this is a very cold stream 
 (implies motion mostly perpendicular to the line of sight?).  Definitely deserves mention.
 
->> 
+>> The metallicity section was at the end of Section 4, and I felt that this might suit
+>> better either (1) in the velocities sub-section or (2) in the conclusions. But, the
+>> velocities sub-section in Section 4 hadn't fully identified which were OSS members.
+>> So, I'd argue putting this text as the second-last paragraph in the conclusions
+>> (However, the placement of this paragraph is only a weak preference):
+
+>> "Although OSS 6 has an uncertain radial velocity, using a maximum-likelihood estimation
+>> we find the mean stream galactocentric velocity at $(l, b) = (250\,^\circ, 50\,^\circ)$ 
+>> from five stars to be $V_{GSR} = 82 \pm 1.6$ km s$^{-1}$ and the intrinsic dispersion 
+>> to be $0.3 \pm 3.3$ km s$^{-1}$. For our four stars with low radial velocity errors this
+>> dispersion is found to be $0.00 \pm 2.4$ km s$^{-1}$. These velocities indicate that the
+>> Orphan Stream is a very cold stream, and implies their motion is largely perpendicular 
+>> to the line of sight."
+
+>> Also added this as the second last line in the abstract:
+>> "The Orphan Stream appears extremely cold, with an intrinsic dispersion of less than
+>> $0.3 \pm 3.3$ km s$^{-1}$."
+
+>> Thanks for pointing that out Gary.
 
 Done!
 
 -----------------
+
+Other changes made:
+
+Replaced "the union of" to "the intersection of".
+Updated the photometric selection with the information provided by Stefan.

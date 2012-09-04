@@ -34,10 +34,17 @@ hist_besancon *= len(besancon_vgsr) * binx/10.
 
 #obs_ax.hist([obs_vgsr, besancon_vgsr], bins=bins, histtype='bar', color=['grey', 'none'], label=['Observed', u'Besançon'])
 #obs_ax.bar([bins[:-1], bins[:-1]], [hist_obs, hist_besancon], [np.diff(bins), np.diff(bins)], color=['r', 'g'])
-obs_ax.bar(bins[:-1], hist_obs, np.diff(bins)/2, color='#dddddd', label='Observed')
-obs_ax.bar(bins[:-1] + np.diff(bins)[0]/2, hist_besancon, np.diff(bins)/2, color='white', label=u'Besançon (Robin et al. 2003)')
+
+
+
+#obs_ax.bar(bins[:-1] + np.diff(bins)[0]/2, hist_besancon, np.diff(bins)/2, color='white', label=u'Besançon (Robin et al. 2003)')
+#obs_ax.scatter(bins[:-1] + np.diff(bins)[0]/2, hist_besancon, facecolor='k', zorder=3)
+obs_bar = obs_ax.bar(bins[:-1], hist_obs, np.diff(bins), color='#cccccc', label='Observed')
+obs_plot = obs_ax.plot(bins[:-1] + np.diff(bins)[0]/2, hist_besancon, '--ok', zorder=2, label=u'Besançon model (Robin et al. 2003)')
+
 
 obs_ax.set_xlim(-250, 250)
+obs_ax.set_ylim(0, obs_ax.get_ylim()[1])
 obs_ax.set_xlabel('$V_{GSR}$ [km s$^{-1}$]', fontsize=labelsize)
 obs_ax.set_ylabel('$N$', fontsize=labelsize)
 
@@ -45,10 +52,11 @@ patch = Rectangle((oss_vgsrs[0], 0), oss_vgsrs[1] - oss_vgsrs[0], obs_ax.get_yli
 obs_ax.add_patch(patch)
 
 idx = np.searchsorted(bins, oss_vgsr_centroid) - 1
-obs_ax.annotate('Orphan Stream', (oss_vgsr_centroid, hist_obs[idx] + 5), (oss_vgsr_centroid, obs_ax.get_ylim()[1]/4), horizontalalignment='center', arrowprops={'arrowstyle': '->'})
+obs_ax.annotate('Orphan Stream', (oss_vgsr_centroid, hist_obs[idx] + 5), (oss_vgsr_centroid, obs_ax.get_ylim()[1]/4), horizontalalignment='center', arrowprops={'arrowstyle': '->'}, fontsize=13)
 
+handles, labels = obs_ax.get_legend_handles_labels()
+plt.legend(handles[::-1], labels[::-1])
 
-plt.legend()
 plt.draw()
 plt.show()
 

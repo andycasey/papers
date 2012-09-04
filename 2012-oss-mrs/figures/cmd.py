@@ -1,5 +1,6 @@
 
-good_candidate_oids = [570, 169, 143, 604, 337, ]#571, 76, 264]
+good_candidate_oids = [570, 169, 143, 604, 337]# 571, 76, 264]
+
 #upperlimit_candidate_oids = [798, 570, 932, 604, 424, 672, 685]
 upperlimit_candidate_oids = []
 dodgy_candidate_oid = False
@@ -46,7 +47,7 @@ if dodgy_candidate_oid:
 g, r = np.loadtxt('giardi-10gyr-1.5.data', unpack=True)
 ax.plot(g - r, g + newberg_distance_modulus, 'k:', zorder=-10, label='[Fe/H] $=-1.5$ at $21.4$ kpc')
 
-g, r = np.loadtxt('giardi-10gyr-1.74.data', unpack=True)
+g, r = np.loadtxt('giardi-10gyr-1.79.data', unpack=True)
 ax.plot(g - r, g + my_distance_modulus, 'k-', lw=2, zorder=-1, label='[Fe/H] $=-1.74$ at $24$ kpc')
 
 g, r = np.loadtxt('giardi-10gyr-2.0.data', unpack=True)
@@ -67,6 +68,10 @@ scat_upperlims = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh[idx], marker='v', 
 # Plot normal measurements
 idx = np.where(ew > 0)
 scat = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh[idx], edgecolor='k', vmin=-2.8, vmax=-0.8, s=50, cmap=my_cmap)
+
+
+for g__, gmr__, feh__ in zip(g0[idx], g0[idx] - r0[idx], feh[idx]):
+    print g__, gmr__, feh__
 
 
 
