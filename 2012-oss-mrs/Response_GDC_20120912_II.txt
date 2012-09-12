@@ -58,6 +58,12 @@ page 2, left column 3rd line.  Surely one of the discovery papers can fill "[cit
 2nd paragraph of 4.1.  Think we need to say that "stars" in the Besancon models were selected in the same way as the observed sample, i.e. same colour and magnitude cuts.  (New Fig 1 is fine).
 >> Whoops! I had forgotten to do this after Stefan gave me the true selection criteria. I've done it now though and re-plotted the histogram. The kinematic distribution did not change significantly. I've also added the following as the second sentence in 2nd paragraph of 4.1: " We have selected predicted stars from Besan\c{c}on using the same criterion outlined in \S\ref{sec:target-selection} after using the \citet{Jordi;et-al_2006} colour transformations."
 
+>> In light of the new Besancon histogram, there is a hint of Orphan Stream there in kinematics alone, so I have altered the text:
+>> "No statistically significant peak representative of the Orphan Stream exists in our sample"
+>> to
+>> "There is no sharp kinematic peak representative of the Orphan Stream exists in our sample."
+>> The statistical significance is probably questionable, i.e. it could be argued either way, so rather than make a bold statement I've erred on the side of caution -- since we recover OSS members quite reliably using a combination of cuts anyways.
+
 
 5th line of 4.2 on page 3 "narrow" ==> "narrower"
 >> Changed
@@ -68,6 +74,8 @@ page 2, left column 3rd line.  Surely one of the discovery papers can fill "[cit
 >> Sorry: I can't find this anywhere in the text.
 
 3rd para - probably put "i.e., consistent with zero" after "0.3 +/- 3.3 kms-1".  Again the numbers might change if the sample of members changes.  And this actual paragraph will probably now come before the conclusions section.
+
+>> Added.
 
 OK, enough!
 
