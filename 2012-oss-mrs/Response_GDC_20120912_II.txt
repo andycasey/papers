@@ -1,0 +1,79 @@
+
+Ok, now the draft.  Given my previous message I think 4.3 is likely to get revised a bit along the lines:
+- discuss Ca II metallicities (with the calibration issues, etc)
+- discuss isochrone metallicities given Newburg distance.
+- correlate these estimates
+==> sample of most probable members  (and less likely, and probably not, members)
+Then given the probable members, likely first revise distance estimate - will give minor adjustment to isochrone abundances.
+Show isochrone fit.  Then in probably new section discuss:
+a) metallicity spread of probable members - noting if significant, then expect progenitor likely dSph.  If small, then progenitor more likely a GC - as in Wylie de Boer et al 2012 ApJ 755 35 for Aquarius.  Probably can't say too much because will depend on confirmation of membership, e.g. the metal-poor star.  But we can speculate.
+b) the line of site velocity dispersion - seemingly very small.  
+
+More specific comments.  (Happy with responses to my earlier comments).
+
+Abstract.  I think technically the AAT is still the Anglo-Australian Telescope despite the name change of the AAO.  May be stick with AAT?
+
+>> You're right. I knew that one of them (AAO/AAT) had changed names and the other had not. I got them mixed up. Corrected in text. 
+
+Second last sentence of Abstract.  I'd prefer something like "The observed velocity dispersion of our highest probability members is consistent with arising from the velocity errors alone, indicating that, at least as regards the
+line-of-sight, the Orphan Stream is kinematically quite cold.
+
+>> That's better: Changed.
+
+top of right hand column page 1, first 4 lines:
+"total low luminosity" ==> "low total luminosity"
+>> Changed.
+
+"in reliably identifying" ==> "to separate reliably"
+>> Altered to "to reliably separate Orphan Stream members from halo stars": "to separate reliably" didn't quite make sense in context.
+
+"will be detected" ==> "will be established"
+>> Changed.
+
+and I think the Keller et al reference should go after "SkyMapper" rather than at the end of the sentence, although not a big issue.
+>> Placed after "SkyMapper telescope".
+
+Next para - maybe "Consequently, the fainter…"
+>> Changed
+
+maybe an "and" between Xue et al and Koposov et al rather than a semi-colon.
+>> Added
+
+maybe "kinematic maps of these streams"  - we're not talking specifically of the OS here.
+>> Changed to "More complete photometric and kinematic maps of these low total luminosity streams may provide the best test as to whether this mass discrepancy is an artefact of incomplete observations."
+
+Last para:
+"seven highly probable Orphan Stream candidates"  - the 'seven' might need changing.  It is after all 5 stars in section 5.
+>> #TODO
+
+page 2, left column 3rd line.  Surely one of the discovery papers can fill "[citation needed]".
+>> I checked them all just now, and none of them make this claim. I can't remember where I first got this number from, but it's about right. I don't think it's too big of a claim to leave there without a citation. I've removed the [citation needed], and I'm happy to see what the referee says.
+
+3 lines from the bottom: "discriminate dwarfs from giants"  (i.e. and ==> from)
+>> Changed
+
+2 lines from the bottom "spectra" is missing after "arm".
+>> Added
+
+2nd paragraph of 4.1.  Think we need to say that "stars" in the Besancon models were selected in the same way as the observed sample, i.e. same colour and magnitude cuts.  (New Fig 1 is fine).
+>> Whoops! I had forgotten to do this after Stefan gave me the true selection criteria. I've done it now though and re-plotted the histogram. The kinematic distribution did not change significantly. I've also added the following as the second sentence in 2nd paragraph of 4.1: " We have selected predicted stars from Besan\c{c}on using the same criterion outlined in \S\ref{sec:target-selection} after using the \citet{Jordi;et-al_2006} colour transformations."
+
+
+5th line of 4.2 on page 3 "narrow" ==> "narrower"
+>> Changed
+
+(Haven't made any specific comments on current 4.3 - not appropriate if it's going to be revised as I suggested).
+
+2nd para of Section 5.  I think the words "brighter than our current limit of g ~ 18" need to go in after "members" as it doesn't quite make sense otherwise.  
+>> Sorry: I can't find this anywhere in the text.
+
+3rd para - probably put "i.e., consistent with zero" after "0.3 +/- 3.3 kms-1".  Again the numbers might change if the sample of members changes.  And this actual paragraph will probably now come before the conclusions section.
+
+OK, enough!
+
+Cheers,
+Gary
+
+
+
+

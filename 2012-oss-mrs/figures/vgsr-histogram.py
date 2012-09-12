@@ -16,7 +16,7 @@ matplotlib.rc('font', **{'sans-serif' : 'Arial',
                          'family' : 'sans-serif'})
 
 obs_vgsr = np.loadtxt('velocities.data', delimiter=',', usecols=(-1,))
-besancon_vgsr = np.loadtxt('besancon.data', usecols=(-1,))
+besancon_vgsr = np.loadtxt('besancon_sel.txt', usecols=(-2,))
 
 
 bins = np.arange(-250, 250, binx)
@@ -30,7 +30,7 @@ hist_obs, bins = np.histogram(obs_vgsr, bins=bins)
 
 # Normalise the besancon results
 hist_besancon, bins = np.histogram(besancon_vgsr, bins=bins, normed=True)
-hist_besancon *= len(besancon_vgsr) * binx/10.
+hist_besancon *= len(besancon_vgsr) * binx/10. *4.
 
 #obs_ax.hist([obs_vgsr, besancon_vgsr], bins=bins, histtype='bar', color=['grey', 'none'], label=['Observed', u'Besançon'])
 #obs_ax.bar([bins[:-1], bins[:-1]], [hist_obs, hist_besancon], [np.diff(bins), np.diff(bins)], color=['r', 'g'])
