@@ -1,0 +1,30 @@
+Andy:
+
+Going through the revised manuscript, will send comments later but I thought this point deserves a separate e-mail.  It concerns how to deal with the abundances from the Ca II and membership criteria.
+
+What I think we should be doing is recognising that for Stream members there should be some level of consistency between the metallicity inferred from the Ca II line strengths - which explicitly assumes each candidate is a member through the use of the g-g_HB luminosity criteria - and the metallicity inferred from isochrone fit - which again explicitly assumes that (in the first instance) the distance is that from Newberg et al.
+
+So for each of the 18 stars you can get two estimates of [Fe/H]:
+- the Ca II triplet ones, which will be uncertain for the fainter stars because of calibration issues (and line strength error) but still presumably internally consistent
+- the [Fe/H] inferred from the fitting an isochrone to the g-r colour assuming the Newberg distance, which will be pretty uncertain for the bluer colours (there's not much difference between a -2.5 and -2.0 isochrone for example),
+BUT
+for members there should be some level of correlation between these two estimates, although not necessarily linear.
+
+You could even make this plot - the advantage is that it doesn't require us to be making any assumption about the extent of any metallicity spread present - basically redder stars that true members should have stronger lines and vice versa.  (Assuming there isn't a significant age spread, which is probably reasonable).
+
+Then we could use this plot to decide on a final sample of high probability members and perhaps even then iterate on the distance to potentially improve the consistency between the line strength and the isochrone-derived abundances.
+
+In this way we can probably say that the star at (17, 0.57) is likely not a member because its isochrone
+abundance is something like -2.0 but the inferred line strength abundance is like ~ -1.0.  Similarly, the star at (16.1, 0.57) is probably also not a member because the isochrone inferred metallicity must be less than -2.5 whereas the line strength is more like -1.5.  (We're also assuming that the stars are RGB stars - which is certainly OK for mags fainter than the HB and probably OK for the brighter objects - in a globular cluster I think it's something 3 RGB stars for every AGB star).   On the other hand the metal-poor star looks like it would be a member because of the reasonable consistency between the two metallicity estimates.  Similarly with the other points that lie near the -1.8 isochrone.  That then makes the discussion of any abundance spread among the members more natural.
+
+We could then have a table which gives the highly probable members first, then the less likely members and then probable non-members - i.e. give data for all 18 stars.  And that gets around the potential problem of saying in Paper II that we observed at high-res stars that weren't highly probable members from this paper - we were checking our criteria in case we did 'mis-classify' stars here.
+
+Comments?
+
+Cheers,
+Gary
+
+
+
+
+
