@@ -1,6 +1,15 @@
 
 good_candidate_oids = [570, 169, 143, 604, 337]# 571, 76, 264]
 
+# Using isochrone consistency check
+good_candidate_oids.extend([917, 768, 76, 685, 932])
+
+# OSS 1
+#good_candidate_oids.append(492)
+
+# OSS 5
+#good_candidate_oids.append(672)
+
 #upperlimit_candidate_oids = [798, 570, 932, 604, 424, 672, 685]
 upperlimit_candidate_oids = []
 dodgy_candidate_oid = False
@@ -56,28 +65,28 @@ ax.plot(g - r, g + newberg_distance_modulus, 'k--', zorder=-10, label='[Fe/H] $=
 
 
 # Load in our candidates
-oid, g0, g, r0, ew, feh = np.loadtxt('all-candidates.data', usecols=(0, 19, 9, 20, 5, 25), unpack=True)
+oid, g0, g, r0, ew, feh_cat, feh_iso, feh_iso_upperlimit = np.loadtxt('all-candidates.data', usecols=(0, 19, 9, 20, 5, 25, 26, 27), unpack=True)
 
-table_data = np.loadtxt('all-candidates.data', usecols=(0, 1, 2, -7, -6, 4, 3, 5, -1, ))
+table_data = np.loadtxt('all-candidates.data', usecols=(0, 1, 2, 19, 20, 4, 3, 5, 25, 26 ))
 
 # Plot upper measurements
 idx = np.where(ew < 0)
-scat_upperlims = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh[idx], marker='v', edgecolor='k', vmin=-2.8, vmax=-0.8, s=50, cmap=my_cmap)
+scat_upperlims = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh_cat[idx], marker='v', edgecolor='k', vmin=-2.8, vmax=-0.8, s=50, cmap=my_cmap)
 
 
 # Plot normal measurements
 idx = np.where(ew > 0)
-scat = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh[idx], edgecolor='k', vmin=-2.8, vmax=-0.8, s=50, cmap=my_cmap)
+scat = ax.scatter(g0[idx] - r0[idx], g0[idx], c=feh_cat[idx], edgecolor='k', vmin=-2.8, vmax=-0.8, s=50, cmap=my_cmap)
 
 
-for g__, gmr__, feh__ in zip(g0[idx], g0[idx] - r0[idx], feh[idx]):
+for g__, gmr__, feh__ in zip(g0[idx], g0[idx] - r0[idx], feh_cat[idx]):
     print g__, gmr__, feh__
 
 
 
 gc_gr0 = []
 gc_g = []
-print "OID RA DEC G0 R0 VGSR VERR EW FEH"
+print "OID RA DEC G0 R0 VGSR VERR EW FEH_CAT FEH_ISO"
 for candidate_oid in good_candidate_oids:
     idx = np.where(oid == candidate_oid)[0]
     
@@ -92,7 +101,7 @@ for candidate_oid in good_candidate_oids:
     gc_gr0.append(g0[idx] - r0[idx])
     gc_g.append(g0[idx])
     
-    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f" % tuple(table_data[idx][0])
+    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f   %2.2f" % tuple(table_data[idx][0])
     
 ax.scatter(gc_gr0, gc_g, marker='o', facecolor='none', edgecolor='k', s=130, zorder=-1)
 
@@ -119,7 +128,7 @@ ax.scatter(gc_gr0, gc_g, marker='v', facecolor='none', edgecolor='k', s=130, zor
 cbar = plt.colorbar(scat)
 
 # Set labels
-cbar.set_label('[Fe/H]', fontsize=labelsize)
+cbar.set_label('[Fe/H] (Ca II lines)', fontsize=labelsize)
 ax.set_xlabel('$g - r$', fontsize=labelsize)
 ax.set_ylabel('$g$', fontsize=labelsize)
 
@@ -135,5 +144,43 @@ ax.set_ylim(ax.get_ylim()[::-1])
 plt.savefig('cmd.pdf')
 plt.close(fig)
 
+# Plot the [Fe/H]_CaT vs [Fe/H]_iso
 
-# Add in our final measurement which didn't have a metallicty determination
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+# plot the normal ones first
+idx = np.where(feh_iso_upperlimit == 0)[0]
+ax.scatter(feh_cat[idx], feh_iso[idx], marker='o', facecolor='k')
+
+# now plot the lower limits
+idx = np.where(feh_iso_upperlimit == 1)[0]
+print "idx ", idx
+ax.errorbar(feh_cat[idx], feh_iso[idx], fmt='ok', lolims=True, yerr=0.1)
+
+intersect = -2.25
+minimum_isochrone_metallicity = -2.28
+pm_window = 0.30
+ax.plot([-3.0, -0.5], [-3.0, -0.5], 'k-')
+ax.plot([-3.0, -0.5], [-3.0 - pm_window, -0.5 - pm_window], 'k:', zorder=-1)
+ax.plot([-3.0, intersect - pm_window, -0.5], [intersect, intersect, -0.5 + pm_window], 'k:', zorder=-1)
+
+ax.fill_between([-3.0, intersect - pm_window, -0.50], [-3.0 - pm_window, intersect - pm_window*2, -0.50 - pm_window], [intersect, intersect, -0.5 + pm_window], facecolor='g', alpha=0.5, zorder=-2)
+
+ax.text(-0.6, -2.5, "Minimum isochrone metallicity", color='#111111', horizontalalignment="right", fontsize=labelsize)
+ax.plot([-3.0, -0.5], [minimum_isochrone_metallicity, minimum_isochrone_metallicity], '--', color='#111111', zorder=-1)
+
+
+# Add a representative error 
+ax.errorbar([-2.75], [-0.75], color='k', xerr=0.2, yerr=0.2)
+
+ax.set_xlabel(r'[Fe/H] (Ca II lines)', fontsize=labelsize)
+ax.set_ylabel(r'[Fe/H] (Isochrone fitting)', fontsize=labelsize)
+
+ax.set_xlim([-3.0, -0.5])
+ax.set_ylim([-3.0, -0.5])
+plt.draw()
+
+plt.savefig('feh.pdf')
+plt.close(fig)
+
