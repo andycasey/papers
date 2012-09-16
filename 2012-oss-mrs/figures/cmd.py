@@ -14,7 +14,7 @@ good_candidate_oids.extend([917, 768, 76, 685, 932])
 upperlimit_candidate_oids = []
 dodgy_candidate_oid = False
 
-distance = 23.7 #kpc (my measurement)
+distance = 23.5 #kpc (my measurement)
 my_distance_modulus = 5 * np.log10(distance * 1000) - 5
 newberg_distance_modulus = 5 * np.log10(21.4 * 1000) - 5 # Newberg et al 2010 estimate distance at (l, b) = (250, 50) of 21.4 +/- 1.0 kpc
 
@@ -56,8 +56,8 @@ if dodgy_candidate_oid:
 g, r = np.loadtxt('giardi-10gyr-1.5.data', unpack=True)
 ax.plot(g - r, g + newberg_distance_modulus, 'k:', zorder=-10, label='[Fe/H] $=-1.5$ at $21.4$ kpc')
 
-g, r = np.loadtxt('giardi-10gyr-1.79.data', unpack=True)
-ax.plot(g - r, g + my_distance_modulus, 'k-', lw=2, zorder=-1, label='[Fe/H] $=-1.74$ at $24$ kpc')
+g, r = np.loadtxt('giardi-10gyr-1.71.data', unpack=True)
+ax.plot(g - r, g + my_distance_modulus, 'k-', lw=2, zorder=-1, label='[Fe/H] $=-1.71$ at $24$ kpc')
 
 g, r = np.loadtxt('giardi-10gyr-2.0.data', unpack=True)
 ax.plot(g - r, g + newberg_distance_modulus, 'k--', zorder=-10, label='[Fe/H] $=-2.0$ at $21.4$ kpc')
@@ -65,9 +65,12 @@ ax.plot(g - r, g + newberg_distance_modulus, 'k--', zorder=-10, label='[Fe/H] $=
 
 
 # Load in our candidates
-oid, g0, g, r0, ew, feh_cat, feh_iso, feh_iso_upperlimit = np.loadtxt('all-candidates.data', usecols=(0, 19, 9, 20, 5, 25, 26, 27), unpack=True)
+#oid, g0, r0, ew, feh_cat, feh_iso, feh_adpoted, feh_iso_upperlimit = np.loadtxt('all-candidates.data', usecols=(0, 19, 20, 5, 25, 26, 27, 28)
+cols = (0, 1, 2, 19, 20, 4, 3, 5, 25, 26, 27, 28)
 
-table_data = np.loadtxt('all-candidates.data', usecols=(0, 1, 2, 19, 20, 4, 3, 5, 25, 26 ))
+oid, ra, dec, g0, r0, vgsr, verr, ew, feh_cat, feh_iso, feh_adopted, feh_iso_upperlimit = np.loadtxt('all-candidates.data', usecols=cols, unpack=True)
+
+table_data = np.loadtxt('all-candidates.data', usecols=cols)
 
 # Plot upper measurements
 idx = np.where(ew < 0)
@@ -85,8 +88,8 @@ for g__, gmr__, feh__ in zip(g0[idx], g0[idx] - r0[idx], feh_cat[idx]):
 
 
 gc_gr0 = []
-gc_g = []
-print "OID RA DEC G0 R0 VGSR VERR EW FEH_CAT FEH_ISO"
+gc_g0 = []
+print "OID RA DEC G0 R0 VGSR VERR EW FEH_CAT FEH_ISO FEH_ADOPTED UPPERLIM"
 for candidate_oid in good_candidate_oids:
     idx = np.where(oid == candidate_oid)[0]
     
@@ -99,14 +102,14 @@ for candidate_oid in good_candidate_oids:
         raise a
     
     gc_gr0.append(g0[idx] - r0[idx])
-    gc_g.append(g0[idx])
+    gc_g0.append(g0[idx])
     
-    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f   %2.2f" % tuple(table_data[idx][0])
+    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f   %2.2f   %2.2f  %i" % tuple(table_data[idx][0])
     
-ax.scatter(gc_gr0, gc_g, marker='o', facecolor='none', edgecolor='k', s=130, zorder=-1)
+ax.scatter(gc_gr0, gc_g0, marker='o', facecolor='none', edgecolor='k', s=130, zorder=-1)
 
 gc_gr0 = []
-gc_g = []
+gc_g0 = []
 for candidate_oid in upperlimit_candidate_oids:
     idx = np.where(oid == candidate_oid)[0]
 
@@ -119,16 +122,16 @@ for candidate_oid in upperlimit_candidate_oids:
         raise a
     
     gc_gr0.append(g0[idx] - r0[idx])
-    gc_g.append(g0[idx])
+    gc_g0.append(g0[idx])
 
-    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f" % tuple(table_data[idx][0])
+    print "%i   %3.5f   %3.5f   %2.2f   %2.2f   %3.1f   %3.1f   %3.4f   %2.2f   %2.2f   %i" % tuple(table_data[idx][0])
 
-ax.scatter(gc_gr0, gc_g, marker='v', facecolor='none', edgecolor='k', s=130, zorder=-1)
+ax.scatter(gc_gr0, gc_g0, marker='v', facecolor='none', edgecolor='k', s=130, zorder=-1)
 
 cbar = plt.colorbar(scat)
 
 # Set labels
-cbar.set_label('[Fe/H] (Ca II lines)', fontsize=labelsize)
+cbar.set_label('[Fe/H] (adopted)', fontsize=labelsize)
 ax.set_xlabel('$g - r$', fontsize=labelsize)
 ax.set_ylabel('$g$', fontsize=labelsize)
 
@@ -172,7 +175,7 @@ ax.plot([-3.0, -0.5], [minimum_isochrone_metallicity, minimum_isochrone_metallic
 
 
 # Add a representative error 
-ax.errorbar([-2.75], [-0.75], color='k', xerr=0.2, yerr=0.2)
+ax.errorbar([-2.70], [-0.80], color='k', xerr=0.2, yerr=0.2)
 
 ax.set_xlabel(r'[Fe/H] (Ca II lines)', fontsize=labelsize)
 ax.set_ylabel(r'[Fe/H] (Isochrone fitting)', fontsize=labelsize)
