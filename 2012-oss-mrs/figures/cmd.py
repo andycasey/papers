@@ -1,3 +1,9 @@
+from matplotlib import rc
+rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+## for Palatino and other serif fonts use:
+#rc('font',**{'family':'serif','serif':['Palatino']})
+#rc('text', usetex=True)
+
 
 good_candidate_oids = [570, 169, 143, 604, 337]# 571, 76, 264]
 
