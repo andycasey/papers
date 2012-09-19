@@ -1,41 +1,95 @@
-Good morning Andy - here are what are hopefully my final comments on this paper.  Sure, it's taken a bit of too-ing and fro-ing but its a better paper for it.
+>> So I did write in-line comments to each of these, and then at some stage I rebooted and hadn't saved the comments. These comments
+>> will be brief but they have all been implemented and there is nothing controversial that has changed except that the "four most
+>> probable members" that fit on the isochrone is now actually three! members because that high proper-motion one was near the base
+>> of the giant branch.
 
-Of course this version still doesn't have the couple of sentences that need to go in, probably in section 4.3, after the paragraph that ends "…fall within the shaded region illustrated in Figure 3." and before the para beginning "We have adopted…"
+Good morning Andy - here are what are hopefully my final comments on this paper.  Sure, it's taken a bit of too-ing and fro-ing but 
+its a better paper for it.
+
+Of course this version still doesn't have the couple of sentences that need to go in, probably in section 4.3, after the paragraph 
+that ends "…fall within the shaded region illustrated in Figure 3." and before the para beginning "We have adopted…"
 
 The text would be something like:
-We have then investigated the status of these 10 stars in the PPMXL proper motion catalogue (ref), finding entries for 8 (?) of the candidates.  One star (OSS8) has a listed proper motion that is different from that of the others at the 3\sigma level [or whatever].  Consequently, we have reduced the membership likelihood  of this star from "High" to "Medium".
+We have then investigated the status of these 10 stars in the PPMXL proper motion catalogue (ref), finding entries for 8 (?) of the 
+candidates.  One star (OSS8) has a listed proper motion that is different from that of the others at the 3\sigma level [or whatever].  
+Consequently, we have reduced the membership likelihood  of this star from "High" to "Medium".
 
-So then there should be 9 "High" classifications in Table 1, and the velocity measurements, etc, can note that they have been calculated for these 9 stars - removes any need discuss the fact that sigma goes down when OSS8 is excluded.  I think Table 1 should have a first column which gives an ID for the star - e.g. the OSS# we have used previously.  Saves quoting in the next paper complex ids like J1046219+004322!
+>> Added.
+
+So then there should be 9 "High" classifications in Table 1, and the velocity measurements, etc, can note that they have been calculated 
+for these 9 stars - removes any need discuss the fact that sigma goes down when OSS8 is excluded.  I think Table 1 should have a first 
+column which gives an ID for the star - e.g. the OSS# we have used previously.  Saves quoting in the next paper complex ids like J1046219+004322!
+         
+>> Done. I have had to make some adjustments to the Table to get it to fit in. Otherwise having it rotated meant an extra page, and
+>> effectively two half-pages of wasted space.
 
 OK, now specific comments.
 
-1.  Author order.  We've never discussed this (well I don't recall any discussion) and normally I don't really care whether I am "et" or "al", but for this paper I do feel I have made quite a few contributions that have improved the science content.  So I wouldn't object to be listed second rather than third.  But you're in a better position to know whether that is appropriate or not, and I'm not going to lose any sleep over it if it remains as is.
+1.  Author order.  We've never discussed this (well I don't recall any discussion) and normally I don't really care whether I am "et" or "al", 
+but for this paper I do feel I have made quite a few contributions that have improved the science content.  So I wouldn't object to be listed 
+second rather than third.  But you're in a better position to know whether that is appropriate or not, and I'm not going to lose any sleep over
+it if it remains as is.
+
+>> I agree with this,
 
 2.  Abstract (yes, I know I'm being nit-picky again, sorry).
+>> Note: I have re-jigged the sentences in the abstract so that it finishes with the hard-hitting dSph conclusion.
+
 3rd line - you corrected Anglo, but not Astronomical as regards the telescope.  It's the Anglo-Australian Telescope.
+>> Corrected.
+
 3rd line - How about: "With modest S/N and" ==> "From modest S/N spectra and"
+>> DOne.
 4th - 7th lines.  As it is now the "more metal-rich than previously found…" literally applies to the intrinsic dispersion.
 I think it would be better to separate the mean and the dispersion sentences as, for example:
-"Our data indicates… …stream metallicity of [Fe/H] = -1.71 +/- error, which is more metal-rich than previously found and unbiased by spectral type.  Further, the significant metallicity dispersion displayed by our probable members, 0.56 dex, suggests that the unidentified Orphan Stream parent was a dSph satellite."
-(note that the error in the mean metallicity could simply be 0.56/sqrt(9) = 0.19, i.e., standard error of the mean.  But we definitely need to give some number for the uncertainty in the mean metallicity).
-9th-10th lines.  The 0.2 +/- 3.1 kms-1 number is the estimate of the intrinsic velocity dispersion, not the observed dispersion.  I think you could drop the number and just say "The observed velocity dispersion….  is consistent with arising from the velocity uncertainties alone."
-11th line "This is indicative" ==> "This indicates".
+"Our data indicates… …stream metallicity of [Fe/H] = -1.71 +/- error, which is more metal-rich than previously found and unbiased by spectral type.  
+Further, the significant metallicity dispersion displayed by our probable members, 0.56 dex, suggests that the unidentified Orphan Stream parent was a dSph satellite."
+(note that the error in the mean metallicity could simply be 0.56/sqrt(9) = 0.19, i.e., standard error of the mean.  But we definitely need to 
+give some number for the uncertainty in the mean metallicity).
+>> Done.
 
-3.  Discussion at the end of 4.3.  You have "…it is clear that the four most probable members lie almost precisely on this isochrone".  I think this is a left-over from the previous approach.  We now have 9 most probable members and only a subset are precisely on this isochrone - the more metal-poorer and more metal-richer aren't.  So this bit needs slight revision - something like with this mean metallicity and adopted distance, 4 of the 9 stars are on the isochrone.  Or may drop it altogether?  Similarly the bit in Section 5 "our most probable members lay perfectly on a 10 Gys isochrone of [Fe/H] = -1.71" needs either revision or dropping.
+9th-10th lines.  The 0.2 +/- 3.1 kms-1 number is the estimate of the intrinsic velocity dispersion, not the observed dispersion.  I think you could 
+drop the number and just say "The observed velocity dispersion….  is consistent with arising from the velocity uncertainties alone."
+>> Done.
+11th line "This is indicative" ==> "This indicates".
+<< Done.
+
+3.  Discussion at the end of 4.3.  You have "…it is clear that the four most probable members lie almost precisely on this isochrone".  I think this is
+a left-over from the previous approach.  We now have 9 most probable members and only a subset are precisely on this isochrone - the more metal-poorer 
+and more metal-richer aren't.  So this bit needs slight revision - something like with this mean metallicity and adopted distance, 4 of the 9 stars are 
+on the isochrone.  Or may drop it altogether?  Similarly the bit in Section 5 "our most probable members lay perfectly on a 10 Gys isochrone of [Fe/H] = -1.71" needs either revision or dropping.
+>> Re-worded
 
 4. Other minor things.
 5 lines up from para starting "In this letter", right hand column page 1.  "full spatial extent of the stream" ==> "full spatial extent of the Orphan Stream"
+>> COrrected.
+
 2nd line, left column page 3.  "criterion outlined" ==> "criterion as outlined"
+>> Done.
 7th line, same place.  "There is no sharp kinematic" ==> "There is no obvious sharp kinematic"
+>> Corrected.
 next line - ditch "exists" - not required.
+>> Removed.
 2nd last line before 4.2.  Change "kinematics" to "velocities"
+>> Changed.
 1st line of 4.2 "widths" ==> "width"  (the line has only one width).
-Second paragraph of Section 5.  You have two sentences both starting "If the…".  I suggest that maybe we could just drop the second one - i.e. simply remove the sentence "If the stream density… …Stripe 1540 field".  Reason - well it doesn't actually contain much information, and is largely implicit in what's said in the previous sentence.
-Third para of Section 5. - again there's confusion between the intrinsic dispersion (i.e. with the contribution from the errors removed) and the observed dispersion, which contains the contribution from the velocity errors.  So I would suggest you use "intrinsic dispersion" for the 0.2 +/- 3.1 kms-1 [or whatever figure finally goes here] and drop the "i.e. comparable to our velocity resolution".  Or say that the observed dispersion is dominated by the velocity errors, indicating that the intrinsic dispersion is small.
+>> Corrected.
+Second paragraph of Section 5.  You have two sentences both starting "If the…".  I suggest that maybe we could just drop the second one - i.e. simply 
+remove the sentence "If the stream density… …Stripe 1540 field".  Reason - well it doesn't actually contain much information, and is largely implicit 
+in what's said in the previous sentence.
+>> Removed, with hesitation!
+
+Third para of Section 5. - again there's confusion between the intrinsic dispersion (i.e. with the contribution from the errors removed) and the observed 
+dispersion, which contains the contribution from the velocity errors.  So I would suggest you use "intrinsic dispersion" for the 0.2 +/- 3.1 kms-1 [or 
+whatever figure finally goes here] and drop the "i.e. comparable to our velocity resolution".  Or say that the observed dispersion is dominated by the velocity 
+errors, indicating that the intrinsic dispersion is small.
+>> Done
 
 Finally, if it doesn't kill us for space, can we add in the acknowledgements:
 "GDaC is also grateful for the support received during an extended visit to the Institute of Astronomy, University of Cambridge, during which this work was completed."
 (I'd like to acknowledge the support I have received here and this paper has the best combination of work I've done here and likelihood of being published on a reasonable timescale).
+>> Added, and there is a little bit of space left-over in total for any changes required from the referee.
+
 
 Cheers,
 Gary
