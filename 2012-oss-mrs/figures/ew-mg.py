@@ -77,6 +77,6 @@ ax.plot(x, y, 'g', alpha=0.80, lw=5)
 ax.set_xlim((xlims[0], xlims[1] - 0.05))
 ax.set_ylim(ylims)
 
-ax.set_ylabel('$EW_{\lambda8807}$ [A]', fontsize=labelsize)
+ax.set_ylabel('EW$_{\lambda8807}$ [A]', fontsize=labelsize)
 ax.set_xlabel('$g - r$', fontsize=labelsize)
 plt.savefig('ew-mg.pdf')

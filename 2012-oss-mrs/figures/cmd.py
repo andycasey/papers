@@ -5,7 +5,8 @@ rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
 #rc('text', usetex=True)
 
 
-good_candidate_oids = [570, 169, 143, 604, 337]# 571, 76, 264]
+good_candidate_oids = [570, 169, 143, 337]# 571, 76, 264]
+# removed "OSS-9" or oid 604
 
 # Using isochrone consistency check
 good_candidate_oids.extend([917, 768, 76, 685, 932])
@@ -20,7 +21,7 @@ good_candidate_oids.extend([917, 768, 76, 685, 932])
 upperlimit_candidate_oids = []
 dodgy_candidate_oid = False
 
-distance = 23.5 #kpc (my measurement)
+distance = 22.5 #kpc (my measurement)
 my_distance_modulus = 5 * np.log10(distance * 1000) - 5
 newberg_distance_modulus = 5 * np.log10(21.4 * 1000) - 5 # Newberg et al 2010 estimate distance at (l, b) = (250, 50) of 21.4 +/- 1.0 kpc
 
@@ -62,7 +63,7 @@ if dodgy_candidate_oid:
 g, r = np.loadtxt('giardi-10gyr-1.5.data', unpack=True)
 ax.plot(g - r, g + newberg_distance_modulus, 'k:', zorder=-10, label='[Fe/H] $=-1.5$ at $21.4$ kpc')
 
-g, r = np.loadtxt('giardi-10gyr-1.71.data', unpack=True)
+g, r = np.loadtxt('giardi+10gyr-1.63.data', unpack=True)
 ax.plot(g - r, g + my_distance_modulus, 'k-', lw=2, zorder=-1, label='[Fe/H] $=-1.71$ at $24$ kpc')
 
 g, r = np.loadtxt('giardi-10gyr-2.0.data', unpack=True)
