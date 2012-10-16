@@ -1,0 +1,109 @@
+Manuscript: LET30039
+Title: Hunting the Orphan Stream Host: Identifying Stream Members from Low-Resolution Spectroscopy
+Authors: Andrew Casey, Stefan Keller, Gary Da Costa, and Elizabeth Maunder
+
+
+
+Dear Mr. Casey,
+
+Your paper above was sent for review to an expert referee who has returned the comments that are appended. The referee has a number of concerns about your paper in its present form and makes many recommendations for improvement in the manuscript. The referee recommends that this paper should be considered for Part 1 of the ApJ, instead of Letters. These suggestions appear to be reasonable to me and I urge you to take the referee's comments fully into account in preparing a revised version of your paper. I will assume that your revised paper will be intended for the main ApJ, so do not worry about the Letters page limit. Letters is able to accept papers into Part 1, so do send the revision back to us for completing the review process.
+
+When you send a revised manuscript, please outline the revisions you have made in response to the referee's comments in a cover letter. Please submit your response in plain text in the field provided when you upload the revised paper. Citing each referee's comment immediately followed by your response to that particular comment would be particularly helpful.
+
+Sincerely,
+
+Fred Rasio
+---
+Frederic A. Rasio
+Letters Editor
+The Astrophysical Journal
+Northwestern University
+ApJLfred@northwestern.edu
+
+
+====================================================
+Referee's report:
+
+
+This paper may well become a useful contribution to the field of Galactic structure and formation, as it identifies several giant stars that could be members of the Orphan Stream. These stars could be used by future investigators to model the orbit of the stream, identify the progenitor, and possibly the progenitor's extended star formation history. The paper is well written and concise, and I expect it could become a valuable additional resource for other workers in the field.
+
+On the other hand, there are some issues and disagreements with previous work that need to be addressed if we are to have any confidence in the membership probabilities provided in Table 1. In particular, the mean velocity of the stream (as measured using the high probability members) disagrees quite significantly with the measurements of Newberg et al, who made use of a much larger and more widely distributed sample. Of less concern, though still worrisome, is the fact that the current metallicity distribution looks more like that of Newberg et al.'s off-stream, field star sample than it does of the Orphan stream. 
+
+Finally, it is not clear to me that this paper needs to be published quickly, and the manuscript already appears to be too long for ApJ Letters. As it stands, the paper is somewhat terse, and with the addition of some explanatory text that I'm recommending (see below), I suspect it will be well over the 4-page limit when ready for publication. I would therefore suggest that the paper be considered for Part 1 of the ApJ instead.
+
+I look forward to seeing a revised version of this manuscript when it becomes available.
+
+Detailed comments follow.
+
+
+Title
+
+1) ``Host' is not the usual way of referring to a stream's progenitor. Since stars in the stream are unbound from the progenitor and separated by kiloparsecs and billions of years, it is better to say ``Origin of the Orphan Stream' or ``Parent of the Orphan Stream' or ``Orphan Stream Progenitor'.
+
+Introduction
+
+2) In the second sentence, the statement ``left behind in a stream of stars' is somewhat misleading, since tidal streams will extend both forward along the progenitor's orbit as well as behind. This should be amended to something like ``are strewn along the progenitor's orbit in leading and trailing streams of stars.'
+
+Altered title to "Hunting the Parent of the Orphan Stream: Identifying Stream Members from Low-Resolution Spectroscopy", and two instances in the text where the Orphan Stream progenitor was referred to as the host:
+
+ - Section 1
+   "as well as make predictions about the nature of the host system."
+
+ - Section 5,
+   "help determine both the nature of the host system before it's discovered"
+
+In both cases, 'host system' has been changed to 'progenitor'.
+
+3) In the first sentence of the second paragraph and elsewhere in the text, an incorrect reference is made to Grillmair and Dionatos (2006). The correct reference is Grillmair 2006 (ApJ,645, L37).
+
+Section 2.
+
+4) In the last paragraph, it would better read ``recover stream giants and contaminating foreground dwarfs.'
+
+5) In this same paragraph, you should specify why no 2mass photometry is available. One assumes this is because even the giants are too faint to be detected in the 2mass survey.
+
+Section 3
+
+6) ``resolving power' should be ``spectral resolution'.
+
+7) ``median combined' should be hyphenated.
+
+8) ``criterion' should be ``criteria'.
+
+Section 4.2
+
+9) In the first paragraph, it is not clear from Figure 2 why this
+particular separation line is appropriate or optimal. More explanation and references should be provided. Also, ``allowing multiple inclusive cuts' is somewhat confusing. Should this be ``imposing simultaneous cuts on several observables'?
+
+10) In the last paragraph, the selection criteria used by Casey et al. (2012a) should be briefly summarized here.
+
+Section 4.3
+
+11) ``fainted' should be ``fainter'.
+
+12) In Table 1, the ra and dec components of proper motion should be listed separately. Strong cross-stream proper motion components could also be used to remove or reduce membership probabilities for some stars.
+
+13) Given the small number and significant color and magnitude spread among the highly probable members about the best-fitting isochrone in Figure 4, a distance uncertainty of only 1 kpc seems unlikely. How was this uncertainty estimated?
+
+14) The last sentence should include ``21.4 +/- 1 kpc estimated by Grillmair (2006) and Newberg et al. (2010).', since the distance estimates in these papers were independent and complementary, one using main sequence fitting and the other using BHB stars.
+
+Section 5
+
+15) In the first paragraph, a reference should be given to support the contention that the metallicity spread is consistent with what one might expect for a dwarf galaxy.
+
+16) The last sentence of the first paragraph should also refer to
+Grillmair (2006) main sequence fitting distance measurement.
+
+17) Given the title of the paper, does the new metallicity measurement help in any way to identify a possible progenitor? At the very least, a statement should be included to the extent that the orbit and the metallicity measurements rule out any of the classical dwarfs, and that if a bound progenitor still exists, then it must be an as yet undiscovered ultrafaint dwarf.
+
+18) The maximum likelihood estimates of the stream velocity given by the authors are either 85.3 /pm 4.4 km/s, or 82.1 /pm 1.4 km/s. A simple weighted mean of the values in Table 1 gives 83.0 km/s. This is very significantly different from the 105 km/s (using the author's V_gsr system) measured by Newberg et al. for the same part of the stream using BHB stars. This disagreement needs to be addressed, as it seriously undermines any confidence in the purity of even the ``high probability' sample.
+
+19) Moreover, though it is somewhat difficult to say given small number statistics, the metallicity distribution of the high probability stars looks more similar to the that of the off-stream, field star sample of Newberg et al. than it does to that of the stream sample.
+
+20) Newberg et al. find velocity dispersions in various parts of the Orphan stream of around 10 km/s. Here the case is made for a much lower velocity dispersion, even colder than that of globular cluster streams like Pal 5 and GD-1. It may well be that Newberg et al.'s velocities are generally less accurate than the present sample. However, one would still have to think about how a stream that is 8-10 times broader than these globular cluster streams should be kinematically just as cold or colder. Unfortunately, the disagreement with previous Orphan velocity measurements, and the fact that removing the weak signal stars makes this disagreement even larger while making the stream colder, undermines my confidence considerably.
+
+21) In thinking about this, I have made use of a velocity versus metallicity plot, with appropriate uncertainties. This makes it much easier to see why the authors are getting the results they see, and I would strongly recommend including such a plot in the final manuscript.
+
+22) The last sentence of the 3rd paragraph is somewhat mysterious. Is it the random motions that must be perpendicular to the line of sight, or the mean motions? The latter follows from the simple fact that the stars are in a stream, and the stream is nearly perpendicular to our line of sight. Unless I'm missing something important, this sentence should be deleted.
+
+----------------------------------------------------------------------
