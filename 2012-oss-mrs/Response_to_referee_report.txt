@@ -40,10 +40,7 @@ Title
 
 1) ``Host' is not the usual way of referring to a stream's progenitor. Since stars in the stream are unbound from the progenitor and separated by kiloparsecs and billions of years, it is better to say ``Origin of the Orphan Stream' or ``Parent of the Orphan Stream' or ``Orphan Stream Progenitor'.
 
-Introduction
-
-2) In the second sentence, the statement ``left behind in a stream of stars' is somewhat misleading, since tidal streams will extend both forward along the progenitor's orbit as well as behind. This should be amended to something like ``are strewn along the progenitor's orbit in leading and trailing streams of stars.'
-
+Response:
 Altered title to "Hunting the Parent of the Orphan Stream: Identifying Stream Members from Low-Resolution Spectroscopy", and two instances in the text where the Orphan Stream progenitor was referred to as the host:
 
  - Section 1
@@ -54,21 +51,53 @@ Altered title to "Hunting the Parent of the Orphan Stream: Identifying Stream Me
 
 In both cases, 'host system' has been changed to 'progenitor'.
 
+
+
+2) In the second sentence, the statement ``left behind in a stream of stars' is somewhat misleading, since tidal streams will extend both forward along the progenitor's orbit as well as behind. This should be amended to something like ``are strewn along the progenitor's orbit in leading and trailing streams of stars.'
+
+Response:
+Manuscript edited as requested. Following sentence edited to minimise repeated words. Text now reads as 'Stars which were once gravitationally bound to the satellite are strewn along the progenitor's orbit in leading and trailing streams of stars. The kinematics of the stream..'
+
+
+
 3) In the first sentence of the second paragraph and elsewhere in the text, an incorrect reference is made to Grillmair and Dionatos (2006). The correct reference is Grillmair 2006 (ApJ,645, L37).
+
+Response:
+Corrected.
+
+
 
 Section 2.
 
 4) In the last paragraph, it would better read ``recover stream giants and contaminating foreground dwarfs.'
 
+Response:
+Text altered as requested.
+
+
+
 5) In this same paragraph, you should specify why no 2mass photometry is available. One assumes this is because even the giants are too faint to be detected in the 2mass survey.
+
+Response:
+One assumes correctly. Text altered to read 'Given our colour selection we expect to recover giants and contaminating dwarf contaminants. Although the 2MASS $JHK$ colours can help to separate dwarfs and giants, our target K-giants stars are too faint to be detected in the 2MASS catalogue.'
 
 Section 3
 
 6) ``resolving power' should be ``spectral resolution'.
 
+Response:
+Corrected.
+
+
 7) ``median combined' should be hyphenated.
 
+Response:
+Corrected.
+
 8) ``criterion' should be ``criteria'.
+
+Response:
+Corrected.
 
 Section 4.2
 
@@ -77,15 +106,27 @@ particular separation line is appropriate or optimal. More explanation and refer
 
 10) In the last paragraph, the selection criteria used by Casey et al. (2012a) should be briefly summarized here.
 
+Response:
+Text now reads as 'This fraction of giants ($\sim$44\%) is much larger than that found by \citeauthor{Casey_et-al_2012} \citeyear{Casey_et-al_2012}a who employed a similar colour selection.'
+
 Section 4.3
 
 11) ``fainted' should be ``fainter'.
+
+Response:
+Corrected.
 
 12) In Table 1, the ra and dec components of proper motion should be listed separately. Strong cross-stream proper motion components could also be used to remove or reduce membership probabilities for some stars.
 
 13) Given the small number and significant color and magnitude spread among the highly probable members about the best-fitting isochrone in Figure 4, a distance uncertainty of only 1 kpc seems unlikely. How was this uncertainty estimated?
 
+Response:
+
+
 14) The last sentence should include ``21.4 +/- 1 kpc estimated by Grillmair (2006) and Newberg et al. (2010).', since the distance estimates in these papers were independent and complementary, one using main sequence fitting and the other using BHB stars.
+
+Response:
+Text altered to 'Our derived distance is in reasonably good agreement with the $21.4 \pm 1.0$\,kpc independently deduced by \citet{Grillmair_2006} and \citet{Newberg_et-al_2010}.'
 
 Section 5
 
@@ -93,6 +134,10 @@ Section 5
 
 16) The last sentence of the first paragraph should also refer to
 Grillmair (2006) main sequence fitting distance measurement.
+
+Response:
+Reference rightly added.
+
 
 17) Given the title of the paper, does the new metallicity measurement help in any way to identify a possible progenitor? At the very least, a statement should be included to the extent that the orbit and the metallicity measurements rule out any of the classical dwarfs, and that if a bound progenitor still exists, then it must be an as yet undiscovered ultrafaint dwarf.
 
