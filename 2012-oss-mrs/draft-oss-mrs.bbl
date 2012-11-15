@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{26}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abazajian} {et~al.}(2009){Abazajian}, {Adelman-McCarthy},
@@ -8,6 +8,9 @@
 
 \bibitem[{{Armandroff} \& {Da Costa}(1991)}]{Amandroff;Da_Costa_1991}
 {Armandroff}, T.~E., \& {Da Costa}, G.~S. 1991, \aj, 101, 1329
+
+\bibitem[{{Battaglia} \& {Starkenburg}(2012)}]{Battaglia;Starkenburg_2012}
+{Battaglia}, G., \& {Starkenburg}, E. 2012, \aap, 539, A123
 
 \bibitem[{{Belokurov} {et~al.}(2006){Belokurov}, {Zucker}, {Evans}, {Gilmore},
   {Vidrih}, {Bramich}, {Newberg}, {Wyse}, {Irwin}, {Fellhauer}, {Hewett},
@@ -22,11 +25,8 @@
   {York}}]{Belokurov;et-al_2007}
 ---. 2007, \apj, 658, 337
 
-\bibitem[{{Bessell} \& {Brett}(1988)}]{Bessell;Brett_1988}
-{Bessell}, M.~S., \& {Brett}, J.~M. 1988, \pasp, 100, 1134
-
 \bibitem[{{Casey} {et~al.}(2012){Casey}, {Keller}, \& {Da
-  Costa}}]{Casey;et-al_2012a}
+  Costa}}]{Casey;et-al_2012}
 {Casey}, A.~R., {Keller}, S.~C., \& {Da Costa}, G. 2012, \aj, 143, 88
 
 \bibitem[{{Fellhauer} {et~al.}(2007){Fellhauer}, {Evans}, {Belokurov},
@@ -34,15 +34,23 @@
   {Hewett}, \& {Beers}}]{Fellhaur;et-al_2007}
 {Fellhauer}, M., {et~al.} 2007, \mnras, 375, 1171
 
-\bibitem[{{Frebel} {et~al.}(2010){Frebel}, {Simon}, {Geha}, \&
-  {Willman}}]{Frebel;et-al_2010}
-{Frebel}, A., {Simon}, J.~D., {Geha}, M., \& {Willman}, B. 2010, \apj, 708, 560
-
 \bibitem[{{Grillmair} \& {Dionatos}(2006)}]{Grillmair;Dionatos_2006}
 {Grillmair}, C.~J., \& {Dionatos}, O. 2006, \apjl, 643, L17
 
+\bibitem[{{Hodapp} {et~al.}(2004){Hodapp}, {Kaiser}, {Aussel}, {Burgett},
+  {Chambers}, {Chun}, {Dombeck}, {Douglas}, {Hafner}, {Heasley}, {Hoblitt},
+  {Hude}, {Isani}, {Jedicke}, {Jewitt}, {Laux}, {Luppino}, {Lupton}, {Maberry},
+  {Magnier}, {Mannery}, {Monet}, {Morgan}, {Onaka}, {Price}, {Ryan},
+  {Siegmund}, {Szapudi}, {Tonry}, {Wainscoat}, \&
+  {Waterson}}]{Hodapp;et-al_2004}
+{Hodapp}, K.~W., {et~al.} 2004, Astronomische Nachrichten, 325, 636
+
 \bibitem[{{Jin} \& {Lynden-Bell}(2007)}]{Jin;Lynden_Bell_2007}
 {Jin}, S., \& {Lynden-Bell}, D. 2007, \mnras, 378, L64
+
+\bibitem[{{Jordi} {et~al.}(2006){Jordi}, {Grebel}, \&
+  {Ammon}}]{Jordi;et-al_2006}
+{Jordi}, K., {Grebel}, E.~K., \& {Ammon}, K. 2006, \aap, 460, 339
 
 \bibitem[{{Keller} {et~al.}(2007){Keller}, {Schmidt}, {Bessell}, {Conroy},
   {Francis}, {Granlund}, {Kowald}, {Oates}, {Martin-Jones}, {Preston},
@@ -51,11 +59,6 @@
 
 \bibitem[{{Kerr} \& {Lynden-Bell}(1986)}]{Kerr;Lynden-Bell_1986}
 {Kerr}, F.~J., \& {Lynden-Bell}, D. 1986, \mnras, 221, 1023
-
-\bibitem[{{Kirby} {et~al.}(2010){Kirby}, {Guhathakurta}, {Simon}, {Geha},
-  {Rockosi}, {Sneden}, {Cohen}, {Sohn}, {Majewski}, \&
-  {Siegel}}]{Kirby;et-al_2010}
-{Kirby}, E.~N., {et~al.} 2010, \apjs, 191, 352
 
 \bibitem[{{Koposov} {et~al.}(2010){Koposov}, {Rix}, \&
   {Hogg}}]{Koposov;et-al_2010}
@@ -84,9 +87,22 @@
 {Robin}, A.~C., {Reyl{\'e}}, C., {Derri{\`e}re}, S., \& {Picaud}, S. 2003,
   \aap, 409, 523
 
+\bibitem[{{Roeser} {et~al.}(2010){Roeser}, {Demleitner}, \&
+  {Schilbach}}]{Roeser;et-al_2010}
+{Roeser}, S., {Demleitner}, M., \& {Schilbach}, E. 2010, \aj, 139, 2440
+
 \bibitem[{{Sales} {et~al.}(2008){Sales}, {Helmi}, {Starkenburg}, {Morrison},
   {Engle}, {Harding}, {Mateo}, {Olszewski}, \& {Sivarani}}]{Sales;et-al_2008}
 {Sales}, L.~V., {et~al.} 2008, \mnras, 389, 1391
+
+\bibitem[{{Saviane} {et~al.}(2012){Saviane}, {Da Costa}, {Held}, {Sommariva},
+  {Gullieuszik}, {Barbuy}, \& {Ortolani}}]{Saviane;et-al_2012}
+{Saviane}, I., {Da Costa}, G.~S., {Held}, E.~V., {Sommariva}, V.,
+  {Gullieuszik}, M., {Barbuy}, B., \& {Ortolani}, S. 2012, \aap, 540, A27
+
+\bibitem[{{Schlegel} {et~al.}(1998){Schlegel}, {Finkbeiner}, \&
+  {Davis}}]{Schlegel;Finkbeiner;Davis_1998}
+{Schlegel}, D.~J., {Finkbeiner}, D.~P., \& {Davis}, M. 1998, \apj, 500, 525
 
 \bibitem[{{Starkenburg} {et~al.}(2010){Starkenburg}, {Hill}, {Tolstoy},
   {Gonz{\'a}lez Hern{\'a}ndez}, {Irwin}, {Helmi}, {Battaglia}, {Jablonka},
