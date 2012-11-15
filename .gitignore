@@ -5,7 +5,4 @@
 *.synctex.gz
 *.aux
 *.bbl
-*.pdf
-*/*.pdf
-
 
