@@ -44,6 +44,16 @@ Introduction
 
 2) In the second sentence, the statement ``left behind in a stream of stars' is somewhat misleading, since tidal streams will extend both forward along the progenitor's orbit as well as behind. This should be amended to something like ``are strewn along the progenitor's orbit in leading and trailing streams of stars.'
 
+Altered title to "Hunting the Parent of the Orphan Stream: Identifying Stream Members from Low-Resolution Spectroscopy", and two instances in the text where the Orphan Stream progenitor was referred to as the host:
+
+ - Section 1
+   "as well as make predictions about the nature of the host system."
+
+ - Section 5,
+   "help determine both the nature of the host system before it's discovered"
+
+In both cases, 'host system' has been changed to 'progenitor'.
+
 3) In the first sentence of the second paragraph and elsewhere in the text, an incorrect reference is made to Grillmair and Dionatos (2006). The correct reference is Grillmair 2006 (ApJ,645, L37).
 
 Section 2.

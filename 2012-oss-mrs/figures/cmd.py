@@ -40,7 +40,7 @@ ax = fig.add_subplot(111)
 
 # Load in all colour data
 oid, g0, g, r0 = np.loadtxt('ew-mg-all.data', usecols=(0, 19, 9, 20, ), unpack=True)
-ax.scatter(g0 - r0, g0, c='#cccccc', facecolor='none', alpha=0.2)
+ax.scatter(g0 - r0, g0, edgecolor='#cccccc', facecolor='none', zorder=-5)
 
 
 if dodgy_candidate_oid:
@@ -61,13 +61,13 @@ if dodgy_candidate_oid:
 # Load in isochrone information
 
 g, r = np.loadtxt('giardi-10gyr-1.5.data', unpack=True)
-ax.plot(g - r, g + newberg_distance_modulus, 'k:', zorder=-10, label='[Fe/H] $=-1.5$ at $21.4$ kpc')
+ax.plot(g - r, g + newberg_distance_modulus, 'k:', zorder=-1, label='[Fe/H] $=-1.5$ at $21.4$ kpc')
 
 g, r = np.loadtxt('giardi+10gyr-1.63.data', unpack=True)
 ax.plot(g - r, g + my_distance_modulus, 'k-', lw=2, zorder=-1, label='[Fe/H] $=-1.71$ at $24$ kpc')
 
 g, r = np.loadtxt('giardi-10gyr-2.0.data', unpack=True)
-ax.plot(g - r, g + newberg_distance_modulus, 'k--', zorder=-10, label='[Fe/H] $=-2.0$ at $21.4$ kpc')
+ax.plot(g - r, g + newberg_distance_modulus, 'k--', zorder=-1, label='[Fe/H] $=-2.0$ at $21.4$ kpc')
 
 
 
@@ -152,6 +152,7 @@ ax.set_ylim(ax.get_ylim()[::-1])
 
     
 plt.savefig('cmd.pdf')
+plt.savefig('cmd.eps')
 plt.close(fig)
 
 # Plot the [Fe/H]_CaT vs [Fe/H]_iso
@@ -175,7 +176,7 @@ ax.plot([-3.0, -0.5], [-3.0, -0.5], 'k-')
 ax.plot([-3.0, -0.5], [-3.0 - pm_window, -0.5 - pm_window], 'k:', zorder=-1)
 ax.plot([-3.0, intersect - pm_window, -0.5], [intersect, intersect, -0.5 + pm_window], 'k:', zorder=-1)
 
-ax.fill_between([-3.0, intersect - pm_window, -0.50], [-3.0 - pm_window, intersect - pm_window*2, -0.50 - pm_window], [intersect, intersect, -0.5 + pm_window], facecolor='g', alpha=0.5, zorder=-2)
+ax.fill_between([-3.0, intersect - pm_window, -0.50], [-3.0 - pm_window, intersect - pm_window*2, -0.50 - pm_window], [intersect, intersect, -0.5 + pm_window], facecolor='#85c078', zorder=-2)
 
 ax.text(-0.6, -2.5, "Minimum isochrone metallicity", color='#111111', horizontalalignment="right", fontsize=labelsize)
 ax.plot([-3.0, -0.5], [minimum_isochrone_metallicity, minimum_isochrone_metallicity], '--', color='#111111', zorder=-1)
@@ -192,5 +193,6 @@ ax.set_ylim([-3.0, -0.5])
 plt.draw()
 
 plt.savefig('feh.pdf')
+plt.savefig('feh.eps')
 plt.close(fig)
 

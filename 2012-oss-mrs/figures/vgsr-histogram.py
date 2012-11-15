@@ -55,7 +55,7 @@ obs_ax.set_ylim(0, obs_ax.get_ylim()[1])
 obs_ax.set_xlabel('$V_{GSR}$ [km s$^{-1}$]', fontsize=labelsize)
 obs_ax.set_ylabel('$N$', fontsize=labelsize)
 
-patch = Rectangle((oss_vgsrs[0], 0), oss_vgsrs[1] - oss_vgsrs[0], obs_ax.get_ylim()[1], color='g', alpha=0.5, zorder=-1)
+patch = Rectangle((oss_vgsrs[0], 0), oss_vgsrs[1] - oss_vgsrs[0], obs_ax.get_ylim()[1], color='#85c078', zorder=-1)
 obs_ax.add_patch(patch)
 
 idx = np.searchsorted(bins, oss_vgsr_centroid) - 1
@@ -68,3 +68,4 @@ plt.draw()
 plt.show()
 
 plt.savefig('vgsr-histogram.pdf')
+plt.savefig('vgsr-histogram.eps')
