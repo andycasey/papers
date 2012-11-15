@@ -5,7 +5,7 @@ summary_out    'Al_3944.syn.summary'
 smoothed_out   'Al_3944.syn.spectra' 
 model_in       'FINALMODEL' 
 lines_in       'Al.list'
-observed_in    'boxcar.txt'
+observed_in    ''
 atmosphere    1                        
 molecules     2                        
 lines         1                        
