@@ -1,3 +1,10 @@
 */*.log
 */*.aux
 */*.bbl
+*.log
+*.synctex.gz
+*.aux
+*.bbl
+
+
+
