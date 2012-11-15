@@ -22,7 +22,33 @@
 
 \section{Introduction}
 
+Stellar streams in the halo are relics of relatively recent minor mergers in the Milky Way. The analysis of stars within these streams can provide great insight about the formation history of the galaxy, as the positions and kinematics of these stars are sensitive to the galactic potential. As such they can collectively constrain the chemodynamical evolution of the galaxy, the fraction and distribution of accreted matter in the stellar halo, the sub-halo mass function, as well as the shape and extent of dark matter in the Milky Way. 
+
+Wide field digital image catalogues have proved excellent sources for finding stellar streams. Dozens of streams reaching out up to 150\,kpc in the stellar halo have been identified through photometric selections and matched-filtering techniques. However, as \citet{Helmi;et-al_1999} point out, these methods are only successful for identifying substructure that are sufficiently distant from the solar neighbourhood. A nearby stream within 10\,kpc will not appear as an on-sky over-density. Such an object would only be detectable by utilising both position and kinematic information. 
+
+% Talk about RAVE
+
+% Identification of the aquarius stream
+
+% is it a real substructure
+
+% MRS follow-up by de boer
+
+% globular cluster chemical signatures
+
+We seek to investigate the globular cluster origin claim made by \citet{de_Boer;et-al_2012}. We present a detailed chemical abundance analysis for six confirmed Aquarius stream members observed using the Magellan Inamori Kyocera Echelle spectrograph on the Magellan telescope. Details of the observations and data reduction are outlined in the next section. The data analysis is presented in \S\ref{sec:analysis} and a detailed discussion of these results resides in \S\ref{sec:discussion}, along with an alternative hypothesis for the Aquarius stream origin. In \S\ref{sec:conclusion} we present our conclusions and critical interpretations.
+
 \section{Observations \& Data Reduction}
+
+
+% program observations 
+
+% standard star observations
+
+% data reduction using carpy
+
+% normalised each order interactively, stitched them at 5000 Angstroms to provide one full long spectrum
+
 
 \begin{deluxetable*}{lccccccccc}
 \tablecolumns{1}
@@ -57,10 +83,24 @@ J223811-104126	& 22:38:11.6	& $-$10:41:29.4	& 2011-07-30	& 1.218	& 0.7 & \dots &
 
 
 \section{Analysis}
+\ref{sec:analysis}
 
 \subsection{Radial Velocities}
+\ref{sec:radial-velocities}
+The radial velocity for each star was accurately determined in a two step method. Initially each normalised, stitched spectrum was cross-correlated with a synthetic spectrum of a K0 giant with $T_{eff} = 4500$\,K, $\log{g} = 1.5$, and [M/H] $= -1.0$ across the wavelength range $8450 - 8700$ \AA{}. Velocities found during our cross-correlation are typically within 1\,km s$^{-1}$, and this measurement is used to place each spectrum at its rest wavelength. The rest spectrum was used to measure equivalent widths of approximately N absorption lines in each spectrum (\S\ref{sec:line-measurements}). In addition to an equivalent width and the FWHM of a Gaussian profile which best fits the absorption shape, a measured central wavelength is found for every line. The ratio between the measured central wavelength and the known rest wavelength of the given transition is primarily determined by the stellar radial velocity. Thus, we have N measurements of the stellar radial velocity. 
+
+The second step of our radial velocity determination is to find the mean offset and standard deviation from this distribution of line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD440077 after initially being placed at rest using our cross-correlation velocity of X.XX\,km s$^{-1}$. As expected, the mean offset is small ($-1.1$\,km s$^{-1}$), and our standard deviation is X.XX\,km s$^{-1}$ from N line measurements. This provides us with a final measured radial velocity of $X.XX \pm X.XX$\,km s$^{-1}$. All of our published radial velocities in Table \ref{tab:observations} have been determined in this two-step process. 
 
 \subsection{Line Measurements}
+\ref{sec:line-measurements}
+
+For the measurement of atomic absorption lines, we employed the line list of \citet{Yong;et-al_2009} with additional transitions of Cr, Sc, Zn, and Sr from \citet{Frebel;et-al_2009}. Molecular line data for CH was taken from \citet{Plez;et-al_2008,Plez;et-al_2009}. We supplemented the list with hyperfine-structure data for Sc and Mn  from the Kurucz compilation \citet{Kurucz;1998}.
+
+
+
+We list the atomic data and measured equivalent widths for lines used during this analysis in Table \ref{tab:equivalent-widths}. In order to exclude saturated lines we only used lines with a reduced equivalent widths $\log_{10}{(\mbox{EW}/\lambda)} < -4.5$ in our chemical abundance analysis. A minimum detectable equivalent width was measured as a function of wavelength, and only lines that exceeded a $3\sigma$ detection significance were included. We have verified our equivalent width measurement techniques by measuring equivalent widths for N lines in HD122563 and comparing our measurements with the study of \citet{Norris;et-al_2000}. Excellent agreement is found between the two studies, which is illustrated in Figure \ref{fig:ew-compare}. The mean difference between this study and that of \cite{Norris;et-al_2000} is a negligible $X.X \pm X.X$\,m\AA{}, and no systematic trend is present.
+
+For lines with hyperfine structure, blended transitions or molecular features, we used a spectral synthesis approach. The abundance of a given species was obtained by matching a synthetic spectrum of known abundance to the observed spectrum.
 
 \subsection{Stellar Parameters}
 
