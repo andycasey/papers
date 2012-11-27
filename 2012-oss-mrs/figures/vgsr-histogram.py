@@ -12,7 +12,7 @@ fontsize = 11
 labelsize = 11
 binx = 20.
 
-oss_vgsrs = [75, 135]
+oss_vgsrs = [65, 125]
 oss_member_count = 10
 oss_vgsr_centroid = oss_vgsrs[0] + 0.5 * (oss_vgsrs[1] - oss_vgsrs[0])
 
@@ -66,6 +66,6 @@ plt.legend(handles[::-1], labels[::-1])
 
 plt.draw()
 plt.show()
-
+                                
 plt.savefig('vgsr-histogram.pdf')
 plt.savefig('vgsr-histogram.eps')

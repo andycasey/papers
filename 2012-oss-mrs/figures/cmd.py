@@ -11,6 +11,9 @@ good_candidate_oids = [570, 169, 143, 337]# 571, 76, 264]
 # Using isochrone consistency check
 good_candidate_oids.extend([917, 768, 76, 685, 932])
 
+# Stupid ones identified from changing the bins to 65, 125 from 75, 135:
+#good_candidate_oids.extend([571, 675, 691])
+
 # OSS 1
 #good_candidate_oids.append(492)
 
