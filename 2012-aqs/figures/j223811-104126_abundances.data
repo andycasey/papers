@@ -1,0 +1,20 @@
+# Element        Num.  log(X)    sigma(X)  [X/H]     [X/Fe]    Uncertainty
+   O \textsc{I} &   1 & \nodata &    0.00 & \nodata &    0.15 &    0.00 \\
+  Na \textsc{I} &   1 &    4.86 &    0.00 & $-$1.38 &    0.07 &    0.00 \\
+  Mg \textsc{I} &   2 &    6.47 &    0.02 & $-$1.13 &    0.32 &    0.01 \\
+  Al \textsc{I} &   2 &    5.10 &    0.14 & $-$1.35 &    0.10 &    0.10 \\
+  Si \textsc{I} &   3 &    6.38 &    0.04 & $-$1.13 &    0.32 &    0.02 \\
+  Ca \textsc{I} &   4 &    5.30 &    0.03 & $-$1.04 &    0.41 &    0.01 \\
+  Sc \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Sc \textsc{II} &   6 &    1.75 &    0.14 & $-$1.40 &    0.05 &    0.06 \\
+  Ti \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Ti \textsc{II} &   4 &    3.83 &    0.09 & $-$1.12 &    0.33 &    0.04 \\
+   V \textsc{I} &   1 &    2.42 &    0.00 & $-$1.51 & $-$0.06 &    0.00 \\
+  Cr \textsc{I} &  12 &    4.12 &    0.06 & $-$1.52 & $-$0.07 &    0.02 \\
+  Mn \textsc{I} &   3 &    3.55 &    0.04 & $-$1.88 & $-$0.43 &    0.02 \\
+  Fe \textsc{I} &  33 &    6.05 &    0.06 & $-$1.45 &    0.00 &    0.01 \\
+ Fe \textsc{II} &  11 &    6.00 &    0.09 & $-$1.50 & $-$0.05 &    0.03 \\
+  Co \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Ni \textsc{I} &   2 &    4.82 &    0.04 & $-$1.40 &    0.05 &    0.03 \\
+  Cu \textsc{I} &   1 &    2.39 &    0.00 & $-$1.80 & $-$0.35 &    0.00 \\
+  Zn \textsc{I} &   2 &    3.17 &    0.04 & $-$1.39 &    0.06 &    0.03 \\
