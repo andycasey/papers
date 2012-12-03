@@ -11,7 +11,7 @@ gs = gridspec.GridSpec(2, 1, height_ratios=[1, 2])
 ax1 = fig.add_subplot(gs[0])
 #ax1 = plt.subplot2grid((3, 1), (0, 0))
 
-ax1.scatter(smh_ew, smh_ew - norris_ew, facecolor='none', edgecolor='k')
+ax1.scatter(smh_ew, smh_ew - norris_ew, facecolor='none', edgecolor='k', marker='+')
 ax1.plot([0, 200], [0, 0], 'k-', zorder=-1)
 
 A = np.vstack([smh_ew, np.ones(len(norris_ew))]).T
@@ -28,7 +28,7 @@ ax1.set_ylabel('$\Delta{}W_\lambda$ [m$\AA{}$]')
 
 ax2 = fig.add_subplot(gs[1], sharex=ax1)
 #ax2 = plt.subplot2grid((3, 1), (1, 0), rowspan=2)
-ax2.scatter(smh_ew, norris_ew, facecolor='none', edgecolor='k')
+ax2.scatter(smh_ew, norris_ew, facecolor='none', edgecolor='k', marker='+')
 
 A = np.vstack([norris_ew, np.ones(len(norris_ew))]).T
 m, c = np.linalg.lstsq(A, smh_ew)[0]
@@ -37,12 +37,19 @@ ax2.plot(x, x, 'k-', zorder=-1)
 x = np.array([np.min(smh_ew), np.max(smh_ew)])
 ax2.plot(x, m * x + c, 'k:')
 
-ax1.set_xlim(0, 160)
-ax2.set_xlim(0, 160)
-ax2.set_ylim(0, 160)
+# Plot an error cone
+error = 10 # percent
+bounds = np.array([0, 160])
+#ax2.plot(bounds, bounds * (1 + error/100.), '-', c='#aaaaaa', zorder=-5)
+#ax2.plot(bounds, bounds * (1 - error/100.), '-', c='#aaaaaa', zorder=-5)
+
+
+ax1.set_xlim(bounds)
+ax2.set_xlim(bounds)
+ax2.set_ylim(bounds)
 
 ax2.set_xlabel('$W_\lambda$ (This work, automatic) [m$\AA{}$]')
-ax2.set_ylabel('$W_\lambda$ (Norris et al. 2000) [m$\AA{}$]')
+ax2.set_ylabel('$W_\lambda$ (Norris et al. 1996) [m$\AA{}$]')
 
 ax2.get_yticklabels()[-1].set_visible(False)
 ax1.get_yticklabels()[0].set_visible(False)
