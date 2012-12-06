@@ -16,6 +16,7 @@
 
 
 \begin{abstract}
+We present a detailed dynamic and chemical analysis of 5 Aquarius stream giants observed using the MIKE spectrograph on the Magellan Clay Telescope. 
 \end{abstract}
 
 \keywords{Galaxy: halo, structure --- Individual: Aquarius Stream --- Stars: FGK-giants}
@@ -103,6 +104,7 @@ With our spectrum at near-rest, we measured the equivalent widths of $N$ lines b
 	\label{fig:line-velocities}
 \end{figure}
 
+
 \subsection{Line Measurements}
 \label{sec:line-measurements}
 
@@ -114,6 +116,7 @@ We note that the results of our iterative fitting approach are entirely insensit
 
 We list the atomic data and measured equivalent widths for atomic lines used during this analysis in Table \ref{tab:equivalent-widths}. Saturated lines were excluded by removing measurements with reduced equivalent widths, $\log_{10}{(EW/\lambda)} > -4.5$\, dex. A minimum detectable equivalent width was calculated as a function of wavelength based on the S/N, and only lines that exceeded a $3\sigma$ detection significance were included. We have verified our equivalent width measurement techniques by comparing our measurements for 164 lines in HD140283 with the study of \citet{Norris;et-al_1996}. Excellent agreement is found between the two studies, which is illustrated in Figure \ref{fig:ew-compare}. The mean difference between this study and that of \cite{norris;et-al_1996} is a negligible $0.64 \pm 2.78$\,m\AA{}, and no systematic trend is present.
 
+
 % equivalent widths plot with Norris for HD 122563
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{./figures/smh-norris.pdf}
@@ -121,15 +124,33 @@ We list the atomic data and measured equivalent widths for atomic lines used dur
 	\label{fig:ew-compare}
 \end{figure}
 
+
 % equivalent widths table
 
 \subsection{Model Atmospheres}
-We employed the ATLAS9 stellar atmospheres of \citet{Castelli;Kurucz_2003} for this analysis. These one-dimensional models ignore any centre-to-limb spatial variations, assume hydrostatic equilibrium and no convective overshoot from the photosphere. Absorption lines are assumed to form under the assumption of local thermal equilibrium. The stellar parameter spacing for these grid models is 250\,K, 0.5 dex in surface gravity, 0.5 dex in [M/H] and 0.1 dex in [$\alpha$/Fe]. We interpolated the atmospheric densities, temperatures, electron pressures at all depths between stellar atmospheres using the Quickhull algorithm for this analysis. Quickhull is reliant on Delaunay tessellation, which suffers from extremely skewed cells when the grid points vary in size by orders of magnitude -- as $T_{eff}$ values do compared to $\log{g}$ or [X/H]. If unaccounted for, these asymmetric cells can manifest as significant errors in interpolated densities, temperatures, pressures, and opacities across all photospheric depths. We scaled each stellar parameter between zero and unity prior to interpolation to minimise these errors. During this step, $\log{g}$, [Fe/H] and [$\alpha$/Fe] points were scaled such that we simultaneously interpolate linearly in $T_{eff}$ and logarithmically in all other parameters.
+We employed the ATLAS9 stellar atmospheres of \citet{Castelli;Kurucz_2003} for this analysis. These one-dimensional models ignore any centre-to-limb spatial variations, assume hydrostatic equilibrium and no convective overshoot from the photosphere. Absorption lines are assumed to form under the assumption of local thermal equilibrium. The stellar parameter spacing for these grid models is 250\,K, 0.5\,dex in surface gravity, 0.5\,dex in [M/H] and 0.1\,dex in [$\alpha$/Fe]. We interpolated the atmospheric densities, temperatures, electron pressures at all depths between stellar atmospheres using the Quickhull algorithm for this analysis. Quickhull is reliant on Delaunay tessellation, which suffers from extremely skewed cells when the grid points vary in size by orders of magnitude -- as $T_{eff}$ values do compared to $\log{g}$ or [X/H]. If unaccounted for, these asymmetric cells can manifest as significant errors in interpolated densities, temperatures, pressures, and opacities across all photospheric depths. We scaled each stellar parameter between zero and unity prior to interpolation to minimise these errors. During this step, $\log{g}$, [Fe/H] and [$\alpha$/Fe] points were scaled such that we simultaneously interpolate linearly in $T_{eff}$ and logarithmically in all other parameters.
 
 \subsection{Stellar Parameters}
 The most recent version of the spectral synthesis code MOOG \citep{Sneden;et-al_1973} has been used to derive individual line abundances and stellar parameters. This version employs a more accurate treatment of Rayleigh scattering \citep{Sobeck;et-al_2011}, which is particularly important for transitions blueward of 450\,nm. This is noteworthy, but is less relevant for this analysis as most of our line measurements are redward of 450\,nm. We have scaled our abundances to solar values using the chemical composition of \citet{Asplund;et-al_2009}.
 
-The effective temperature for each star was found by demanding a zero-trend in excitation potential and abundance for each measured Fe\,I line. In the same way, the microturbulence was found by demanding a zero trend in reduced equivalent width against abundance. Linear relationships with slopes of $|0.001|$ dex were considered to be converged. Surface gravity was found by forcing the mean Fe\,I and Fe\,II abundances to be equal, whilst maintaining zero trends with the excitation potential, reduced equivalent width and abundance. After these parameters had converged, the model metallicity was exactly matched to that of our line abundances. Line abundances that were unusually deviant ($>3\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was N for X.
+
+\subsubsection{Photometric Effective Temperatures}
+
+The effective temperatures published for all of our stars in Table \ref{sec:stellar-parameters} were derived spectroscopically (see \S\ref{sec:effective-teffs}). For consistency, we have also estimated effective temperatures using 2MASS infrared photometry. The $J-K$ colour has been employed for these calculations because it has the least dependence on metallicity. The Aquarius stream is relatively close and at high-latitude, so significant extinction by dust is note expected. Nevertheless, the dust maps of \citet{Schlegel;et-al_1998} have been used to estimate the effect of extinction along the line-of-sight. Two different $T_{eff}$-colour relationships have been used for estimating temperatures: the \citet{Alonso;et-al_1999} calibration for dwarfs/sub-giants, and the ? calibration for giants. All photometrically-derived temperatures are listed in \ref{tab:photometric-temperatures}. 
+
+\subsubsection{Effective Temperature}
+
+The effective temperature for each star was found by demanding a zero-trend in excitation potential and abundance for each measured Fe\,I line. In the same way, the microturbulence was found by demanding a zero trend in reduced equivalent width against abundance. Linear relationships with slopes of $|0.001|$ dex were considered to be converged. 
+
+\subsubsection{Surface Gravity}
+
+Surface gravity was found by forcing the mean Fe\,I and Fe\,II abundances to be equal, whilst maintaining zero trends with the excitation potential, reduced equivalent width and abundance. After these parameters had converged, the model metallicity was exactly matched to that of our line abundances. Line abundances that were unusually deviant ($3\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was N for X.
+
+\subsubsection{Metallicity, $\mbox{[M/H]}$}
+Determining the stellar parameters for a given star is an iterative process. Once the effective temperature, microturbulence and surface gravity were deduced, the model atmosphere abundance was matched to our solar-scaled Fe \textsc{I} abundance. The degeneracy between parameters required a refinement of the stellar parameters until the line abundances were consistent with the model atmosphere.
+
+% process is iterative
+% our final Fe abundance matched the model atmosphere abundance
 
 
 % spectral plots for five stars
@@ -182,6 +203,38 @@ J223811-104126	& 5100	& 3.00	& 1.21	& --1.44
 
 \subsection{Abundances}
 
+\subsubsection{Carbon}
+
+\subsubsection{Oxygen}
+Oxygen is a particularly difficult element to measure. There are only a handful of lines available in an optical spectrum: the forbidden [O \textsc{I}] lines at 630 nm and 636 nm, and the O \textsc{I} triplet lines at 777 nm. The forbidden lines are very weak, and become immeasurable in either hot and/or metal-poor stars ([Fe/H] $\lesssim -1.5$ dex). When they are present, depending on the radial velocity of the star, the [O \textsc{I}] can be significantly affected by telluric absorption. Moreover, the 630 nm line is blended with a Ni \textsc{I} absorption line \citep{Allende-Prieto;et-al_2001}, and hence the region requires careful consideration. Although the O \textsc{I} triplet lines at 777 nm are stronger than the forbidden lines, they are extremely susceptible to NLTE and 3D effects \citep{Asplund;Perez_2001}, and sensitive to changes in microturbulence. \citet{Perez;et-al_2006} showed that oxygen abundances measured under the assumption of LTE in their sample are 0.08\,dex higher than abundances derived from the `true' oxygen content derived from the forbidden lines \citep{Perez;et-al_2006}. 
+
+The [O \textsc{I}] lines were measurable in four of our candidates. Careful consideration was taken when correcting for telluric absorption, and we inspected all lines for any contamination by the earth's atmosphere. The 6300$\lambda$ line in one of our candidates, C2306265-085103, was sufficiently affected by telluric absorption such that we considered the line immeasurable. Thus, only the 6363$\lambda$ line was used to derive an oxygen abundance for C2306265-085103. In our hottest star, J223811-104126, the forbidden oxygen lines were not detected above a $3-\sigma$ significance. After synthesising the region, we deduce a conservative upper limit of $\mbox{[O/Fe]} < -0.50$ dex from the [O \textsc{I}] lines. This is consistent with the rest of our candidates, with [O/Fe] abundances varying between 0.41 to 0.57 dex.
+
+In order to derive an oxygen measurement for J223811-104126, we were forced to use the triplet lines at 777\,nm. Each line was synthesised, and a mean abundance was calculated for each candidate. Abundances determined from the oxygen triplet lines were systematically $+0.27$\,dex higher than found from the [O \textsc{I}] lines. \citet{Perez;et-al_2006} found [O/Fe] values based on the O \textsc{I} permitted triplet lines are on average $+0.19 \pm 0.07$\,dex higher than those found from the forbidden lines, after NLTE corrections of $-$0.08\,dex had been applied.  Thus, our 0.27\,dex offset between measurements of the [O \textsc{I}] and O \textsc{I} triplet lines is exactly the same as found by \citet{Perez;et-al_2006}, which we attribute to a combination of NLTE, 3D and other systematic effects. \citet{Perez;et-al_2006} concluded the weak forbidden lines, when not too weak, probably give the most reliable estimate of [O/Fe].
+
+From the permitted O \textsc{I} triplet, we derive an oxygen abundance of $\mbox{[O/Fe]} = 0.41 \pm 0.01$\,dex (random scatter) for J223811-104126. This measurement will be systematically higher than the `true' abundance if it were discernible from the [O \textsc{I}] lines, on the order of $\sim{}$0.27\,dex. When we apply this crude offset derived from the rest of our sample, we arrive at a corrected abundance of $[O/Fe] = 0.14 \pm 0.08$\,dex for J223811-104126. This is the most oxygen-deficient star in our sample.
+
+
+\subsubsection{Sodium}
+
+Sodium is produced during hydrogen burning through the Ne-Na cycle, as well as through carbon burning in massive stars by the dominant $^{12}\mbox{C}(^{12}\mbox{C}, p)^{23}\mbox{Na}$ process. The total amount of Na production by C-burning is dependent on the neutron excess of the star, which slowly increases through stellar evolution along the red giant branch. Massive stars ($>8 M_\odot$) eventually deliver their manufactured sodium to the interstellar-medium through SN II events. Because the eventual SN II explosion is devoid of any significant beta-decay processes, the neutron excess of the exploded material is representative of the pre-explosion abundance.  
+  
+The explosive material eventually condenses to form the next generation of stars, which will have a net increase in their neutron excess with respect to their predecessors. Since the Na-production rate is correlated with the neutron excess, an overall increase in the total Na and Na-production rate between stellar generations is expected. Thus, an increase in the Na abundance between generations of massive stars is a natural consequence of nucleosynthesis. Sodium content also becomes important for production of Ni during the SN II event (see \S\ref{sec:na-ni}) because $^{23}$Na is the only stable isotope produced in significant quantities during the C- (or O-) burning stages.
+
+% which lines did we use for sodium and were there any problems with the Na lines?
+
+\subsubsection{$\alpha$-elements (Mg, Ca, Si and Ti)}
+
+The $\alpha$-elements (Mg, Ca, Si and Ti) are forged through $\alpha$-particle capture in assorted burning stages of stellar evolution, including the burning of carbon, neon and silicon.
+
+% magnesium measurements
+Magnesium has been measured from unblended lines that fall within the linear regime between reduced equivalent width and abundance. Depending on the radial velocity of the star, some of these lines can be affected by telluric absorption, particularly the 6318$\lambda$ and 6965.4$\lambda$ lines. Atmospheric absorption was most notable for C2225316-14437, where three of the four Mg transitions in our line list suffered some degree of telluric absorption, requiring an attentive correction. Every corrected absorption profile was carefully examined, and lines with suspicious profiles were excluded from the final magnesium abundance.
+
+% calcium measurements + silicon measurements
+Of all the $\alpha$-elements, calcium has the smallest measurement scatter in our stars. Four line measurements were used for each star, with a measurement uncertainty of 0.01\,dex. As shown in Figure \ref{fig:alpha-elements}, all Aquarius stars show super-solar Ca abundances, ranging between 0.23 to 0.43 dex, consistent with both [Mg/Fe] and [Si/Fe] measurements. However, C2225316-14437 has an unusually high silicon abundance ($\mbox{[Si/Fe]} = 0.72$), well outside the uncertainties of the rest of our sample. C2225316-14437 does not demonstrate unusually high abundances of any other $\alpha$-element, and the silicon lines are not affected by telluric absorption. Moreover, the Si lines are in relatively good agreement with one another. If we exclude the most prominent outlier, then the mean abundance drops only slightly to $\mbox{[Si/Fe]} = 0.70 \pm 0.04$\,dex. The lowest Si line abundance for C2225316-14437 is $\mbox{[Si/Fe]} = 0.57$\,dex, still significantly higher than the final measurements for any other star.
+
+
+% titanium measurements
 
 \begin{deluxetable*}{lccccccclcccccc}
 \tablecolumns{15}
@@ -354,46 +407,69 @@ Given the line list employed, the overall data quality and the lack of Fe\,I lin
 
 % establish the relationship as a true phenomena
 
-
 Extensive studies looking at stars in globular clusters have revealed variations in light-element abundances, most notably an anti-correlation in sodium and oxygen content \citet{Norris;Da-Costa_1995}. Between generations of stars within a globular cluster, the oxygen abundance is transformed into nitrogen, reducing the overall oxygen abundance. 
 This pattern has been repeatedly demonstrated in all well-studied globular clusters, although the strength of the anti-correlation varies between systems. Even though oxygen undergoes internal mixing during its evolution along the giant branch, it is now well established that any observed abundance variations due to such mixing is limited to Li, C, and N. Therefore, the observed anti-correlations in light elements required a different astrophysical explanation.
 
-In order to help explain this phenomena, \citet{Caretta;et-al_2009} defined three components of stars within a population: primordial, intermediate, and extreme. The [Na/Fe] and [O/Fe] abundances for a given star defines which component it belongs to. Primordial (first-generation) stars are those with Na and O content similar to field stars of the same metallicity. For a well-studied system, stars with the lowest cluster [Na/Fe] abundances are characterised as primordial. An intermediate population -- the second-generation of stars -- will have super-solar sodium abundances, and demonstrate a slight depletion in oxygen content. The  abundance exhaustion rate is ultimately dependent on the star-formation history of the cluster environment. The intermediate population is sub-divided based on how much the O and Na abundances depart from the primordial population: stars with [O/Na]$ > -0.9$ dex are classified as belonging to an extreme component of this Na-O pattern because they differ greatly from the primordial cluster abundance. The extreme O-depletion component has only been observed in a few clusters (more massive ones preferentially), indicating an extended star-formation history in more massive clusters.
+% more on background
+
+% discuss three components
+\citet{Caretta;et-al_2009} defined three components of stars following this abundance pattern within a population: primordial, intermediate, and extreme. The [Na/Fe] and [O/Fe] abundances for a given star defines which component it belongs to. Primordial (first-generation) stars are those with Na and O content similar to field stars of the same metallicity. For a well-studied system, stars with the lowest cluster [Na/Fe] abundances are characterised as primordial. An intermediate population -- the second-generation of stars -- will have super-solar sodium abundances, and demonstrate a slight depletion in oxygen content. The  abundance exhaustion rate is ultimately dependent on the star-formation history of the cluster environment. The intermediate population is sub-divided based on how much the O and Na abundances depart from the primordial population: stars with [O/Na]$ > -0.9$ dex are classified as belonging to an extreme component of this Na-O pattern because they differ greatly from the primordial cluster abundance. The extreme O-depletion component has only been observed in a few clusters (more massive ones preferentially), indicating an extended star-formation history in more massive clusters.
 
 % discuss the production of Sodium
-The increase in Na abundance between generations of stars is a natural consequence of nucleosynthesis in massive ($>8 M_\odot$) stars. Massive stars undergo hydrostatic carbon burning, producing sodium by the dominant $^{12}\mbox{C}(^{12}\mbox{C}, p)^{23}\mbox{Na}$ process and eventually delivering it to the interstellar-medium through SN II events. The total amount of Na production is dependent on the neutron excess of the star, which slowly increases during the star's evolution. Because the eventual SN II explosion is devoid of any significant beta-decay processes, the neutron excess of the exploded material is representative of the pre-explosion abundance. This material eventually condenses to form the next generation of stars, which will have a net increase in their neutron excess with respect to their predecessors. Since the Na-production rate is correlated with the stellar neutron excess, an overall increase in Na is expected. The sodium content also becomes important for production of Ni during the SN II event (see \S\ref{sec:na-ni}) because $^{23}$Na is the only stable isotope produced in significant quantities during the C- (or O-) burning stages.
-
-% discuss the production of Oxygen
 
 
 % Discuss the depletion of oxygen over time. What are the possible astrophysical explanations for this depletion
-The exact astrophysical mechanism for oxygen depletion between generations of stars in globular clusters is still under debate. However, it is clear that this trend has been well-demonstrated by numerous independent observational studies. 
- 
- 
-Additionally, oxygen is a particularly difficult element to measure. There are only a handful of lines available in an optical spectrum: the forbidden [O \textsc{I}] lines at 630 nm and 636 nm, and the O \textsc{I} triplet lines at 777 nm. The forbidden lines are very weak, and become immeasurable in either hot and/or metal-poor stars ([Fe/H] $\lesssim -1.5$ dex). When they are present, the forbidden lines can be hugely affected by telluric absorption -- depending on the radial velocity of the star. Moreover, the 630 nm line is blended with a Ni \textsc{I} absorption line \citep{Allende-Prieto;et-al_2001}, and hence the region requires a careful synthesis approach. Although the O \textsc{I} triplet lines at 777 nm are stronger than the forbidden lines, they are extremely sensitive to NLTE effects. Oxygen abundances measured using the triplet lines under the assumption of LTE can be $\sim$0.25 dex higher than abundances derived from the forbidden lines \citep{Perez;et-al_2006}.
+The exact astrophysical mechanism for oxygen depletion between generations of stars in globular clusters is still under debate. However, it is clear that this trend has been well-demonstrated empirically. Several hypotheses have been proposed in order to account for oxygen depletion between stellar generations, including massive binaries \citep{De_Mink;et-al_2009} or fast-rotating massive stars \citep{decressin;et-al_2007}. While the exact procedure is yet to be fully characterized, we can describe the abundance variation as a simple oxygen depletion (or dilution) model with time. Through comparisons with existing globular clusters, we can still draw inferences on the star-formation history of a system from measuring sodium and oxygen in a sample of its stars.
 
 % Thus if you want to deduce the history of star formation for a group of stars, and deduce whether it has undergone star formation typically seen in globular clusters, you must sample from all components.
 
-It is clear that careful consideration must be given inferring star-formation histories from observed stellar abundances. In addition to the normal care afforded for measuring elemental abundances from high-resolution spectroscopic data, attention must be given to telluric absorption, Ni contamination, and NLTE corrections when deriving oxygen abundances. Furthermore, when characterising the oxygen depletion rate -- and hence the strength of the Na-O anti-correlation for a cluster -- it is vital to obtain observations for stars belonging to all components (where possible). If only a primordial sample of stars in a globular cluster is observed, then their [Na/Fe] and [O/Fe] abundances will be indistinguishable from halo stars of a similar metallicity. In such a scenario, any inferred anti-correlation could equally be explained by intrinsic chemical scatter or observational uncertainties.
+It is clear that careful consideration must be given inferring star-formation histories from observed stellar abundances. In addition to the normal care afforded for measuring elemental abundances from high-resolution spectroscopic data, attention must be given to telluric absorption, Ni contamination, and NLTE corrections when deriving oxygen abundances. Furthermore, when characterising the oxygen depletion rate -- and hence the strength of the Na-O anti-correlation for a cluster -- it is vital to obtain observations for stars belonging to all three components (where possible). If only a primordial sample of stars in a globular cluster is observed, then their [Na/Fe] and [O/Fe] abundances will be indistinguishable from halo stars of a similar metallicity. In such a scenario, any inferred anti-correlation could equally be explained by intrinsic chemical scatter or observational uncertainties.
 
 % Talk about Wylie de boer measurements
 
-% Wylie de boer claim from their Na-O abundances that...
-% Wylie de boer abundances themselves do not demonstrate the classical Na-O anti-correlation. In fact, they have a slight positive relationship. However, this trend is drawn from a sample of 5 stars -- the same as this study. If there is any evidence of a globular cluster from the [Na/Fe], [O/Fe] abundances in the Wylie de Boer study, it is the fact that two of their stars have slightly super-solar Na abundances; which is higher than expected for halo stars of this metallicity.
+With high-resolution data and modest ($\sim$30 pixel$^{-1}$) signal-to-noise, \citet{Wylie-de-boer;et-al_2012} measured Na and O abundances for four of their six Aquarius stream members. This research has four stars in common with the \citet{Wylie-de-boer;et-al_2012} study, but Na and O measurements exist for only three stars that are in both samples. We have measurements for all of our stars, including J223811-104126, for which we ascertained an upper limit from the [O \textsc{I}] lines of [O/Fe] $< 0.5$ dex, and a NLTE-corrected abundance of $\mbox{[O/Fe]} = 0.21$ (CHECK) from the O \textsc{I} triplet lines.
 
-% How our measurements of Na, O compare to theirs
+% how do our values compare with Wylie de boer
+
+% Is there some explanation for abundance differences?
+
+The \citet{wylie-de-boer;et-al_20120} measurements indicate two stars with solar-type levels of Na -- identical to field star Na abundances for their metallicity -- and two stars with super-solar sodium content. Combined with measurements of other light elements (see \S\ref{sec:al-mg}, \ref{sec:na-ni}) they claim the Aquarius stream is ``consistent with a globular cluster origin''. The \citet{wylie-de-boer;et-al_2012} abundances themselves do not demonstrate a classical Na-O anti-correlation. In fact, they have a slight positive relationship: their Na-enhanced stars show an increased oxygen content, contrary to an expected oxygen depletion between generations with. However, this trend is drawn from a sample of only four stars -- the same as this study if our upper limit for J223811-104126 is excluded. 
 
 % Can these abundance differences be explained by a line-list?
 
 
 % In any case, suppose these stars did originate from a globular cluster. If the entire cluster was well-studied, the primordial component cut-off is described by Caretta as stars which are 4\sigma from the halo abundance at that metallicity. These stars would 
 
-In such a scenario, these stars would be classified as a primordial component -- thus being indistinguishable from the halo. It is insufficient 
-
 
 \subsection{The Al-Mg Relationship}
 
-\subsection{The Na-Na Relationship}
+The Na-O anti-correlation is likely the result of complete CNO and Ne-Na cycles of proton reactions in globular cluster stars. There is also evidence in some clusters that the Mg-Al nucleosynthesis cycle is also active. 
+
+ The conditions required for these reactions are significantly higher than the CNO and Ne-Na cycle: temperatures of 70 MK are required for the Mg-Al channel instead of just 25 MK for the CNO/Ne-Na cycles \citet{Charbonnel_Prantzos_2006}. 
+
+
+\subsection{The Na-Ni Relationship}
+
+% discuss the discovery of the Na-Ni relationship
+
+% this relationship was correlated with distance, such that more distant stars were deficient in Na
+
+% revise contribution of Na from type II SN events
+
+% production of nickel
+
+% thus, a Na-Ni trend is expected across a wide range of metallicities
+
+% as Venn points out, this trend can be altered based on SN Ia contributions
+
+% in general, we can expect high Na, Ni abundances in stars that have an long contribution of previous massive stars
+% thus, the we can infer the star formation history 
+
+% dsPh's have a very different star formation history and chemical signature to typical halo stars of the same metallicity
+% the same is true for globular clusters, given the chemical patterns already discussed
+% however disk stars and globular clusters are indiscernible in the Na/Ni plane: they both show an extended contribution of massive stars with respect to dSph's (Figure X).
+
+% 
 
 \subsection{Possible Progenitors}
 
