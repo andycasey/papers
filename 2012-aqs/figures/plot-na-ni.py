@@ -59,3 +59,35 @@ ax.set_ylim(-0.7, 0.5)
 
 plt.savefig('aquarius-na-ni.eps')
 plt.savefig('aquarius-na-ni.pdf')
+
+
+
+NS_Na_Fe, NS_Ni_Fe, kind = np.loadtxt('nissen_schuster_2010.data', delimiter='|', skiprows=9, dtype=str, usecols=(6, 12, -1), unpack=True)
+
+NS_Na_Fe = np.array(map(float, NS_Na_Fe))
+NS_Ni_Fe = np.array(map(float, NS_Ni_Fe))
+
+# Thick disk stars
+thick_disk = np.where(kind == 'TD')[0]
+
+# High alpha stars
+high_alpha = list(np.where(kind == 'high-alpha')[0])
+high_alpha.extend(np.where(kind == '(high-alpha)')[0])
+
+high_alpha = np.array(high_alpha)
+
+low_alpha = list(np.where(kind == 'low-alpha')[0])
+low_alpha.extend(np.where(kind == '(low-alpha)')[0])
+
+low_alpha = np.array(low_alpha)
+
+ax.scatter(NS_Na_Fe[thick_disk], NS_Ni_Fe[thick_disk], c='r', marker='+')
+ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], c='g', marker='o', facecolor='none')
+ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], c='b', marker='o', facecolor='b')
+
+ax.set_xlim(-0.5, 0.4)
+ax.set_ylim(-0.2, 0.2)
+
+plt.savefig('aquarius-nissen-schuster-na-ni.eps')
+plt.savefig('aquarius-nissen-schuster-na-ni.eps')
+
