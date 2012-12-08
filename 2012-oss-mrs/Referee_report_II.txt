@@ -1,0 +1,18 @@
+
+Reviewer's Comments:
+Hunting the Parent of the Orphan Stream: Identifying Stream Members From Low Resolution Spectroscopy
+
+Casey, A. R., Da Costa, G., Keller, S. C., & Maunder, E.
+
+
+I have read the revised manuscript and I believe this paper is now ready for publication. My concerns have been suitably addressed and I believe this paper (and the candidate Orphan stream giant star list contained therein) will prove to be a very useful contribution to the field. 
+
+Some minor remaining nits:
+
+1) In the Introduction it is stated that the Orphan stream is a spatial overdensity of ~10%. I believe this is only true after substantial color cuts have been applied, or the stream would surely have been discovered many decades ago in photographic surveys.
+
+2) In Section 4.2, ``the same candidate selection' would better be phrased ``the same candidate list'.
+
+3) In Section 5, second sentence, ``criteria' should be ``criterion' and there should be an ``of' before ``contamination'.
+
+
