@@ -94,13 +94,20 @@ The white dwarf HR 6141 was observed on X with a S/N of 400 pixel$^{-1}$ to acco
 }
 \startdata
 
-C2225316-14437	& 22:25:31.7 & $-$14:54:39.6	& 2011-07-30	& 1.033 & \dots & \dots & \dots & $-$169.0	& \dots & 0.7 \\
-C2306265-085103	& 23:06:26.6 & $-$08:51:04.8	& 2011-07-30	& 1.096 & \dots & \dots & \dots & $-$239.3	& \dots & 0.6 \\
+C2225316-14437	& 22:25:31.7 & $-$14:54:39.6	& 2011-07-30	& 1.033 & \dots & \dots & 135	 & --168.6	& --156.4 & 0.1 \\
+C2306265-085103	& 23:06:26.6 & $-$08:51:04.8	& 2011-07-30	& 1.096 & \dots & \dots & 100	 & --240.4	& --221.1 & 0.1 \\
 HD41667			& 06:05:03.7 & $-$32:59:36.8	& 2011-03-13	& 1.005	& \dots & \dots & \dots & 314.4	& \dots & 0.8 \\
 HD142948		& 16:00:01.6 & $-$53:51:04.1	& 2011-03-14	& 1.107	& \dots & \dots & \dots & 6.8		& \dots & 0.4 \\
-J221821-183424	& 22:18:21.2	& $-$18:34:28.3	& 2011-07-30	& 1.026	& \dots & \dots & \dots & $-$170.5	& \dots & 0.5 \\
-J223504-152834	& 22:35:04.5	& $-$15:28:34.9	& 2011-07-30	& 1.047	& \dots & \dots & \dots & $-$180.9	& \dots & 0.7 \\
-J223811-104126	& 22:38:11.6	& $-$10:41:29.4	& 2011-07-30	& 1.218	& \dots & \dots & \dots & $-$248.4	& \dots & 0.7 
+J221821-183424	& 22:18:21.2 & $-$18:34:28.3	& 2011-07-30	& 1.026	& \dots & \dots & 115 	 & --170.2	& --159.5 & 0.1 \\
+J223504-152834	& 22:35:04.5 & $-$15:28:34.9	& 2011-07-30	& 1.047	& \dots & \dots & 135	 & --179.0	& --169.7 & 0.1 \\
+J223811-104126	& 22:38:11.6 & $-$10:41:29.4	& 2011-07-30	& 1.218	& \dots & \dots & 115	 & --250.1	& --235.7 & 0.1 
+
+% V corrections (already applied the first number of each row)
+% J221821     	:   0.30, 0.25 +/- 1.25 (MEK has -154.1, wdb ) -- diff: 5.4  (positive == higher)
+% C2225316		:	0.43, 0.42 +/- 1.13 (MEK has -155.7) -- diff: -0.4 (hers is lower)
+% C2306265		: 	1.14, 1.19 +/- 1.16 (MEK has -221.8) -- diff: -0.7 (hers is lower)
+% J223504		:	-1.87, -1.89 +/- 1.45 (MEK has -166.9) -- diff: 2.8 (positive == higher)
+% J223811		:	1.69, 1.61	+/- 1.47 (MEK has --230.1) -- diff 5.6 (positive == higher)
 
 \enddata
 \tablenotetext{a}{S/N measured at 6000 \AA{} for each target.}
@@ -114,7 +121,7 @@ J223811-104126	& 22:38:11.6	& $-$10:41:29.4	& 2011-07-30	& 1.218	& \dots & \dots
 \label{sec:radial-velocities}
 The radial velocity for each star was determined in a two-step method. An initial estimate of the radial velocity was ascertained by cross-correlation with the synthetic spectrum of a giant with $T_{eff} = 4500$\,K, $\log{g} = 1.5$, and [M/H] $= -1.0$ across the wavelength range $8450 - 8700$ \AA{}. The observed spectrum was shifted to the pseudo-rest frame using this initial velocity. Velocities found from cross-correlation are typically within 1\,km\,s$^{-1}$ of our final published value.
 
-With our spectrum at near-rest, we measured the equivalent widths of $\sim$200 lines by fitting Gaussian functions to the absorption profiles. Fitted Gaussian profiles provides us with a measured equivalent width, the full-width half-maximum of the profile, and the central wavelength. Thus, the residual radial velocity can be found from the ratio of the central and rest line wavelengths. The final radial velocity for the star is provided by the mean of these $\sim$200 line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and our standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.7 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree excellently (within X\,km s$^{-1}$) with previously reported literature values \citep{williams;et-al_2011,wylie-de-boer;et-al_2012}, demonstrating the accuracy of the radial velocities published by the RAVE survey.
+With our spectrum at near-rest, we measured the equivalent widths of $\sim$200 lines by fitting Gaussian functions to the absorption profiles. Fitted Gaussian profiles provides us with a measured equivalent width, the full-width half-maximum of the profile, and the central wavelength. Thus, the residual radial velocity can be found from the ratio of the central and rest line wavelengths. The final radial velocity for the star is provided by the mean of these $\sim$200 line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and our standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.7 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree quite well with the \citet{williams;et-al_2011} published values: $\langle\Delta{V_{hel}}\rangle = 2.8$\,km\,s$^{-1}$, demonstrating the accuracy of the velocities published by the RAVE survey.
 
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{./figures/line-velocity.pdf}
@@ -407,7 +414,7 @@ J223811-104126 	& 0.07\phn	&	0.48 & 5104	&	5367 \\
 
 \subsubsection{Surface Gravity}
 
-Surface gravity was found by forcing the mean Fe\,I and Fe\,II abundances to be equal, whilst maintaining zero trends with the excitation potential, reduced equivalent width and abundance. After these parameters had converged, the model metallicity was exactly matched to that of our line abundances. Line abundances that were unusually deviant ($3\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was N for X.
+Surface gravity was found by forcing the mean Fe\,I and Fe\,II abundances to be equal, whilst maintaining zero trends with the excitation potential, reduced equivalent width and abundance. After these parameters had converged, the model metallicity was exactly matched to that of our line abundances. Line abundances that were unusually deviant ($3\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was nine for C222531-144370.
 
 \subsubsection{Metallicity, $\mbox{[M/H]}$}
 Determining the stellar parameters for a given star is an iterative process. Once the effective temperature, microturbulence and surface gravity were deduced, the model atmosphere abundance was matched to our solar-scaled Fe \textsc{I} abundance. The degeneracy between parameters required a refinement of the stellar parameters until the line abundances were consistent with the model atmosphere.
@@ -499,12 +506,34 @@ The $\alpha$-elements (Mg, Ca, Si and Ti) are forged through $\alpha$-particle c
 %Magnesium has been measured from unblended lines that fall within the linear regime between reduced equivalent width and abundance.
 Depending on the radial velocity of the star, some magnesium lines were be affected by telluric absorption, particularly the 6318$\lambda$ and 6965.4$\lambda$ lines. Atmospheric absorption was most notable for C2225316-14437, where three of the four Mg transitions in our line list suffered some degree of telluric absorption, requiring an attentive correction. Every amended absorption profile was carefully examined, and lines with suspicious profiles were excluded from the final magnesium abundance.
 
+% [alpha/Fe]
+\begin{figure}[h]
+	\includegraphics[width=\columnwidth]{./figures/aquarius-alpha-fe.pdf}
+	\caption{A plot showing $[\alpha/\mbox{Fe}]$ for all Aquarius stream stars.}
+	\label{fig:alpha-fe}
+\end{figure}
+
 % calcium measurements + silicon measurements
-Of all the $\alpha$-elements, calcium has the smallest measurement scatter in our stars. Four line measurements were used for each star, with a measurement uncertainty of 0.01\,dex. As shown in Figure \ref{fig:alpha-elements}, all Aquarius stars show super-solar Ca abundances, ranging between 0.23 to 0.43 dex, consistent with both [Mg/Fe] and [Si/Fe] measurements. However, C2225316-14437 has an unusually high silicon abundance ($\mbox{[Si/Fe]} = 0.72$), well outside the uncertainties of the rest of our sample. C2225316-14437 does not demonstrate unusually high abundances of any other $\alpha$-element, and the silicon lines are not affected by telluric absorption. Moreover, the Si lines are in relatively good agreement with one another. If we exclude the most prominent outlier, then the mean abundance drops only slightly to $\mbox{[Si/Fe]} = 0.70 \pm 0.04$\,dex. The lowest silicon line abundance for C2225316-14437 is $\mbox{[Si/Fe]} = 0.57$\,dex, still significantly higher than the final measurements for any other star.
+Of all the $\alpha$-elements, calcium has the smallest measurement scatter in our stars. Four line measurements were used for each star, with a measurement uncertainty of 0.01\,dex. As shown in Figure \ref{fig:alpha-elements}, all Aquarius stars show super-solar Ca abundances, ranging between 0.23 to 0.43 dex, consistent with both [Mg/Fe] and [Si/Fe] measurements. However, C2225316-14437 has an unusually high silicon abundance ($\mbox{[Si/Fe]} = 0.72$), well outside the uncertainties of the rest of our sample. C2225316-14437 does not demonstrate unusually high abundances of any other $\alpha$-element, and the silicon lines are not affected by telluric absorption. Moreover, the Si lines are in relatively good agreement with one another. If we exclude the most prominent outlier, then the mean abundance drops only slightly to $\mbox{[Si/Fe]} = 0.70 \pm 0.04$\,dex. The lowest silicon line abundance for C2225316-14437 is $\mbox{[Si/Fe]} = 0.57$\,dex, still significantly higher than the averaged abundance for any other star.
 
 % titanium measurements
 
-\subsubsection{Iron-peak Elements}
+
+\subsubsection{Aluminium}
+There are six aluminium transition lines available in our optical spectra. The strongest of these lines occur at 3944 and 3961\,{\AA}, and are visible in all of our stars. However, this is a particularly crowded spectral region: these lines fall between the strong Ca H and K lines, with the 3961\,{\AA} transition clearly in the wing of the Ca H line. This makes the continuum determination and subsequent Al measurement non-trivial, especially given the metallicity of our stars. Instead, we have measured Al abundances from the other transitions available in our spectra: the Al \textsc{I} lines at 6696, 6698, 7835 and 7836\,{\AA}. Although these lines are weaker than the bluer Al \textsc{I} lines, their surrounding regions are uncrowded.
+
+Generally the four Al \textsc{i} lines are in reasonable agreement with one another, yielding random scatter of less than 0.05\,dex. 
+
+These lines were not always detected in our spectra. With decreasing metallicity and increasing temperature the strength of the lines is noticeably weakened, below a 3-$\sigma$ detection limit. For our most metal-poor star, J221821, only one Al \textsc{i} line was detectable, and we have adopted an uncertainty of 0.05\,dex. 
+
+% there are a few lines available in the spectrum
+% incl. blue ones
+% the blue ones remain strong even in extremely metal-poor stars
+% in metal rich stars the region is too crowded and the continuum (and abundance) is non-trivial to determine
+% in lieu of using these lines, we have used 4 other lines at X
+% for our most metal-poor star, J221X, only one of these lines was detectable
+
+\subsubsection{Iron-peak Elements (Sc, V, Cr and Mn)}
 Scantium, Vanadium, Chromium and Manganese. All very vanilla, exhibiting a downward trend with [Fe/H].
 Data.
 
@@ -512,7 +541,7 @@ Data.
 \subsubsection{Barium}
 Barium is a neutron-capture element, primarily produced through the \textit{s}-process, but can be forged from a variety of nucleosynthetic processes. Measuring barium requires some careful consideration. The strong resonance lines at 4554 {\AA} and 4934 {\AA} have appreciable hyperfine splitting, which if unaccounted for can result in over-estimated abundances. There are a few singly ionized lines available in our spectra which do not suffer from strong hyperfine splitting, namely the 5853, 6141 and 6496 {\AA} transitions. Depending on the radial velocity of the star, sometimes our 6496 {\AA} line was affected by small amounts of telluric absorption. In these cases the line was discarded. The abundances tabulated in Table \ref{tab:program-star-abundances} are based on the remaining clean Ba \textsc{II} lines at 5853 and 6141 {\AA}, which are generally in good agreement with each other, and the 6496 {\AA} line where available.
 
-Our standard stars have [Ba/Fe] abundances very typical of the Milky Way halo. Only one of our standard stars, HD 44007, has published [Ba/Fe] abundances from high-resolution spectra. We find HD 44007 to have $\mbox{[Ba/Fe]} = -0.05 \pm 0.04$, which is in rough accordance with existing published measurements from \citet{fulbright_2000} and \citet{burris;et-al_2000} of $-0.27$ and 0.05 dex, respectively. 
+Our standard stars have [Ba/Fe] abundances very typical of the Milky Way halo. Only one of our standard stars, HD 44007, has published [Ba/Fe] abundances from high-resolution spectra. We find HD 44007 to have $\mbox{[Ba/Fe]} = -0.05 \pm 0.04$, which is in between existing published measurements from \citet{fulbright_2000} and \citet{burris;et-al_2000} of $-0.27$ and 0.05 dex, respectively. 
 
 With one exception, the Aquarius stream stars have barium abundances that are quite similar to the stellar halo, ranging between $\mbox{[Ba/Fe]} = -0.02$ to 0.15 dex. The exception is C2225316, which has an anomalously high barium abundance of $\mbox{[Ba/Fe]} = 0.68$ dex. This is $\sim{}0.60$ dex higher than the Milky Way trend at its given $\mbox{[Fe/H]} = -1.19$ dex. Our three Ba \textsc{II} lines in C2225316 are in excellent agreement: 0.67, 0.68, and 0.72 dex. The 6496 {\AA} transition has negligible telluric contribution (e.g. Figure \ref{fig:ba-6496}), so it was included for this star. At least in Al, Si, Cr and Ba abundances (see sections \ref{sec:aluminium-abundance}, \ref{sec:alpha-elements}, \ref{sec:iron-peak-elements}), this star appears to be chemically distinct from the other Aquarius stream stars in our sample. 
 
@@ -737,6 +766,14 @@ The \citet{wylie-de-boer;et-al_2012} measurements indicate two stars with solar 
 
 % In any case, suppose these stars did originate from a globular cluster. If the entire cluster was well-studied, the primordial component cut-off is described by Caretta as stars which are 4\sigma from the halo abundance at that metallicity. These stars would 
 
+% [O/Fe], [Na/Fe]
+\begin{figure}[h]
+	\includegraphics[width=\columnwidth]{./figures/aquarius-o-na.pdf}
+	\caption{A plot showing [O/Fe] and [Na/Fe] for all Aquarius stream stars.}
+	\label{fig:o-na}
+\end{figure}
+
+
 
 \subsection{The Al-Mg Relationship}
 
@@ -744,6 +781,12 @@ The Na-O anti-correlation is likely the result of complete CNO and Ne-Na cycles 
 
  The conditions required for these reactions are significantly higher than the CNO and Ne-Na cycle: temperatures of 70 MK are required for the Mg-Al channel instead of just 25 MK for the CNO/Ne-Na cycles \citet{charbonnel;prantzos_2006}. 
 
+% Mg-Al
+\begin{figure}[h]
+	\includegraphics[width=\columnwidth]{./figures/aquarius-mg-al.pdf}
+	\caption{A plot showing [Mg/Al] for all Aquarius stream stars.}
+	\label{fig:mg-al}
+\end{figure}
 
 \subsection{The Na-Ni Relationship}
 
@@ -759,7 +802,7 @@ The correlation between sodium and nickel content is the nucleosynthetic result 
 % [Na/Fe], [Ni/Fe]
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{./figures/aquarius-na-ni.pdf}
-	\caption{A plot showing [Na/Fe] and [Ni/Fe] for all Aquarius stream stars.}
+	\caption{A plot showing [Na/Fe] and [Ni/Fe] for all Aquarius stream stars. TODO add dwarf/GC/disk stars on here.}
 	\label{fig:na-ni}
 \end{figure}
 
@@ -771,6 +814,8 @@ Stars originating in dwarf spheroidal galaxies and globular clusters have very d
 \subsection{Possible Progenitors}
 
 Since the Aquarius stream is kinematically coherent, the default assumption is that the system has been accreted.
+
+
 % their chemistry is indicative of not belonging to a dwarf spheroidal
 
 % open cluster
@@ -822,19 +867,6 @@ HD219615  			& 23:17:10.7 &$+$03:16:51.9 & 1.412 & \nodata & \nodata
 \end{deluxetable*}
 
 
-% [alpha/Fe]
-\begin{figure}[h]
-	\includegraphics[width=\columnwidth]{./figures/aquarius-alpha-fe.pdf}
-	\caption{A plot showing $[\alpha/\mbox{Fe}]$ for all Aquarius stream stars.}
-	\label{fig:alpha-fe}
-\end{figure}
-
-% Mg-Al
-\begin{figure}[h]
-	\includegraphics[width=\columnwidth]{./figures/aquarius-mg-al.pdf}
-	\caption{A plot showing [Mg/Al] for all Aquarius stream stars.}
-	\label{fig:mg-al}
-\end{figure}
 
 % [Na/Fe], [Cr/Fe], [Ni/Fe]
 \begin{figure}[h]
@@ -845,12 +877,6 @@ HD219615  			& 23:17:10.7 &$+$03:16:51.9 & 1.412 & \nodata & \nodata
 
 
 
-% [O/Fe], [Na/Fe]
-\begin{figure}[h]
-	\includegraphics[width=\columnwidth]{./figures/aquarius-o-na.pdf}
-	\caption{A plot showing [O/Fe] and [Na/Fe] for all Aquarius stream stars.}
-	\label{fig:o-na}
-\end{figure}
 
 % Toombre
 \begin{figure}[h]
