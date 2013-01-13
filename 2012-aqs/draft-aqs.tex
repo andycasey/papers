@@ -1,12 +1,14 @@
 %!TEX TS-program = pdflatex
 \documentclass{emulateapj}
 
-\shorttitle{The Aquarius Stream Progenitor Was Not A Globular Cluster}
+\usepackage{amssymb,graphics} % for resolution symbol
+
+\shorttitle{No Evidence for the Aquarius Co-Moving Group Resulting from a Disrupted Classical Globular Cluster}
 \shortauthors{Casey et al}
 
 \begin{document}
 
-\title{The Aquarius Stream Progenitor Was Not A Globular Cluster: \\ Its History Could Be Far More Interesting\altaffilmark{1}}
+\title{No Evidence for the Aquarius Co-Moving Group \\Resulting from a Disrupted Classical Globular Cluster\altaffilmark{1}}
 
 
 \author{Andrew R. Casey\altaffilmark{2,3} and distinguished collaborators}
@@ -17,27 +19,27 @@
 
 
 \begin{abstract}
-We present a detailed dynamic and chemical analysis of 5 Aquarius stream giants observed using the MIKE spectrograph on the Magellan Clay Telescope. Assuming all candidates are stream members, our data indicate the Aquarius stream has a large metallicity dispersion. We find no Na-O anti-correlation, and no chemical evidence that the stream is a result of a disrupted globular cluster, contrary to \citet{wylie-de-boer;et-al_2012}.
+We present a detailed analysis of five Aquarius stream giant stars observed using the MIKE spectrograph on the Magellan Clay telescope.  Enhanced sodium and nickel abundances suggest the group is not the result of a dwarf satellite galaxy, and that its chemical enrichment environment is more like a globular cluster or the thick disk of the Milky Way. However, we find no evidence that the group is a result of a disrupted globular cluster. Our data indicate the Aquarius stream has a large metallicity dispersion of $\sigma(\mbox{[Fe/H}]) = 0.32$\,dex. No inverse Na-O correlation is present, and we find a positive Mg-Al relationship. Chemically, the group is indistinguishable from the Milky Way thick disk with the exception of one very interesting candidate, which is most likely tidal debris from $\omega$-Centurai. Assuming all other candidates are Aquarius members, we propose the co-moving group has arisen from a minor merger in the Milky Way's thick disk.
 
 \end{abstract}
 
 \keywords{Galaxy: halo, structure --- Individual: Aquarius Stream --- Stars: FGK-giants}
 
 \section{Introduction}
-Galaxies are formed hierarchically through chaotic mergers of smaller systems. The Milky Way is no exception. In our own stellar  halo, we see ongoing evidence of these accretion events. As accreting satellites infall onto the galaxy, tidal forces disrupt the dwarf, hurtling stars in leading and trailing streams. The phase space information of stars within such streams are sensitive to the galactic potential. They can collectively constrain the fraction and distribution of accreted matter in the stellar halo, the sub-halo mass function, as well as the shape and extent of dark matter in the Milky Way. Moreover, individual chemical abundances can constrain the  precise nucleosynthesis sites where elements are forged, and can collectively trace the chemical evolution of the galaxy.
+Galaxies are formed hierarchically through chaotic mergers of smaller systems. The Milky Way is no exception. In our own stellar halo, we see ongoing evidence of these accretion events. As accreting satellites infall onto the galaxy, tidal forces disrupt the dwarf, hurtling stars in leading and trailing directions. The phase space information of stars within these `stellar streams' are sensitive to the galactic potential. They can collectively constrain the fraction and distribution of accreted matter in the stellar halo, the sub-halo mass function, as well as the shape and extent of dark matter in the Milky Way. Moreover, individual chemical abundances can constrain the  precise nucleosynthesis sites where elements are forged, as well as trace the chemical evolution of the galaxy.
 
 % Consider adding a final sentence about the amount of work that has gone into stellar streaams
 
-Wide-field surveys have proved excellent sources for finding stellar streams. Dozens of streams reaching out up to 150\,kpc in the halo have been identified through photometric selections and matched-filtering techniques \citep{belokurov;et-al_2007,koposov_SG1}. Indeed, it is clear that a large fraction of the stellar halo has been built up by accretion. However, as \citet{helmi;white_1999} point out, these observing strategies are only successful for identifying streams that are sufficiently distant from the solar neighbourhood. A nearby stream, within $\sim{}$10\,kpc, will not appear as an on-sky over-density, as the stars would be sparsely positioned across the sky. Such substructures would only be detectable by their kinematics, or perhaps precise chemical abundances through a `chemical tagging' approach (e.g. see \citet{freeman;bland-hawthorn_2003}). 
+Wide-field surveys have proved excellent sources for finding stellar streams. Dozens of streams reaching out up to 150\,kpc in the halo have been identified through photometric selections and matched-filtering techniques \citep{belokurov;et-al_2007,koposov_SG1}. Indeed, it is clear that a large fraction of the stellar halo has been built up by accretion. However, as \citet{helmi;white_1999} point out, these observing strategies are only successful for identifying streams that are sufficiently distant from the solar neighbourhood. A nearby stream, within $\sim$10\,kpc, will not appear as an over-density, as the stars would be sparsely positioned across the sky. Such substructures would only be detectable by their kinematics, or perhaps precise chemical abundances through a `chemical tagging' approach (e.g. see \citet{freeman;bland-hawthorn_2003}). 
 
 % Talk about RAVE
-It is therefore necessary to survey solar neighbourhood stars with spectroscopy in order to detect any nearby substructures. The RAVE (Radial Velocity Experiment) began such a survey in 2003 and has observed spectra from over 500,000 stars across 17,000 deg$^{2}$. As the name suggests, the primary goal of RAVE was to obtain radial velocities for the solar neighbourhood and beyond. In an attempt to remain kinematically unbiased, RAVE candidates were selected based only on their apparent magnitude. With the exception of bulge stars, where some photometric cuts were employed, all stars between 9 $<$ I $<$ 13 were observed. Almost all of these candidates have published radial velocity measurements \citep{steinmetz;et-al_2006}, and for a subset of stars with sufficient S/N, estimates of stellar parameters have been derived using a $\chi^2$ minimization technique \citep{zwitter;et-al_2008, siebert;et-al_2011}. 
+It is therefore necessary to survey solar neighbourhood stars with spectroscopy in order to detect any nearby substructures. The RAVE (Radial Velocity Experiment) team began such a survey in 2003 and have observed spectra from over 500,000 stars across 17,000 deg$^{2}$. As the name suggests, the primary goal of RAVE was to obtain radial velocities for the solar neighbourhood and beyond. In an attempt to remain kinematically unbiased, RAVE candidates were selected based only on their apparent magnitude. With the exception of bulge stars, where some photometric cuts were employed, all stars between 9 $<$ I $<$ 13 were observed. Almost all of these candidates have published radial velocity measurements \citep{steinmetz;et-al_2006}, and for a subset of stars with sufficient S/N, estimates of stellar parameters have been derived using a $\chi^2$ minimization technique \citep{zwitter;et-al_2008, siebert;et-al_2011}. 
 
 % Identification of the aquarius stream
-Using these data, \citet{williams;et-al_2011} identified a co-moving group of nearby ($0.5 \lesssim d \lesssim 10$\,kpc) stars in the vicinity of the Aquarius constellation $(l, b) = (60\,^\circ, -55\,^\circ)$. Thus, the co-moving group was named the Aquarius stream. The stream is most apparent when examining velocities against galactic latitude for stars within $-70\,^\circ < b < -50\,^\circ$. \citet{williams;et-al_2011} employed a selection criteria of $-250 < V_{HEL} < -150$\,km s$^{-1}$, $30\,^\circ < l < 75\,^\circ$ and $J > 10.3$ to maximize the contrast between the stream and background, identifying 15 candidates in the process. The average heliocentric velocity of these members was found to be $V_{HEL} = -199$\,km s$^{-1}$, with a dispersion of 27\,km s$^{-1}$. The radial velocities outputted by the RAVE survey are described to be $\sim2$\,km s$^{-1}$, so the wide kinematic distribution appears to be real.
+Using these data, \citet{williams;et-al_2011} identified a co-moving group of nearby ($0.5\,\mbox{kpc} \lesssim d \lesssim 10\,\mbox{kpc}$) stars in the vicinity of the Aquarius constellation $(l, b) = (60\,^\circ, -55\,^\circ)$. Thus, the co-moving group was named the Aquarius stream. The stream is most apparent when examining velocities against galactic latitude for stars within $-70\,^\circ < b < -50\,^\circ$. \citet{williams;et-al_2011} employed a selection criteria of $-250\,\mbox{km s}^{-1} < V_{HEL} < -150\,\mbox{km s}^{-1}$, $30\,^\circ < l < 75\,^\circ$ and $J > 10.3$ to maximize the contrast between the stream and background, identifying 15 candidates in the process. The average heliocentric velocity of these members was found to be $V_{HEL} = -199\,\mbox{km s}^{-1}$, with a dispersion of 27\,km s$^{-1}$. The radial velocity uncertainties provided by the RAVE catalog are described to be $\sim$2\,km s$^{-1}$, so the wide kinematic distribution appears to be real.
 
 % QUANTIFYING THE STREAM DETECTION
-Upon examining the galactic longitude and velocities of Aquarius stars, the stream appears quite distinct from the halo. In order to quantify the statistical likelihood that the Aquarius stream is truly distinct from the halo, \citet{williams;et-al_2011} compared the number of observed RAVE stars within $-70\,^\circ < b < -50\,^\circ$ against the Galaxia \citep{sharma;et-al_2011} and Besan\c{c}on \citep{robin;et-al_2003} galaxy simulations. The predicted particles in each model between $-70\,^\circ < b < -50\,^\circ$ were binned in $\Delta{l} \times \Delta{V_{hel}}$ using varying grid cell sizes between $25-70\,^\circ$ and 20-100\,km s$^{-1}$ respectively. The RAVE sample was binned in the same way, and the statistical significance of the over-density is calculated for each cell. \citet{williams;et-al_2011} found the stream to be statistically significant ($>$4-$\sigma$) in 96\% of the grid cell sizes employed for the Besan\c{c}on model. By sampling the Galaxia model multiple times with varying extinction rates, a similar result was found: between $75\pm15$\,\% to $80\pm18$\,\% of grid cells showed the Aquarius stream to significant at the 4-$\sigma$ level or higher. Given the high-latitude and proximity of the stream, it is not surprising that dust had a negligible effect on the statistical significance. \citet{williams;et-al_2011} concluded that the over-density in $l, V_{hel}$ is a true substructure, and neither the choice of galaxy model, cell size, nor the extinction model made any real difference to the stream detection significance.
+Upon examining the galactic longitude and velocities of Aquarius stars, the stream appears quite distinct from the halo. In order to quantify the statistical likelihood that the Aquarius stream is truly separate from a smooth halo distribution, \citet{williams;et-al_2011} compared the number of observed RAVE stars within $-70\,^\circ < b < -50\,^\circ$ against the Galaxia \citep{sharma;et-al_2011} and Besan\c{c}on \citep{robin;et-al_2003} galaxy simulations. The predicted particles in each model between $-70\,^\circ < b < -50\,^\circ$ were binned in $\Delta{l} \times \Delta{V_{hel}}$ blocks using varying grid cell sizes between $25\,^\circ$ to $70\,^\circ$ and $20\,\mbox{km s}^{-1}$ to $100\,\mbox{km s}^{-1}$ respectively. The RAVE sample was binned in the same way, and the statistical significance of the over-density is calculated for each cell. \citet{williams;et-al_2011} found the stream to be statistically significant ($>$4-$\sigma$) in 96\% of the grid cell sizes employed for the Besan\c{c}on model. By sampling the Galaxia model repeatedly with varying extinction rates, a similar result was found: between $75\pm15$\,\% to $80\pm18$\,\% of grid cells showed the Aquarius stream to significant at the 4-$\sigma$ level or higher. Given the high-latitude and proximity of the stream, it is not surprising that dust had a negligible effect on the statistical significance. \citet{williams;et-al_2011} concluded that the over-density in $l, V_{hel}$ is a true substructure, and neither the choice of galaxy model, cell size, nor the extinction model made any real difference to the stream detection significance.
 
 % STREAM IS LOCALIZED
 % the stream appears to be quite localized in space.
@@ -50,11 +52,10 @@ Upon examining the galactic longitude and velocities of Aquarius stars, the stre
 
 Given the extent of stellar debris the Sagittarius dwarf has littered throughout the Milky Way, it is reasonable to suspect the Aquarius stream might originate from the Sagittarius dwarf. Indeed, the Aquarius stream stars do not lie far from the orbital plane of Sagittarius and the metallicities reported by \citet{williams;et-al_2011} are not dissimilar from the Sagittarius stream. However, \citet{williams;et-al_2011} found the Aquarius space positions and kinematics (specifically $V_{Z}$ and $V_\phi$) are quite distinct from Sagittarius. Based on the phase space information available, \citet{williams;et-al_2011} concluded that the newly discovered stream could not be positively associated with the Monoceros stream, Hercules-Aquila cloud, or either the Canis Major or Virgo over-densities. 
 
-The Aquarius stream has a metallicity of $\mbox{[Fe/H]} \sim -1.0$ \citep{williams;et-al_2011}, slightly more metal-rich than halo stars at the same distance. The dispersion in the stream's metallicity has yet to be fully characterised. \citet{williams;et-al_2011} found the stream to have an average of $\mbox{[M/H]} = -1.0 \pm 0.4$, compared to $\mbox{[M/H]} = -1.1 \pm 0.6$ for background stars after the same selection cuts had been employed. Of the 12 Aquarius stars in the \citet{williams;et-al_2011} discovery sample with stellar parameters, the metallicity range is wide: between --2.02 and --0.33 dex. Spectroscopic observations of high resolution with high signal-to-noise ($S/N$) are necessary to accurately determine the metallicity distribution.
+The Aquarius stream has a metallicity of $\mbox{[Fe/H]} \sim -1.0$, slightly more metal-rich than halo stars at the same distance. \citet{williams;et-al_2011} found the stream to have an average of $\mbox{[M/H]} = -1.0 \pm 0.4$, compared to $\mbox{[M/H]} = -1.1 \pm 0.6$ for background stars after the same selection cuts had been employed. Of the 12 Aquarius stars in the \citet{williams;et-al_2011} discovery sample with stellar parameters, the metallicity range is wide: between --2.02 and --0.33 dex. Spectroscopic observations of high resolution with high signal-to-noise ($S/N$) are necessary to accurately characterize the stream's metallicity distribution.
 
-To this end, \citet{wylie-de-boer;et-al_2012} obtained high-resolution ($R = 25,000$) spectra with modest $S/N$ ($\sim$30 pixel$^{-1}$) for six Aquarius stream stars. Their data indicate a very narrow metallicity distribution: $\mbox{[Fe/H]} = -1.09 \pm 0.10$\,dex extending between $\mbox{[Fe/H]} = -1.25$ to $-0.98$\,dex. The largest [Fe/H] discrepancy between the two studies was $\Delta\mbox{[Fe/H]} = -0.66$\,dex for the most metal-rich star in the \citet{williams;et-al_2011} sample. The most metal-poor star in the \citet{williams;et-al_2011} study was not observed by \citet{wylie-de-boer;et-al_2012}. The negligible level of chemical scatter observed in the \citet{wylie-de-boer;et-al_2012} sample is typical of what is found in globular or open clusters.
-
-In addition to ascertaining stellar parameters, \citet{wylie-de-boer;et-al_2012} measured light element abundances for the Aquarius stream stars -- the only study to do so until now. Their study primarily focussed on light elemental abundances: Na, O, Ni, Mg, and Al. Chemical patterns in these light elements arise as natural consequences of nucleosynthetic processes in massive stars. Thus, by observing the abundances of light elements in stars that formed together, we can infer the star-formation history and environment. More specifically, an anti-correlation in sodium and oxygen abundance has been identified in all well-studied globular clusters to date. Originally this was thought to arise from internal mixing along the giant branch. However, dwarf stars were found to exhibit strong Na-enhancement and O-depletions, contrary to what would be expected if the Na-O anti-correlation was purely a result of internal mixing. It is well known now that photospheric abundance variations resulting from internal mixing are limited to C, N and Li. While the exact astrophysical mechanism for oxygen-depletion remains under debate, the chemical relationship is well-established empirically. The Na-O pattern provides the best chemical evidence that their chemical enrichment history has been dominated by Sn \textsc{ii} events and that those stars formed in a globular cluster-like environment.
+To this end, \citet{wylie-de-boer;et-al_2012} obtained high-resolution ($\mathcal{R} = 25,000$) spectra with modest $S/N$ ($\sim$30 pixel$^{-1}$) for six Aquarius stream stars. Their data indicate a very narrow metallicity distribution: $\mbox{[Fe/H]} = -1.09 \pm 0.10$\,dex extending between $\mbox{[Fe/H]} = -1.25$ to $-0.98$\,dex. The largest [Fe/H] discrepancy between the \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012} study was $\Delta\mbox{[Fe/H]} = -0.66$\,dex for the most metal-rich star in the \citet{williams;et-al_2011} sample. The most metal-poor star in the \citet{williams;et-al_2011} study was not observed by \citet{wylie-de-boer;et-al_2012}. 
+In addition to ascertaining stellar parameters, \citet{wylie-de-boer;et-al_2012} measured elemental abundances for the Aquarius stream stars -- the only study to do so until now. Their study primarily focussed on light elements: Na, O, Ni, Mg, and Al. Chemical patterns in these light elements arise as natural consequences of nucleosynthetic processes in massive stars. These patterns have been repeatedly observed in globular clusters. Specifically, an anti-correlation between sodium and oxygen abundance has been found to be ubiquitous to globular clusters. Originally this was thought to arise from internal mixing along the giant branch. However, dwarf stars were later found to exhibit strong Na-enhancement and O-depletions, contrary to what would be expected if the Na-O anti-correlation was purely a result of internal mixing. It is well known now that photospheric abundance variations resulting from internal mixing are limited to C, N and Li. While the exact astrophysical mechanism for oxygen-depletion remains under debate, the chemical relationship is well-established empirically. The Na-O pattern provides the best chemical evidence that their chemical enrichment history has been dominated by Sn \textsc{ii} events and that those stars formed in a globular cluster-like environment.
 
 From high-resolution spectroscopy of five stars in Aquarius, four of which had Na and O measurements, \citet{wylie-de-boer;et-al_2012} found two stars with super-solar sodium; slightly higher [Na/Fe] ratios than halo stars of the same metallicity. However, no strong oxygen depletion was evident in their data.
 
@@ -107,13 +108,13 @@ J223811-104126	& 22:38:11.6 & $-$10:41:29.4	& 2011-07-30	& 1.218	& \dots & \dots
 
 \section{Observations \& Data Reduction}
 
-The most complete sample of Aquarius stream stars is presented in the discovery paper of \citet{williams;et-al_2011}. Our sample includes five stars: four common to the \citet{wylie-de-boer;et-al_2012} study, and an additional star from the original \citet{williams;et-al_2011} sample. The additional candidate, J2306265-085103, was observed by the RAVE survey but had a $S/N$ ratio too low for stellar parameters to be accurately determined. All program stars were observed in July 2011 in good seeing at low airmass (Table \ref{tab:observations}), and X additional standard stars were observed in March 2011. All observations were taken using a 1.0'' slit, providing a spectral resolution of $R = 28,000$ in the blue and $R = XX,XXX$ in the red arm. The total exposure times for our program stars varied per star from X-Y seconds to ensure a Signal-to-Noise ratio (S/N) in excess of 100 per pixel element at 600 nm.
+The most complete sample of Aquarius stream stars is presented in the discovery paper of \citet{williams;et-al_2011}. Our sample includes five stars: four common to the \citet{wylie-de-boer;et-al_2012} study, and an additional star from the original \citet{williams;et-al_2011} sample. The additional candidate, J2306265-085103, was observed by the RAVE survey but had a $S/N$ ratio too low for stellar parameters to be accurately determined. All program stars were observed in July 2011 in good seeing at low airmass (Table \ref{tab:observations}), and X additional standard stars were observed in March 2011. All observations were taken using a 1.0'' slit, providing a spectral resolution of $\mathcal{R} = 28,000$ in the blue and $\mathcal{R} = 22,000$ in the red arm. The total exposure times for our program stars varied per star from X-Y seconds to ensure a Signal-to-Noise ratio ($S/N$) ratio in excess of 100 per pixel element at 600 nm.
 
 % what spectral resolution in the blue, what resolution in the red
 
-Calibration frames were taken at the start of each night, including twenty flat-field frames (10 quartz, 10 milky) and 10 Th-Ar arc lamp exposures for wavelength calibration. The data were reduced using the CarPy pipeline\footnote{http://code.obs.carnegiescience.edu/mike}. One of our standard stars, HD 41667, was also reduced using standard extraction and calibration methods in \textsc{iraf}. The resultant spectra from both reduction approaches were compared for residual fringing, S/N, and wavelength calibration. No noteworthy differences were present, and thus the CarPy pipeline was utilized for the remainder of the reductions. Each reduced echelle order was carefully normalized using a third order spline. Normalized orders   were stitched together to provide a single one-dimensional spectrum from 3800-9400\,\AA{}. 
+Calibration frames were taken at the start of each night, including twenty flat-field frames (10 quartz, 10 milky) and 10 Th-Ar arc lamp exposures for wavelength calibration. The data were reduced using the CarPy pipeline\footnote{http://code.obs.carnegiescience.edu/mike}. One of our standard stars, HD 41667, was also reduced using standard extraction and calibration methods in \textsc{iraf}. The resultant spectra from both reduction approaches were compared for residual fringing, $S/N$, and wavelength calibration. No noteworthy differences were present, and the CarPy pipeline was utilized for the remainder of the reductions. Each reduced echelle order was carefully normalized using a third order spline with defined knot spacing. Normalized orders   were stitched together to provide a single one-dimensional spectrum from 3800-9400\,\AA{}. 
  
-The white dwarf HR 6141 was observed on X with a S/N of 400 pixel$^{-1}$ as a telluric standard. The $S/N$ ratio for HR 6141 exceeds the $S/N$ ratio in any of our program stars. Although the atmospheric conditions at Las Campanas Observatory are certain to change throughout the night and between observing runs, we are primarily using this spectra to identify lines that are affected by telluric absorption. Critical transitions necessary for abundance analyses that are affected by the earth's atmosphere are corrected for telluric absorption (see \S\ref{sec:telluric-absorption}).
+The white dwarf HR 6141 was observed on X as a telluric standard. The $S/N$ ratio for HR 6141 exceeds that in any of our other standard or  program stars. Although the atmospheric conditions at Las Campanas Observatory are certain to change throughout the night and between observing runs, we are primarily using this spectra to identify lines that are affected by telluric absorption. Critical transitions necessary for abundance analyses that are affected by the earth's atmosphere are corrected for telluric absorption (see \S\ref{sec:telluric-absorption}).
 
 \section{Analysis}
 \label{sec:analysis}
@@ -122,7 +123,7 @@ The white dwarf HR 6141 was observed on X with a S/N of 400 pixel$^{-1}$ as a te
 \label{sec:radial-velocities}
 The radial velocity for each star was determined in a two-step method. An initial estimate of the radial velocity was ascertained by cross-correlation with a synthetic spectrum of a giant star with $T_{eff} = 4500$\,K, $\log{g} = 1.5$, and [M/H] $= -1.0$ across the wavelength range $8450 - 8700$ \AA{}. The observed spectrum was shifted to the pseudo-rest frame using this initial velocity estimate. Velocities found from cross-correlation are typically within 1\,km\,s$^{-1}$ of our final published value.
 
-With our spectra at near-rest, we measured the equivalent widths of $\sim$200 lines by automatically fitting Gaussian functions to the absorption profiles (see Section \ref{sec:line-measurements}). Fitted Gaussian profiles provide us with a measured equivalent width, the full-width half-maximum and the central wavelength of the profile. Thus, the residual radial velocity can be found from the ratio of the central and rest line wavelengths. The final radial velocity for the star is provided by the initial velocity and the mean of $\sim$200 residual line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and the standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.7 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree quite well with the \citet{williams;et-al_2011} published values: the mean absolute offset is $\langle\Delta{V_{hel}}\rangle = 2.8$\,km\,s$^{-1}$, demonstrating the accuracy of the velocities published by the RAVE survey.
+With our spectra at near-rest, we measured the equivalent widths of $\sim$200 lines by automatically fitting Gaussian functions to the absorption profiles (see Section \ref{sec:line-measurements}). Fitted Gaussian profiles provide us with a measured equivalent width, the full-width half-maximum and the central wavelength of the profile. Thus, the residual radial velocity can be found from the ratio of the central and rest wavelengths. The final radial velocity for the star is provided by the initial velocity and the mean of $\sim$200 residual line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD 41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and the standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.7 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree quite well with the \citet{williams;et-al_2011} published values: the mean offset is $\langle\Delta{V_{hel}}\rangle = 2.5 \pm 2.7$\,km\,s$^{-1}$, demonstrating the accuracy of the velocities published in the RAVE catalog.
 
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{./figures/line-velocity.pdf}
@@ -134,9 +135,9 @@ With our spectra at near-rest, we measured the equivalent widths of $\sim$200 li
 \subsection{Line Measurements}
 \label{sec:line-measurements}
 
-For the measurement of atomic absorption lines, we employed the line list of \citet{yong;et-al_2005} with additional transitions of Cr, Sc, Zn, and Sr from \citet{frebel;et-al_2010}. The line list was augmented with hyperfine-structure data for Sc and Mn from the Kurucz compilation \citet{kurucz;1998}. Molecular line data for CH was taken from \citet{plez;et-al_2008,plez;et-al_2009}. For lines with hyperfine structure, blended transitions or molecular features, we determined the abundance using a spectral synthesis approach. For all other transitions, equivalent widths were measured to determine the abundance.
+For the measurement of atomic absorption lines, we employed the line list of \citet{yong;et-al_2005} with additional transitions of Cr, Sc, Zn, and Sr from \citet{frebel;et-al_2010}. The line list was augmented with hyperfine-structure data for Sc and Mn from the Kurucz compilation \citet{kurucz;1998}. Molecular line data for CH was taken from \citet{plez;et-al_2008,plez;et-al_2009}. For lines with hyperfine structure, blended transitions or molecular features, we determined the abundance using a spectral synthesis approach. For all other transitions, equivalent widths were measured to determine the line abundance.
 
-The equivalent widths for all absorption lines were measured automatically using software written for this study. Given the rest wavelength and an initial guess of the full-width half-maxium (FWHM), a Gaussian function is iteratively fitted to the absorption profile. At the same time, the local continuum is found within 20\,\AA{} either side of the rest wavelength using a second-order polynomial. Measuring the local continuum ensures any errors in our initial normalisation or order-stitching do not propagate through to our equivalent width measurements. When determining the local continua, any neighbouring group of pixels that deviate significantly ($>$2-$\sigma$) from the local continua either belong to a persistent cosmic ray hit, or they are trough points of a neighbouring absorption profile. We attempt to fit a Gaussian profile to each group of deviating pixels, using the current best estimate for the local continuum. If a Gaussian profile is successfully fitted to the deviating group and its surrounding pixels, we assume the outlier points belong to an absorption profile and all points belonging to that profile are excluded from the continuum determination. 
+The equivalent widths for all absorption lines were measured automatically using software written for this study. Given the rest wavelength and an initial guess of the full-width half-maxium (FWHM), a Gaussian function is iteratively fitted to the absorption profile. At the same time, the local continuum is found within 20\,\AA{} either side of the rest wavelength using a second-order polynomial. Measuring the local continuum ensures any errors in our initial normalisation or order-stitching do not propagate through to our equivalent width measurements. When determining the local continuum, any neighbouring group of pixels that deviate significantly ($>$2-$\sigma$) from the local continua either belong to a persistent cosmic ray hit, or they are trough points of a neighbouring absorption profile. We attempt to fit a Gaussian profile to each group of deviating pixels, using the current best estimate for the local continuum. If a Gaussian profile is successfully fitted to the deviating group and its surrounding pixels, we assume the outlier points belong to an absorption profile and all points belonging to that profile are excluded from the continuum determination. 
 
 When fitting Gaussian profiles, the $\chi^2$ difference between the observed spectra and the fitted profile is minimized. In order to account for crowded absorption regions, where the $\chi^2$ value might be influenced by a nearby profile, our $\chi^2$ function is weighted based on the distance to the rest wavelength by the function
 
@@ -145,11 +146,11 @@ W_{\lambda_{i}} = 1 + \exp{\left(\frac{-(\lambda_{i} - \lambda_{r})^2}{4\sigma^2
 \label{eq:chi-weight}
 \end{equation}
 
-\noindent where the rest wavelength ($\lambda_{r}$) and FWHM ($\sigma$) are free parameters in the iterative fitting process. As a consequence of Eq. \ref{eq:chi-weight}, pixels near the rest wavelength are weighted higher than those on the wings, forcing the fitting scheme to disregard blended or crowded regions. Although this approach relies on a reasonably accurate radial velocity correction ($<$4\,km s$^{-1}$; which is easily achieved), it greatly improves the accuracy and robustness of the equivalent width measurements.
+\noindent where the rest wavelength ($\lambda_{r}$) and standard deviation\footnote{Recall $\sigma = 2.355FWHM$} ($\sigma$) are free parameters in the iterative fitting process. As a consequence of Eq. \ref{eq:chi-weight}, pixels near the rest wavelength are weighted higher than those on the wings, forcing the fitting scheme to disregard blended or crowded regions. Although this approach relies on a reasonably accurate initial radial velocity correction ($<$4\,km s$^{-1}$; which is easily achieved), it greatly improves the accuracy and robustness of the equivalent width measurements.
 
-The results of our iterative Gaussian fitting approach are completely \textit{insensitive} to the initial FWHM guess. Increasing the initial FWHM estimate from 0.1\,\AA{} to 1 or 2\,\AA{} -- which are unphysically large values for high-resolution spectra -- does not alter either the FWHM or the equivalent width for any of our measurements. Only a small increase in computational cost is observed. Although we are extremely confident in our automatic equivalent width measurements, every absorption profile was examined by eye for quality, and spurious measurements were excluded.
+The results of our iterative Gaussian fitting approach are \textit{completely insensitive} to the initial FWHM guess. Increasing the initial FWHM estimate from 0.1\,\AA{} to 1 or 2\,\AA{} -- which are unphysically large values for high-resolution spectra -- does not alter either the FWHM or the equivalent width for any of our measurements. Only a small increase in computational cost is observed. Although we are extremely confident in our equivalent width measurements, every absorption profile was examined by eye for quality, and spurious measurements were excluded.
 
-We list the atomic data and measured equivalent widths for atomic lines used during this analysis in Table \ref{tab:equivalent-widths}. Saturated lines were excluded by removing measurements with reduced equivalent widths, $\log_{10}{(EW/\lambda)} > -4.5$\, dex. A minimum detectable equivalent width was calculated as a function of wavelength based on the $S/N$, and only lines that exceeded a 3-$\sigma$ detection significance were included. We have verified the approach by comparing our measurements of 156 lines in HD 140283 with the study of \citet{norris;et-al_1996}. We only included measurements in the \citet{norris;et-al_1996} study that were not marked with line quality parameters. Excellent agreement is found between the two studies, which is illustrated in Figure \ref{fig:ew-compare}. The mean difference is a negligible $0.64 \pm 2.78$\,m\AA{}, and no systematic trend is present. We note that the scatter may  be directly attributed to the observed $S/N$, as other studies using the same equivalent width measurement software described here find better agreement with hand measurements for spectra with higher $S/N$ ($0.20 \pm 0.16$\,m{\AA} with $S/N \sim X$, $0.25 \pm 0.28$\,m{\AA} with $S/N \sim{} Y$; \citet{frebel;et-al_2013}).
+We list the atomic data and measured equivalent widths for atomic lines used during this analysis in Table \ref{tab:equivalent-widths}. Saturated lines were excluded by removing measurements with reduced equivalent widths, $\log_{10}{(EW/\lambda)} > -4.5$\, dex. A minimum detectable equivalent width was calculated as a function of wavelength based on the $S/N$, and only lines that exceeded a 3-$\sigma$ detection significance were included. We have verified the approach by comparing our measurements of 156 lines in HD 140283 with the study of \citet{norris;et-al_1996}. We only included measurements in the \citet{norris;et-al_1996} study that were not marked with questionable line quality parameters. Excellent agreement is found between the two studies, which is illustrated in Figure \ref{fig:ew-compare}. The mean difference is a negligible $0.64 \pm 2.78$\,m\AA{}, and no systematic trend is present. We note that the scatter may  be directly attributed to the observed $S/N$, as other studies using the same equivalent width measurement software described here find better agreement with hand measurements for spectra with higher $S/N$ ($0.20 \pm 0.16$\,m{\AA} with $S/N \sim X$, $0.25 \pm 0.28$\,m{\AA} with $S/N \sim{} Y$; \citet{frebel;et-al_2013}).
 
 % equivalent widths plot with Norris for HD 122563
 \begin{figure}[h]
@@ -162,7 +163,7 @@ We list the atomic data and measured equivalent widths for atomic lines used dur
 \begin{deluxetable*}{cccccccccc}
 \tablecolumns{1}
 \tabletypesize{\scriptsize}
-\tablecaption{List of Line Transitions and Equivalent Width Measurements}
+\tablecaption{List of Line Transitions and Equivalent Width Measurements\label{tab:equivalent-widths}}
 \tablehead{
 	& & & & \multicolumn{5}{c}{Equivalent Width} \\
 	\cline{5-9} \\
@@ -364,81 +365,22 @@ We list the atomic data and measured equivalent widths for atomic lines used dur
  6645.110 &      63.1 &      1.38 &      0.204 &     24.47 &     27.76 &     16.96 &     30.31 &   \nodata \\
 \enddata
 \end{deluxetable*}
-
+\clearpage
 \clearpage
 % equivalent widths table
+
+
+
+
+
 
 \subsection{Model Atmospheres}
 We have employed the ATLAS9 plane-parallel stellar atmospheres of \citet{castelli;kurucz_2003}. These one-dimensional models ignore any centre-to-limb spatial variations, assume hydrostatic equilibrium and no convective overshoot from the photosphere. The stellar parameter spacing between models is 250\,K, 0.5\,dex in surface gravity, 0.5\,dex in [M/H] and 0.1\,dex in [$\alpha$/Fe]. We interpolated the atmospheric pressures, densities, temperatures, and opacities between stellar atmosphere models using the Quickhull algorithm \citep{barber;et-al_1996}. Quickhull is reliant on Delaunay tessellation, which suffers from extremely skewed cells when the grid points vary in size by orders of magnitude -- as $T_{eff}$ values do compared to $\log{g}$ or [X/H]. If unaccounted for, performing interpolation using these asymmetric cells can manifest as significant errors in atmospheric properties across all photospheric depths. We scaled each stellar parameter between zero and unity prior to interpolation in order to minimise these effects. During this step, $\log{g}$, [M/H] and [$\alpha$/Fe] points were scaled such that we simultaneously interpolate linearly in $T_{eff}$ and logarithmically in all other parameters.
 
-\subsection{Stellar Parameters}
-The most recent version of the spectral synthesis code \textsc{moog} \citep{sneden;et-al_1973} has been used to derive individual line abundances and stellar parameters. This version employs Rayleigh scattering \citep{sobeck;et-al_2011} instead of treating scattering as true absorption, which is particularly important for transitions blue-ward of 450\,nm. This is noteworthy, but is less relevant for these analyses as most of our line measurements are red-ward of 450\,nm. Absorption lines are assumed to form under the assumption of local thermal equilibrium. 
-
-
-\begin{figure*}[t!]
-	\includegraphics[width=\textwidth]{./figures/spectra-h-alpha.pdf}
-	\caption{Spectra for all Aquarius stream stars.}
-	\label{fig:spectra-h-alpha}
-\end{figure*}
-
-\subsubsection{Effective Temperature}
-The effective temperature for each star was found by demanding a zero-trend in excitation potential and abundance for each measured Fe\,I line. In the same way, the microturbulence was found by demanding a zero trend in reduced equivalent width against abundance. Linear relationships with slopes of $|0.001|$ dex were considered to be converged. 
-
-\subsubsection{Photometric Effective Temperatures}
-\label{sec:photometric-temperatures}
-
-The effective temperatures published for all of our stars in Table \ref{sec:stellar-parameters} have been derived spectroscopically (see \S\ref{sec:effective-teffs}). As a consistency check for our spectroscopic temperatures, we have estimated effective temperatures using infrared photometry from the 2MASS catalog. The $J-K$ color has been employed for these calculations because it has the least dependence on metallicity. 
-
-The Aquarius stream is relatively close and at high-latitude, so significant extinction by dust is not expected. The dust maps of \citet{schlegel;et-al_1998} estimate that the extinction for our stars varies between E(B-V) = 0.03 to 0.07 mags. However, these maps are not perfect. As an alternative to using the \citet{schlegel;et-al_1998} dust maps, the level of extinction towards a star can be found by the strength of the interstellar Na D or K \textsc{i} lines \citep{munari;zwitter_1997}. The interstellar lines must be sufficiently separated from the stellar absorption lines in order for the extinction to be measurable. Unfortunately this was the case in only one of our stars, J223811. We measured the equivalent width of the Na D1 line in J223811 to be 302.4\,m{\AA}, which corresponds to an $\mbox{E(B-V)} = 0.12^{+0.01}_{-0.02}$ according to the \citet{munari;zwitter_1997} relationship. This is a significantly higher value than what the \citet{schlegel;et-al_1998} dust map value of $\mbox{E(B-V)} = 0.07$ for J223811. For completeness, both extinction values have been used to calculate photometric temperatures. 
-
-Although all of our targets are giant stars, two different $T_{eff}$-colour relationships have been employed: the \citet{alonso;et-al_1999} calibration for giants, and the \citet{casagrande;et-al_2010} calibration for dwarfs and sub-giants. All photometrically-derived temperatures are listed in \ref{tab:photometric-temperatures}. The \citet{alonso;et-al_1999} $J-K$ scale is insensitive to metallicity effects, and is in good agreement with our spectroscopic temperatures. For the \citet{casagrande;et-al_2010} $J-K$ relationship, which has a slight metallicity dependency, we have utilized the spectroscopically-derived [Fe/H] values shown in Table \ref{tab:stellar-parameters}.
-
-The effective temperatures found from spectroscopy agree fairly well with the photometric temperature estimates. For three of our stars, the temperatures we find are in between the two color-temperature relationships. There are two noteworthy deviations: J223504-152834 and J223811-104126. For J223504-152834 we find the star to have an effective temperature of 4590\,K, only 10\,K hotter than the \citet{casagrande;et-al_2010} dwarf/sub-giant relationship, yet ${\sim}$500\,K hotter than the \citet{alonso;et-al_1999} estimate. Our temperature of 4590\,K is in good agreement with previous spectroscopic determinations (4795\,K; \citet{williams;et-al_2011}, 4597\,K; \citet{wylie-de-boer;et-al_2012}). The fact that the \citet{alonso;et-al_1999} photometric temperature relationship for giants predicts a temperature that is ${\sim}$500\,K cooler than the spectroscopically-derived values may be attributed to an underestimated amount of dust towards J223504-152834. A higher than expected level of extinction along the line-of-sight would produce cooler photometric temperatures than the true effective temperature.  An extinction of $E(B-V) = 0.10$ would be required for the \citet{alonso;et-al_1999} relation to yield a temperature of ${\sim}$4500\,K, within the uncertainties of our effective temperature derived from spectroscopy. Such a discrepancy in extinction is large, but not unheard of (e.g., see \citet{nataf;et-al}). Although we suspect J223504-152834 to have a higher reddening than $E(B-V) = 0.04$, we have adopted the \citet{schlegel;et-al_1998} value for this analysis.
-
-J223811-104126 has two extinction values available: the \citet{schlegel;et-al_1998} value of $E(B-V) = 0.07$ and the 0.12 value  determined from the interstellar Na D1 line. Given the inherent difficulties in producing dust maps, and the known problems associated with them, we believe the $E(B-V) = 0.12$ determination to be more accurate. However, using the \citet{schlegel;et-al_1998} extinction value with the \citet{alonso;et-al_1999} color-temperature relationship yields excellent agreement (5104\,K) with our spectroscopic temperature of 5140\,K. Employing our more accurate reddening determination yields 5215\,K, within the uncertainties of the relationship. The \citet{casagrande;et-al_2010} scale is ${\sim}$250\,K hotter in both cases.
-
-With the exception of J223504-152834, the \citet{alonso;et-al_1999} giant relationship agrees well ($\pm$100\,K) with our spectroscopically-derived values. The \citet{casagrande;et-al_2010} relationship is also in relatively good agreement (most within 100\,K, largest discrepancy is 220\,K) with our spectroscopic temperatures, although we note that this relation was derived primarily for dwarfs/sub-giants and our candidates are all giant stars.
-
-
-
-\begin{deluxetable}{lccccc}
-\tablecolumns{1}
-\tabletypesize{\scriptsize}
-\tablecaption{Reddening \& Photometric Temperatures}
-\tablehead{
-& & & \multicolumn{2}{c}{$T_{phot}$} \\
-\cline{4-5} \\
-	\colhead{Designation} &
-	\colhead{E($B-V$)} &
-	\colhead{$(J-K)_0$} &
-	\colhead{Alonso} &
-	\colhead{Casagrande} \\
-	& (mag) & & (K) & (K)
-}
-\startdata 
-C222531-144370 	& 0.03\phn	& 	0.75 & 4247	&	4391 \\	
-C230626-085103	& 0.05\phn	&	0.82 & 4091	&	4200 \\	
-J221821-183424 	& 0.03\phn	&	0.64 & 4546	&	4747 \\	
-J223504-152834 	& 0.04\phn	&	0.69 & 4110	& 	4579 \\	
-J223811-104126 	& 0.07\phn	&	0.48 & 5104	&	5367 \\	
-				& 0.12\footnote{Extinction derived from interstellar Na D1 line (see \ref{sec:photometric-temperatures})} 			&	0.45 & 5215	&	5484	
-\enddata
-\end{deluxetable}
-
-\subsubsection{Surface Gravity}
-
-The surface gravity for all stars was found by forcing the mean Fe\,\textsc{i} and Fe\,\textsc{ii} abundances to be equal. The process is iterative: a zero trend with the excitation potential, reduced equivalent width and abundance must be maintained. For two stars, X and Y, the surface gravity could not be found by balancing the Fe\,\textsc{i} and \textsc{ii} lines. The smallest difference between the median abundances was $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle = 0.05$\,dex, which was considered to be converged. Varying the surface gravity from this solution did alter the Fe\,\textsc{i}, \textsc{ii} abundance, but the mean difference $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle$ remained constant at 0.05\,dex. In these two instances, the surface gravity was set to be closer towards the isochrone, while the $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle$ = 0.05$\,dex condition was met.
-
-
-\subsubsection{Metallicity, $\mbox{[M/H]}$}
-The degeneracy between parameters required a refinement of the stellar parameters until the line abundances were consistent with the model atmosphere. After these parameters had converged, the model metallicity was exactly matched to that of our line abundances. Line abundances that were unusually deviant ($3\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was nine for C222531-144370, leaving 60 Fe\,\textsc{i} and 10 Fe\,\textsc{ii} lines for analysis. The minimum number of Fe transitions used in any star was 44 lines (33 Fe\,\textsc{i} and 11 Fe\,\textsc{ii}) for our hottest star, J223811-104126.
-
-% spectral plots for five stars
-
-\begin{deluxetable*}{lcccccccccccccc}
+\begin{deluxetable*}{lcccccccccccccc}[h!]
 \tablecolumns{2}
 \tabletypesize{\scriptsize}
-\tablecaption{Stellar Parameters}
+\tablecaption{Stellar Parameters\label{tab:stellar-parameters}}
 \tablehead{
 	\colhead{Designation} &
 	\colhead{$T_{eff}$} &
@@ -486,28 +428,93 @@ J223811-104126	& 5140				& 2.96				& 1.33				& --1.45
 
 \end{deluxetable*}
 
+\subsection{Stellar Parameters}
+The most recent version of the spectral synthesis code \textsc{moog} \citep{sneden;et-al_1973} has been used to derive individual line abundances and stellar parameters. This version employs Rayleigh scattering \citep{sobeck;et-al_2011} instead of treating scattering as true absorption, which is particularly important for transitions blue-ward of 450\,nm. This is noteworthy, but is less relevant for these analyses as most of our line measurements are red-ward of 450\,nm. Absorption lines are assumed to form under the assumption of local thermal equilibrium. 
+
+
+\begin{figure*}[t!]
+	\includegraphics[width=\textwidth]{./figures/spectra-h-alpha.pdf}
+	\caption{Spectra for all Aquarius stream stars.}
+	\label{fig:spectra-h-alpha}
+\end{figure*}
+
+\subsubsection{Effective Temperature}
+\label{sec:effective-teffs}
+The effective temperature for each star was found by demanding a zero-trend in excitation potential and abundance for each measured Fe\,\textsc{i} line. In the same way, the microturbulence was found by demanding a zero trend in reduced equivalent width against abundance. Linear relationships with slopes of $|0.001|$ dex were considered to be converged. 
+
+\subsubsection{Photometric Effective Temperatures}
+\label{sec:photometric-temperatures}
+
+The effective temperatures published for all of our stars in Table \ref{sec:stellar-parameters} have been derived spectroscopically (see \S\ref{sec:effective-teffs}). As a consistency check for our spectroscopic temperatures, we have estimated effective temperatures using infrared photometry from the 2MASS catalog. The $J-K$ color has been employed for these calculations because it has the least dependence on metallicity. 
+
+The Aquarius stream is relatively close and at high-latitude, so significant extinction by dust is not expected. The dust maps of \citet{schlegel;et-al_1998} estimate that the extinction for our stars varies between E(B-V) = 0.03 to 0.07 mags. However, these maps are not perfect. As an alternative to using the \citet{schlegel;et-al_1998} dust maps, the level of extinction towards a star can be found by the strength of the interstellar Na D or K \textsc{i} lines \citep{munari;zwitter_1997}. The interstellar lines must be sufficiently separated from the stellar absorption lines in order for the extinction to be measurable. This was the case in only one of our stars, J223811. We measured the equivalent width of the Na D1 line in J223811 to be 302.4\,m{\AA}, which corresponds to an $\mbox{E(B-V)} = 0.12^{+0.01}_{-0.02}$ according to the \citet{munari;zwitter_1997} relationship. This is a significantly higher value than what the \citet{schlegel;et-al_1998} dust map value of $\mbox{E(B-V)} = 0.07$ for J223811. For completeness, both extinction values have been used to calculate photometric temperatures. 
+
+Although all of our targets are giant stars, two different $T_{eff}$-colour relationships have been employed: the \citet{alonso;et-al_1999} calibration for giants, and the \citet{casagrande;et-al_2010} calibration for dwarfs and sub-giants. All photometrically-derived temperatures are listed in \ref{tab:photometric-temperatures}. The \citet{alonso;et-al_1999} $J-K$ scale is insensitive to metallicity effects, and is in good agreement with our spectroscopic temperatures. For the \citet{casagrande;et-al_2010} $J-K$ relationship, which has a slight metallicity dependency, we have utilized the spectroscopically-derived [Fe/H] values shown in Table \ref{tab:stellar-parameters}.
+
+The effective temperatures found from spectroscopy agree fairly well with the photometric temperature estimates. For three of our stars, the temperatures we find are in between the two color-temperature relationships. There are two noteworthy deviations: J223504-152834 and J223811-104126. For J223504-152834 we find the star to have an effective temperature of 4590\,K, only 10\,K hotter than the \citet{casagrande;et-al_2010} dwarf/sub-giant relationship, yet ${\sim}$500\,K hotter than the \citet{alonso;et-al_1999} estimate. Our temperature of 4590\,K is in good agreement with previous spectroscopic determinations (4795\,K; \citet{williams;et-al_2011}, 4597\,K; \citet{wylie-de-boer;et-al_2012}). The fact that the \citet{alonso;et-al_1999} photometric temperature relationship for giants predicts a temperature that is ${\sim}$500\,K cooler than the spectroscopically-derived values may be attributed to an underestimated amount of dust towards J223504-152834. A higher than expected level of extinction along the line-of-sight would produce cooler photometric temperatures than the true effective temperature.  An extinction of $E(B-V) = 0.10$ would be required for the \citet{alonso;et-al_1999} relation to yield a temperature of ${\sim}$4500\,K, within the uncertainties of our effective temperature derived from spectroscopy. Such a discrepancy in extinction is large, but not uncommon (e.g., see \citet{nataf;et-al}). Although we suspect J223504-152834 to have a higher reddening than $E(B-V) = 0.04$, we have adopted the \citet{schlegel;et-al_1998} value for this analysis.
+
+J223811-104126 has two extinction values available: the \citet{schlegel;et-al_1998} value of $E(B-V) = 0.07$ and the 0.12 value  determined from the interstellar Na D1 line. Given the inherent difficulties in producing dust maps, and the known problems associated with them, we believe the $E(B-V) = 0.12$ determination to be more accurate. However, using the \citet{schlegel;et-al_1998} extinction value with the \citet{alonso;et-al_1999} color-temperature relationship yields excellent agreement (5104\,K) with our spectroscopic temperature of 5140\,K. Employing our more accurate reddening determination yields 5215\,K, within the uncertainties of the relationship. The \citet{casagrande;et-al_2010} scale is ${\sim}$250\,K hotter in both cases.
+
+With the exception of J223504-152834, the \citet{alonso;et-al_1999} giant relationship agrees well ($\pm$100\,K) with our spectroscopically-derived values. The \citet{casagrande;et-al_2010} relationship is also in relatively good agreement (most within 100\,K, largest discrepancy is 220\,K) with our spectroscopic temperatures, although we note that this relation was derived primarily for dwarfs/sub-giants and our candidates are all giant stars.
+
+
+
+\begin{deluxetable}{lccccc}
+\tablecolumns{1}
+\tabletypesize{\scriptsize}
+\tablecaption{Reddening \& Photometric Temperatures\label{tab:photometric-temperatures}}
+\tablehead{
+& & & \multicolumn{2}{c}{$T_{phot}$} \\
+\cline{4-5} \\
+	\colhead{Designation} &
+	\colhead{E($B-V$)} &
+	\colhead{$(J-K)_0$} &
+	\colhead{Alonso} &
+	\colhead{Casagrande} \\
+	& (mag) & & (K) & (K)
+}
+\startdata 
+C222531-144370 	& 0.03\phn	& 	0.75 & 4247	&	4391 \\	
+C230626-085103	& 0.05\phn	&	0.82 & 4091	&	4200 \\	
+J221821-183424 	& 0.03\phn	&	0.64 & 4546	&	4747 \\	
+J223504-152834 	& 0.04\phn	&	0.69 & 4110	& 	4579 \\	
+J223811-104126 	& 0.07\phn	&	0.48 & 5104	&	5367 \\	
+				& 0.12\footnote{Extinction derived from interstellar Na D1 line (see \ref{sec:photometric-temperatures})} 			&	0.45 & 5215	&	5484	
+\enddata
+\end{deluxetable}
+
+\subsubsection{Surface Gravity}
+
+The surface gravity for all stars was found by forcing the mean Fe\,\textsc{i} and Fe\,\textsc{ii} abundances to be equal. The process is iterative: a zero trend with the excitation potential, reduced equivalent width and abundance must be maintained. For two stars, X and Y, the surface gravity could not be found by balancing the Fe\,\textsc{i} and \textsc{ii} line abundances. The smallest difference between the median abundances was $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle = 0.05$\,dex, which was considered to be converged. Varying the surface gravity from this solution did alter the mean Fe\,\textsc{i} and \textsc{ii} abundances, but the difference $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle$ remained constant at 0.05\,dex. In these two instances, the surface gravity was set to be closer towards the isochrone, while the $\langle$Fe\,\textsc{i} $-$ Fe\,\textsc{ii}$\rangle$ = 0.05\,dex condition was maintained.
+
+
+\subsubsection{Metallicity, $\mbox{[M/H]}$}
+The degeneracy between parameters required a refinement of the stellar parameters until the line abundances were consistent with the model atmosphere. After these parameters had converged, the model metallicity was exactly matched to that of our mean Fe \textsc{i} abundance. Line abundances that were unusually deviant (>3-$\sigma$) from the mean were removed. The largest number of outlier measurements removed for any observation was nine for C222531-144370, leaving 60 Fe\,\textsc{i} and 10 Fe\,\textsc{ii} lines for analysis. The minimum number of Fe transitions used in any star was 44 lines (33 Fe\,\textsc{i} and 11 Fe\,\textsc{ii}) for our hottest star, J223811-104126.
+
+% spectral plots for five stars
+
 
 \subsection{Abundances}
-We have scaled our abundances to solar values using the chemical composition of \citet{asplund;et-al_2009}.
+We have scaled our abundances to solar values using the solar chemical composition described in \citet{asplund;et-al_2009}.
 
 \subsubsection{Carbon}
 
 \subsubsection{Oxygen}
 \label{sec:oxygen-abundances}
-Oxygen is a particularly difficult element to measure. There are only a handful of lines available in an optical spectrum: the forbidden [O \textsc{i}] lines at 630 nm and 636 nm, and the O \textsc{i} triplet lines at 777 nm. The forbidden lines are very weak, and become immeasurable in either hot and/or metal-poor stars ([Fe/H] $\lesssim -1.5$ dex). When they are present, depending on the radial velocity of the star, the [O \textsc{i}] lines can be significantly affected by telluric absorption. Moreover, the 630 nm line is blended with a Ni \textsc{i} absorption line \citep{allende-prieto;et-al_2001}, and hence the region requires careful consideration. Although the O \textsc{i} triplet lines at 777 nm are stronger than the forbidden lines, they are extremely susceptible to NLTE and 3D effects \citep{asplund;perez_2001}, and sensitive to changes in microturbulence. \citet{perez;et-al_2006} showed that oxygen abundances measured under the assumption of LTE in their sample are 0.08\,dex higher than abundances derived from the `true' oxygen content derived from the forbidden lines.
+Oxygen is a particularly difficult element to measure. There are only a handful of lines available in an optical spectrum: the forbidden [O \textsc{i}] lines at 630 nm and 636 nm, and the O \textsc{i} triplet lines at 777 nm. The forbidden lines are very weak, and become immeasurable in either hot and/or metal-poor stars ([Fe/H] $\lesssim -1.5$ dex). When they are present, depending on the radial velocity of the star, the [O \textsc{i}] lines can be significantly affected by telluric absorption. Moreover, the 630 nm line is blended with a Ni \textsc{i} absorption line \citep{allende-prieto;et-al_2001}, and hence the region requires careful consideration. Although the O \textsc{i} triplet lines at 777 nm are stronger than the forbidden lines, they are extremely susceptible to NLTE and 3D effects \citep{asplund;perez_2001}, and sensitive to changes in microturbulence. 
 
-The [O \textsc{i}] lines were measurable in four of our candidates. Careful consideration was taken when correcting for telluric absorption. The 6300$\lambda$ line in one of our candidates, C2306265-085103, was sufficiently affected by telluric absorption such that we considered the line immeasurable. Thus, only the 6363$\lambda$ line was used to derive an oxygen abundance for C2306265-085103. In our hottest star, J223811-104126, the forbidden oxygen lines were not detected above a 3-$\sigma$ significance. After synthesising the region, we deduce a conservative upper limit of $\mbox{[O/Fe]} < -0.50$ dex from the [O \textsc{i}] lines. This is consistent with the rest of our candidates, with [O/Fe] abundances varying between 0.41 to 0.57 dex.
+The [O \textsc{i}] lines were measurable in four of our candidates. Careful consideration was taken when correcting for telluric absorption. The 6300$\lambda$ line in one of our candidates, C2306265-085103, was sufficiently affected by telluric absorption such that we considered the line to be immeasurable. Thus, only the 6363$\lambda$ line was used to derive an oxygen abundance for C2306265-085103. In our hottest star, J223811-104126, the forbidden oxygen lines were not detected above a 3-$\sigma$ significance. After synthesising the region, we deduce a very conservative upper limit of $\mbox{[O/Fe]} < -0.50$ dex from the [O \textsc{i}] lines. This is consistent with the rest of our candidates, with [O/Fe] abundances varying between 0.41 to 0.57\,dex.
 
-In order to derive an oxygen measurement for J223811-104126, we were forced to use the triplet lines at 777\,nm. Each line was synthesised, and a mean abundance was calculated for each candidate. Abundances determined from the oxygen triplet lines were systematically $+0.27$\,dex higher than found from the [O \textsc{i}] lines. \citet{perez;et-al_2006} found [O/Fe] values based on the O \textsc{i} permitted triplet lines are on average $+0.19 \pm 0.07$\,dex higher than those found from the forbidden lines, after NLTE corrections of $-$0.08\,dex had been applied.  Thus, our 0.27\,dex offset between measurements of the [O \textsc{i}] and O \textsc{i} triplet lines is exactly the same as found by \citet{perez;et-al_2006}, which we attribute to a combination of systematic phenomena including NLTE and 3D effects. \citet{perez;et-al_2006} concluded the weak forbidden lines, when not too weak, probably give the most reliable estimate of oxygen abundance.
+In order to derive an oxygen measurement for J223811-104126, we were forced to use the triplet lines at 777\,nm. Each line was synthesised, and a mean abundance was calculated for each candidate. Abundances determined from the oxygen triplet lines were systematically $+0.27$\,dex higher than found from the [O \textsc{i}] lines. \citet{perez;et-al_2006} found [O/Fe] values based on the O \textsc{i} permitted triplet lines are on average $+0.19 \pm 0.07$\,dex higher than those found from the forbidden lines, after NLTE corrections of $-$0.08\,dex had been applied to the permitted abundance.  Thus, our 0.27\,dex offset between measurements of the [O \textsc{i}] and O \textsc{i} triplet lines is exactly the same as found by \citet{perez;et-al_2006}, which we attribute to a combination of systematic phenomena including NLTE and 3D effects. \citet{perez;et-al_2006} concluded the weak forbidden lines, when not too weak, probably give the most reliable estimate of oxygen abundance.
 
-From the permitted O \textsc{i} triplet, we derive an oxygen abundance of $\mbox{[O/Fe]} = 0.41 \pm 0.01$\,dex (random scatter) for J223811-104126. This measurement will be systematically higher than the `true' abundance if it were discernible from the [O \textsc{i}] lines, on the order of ${\sim}$0.27\,dex. When we apply this crude offset derived from the rest of our sample, we arrive at a corrected abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$\,dex for J223811-104126. This is the most oxygen-deficient star in our sample, by in excess of 0.25 dex.
+From the permitted O \textsc{i} triplet, we derive an oxygen abundance of $\mbox{[O/Fe]} = 0.41 \pm 0.01$\,dex (random scatter) for J223811-104126. This measurement will be systematically higher than the `true' abundance if it were discernible from the [O \textsc{i}] lines, on the order of ${\sim}$0.27\,dex. When we apply this crude offset derived from the rest of our sample, we arrive at a corrected abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$\,dex for J223811-104126. This is the most oxygen-deficient star in our sample.
 
 
 \subsubsection{Sodium}
+\label{sec:sodium-abundances}
+Our line list includes three clean, unblended sodium lines at 5688$\lambda$, 6154$\lambda$ and 6161$\lambda$. Not all three of these lines were detectable in each star. In the hottest and most metal-poor stars, J223811 and J221821-183424 respectively, only the 5688$\lambda$ line was measurable. Consequently, an uncertainty of 0.10\,dex was adopted for these stars. For stars where multiple sodium lines were available, the line-to-line scatter is reasonable: smaller than 0.09\,dex. 
 
-
-
-% which lines did we use for sodium and were there any problems with the Na lines? 
+% [Na/Fe] measurements in the standard stars? 
 
 \subsubsection{$\alpha$-elements (Mg, Ca, Si and Ti)}
 \label{sec:alpha-elements}
@@ -528,20 +535,29 @@ Depending on the radial velocity of the star, some magnesium lines were be affec
 % calcium measurements + silicon measurements
 Of all the $\alpha$-elements, calcium has the smallest measurement scatter in our stars. Four line measurements were used for each star, with a measurement uncertainty of 0.01\,dex. As shown in Figure \ref{fig:alpha-elements}, all Aquarius stars show super-solar Ca abundances, ranging between 0.23 to 0.43 dex, consistent with both [Mg/Fe] and [Si/Fe] measurements. 
 
-However, C2225316-14437 has an unusually high silicon abundance ($\mbox{[Si/Fe]} = 0.72$), well outside the uncertainties of the rest of our sample. C2225316-14437 does not demonstrate unusually high abundances of any other $\alpha$-element, and the silicon lines are not affected by telluric absorption. Moreover, the Si lines are in relatively good agreement with one another. If we exclude the most prominent outlier, then the mean abundance drops only slightly to $\mbox{[Si/Fe]} = 0.70 \pm 0.04$\,dex. The lowest silicon line abundance for C2225316-14437 is $\mbox{[Si/Fe]} = 0.57$\,dex, which is still significantly higher than the averaged abundance for any other star.
+However, C2225316-14437 has an unusually high silicon abundance ($\mbox{[Si/Fe]} = 0.72$), well outside the uncertainties of the rest of our sample. The silicon line abundances are in relatively good agreement with one another. If we exclude the most prominent outlier, then the mean abundance drops only slightly to $\mbox{[Si/Fe]} = 0.70 \pm 0.04$\,dex. The lowest silicon line abundance for C2225316-14437 is $\mbox{[Si/Fe]} = 0.57$\,dex, which is still significantly higher than the averaged abundance for any other star.
 
-% titanium measurements
+% titanium measurements?
 
 
 \subsubsection{Aluminium}
-There are six aluminium transition lines available in our optical spectra. The strongest of these lines occur at 3944 and 3961\,{\AA}, and are visible in all of our stars. However, this is a particularly crowded spectral region: the lines fall between the strong Ca H and K lines, with the 3961\,{\AA} transition clearly in the wing of the Ca H line. This makes the continuum determination and subsequent Al measurement non-trivial, especially given the metallicity of our stars. Instead, we have measured Al abundances from the other transitions available in our spectra: the Al \textsc{i} lines at 6696, 6698, 7835 and 7836\,{\AA}. Although these lines are weaker than the bluer Al \textsc{i} lines, their surrounding regions are uncrowded.
+There are six aluminium transition lines available in our optical spectra. The strongest of these lines occur at 3944 and 3961\,{\AA}, and are visible in all of our stars. However, this is a particularly crowded spectral region: the lines fall between the strong Ca H and K lines, with the 3961\,{\AA} transition clearly in the wing of the Ca H line. This makes the continuum determination and subsequent aluminium measurement non-trivial, especially given the metallicity of our stars. Additionally, the 3944 and 3961 lines suffer from appreciable departures from LTE, resulting in under-estimated abundances by up to $\sim$0.60\,dex \citep{baumuller;gehren_1997}. Instead, we have measured Al abundances from the other transitions available in our spectra: the Al \textsc{i} lines at 6696, 6698, 7835 and 7836\,{\AA}. Although these lines are weaker than the bluer Al \textsc{i} lines, their surrounding regions are uncrowded from strong absorption lines.
 
-Generally the four Al \textsc{i} lines are in reasonable agreement with one another, yielding random scatter of less than 0.05\,dex. However, these lines were not always detected in the data. The strength of the lines is noticeably weakened below a 3-$\sigma$ detection with decreasing metallicity and increasing temperature. For our most metal-poor star, J221821, only one Al \textsc{i} line was detectable, and so we have adopted an uncertainty of 0.10\,dex. 
+Generally the four Al \textsc{i} lines are in reasonable agreement with one another, yielding random scatter of less than 0.05\,dex. However, these lines were not always detected in the data. The strength of the lines is noticeably weakened below a 3-$\sigma$ detection with decreasing metallicity and increasing temperature. For our most metal-poor star, J221821, only a single Al \textsc{i} line was detectable, and so we have adopted a conservative uncertainty of 0.10\,dex. 
 
 
 \subsubsection{Iron-peak Elements (Sc, V, Cr and Mn)}
-Scantium, Vanadium, Chromium and Manganese. All very vanilla, exhibiting a downward trend with [Fe/H].
-Data.
+
+As expected, the Fe-peak elemental abundances exhibit similar trends (Figure \ref{fig:fe-peak-elements}). The noteworthy exception is chromium, where the median abundance is $\mbox{[Cr/Fe]} = -0.08 \pm 0.12$ and does not vary with overall metallicity. The number of clean, suitable Cr \textsc{i} lines available varied between stars from three to twelve. Very little line-to-line scatter is present in both Cr \textsc{i} and \textsc{ii}: the random scatter is below 0.04\,dex for most stars, with the isolated example of J223504 where $\sigma(\mbox{[Cr \textsc{ii}/Fe]}) = 0.29$\,dex and only three lines were available. The Cr \textsc{i} and \textsc{ii} abundances for J223504 are in good agreement (0.05\,dex), and since none of the measured profiles were particularly unusual, we chose not to exclude outlier measurements. For all other stars, the Cr \textsc{i} $-$ Cr \textsc{ii} abundance differences varied between 0.02\,dex up to 0.31\,dex. The largest discrepancy occurred in our hottest star, where fewer chromium transitions were detectable.
+
+All other iron peak elements considered (Sc, V, Mn) all exhibit a slight downward trend in metallicity, with manganese demonstrating the most prominent gradient: varying between $\mbox{[Mn/Fe]} = -0.52$\,dex to $+0.31$\,dex in the most metal-poor and -rich stars respectively. The [Sc/Fe] measurements presented in Figure \ref{fig:fe-peak-elements} are calculated from six clean Sc \textsc{ii} lines, and there is very minimal line-to-line scatter, the largest of which is 0.06\,dex. Three Aquarius stream stars display [Sc/Fe] $\sim$ +0.20, while J221821 and J223811 have $\mbox{[Sc/Fe]} = 0.01$ and 0.05\,dex, respectively.
+
+% Iron peak elements
+\begin{figure}[h]
+	\includegraphics[width=\columnwidth]{./figures/aquarius-fe-peak.pdf}
+	\caption{Iron peak elements for all stars.}
+	\label{fig:fe-peak-elements}
+\end{figure}
 
 
 \subsubsection{Barium}
@@ -551,7 +567,7 @@ Measuring barium requires some careful consideration. The strong resonance lines
 
 Our standard stars have [Ba/Fe] abundances very typical of the Milky Way halo. Only one of our standard stars, HD 44007, has published [Ba/Fe] abundances from high-resolution spectra. We find HD 44007 to have $\mbox{[Ba/Fe]} = -0.05 \pm 0.04$, which is in between existing published measurements from \citet{fulbright_2000} and \citet{burris;et-al_2000} of $-0.27$ and 0.05 dex, respectively. 
 
-With one exception, the Aquarius stream stars have barium abundances that are quite similar to the stellar halo, ranging between $\mbox{[Ba/Fe]} = -0.02$ to 0.15 dex. The exception is C2225316, which has an anomalously high barium abundance of $\mbox{[Ba/Fe]} = 0.68$ dex. This is ${\sim}$0.60 dex higher than the Milky Way trend at its given $\mbox{[Fe/H]} = -1.19$ dex. Our three Ba \textsc{ii} lines in C2225316 are in excellent agreement: 0.67, 0.68, and 0.72 dex. The 6496 {\AA} transition has a negligible telluric contribution (e.g. Figure \ref{fig:ba-6496}), so it was included for this star. At least in Al, Si, Cr and Ba abundances (see sections \ref{sec:aluminium-abundance}, \ref{sec:alpha-elements}, \ref{sec:iron-peak-elements}), C225316 appears to be chemically distinct from the other Aquarius stream stars in our sample. 
+With one exception, the Aquarius stream stars have barium abundances that are quite similar to the stellar halo, ranging between $\mbox{[Ba/Fe]} = -0.02$ to 0.15 dex. The exception is C2225316, which has an anomalously high barium abundance of $\mbox{[Ba/Fe]} = 0.70$ dex. This is ${\sim}$0.70 dex higher than the Milky Way trend at its given $\mbox{[Fe/H]} = -1.26$ dex. Our three Ba \textsc{ii} lines in C2225316 are in excellent agreement: 0.67, 0.68, and 0.72 dex. The 6496\,{\AA} transition in C2225316 has a negligible telluric contribution and was included for this star. At least in Al, Si, Cr and Ba abundances (see sections \ref{sec:aluminium-abundance}, \ref{sec:alpha-elements}, \ref{sec:iron-peak-elements}), C225316 appears to be chemically distinct from the other Aquarius stream stars in our sample. 
 
 \begin{deluxetable*}{lccccccclcccccc}
 \tablecolumns{15}
@@ -564,110 +580,115 @@ With one exception, the Aquarius stream stars have barium abundances that are qu
 \\
  \multicolumn{7}{c}{J221821-183424} & \colhead{} & \multicolumn{7}{c}{C2225316-14437} \\
  \cline{1-7} \cline{9-15} \\
-   O \textsc{i} &   2 &    7.50 &    0.04 & $-$1.18 &    0.41 &    0.02 &&
-   O \textsc{i} &   2 &    7.90 &    0.01 & $-$0.79 &    0.48 &    0.01 \\
-  Na \textsc{i} &   2 &    4.56 &    0.14 & $-$1.68 & $-$0.08 &    0.10 &&
-  Na \textsc{i} &   3 &    5.09 &    0.17 & $-$1.15 &    0.12 &    0.10 \\
-  Mg \textsc{i} &   4 &    6.55 &    0.37 & $-$1.04 &    0.55 &    0.18 &&
-  Mg \textsc{i} &   4 &    6.98 &    0.24 & $-$0.62 &    0.65 &    0.12 \\
-  Al \textsc{i} &   1 &    5.04 &    0.00 & $-$1.41 &    0.18 & \nodata &&
+   O \textsc{i} &   2 &    7.55 &    0.04 & $-$1.13 &    0.47 &    0.02 &&
+   O \textsc{i} &   2 &    7.92 &    0.00 & $-$0.77 &    0.49 &    0.00 \\
+  Na \textsc{i} &   1 &    4.71 &    0.00 & $-$1.53 &    0.08 &    0.00 &&
+  Na \textsc{i} &   2 &    5.07 &    0.02 & $-$1.17 &    0.09 &    0.01 \\
+  Mg \textsc{i} &   3 &    6.33 &    0.09 & $-$1.27 &    0.34 &    0.05 &&
+  Mg \textsc{i} &   2 &    6.84 &    0.09 & $-$0.76 &    0.50 &    0.06 \\
+  Al \textsc{i} &   1 &    5.05 &    0.00 & $-$1.40 &    0.21 &    0.00 &&
   Al \textsc{i} &   4 &    5.87 &    0.09 & $-$0.58 &    0.68 &    0.04 \\
-  Si \textsc{i} &   5 &    6.28 &    0.08 & $-$1.23 &    0.37 &    0.04 &&
-  Si \textsc{i} &   5 &    6.96 &    0.15 & $-$0.55 &    0.72 &    0.07 \\
-  Ca \textsc{i} &   4 &    4.97 &    0.04 & $-$1.37 &    0.23 &    0.02 &&
-  Ca \textsc{i} &   4 &    5.50 &    0.04 & $-$0.84 &    0.43 &    0.02 \\
-  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
-  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
- Sc \textsc{ii} &   6 &    1.52 &    0.08 & $-$1.63 & $-$0.04 &    0.03 &&
- Sc \textsc{ii} &   5 &    2.05 &    0.13 & $-$1.10 &    0.17 &    0.06 \\
+  Si \textsc{i} &   5 &    6.28 &    0.08 & $-$1.23 &    0.38 &    0.04 &&
+  Si \textsc{i} &   5 &    6.97 &    0.15 & $-$0.54 &    0.72 &    0.07 \\
+  Ca \textsc{i} &   4 &    4.99 &    0.04 & $-$1.35 &    0.25 &    0.02 &&
+  Ca \textsc{i} &   4 &    5.51 &    0.04 & $-$0.83 &    0.43 &    0.02 \\
+ Sc \textsc{ii} &   6 &    1.56 &    0.09 & $-$1.59 &    0.01 &    0.04 &&
+ Sc \textsc{ii} &   5 &    2.08 &    0.13 & $-$1.07 &    0.19 &    0.06 \\
   Ti \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
-  Ti \textsc{i} &   4 &    4.04 &    0.03 & $-$0.91 &    0.36 &    0.01 \\
- Ti \textsc{ii} &   4 &    3.81 &    0.13 & $-$1.14 &    0.45 &    0.07 &&
- Ti \textsc{ii} &   2 &    4.26 &    0.08 & $-$0.69 &    0.58 &    0.06 \\
-   V \textsc{i} &   3 &    2.23 &    0.01 & $-$1.70 & $-$0.11 &    0.01 &&
-   V \textsc{i} &   6 &    2.92 &    0.17 & $-$1.01 &    0.26 &    0.07 \\
-  Cr \textsc{i} &  11 &    3.74 &    0.07 & $-$1.90 & $-$0.30 &    0.02 &&
-  Cr \textsc{i} &   8 &    4.27 &    0.16 & $-$1.37 & $-$0.10 &    0.06 \\
-  Mn \textsc{i} &   3 &    3.29 &    0.04 & $-$2.14 & $-$0.54 &    0.02 &&
-  Mn \textsc{i} &   3 &    4.14 &    0.05 & $-$1.29 & $-$0.02 &    0.03 \\
-  Fe \textsc{i} &  52 &    5.91 &    0.09 & $-$1.59 &    0.00 &    0.01 &&
-  Fe \textsc{i} &  61 &    6.23 &    0.11 & $-$1.27 &    0.00 &    0.01 \\
- Fe \textsc{ii} &  13 &    5.90 &    0.05 & $-$1.60 &    0.00 &    0.01 &&
- Fe \textsc{ii} &  10 &    6.17 &    0.06 & $-$1.33 & $-$0.07 &    0.02 \\
-  Co \textsc{i} &   1 &    3.35 &    0.00 & $-$1.64 & $-$0.05 & \nodata &&
-  Co \textsc{i} &   3 &    3.92 &    0.12 & $-$1.07 &    0.20 &    0.07 \\
-  Ni \textsc{i} &   5 &    4.61 &    0.15 & $-$1.61 & $-$0.01 &    0.07 &&
-  Ni \textsc{i} &   7 &    5.04 &    0.09 & $-$1.18 &    0.09 &    0.03 \\
-  Cu \textsc{i} &   1 &    2.13 &    0.00 & $-$2.06 & $-$0.47 & \nodata &&
-  Cu \textsc{i} &   1 &    3.35 &    0.00 & $-$0.84 &    0.43 & \nodata \\
-  Zn \textsc{i} &   2 &    3.15 &    0.11 & $-$1.41 &    0.19 &    0.08 &&
-  Zn \textsc{i} &   2 &    3.46 &    0.23 & $-$1.10 &    0.17 &    0.17 \\
+  Ti \textsc{i} &   4 &    4.04 &    0.02 & $-$0.91 &    0.36 &    0.01 \\
+ Ti \textsc{ii} &   4 &    3.85 &    0.13 & $-$1.10 &    0.50 &    0.06 &&
+ Ti \textsc{ii} &   2 &    4.29 &    0.08 & $-$0.66 &    0.61 &    0.05 \\
+   V \textsc{i} &   3 &    2.26 &    0.01 & $-$1.67 & $-$0.06 &    0.01 &&
+   V \textsc{i} &   6 &    2.93 &    0.17 & $-$1.00 &    0.26 &    0.07 \\  
+  Cr \textsc{i} &  11 &    3.77 &    0.08 & $-$1.87 & $-$0.26 &    0.02 &&
+  Cr \textsc{i} &   8 &    4.29 &    0.16 & $-$1.35 & $-$0.08 &    0.06 \\
+ Cr \textsc{ii} &   2 &    4.04 &    0.02 & $-$1.60 &    0.00 &    0.02 &&
+ Cr \textsc{ii} &   1 &    4.27 &    0.00 & $-$1.37 & $-$0.11 &    0.00 \\
+  Mn \textsc{i} &   3 &    3.30 &    0.03 & $-$2.13 & $-$0.52 &    0.02 &&
+  Mn \textsc{i} &   3 &    4.15 &    0.04 & $-$1.28 & $-$0.01 &    0.03 \\
+  Fe \textsc{i} &  52 &    5.89 &    0.09 & $-$1.61 &    0.00 &    0.01 &&
+  Fe \textsc{i} &  60 &    6.24 &    0.10 & $-$1.26 &    0.00 &    0.01 \\
+ Fe \textsc{ii} &  13 &    5.91 &    0.05 & $-$1.59 &    0.02 &    0.01 &&
+ Fe \textsc{ii} &  10 &    6.19 &    0.06 & $-$1.31 & $-$0.05 &    0.02 \\
+  Co \textsc{i} &   1 &    3.38 &    0.00 & $-$1.61 & $-$0.00 &    0.00 &&
+  Co \textsc{i} &   3 &    3.92 &    0.12 & $-$1.07 &    0.19 &    0.07 \\
+  Ni \textsc{i} &   5 &    4.62 &    0.14 & $-$1.60 &    0.01 &    0.06 &&
+  Ni \textsc{i} &   7 &    5.05 &    0.09 & $-$1.17 &    0.09 &    0.03 \\
+  Cu \textsc{i} &   1 &    2.16 &    0.00 & $-$2.03 & $-$0.42 &    0.00 &&
+  Cu \textsc{i} &   1 &    3.38 &    0.00 & $-$0.81 &    0.45 &    0.00 \\
+  Zn \textsc{i} &   2 &    3.17 &    0.11 & $-$1.39 &    0.22 &    0.08 &&
+  Zn \textsc{i} &   2 &    3.48 &    0.24 & $-$1.08 &    0.19 &    0.17 \\
+ Ba \textsc{ii} &   2 &    0.72 &    0.08 & $-$1.47 &    0.14 &    0.05 &&
+ Ba \textsc{ii} &   2 &    1.62 &    0.01 & $-$0.56 &    0.70 &    0.00 \\
+
 \cline{1-7} \cline{9-15} \\
 \\
 \multicolumn{7}{c}{J223504-152834} && \multicolumn{7}{c}{J223811-104126} \\
 \cline{1-7} \cline{9-15} \\
-   O \textsc{i} &   2 &    8.48 &    0.09 & $-$0.21 &    0.46 &    0.07 &&
-   O \textsc{i} &   1 &    8.60 &    0.00 & $-$0.09 &    0.14\footnote{Abundance derived from the permitted O \textsc{i} triplet instead of the forbidden [O \textsc{i}] lines, see \S\ref{sec:oxygen-abundances}} &    0.08 \\
-  Na \textsc{i} &   3 &    5.76 &    0.12 & $-$0.48 &    0.19 &    0.07 &&
-  Na \textsc{i} &   2 &    4.76 &    0.10 & $-$1.48 & $-$0.03 &    0.07 \\
-  Mg \textsc{i} &   3 &    7.50 &    0.24 & $-$0.10 &    0.58 &    0.14 &&
-  Mg \textsc{i} &   3 &    6.49 &    0.42 & $-$1.11 &    0.34 &    0.24 \\
-  Al \textsc{i} &   3 &    6.10 &    0.08 & $-$0.35 &    0.32 &    0.05 &&
+   O \textsc{i} &   2 &    8.46 &    0.10 & $-$0.23 &    0.45 &    0.07 &&
+   O \textsc{i} &   1 &    8.26 &    0.00 & $-$0.43 &    0.14\footnote{Abundance derived from the permitted O \textsc{i} triplet instead of the forbidden [O \textsc{i}] lines, see \S\ref{sec:oxygen-abundances}} &    0.08 \\
+  Na \textsc{i} &   3 &    5.74 &    0.12 & $-$0.50 &    0.18 &    0.07 &&
+  Na \textsc{i} &   1 &    4.86 &    0.00 & $-$1.38 &    0.07 &    0.00 \\
+  Mg \textsc{i} &   3 &    7.41 &    0.15 & $-$0.19 &    0.49 &    0.09 &&
+  Mg \textsc{i} &   2 &    6.47 &    0.02 & $-$1.13 &    0.32 &    0.01 \\
+  Al \textsc{i} &   3 &    6.08 &    0.08 & $-$0.37 &    0.31 &    0.05 &&
   Al \textsc{i} &   2 &    5.10 &    0.14 & $-$1.35 &    0.10 &    0.10 \\
-  Si \textsc{i} &   5 &    7.11 &    0.10 & $-$0.40 &    0.28 &    0.04 &&
+  Si \textsc{i} &   5 &    7.12 &    0.10 & $-$0.39 &    0.29 &    0.04 &&
   Si \textsc{i} &   3 &    6.38 &    0.04 & $-$1.13 &    0.32 &    0.02 \\
-  Ca \textsc{i} &   4 &    6.03 &    0.04 & $-$0.31 &    0.36 &    0.02 &&
+  Ca \textsc{i} &   4 &    6.00 &    0.03 & $-$0.34 &    0.33 &    0.02 &&
   Ca \textsc{i} &   4 &    5.30 &    0.03 & $-$1.04 &    0.41 &    0.01 \\
-  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
-  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
  Sc \textsc{ii} &   6 &    2.70 &    0.14 & $-$0.45 &    0.23 &    0.06 &&
  Sc \textsc{ii} &   6 &    1.75 &    0.14 & $-$1.40 &    0.05 &    0.06 \\
-  Ti \textsc{i} &   4 &    4.63 &    0.02 & $-$0.32 &    0.36 &    0.01 &&
+  Ti \textsc{i} &   4 &    4.59 &    0.02 & $-$0.36 &    0.32 &    0.01 &&
   Ti \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
- Ti \textsc{ii} &   2 &    4.92 &    0.26 & $-$0.04 &    0.64 &    0.19 &&
+ Ti \textsc{ii} &   2 &    4.91 &    0.27 & $-$0.04 &    0.64 &    0.19 &&
  Ti \textsc{ii} &   4 &    3.83 &    0.09 & $-$1.12 &    0.33 &    0.04 \\
-   V \textsc{i} &   6 &    3.67 &    0.22 & $-$0.26 &    0.41 &    0.09 &&
-   V \textsc{i} &   1 &    2.42 &    0.00 & $-$1.51 & $-$0.06 & \nodata \\
-  Cr \textsc{i} &   7 &    4.94 &    0.09 & $-$0.70 & $-$0.02 &    0.03 &&
+   V \textsc{i} &   6 &    3.62 &    0.22 & $-$0.31 &    0.37 &    0.09 &&
+   V \textsc{i} &   1 &    2.42 &    0.00 & $-$1.51 & $-$0.06 &    0.00 \\
+  Cr \textsc{i} &   7 &    4.88 &    0.09 & $-$0.76 & $-$0.08 &    0.04 &&
   Cr \textsc{i} &  12 &    4.12 &    0.06 & $-$1.52 & $-$0.07 &    0.02 \\
-  Mn \textsc{i} &   3 &    5.08 &    0.10 & $-$0.35 &    0.33 &    0.06 &&
+ Cr \textsc{ii} &   3 &    4.83 &    0.50 & $-$0.81 & $-$0.13 &    0.29 &&
+ Cr \textsc{ii} &   3 &    4.34 &    0.07 & $-$1.30 &    0.15 &    0.04 \\
+  Mn \textsc{i} &   3 &    5.06 &    0.10 & $-$0.37 &    0.31 &    0.06 &&
   Mn \textsc{i} &   3 &    3.55 &    0.04 & $-$1.88 & $-$0.43 &    0.02 \\
-  Fe \textsc{i} &  64 &    6.83 &    0.12 & $-$0.67 &    0.00 &    0.02 &&
+  Fe \textsc{i} &  63 &    6.82 &    0.12 & $-$0.68 &    0.00 &    0.02 &&
   Fe \textsc{i} &  33 &    6.05 &    0.06 & $-$1.45 &    0.00 &    0.01 \\
  Fe \textsc{ii} &  12 &    6.82 &    0.07 & $-$0.68 &    0.00 &    0.02 &&
  Fe \textsc{ii} &  11 &    6.00 &    0.09 & $-$1.50 & $-$0.05 &    0.03 \\
-  Co \textsc{i} &   3 &    4.53 &    0.14 & $-$0.46 &    0.21 &    0.08 &&
+  Co \textsc{i} &   3 &    4.50 &    0.13 & $-$0.49 &    0.19 &    0.08 &&
   Co \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
-  Ni \textsc{i} &   7 &    5.62 &    0.09 & $-$0.60 &    0.08 &    0.03 &&
+  Ni \textsc{i} &   7 &    5.61 &    0.09 & $-$0.61 &    0.07 &    0.03 &&
   Ni \textsc{i} &   2 &    4.82 &    0.04 & $-$1.40 &    0.05 &    0.03 \\
-  Cu \textsc{i} &   1 &    3.85 &    0.00 & $-$0.34 &    0.33 & \nodata &&
-  Cu \textsc{i} &   1 &    2.39 &    0.00 & $-$1.80 & $-$0.35 & \nodata \\
-  Zn \textsc{i} &   2 &    4.17 &    0.03 & $-$0.39 &    0.28 &    0.02 &&
+  Cu \textsc{i} &   1 &    3.82 &    0.00 & $-$0.37 &    0.31 &    0.00 &&
+  Cu \textsc{i} &   1 &    2.39 &    0.00 & $-$1.80 & $-$0.35 &    0.00 \\
+  Zn \textsc{i} &   2 &    4.18 &    0.02 & $-$0.38 &    0.30 &    0.02 &&
   Zn \textsc{i} &   2 &    3.17 &    0.04 & $-$1.39 &    0.06 &    0.03 \\
-
+ Ba \textsc{ii} &   2 &    1.65 &    0.02 & $-$0.53 &    0.15 &    0.01 &&
+ Ba \textsc{ii} &   2 &    0.78 &    0.06 & $-$1.40 &    0.05 &    0.04 \\
 \cline{1-7} \cline{9-15} \\
 \\
 \multicolumn{7}{c}{C2306265-085103} && \\
 \cline{1-7} \\
-   O \textsc{i} &   2 &    8.09 &    0.15 & $-$0.60 &    0.57 &    0.10 \\
+   O \textsc{i} &   2 &    7.96 &    0.02 & $-$0.72 &    0.45 &    0.02 \\
   Na \textsc{i} &   2 &    5.25 &    0.00 & $-$0.99 &    0.18 &    0.00 \\
   Mg \textsc{i} &   2 &    6.84 &    0.07 & $-$0.76 &    0.41 &    0.05 \\
   Al \textsc{i} &   4 &    5.56 &    0.08 & $-$0.89 &    0.28 &    0.04 \\
   Si \textsc{i} &   5 &    6.66 &    0.08 & $-$0.85 &    0.32 &    0.03 \\
   Ca \textsc{i} &   4 &    5.48 &    0.04 & $-$0.86 &    0.31 &    0.02 \\
-  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
  Sc \textsc{ii} &   6 &    2.18 &    0.15 & $-$0.97 &    0.20 &    0.06 \\
   Ti \textsc{i} &   4 &    4.06 &    0.03 & $-$0.89 &    0.28 &    0.01 \\
  Ti \textsc{ii} &   3 &    4.21 &    0.36 & $-$0.74 &    0.43 &    0.21 \\
    V \textsc{i} &   4 &    2.88 &    0.06 & $-$1.05 &    0.12 &    0.03 \\
-  Cr \textsc{i} &   4 &    4.20 &    0.26 & $-$1.44 & $-$0.27 &    0.13 \\
+  Cr \textsc{i} &   3 &    4.08 &    0.12 & $-$1.56 & $-$0.39 &    0.07 \\
+ Cr \textsc{ii} &   1 &    4.39 &    0.00 & $-$1.25 & $-$0.08 &    0.00 \\
   Mn \textsc{i} &   3 &    4.35 &    0.10 & $-$1.08 &    0.09 &    0.06 \\
-  Fe \textsc{i} &  63 &    6.33 &    0.12 & $-$1.17 &    0.00 &    0.01 \\
+  Fe \textsc{i} &  62 &    6.33 &    0.12 & $-$1.17 &    0.00 &    0.01 \\
  Fe \textsc{ii} &  11 &    6.31 &    0.09 & $-$1.19 & $-$0.02 &    0.03 \\
   Co \textsc{i} &   3 &    4.00 &    0.15 & $-$0.99 &    0.18 &    0.08 \\
   Ni \textsc{i} &   7 &    5.08 &    0.08 & $-$1.14 &    0.03 &    0.03 \\
   Cu \textsc{i} &   1 &    3.55 &    0.00 & $-$0.64 &    0.53 &    0.00 \\
-  Zn \textsc{i} &   2 &    3.38 &    0.14 & $-$1.18 & $-$0.01 &    0.10
+  Zn \textsc{i} &   2 &    3.38 &    0.14 & $-$1.18 & $-$0.01 &    0.10 \\
+ Ba \textsc{ii} &   2 &    0.99 &    0.06 & $-$1.19 & $-$0.02 &    0.04
 \enddata
 \end{deluxetable*}
 
@@ -695,84 +716,67 @@ With one exception, the Aquarius stream stars have barium abundances that are qu
 
 % wylie de boer discrepancies
 
-We seek to investigate the nature of the Aquarius stream, as well as the specific globular cluster origin claim made by \citet{wylie-de-boer;et-al_2012}. 
+
 
 \subsection{Stellar Parameter Discrepancies with \citet{wylie-de-boer;et-al_2012}}
 
-The stellar parameters reported in \citet{wylie-de-boer;et-al_2012} differ slightly to those published in Table \ref{tab:stellar-parameters}. \citet{wylie-de-boer;et-al_2012} deduce their stellar parameters by minimizing the $\chi^2$ difference between the observed spectra, and the \citet{munari;et-al_2005} synthetic spectral library after it was convolved and re-sampled to match the observations. The comparison regions used for analysis were 4900-5200\,{\AA} and 5575-5725\,{\AA}. In general, temperatures between the two studies agree within the uncertainties. The only noteworthy exception is J223811-104126, where we find an effective temperature of 5140\,K, ${\sim}$500\,K cooler than the 5646\,K found by \citet{wylie-de-boer;et-al_2012}.  Similarly, \citet{williams;et-al_2011} report a hotter effective temperature of 5502\,K from low-resolution spectra. This is the largest discrepancy we see in any of our standard or program stars.
+We seek to investigate the nature of the Aquarius stream, as well as the specific globular cluster origin claim made by \citet{wylie-de-boer;et-al_2012}. The stellar parameters reported in \citet{wylie-de-boer;et-al_2012} differ slightly to those published in Table \ref{tab:stellar-parameters}. \citet{wylie-de-boer;et-al_2012} deduce their stellar parameters by minimizing the $\chi^2$ difference between the observed spectra, and the \citet{munari;et-al_2005} synthetic spectral library after it was convolved and re-sampled to match the observations. The comparison regions used for analysis were 4900-5200\,{\AA} and 5575-5725\,{\AA}. In general, temperatures between the two studies agree within the uncertainties. The only abberation is J223811-104126, where we find an effective temperature of 5140\,K, ${\sim}$500\,K cooler than the 5646\,K found by \citet{wylie-de-boer;et-al_2012}.  Similarly, \citet{williams;et-al_2011} report a hotter effective temperature of 5502\,K from low-resolution spectra. This is the largest discrepancy we see in any of our standard or program stars.
 
-Photometric temperatures only lend marginal argumentative weight towards our spectroscopic temperatures. If the \citet{schlegel;et-al_1998} dust maps are employed, then the \citet{alonso;et-al_1999} and \citet{casagrande;et-al_2010} relations estimate the effective temperatures to be between 5104\,K and 5367\,K. Our spectroscopic temperature of 5110\,K is closer to the \citet{alonso;et-al_1999} prediction, but not in disagreement with the \citet{casagrande;et-al_2010} relation either. If we employ the reddening of $E(B-V) = 0.12$ that we have determined from interstellar Na D1 line, the photometric temperature increases slightly by ${\sim}100$\,K, still within the uncertainties of the \citet{alonso;et-al_1999} scale, but in less agreement with the \citet{casagrande;et-al_2010} scale. We find the surface gravity for J223811-104126 to be 3.00 $\pm$ 0.50, placing this star at the base of the red giant branch. Thus, if J223811-104126 is a giant star, our spectroscopic temperatures should be in slightly better agreement with the \citet{alonso;et-al_1999} scale, rather than the \citet{casagrande;et-al_2010} dwarf/sub-giant scale. However, \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012} find this star to be a sub-giant, with a surface gravity $\log{g} = 4.16$ and 4.60 respectively. The \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012} temperatures are 150\,K and 300\,K hotter than the \citet{casagrande;et-al_2010} prediction respectively. If our extinction value is employed, then the \citet{williams;et-al_2011} and \citet{casagrande;et-al_2010} temperatures are in good agreement, yet still 175\,K cooler than the \citet{wylie-de-boer;et-al_2012} measurement.
+Photometric temperatures only lend marginal argumentative weight towards our spectroscopic temperatures. If the \citet{schlegel;et-al_1998} dust maps are employed, then the \citet{alonso;et-al_1999} and \citet{casagrande;et-al_2010} relations estimate the effective temperatures to be between 5104\,K and 5367\,K. Our spectroscopic temperature of 5110\,K is in excellent agreement with the \citet{alonso;et-al_1999} prediction, but not in strong disagreement with the \citet{casagrande;et-al_2010} relation either. If we employ the reddening of $E(B-V) = 0.12$ that we have determined from interstellar Na D1 line, the photometric temperature increases slightly by ${\sim}100$\,K, still within the uncertainties of the \citet{alonso;et-al_1999} scale, but less so  with the \citet{casagrande;et-al_2010} scale. We find the surface gravity for J223811-104126 to be 3.00 $\pm$ 0.50, placing this star at the base of the red giant branch. Thus, if J223811-104126 is a giant star, our spectroscopic temperatures should be in slightly better agreement with the \citet{alonso;et-al_1999} scale, rather than the \citet{casagrande;et-al_2010} dwarf/sub-giant scale. However, \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012} find this star to be a sub-giant, with a surface gravity $\log{g} = 4.16$ and 4.60 respectively. The \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012} temperatures are 150\,K and 300\,K hotter than the \citet{casagrande;et-al_2010} prediction respectively. If our extinction value is employed, then the \citet{williams;et-al_2011} and \citet{casagrande;et-al_2010} temperatures are in good agreement, yet still 175\,K cooler than the \citet{wylie-de-boer;et-al_2012} measurement.
 
 As a test, we set the temperature for J223811-104126 to be 5600\,K -- within the temperature regime reported by \citet{williams;et-al_2011} and \citet{wylie-de-boer;et-al_2012}. The slopes in abundance with excitation potential and reduced equivalent width were large (how many dex), and in doing so we could not find a physical solution for this temperature. Thus, although photometric temperatures do not help in solving this discrepancy, and the reddening measured from the interstellar Na D1 line may have made it worse, our high-resolution spectra  indicates that J223811-104126 has an effective temperature of 5110\,K and is indeed a giant star.
 
-In the \citet{wylie-de-boer;et-al_2012} study, the surface gravity was determined during the $\chi^2$ minimization process. Again, with the exception of J223811-104126, our surface gravities are largely in agreement. The only other noteworthy difference in surface gravity is for J221821-183424, where we find a lower gravity of $\log{g} = 0.80 \pm 0.30$ where \citet{wylie-de-boer;et-al_2012} find $\log{g} = 1.45 \pm 0.35$\,cm\,s$^{-2}$. Given the difference in $S/N$ and resolution between these studies, this difference is not too concerning. 
+In the \citet{wylie-de-boer;et-al_2012} study, the surface gravity was determined during the $\chi^2$ minimization process. Again, with the exception of J223811-104126, our surface gravities are largely in agreement. The only other noteworthy difference in surface gravity is for J221821-183424, where we find a lower gravity of $\log{g} = 0.80 \pm 0.30$ and \citet{wylie-de-boer;et-al_2012} find $\log{g} = 1.45 \pm 0.35$\,cm\,s$^{-2}$. Given the difference in $S/N$ and resolution between these studies, this difference is not too concerning. 
 
-\citet{wylie-de-boer;et-al_2012} calculate microturbulence from empirical relationships derived by \citet{Reddy;et-al_2003} for dwarfs and \citet{fulbright_2000} for giants. These relationships are based upon the effective temperature and surface gravity. Our published microturbulence values agree excellently with the values presented in \citet{wylie-de-boer;et-al_2012}, again with the exception of J223811-104126, where the difference in $v_{t}$ can be  directly attributed to the offsets in other stellar parameters.
+\citet{wylie-de-boer;et-al_2012} calculate microturbulence from empirical relationships derived by \citet{Reddy;et-al_2003} for dwarfs and \citet{fulbright_2000} for giants. These relationships are based upon the effective temperature and surface gravity. Our published microturbulent velocities agree excellently with the values presented in \citet{wylie-de-boer;et-al_2012}, again with the exception of J223811-104126, where the difference in $v_{t}$ can be  directly attributed to the offsets in other stellar parameters.
 
-Of all the stellar parameters ($T_{eff}$, $\log{g}$, $v_{t}$ and $\mbox{[Fe/H]}$), the metallicities between our two studies vary the most. Here we discuss the potential causes for these discrepancies. In the \citet{wylie-de-boer;et-al_2012} study, after the stellar parameters ($T_{eff}$, $\log{g}$, $v_{t}$, and an initial [Fe/H] estimate) had been determined, the authors synthesized Fe \textsc{i} and \textsc{ii} lines individually using the spectrum synthesis code \textsc{moog}. \citet{castelli;kurucz_2003} stellar atmosphere models were employed \--- the same ones used in this study, albeit the interpolation schemes will have subtle differences. The median abundance of Fe\,I lines was taken as the overall stellar metallicity, scaled using the \citet{grevesse;sauval_1998} solar abundances.
+Of all the stellar parameters ($T_{eff}$, $\log{g}$, $v_{t}$ and $\mbox{[Fe/H]}$), the metallicities between our two studies vary the most. Here we discuss the potential causes for these discrepancies. In the \citet{wylie-de-boer;et-al_2012} study, after the stellar parameters ($T_{eff}$, $\log{g}$, $v_{t}$, and an initial [Fe/H] estimate) had been determined through a $\chi^2$ analysis, the authors synthesized individual Fe \textsc{i} and \textsc{ii} lines using the \textsc{moog} code. \citet{castelli;kurucz_2003} stellar atmosphere models were employed \--- the same ones used in this study, albeit the interpolation schemes will have subtle differences. The median abundance of Fe\,\textsc{i} lines was taken as the overall stellar metallicity, scaled using the \citet{grevesse;sauval_1998} solar composition.
 
-The study of \citet{wylie-de-boer;et-al_2012} is of slightly lower resolution ($R = 25,000$ compared to $R = 28,000$ presented here), but with a much lower $S/N$ ratio: $\sim{}25$ pixel$^{-1}$ compared to $>100$ pixel$^{-1}$ achieved here. Given the lower spectral resolution and modest $S/N$ in the \citet{wylie-de-boer;et-al_2012} study, there are fewer unblended absorption lines available. In fact, there are very few transitions present in their published line list: only 14 Fe\,\textsc{i} lines and 3 Fe\,\textsc{ii} lines were available. For contrast, our metallicity determinations are usually based from ${\sim}$50 Fe\,I and ${\sim}$13 Fe\,II lines. Given the metallicity of these stars and the spectral coverage (4120 to 6920 {\AA}), it is somewhat surprising that there were not more unblended transitions available to \citet{wylie-de-boer;et-al_2012}. 
+The study of \citet{wylie-de-boer;et-al_2012} is of slightly lower resolution ($\mathcal{R} = 25,000$ compared to $\mathcal{R} = 28,000$ presented here), but with a much lower $S/N$ ratio: $\sim{}25$ pixel$^{-1}$ compared to >100 pixel$^{-1}$ achieved here. Given the lower spectral resolution and modest $S/N$ in the \citet{wylie-de-boer;et-al_2012} study, there are fewer unblended absorption lines available. In fact, there are very few transitions present in their published line list: only 14 Fe\,\textsc{i} lines and 3 Fe\,\textsc{ii} lines were available. For contrast, our metallicity determinations are usually based from ${\sim}$50 Fe\,\textsc{i} and ${\sim}$13 Fe\,\textsc{ii} lines. Given the metallicity of these stars and the spectral coverage (4120 to 6920 {\AA}), it is somewhat surprising that there were not more unblended transitions available to \citet{wylie-de-boer;et-al_2012}. 
 
-The line list employed in the \citet{wylie-de-boer;et-al_2012} study contained fewer lines, and employed different oscillator strengths than what we have used. The oscillator strengths in the \citet{wylie-de-boer;et-al_2012} study are astrophysical, and were derived from a reverse analysis from the \citet{hinkle;et-al_2003} solar atlas. Suspecting the differing line lists may be the cause of the  metallicity discrepancy, we reanalysed our data using the \citet{wylie-de-boer;et-al_2012} line list and stellar parameters. Indeed, we arrive at very similar metallicities to \citet{wylie-de-boer;et-al_2012}. Without using their published stellar parameters a priori, in a `blind' analysis employing just the \citet{wylie-de-boer;et-al_2012} line list, we arrive at similar stellar parameters. However, we note that one Fe\,\textsc{i} transition at 6420.060\,\AA{} in the \citet{wylie-de-boer;et-al_2012} line list was not detected in any of our stars at the $3-\sigma$ level, even though the $S/N$ at this point exceeds 115 pixel$^{-1}$ in every observation. Thus, for this comparative analysis a maximum of 13 Fe\,\textsc{i} and 3 Fe\,\textsc{ii} lines were available to us.
+The line list employed in the \citet{wylie-de-boer;et-al_2012} study contained fewer lines, and employed different oscillator strengths than what we have used. The oscillator strengths in the \citet{wylie-de-boer;et-al_2012} study are astrophysical; they were derived from a reverse analysis from the \citet{hinkle;et-al_2003} solar atlas. Suspecting the differing line lists may be the cause of the  metallicity discrepancy, we reanalysed our data using the \citet{wylie-de-boer;et-al_2012} line list and stellar parameters. Indeed, we arrive at very similar metallicities to \citet{wylie-de-boer;et-al_2012}. Without using their published stellar parameters a priori, in a `blind' analysis employing just the \citet{wylie-de-boer;et-al_2012} line list, we arrive at similar stellar parameters. However, we note that one Fe\,\textsc{i} transition at 6420.060\,\AA{} in the \citet{wylie-de-boer;et-al_2012} line list was not detected in any of our stars at the 3-$\sigma$ level, even though the $S/N$ at this point exceeds 115 pixel$^{-1}$ in every observation. Thus, for this comparative analysis a maximum of 13 Fe\,\textsc{i} and 3 Fe\,\textsc{ii} lines were available to us.
 
 Given the line list employed in the \citet{wylie-de-boer;et-al_2012} study, the overall data quality and the lack of suitable iron lines available for analysis, it appears the Aquarius stream stars conspired to present a tight metallicity distribution function of $\sigma(\mbox{Fe/H}) = 0.10$\,dex. When viewed in light of enhanced Ni, Na abundances, this chemistry is suggestive of a globular cluster origin. Our analysis of high-resolution spectra with high $S/N$ reveals a much broader metallicity distribution for the stream. With just five stars -- if we assume all our stars are members -- we find the stream metallicity varies from $\mbox{[Fe/H]} = -0.65$ to --1.60\,dex. Although this is a small sample, we find the calculated median abundance and standard deviation to be $\mbox{[Fe/H]} = -1.26 \pm 0.32$\,dex.
 
 
 \subsection{The Aquarius Stream M.D.F.}
 
-% Globular clusters typically exhibit minimal chemical scatter because X. 
-% globular clusters vs dwarf spheroidals MDF
+Classical globular clusters typically exhibit very little chemical scatter. This is largely because they are primarily considered to be a single stellar populations, originating from a lone \--- largely homogenous \--- proto-stellar cloud. More recent observations have repeatedly shown that this is not always the case: many globular clusters clearly host multiple stellar populations. The separation between these populations is identifiable through chemical abundances, and often from photometry alone. In many cases, the chemistry between the two stellar populations are quite similar, still revealing minimal overall chemical scatter within the cluster. There are some unusual exceptions to this rule, most notable of which is the globular cluster $\omega$-Centurai (NGC 5139), which is seen to host many sub-populations with very different metallicity distributions. Without the explanation of multiple sub-populations in mind, the system would be seen to exhibit an unusually wide metallicity dispersion for a globular cluster.
 
-% larger MDF than expected for globular clusters
+Assuming all our candidates are stream members, we find a metallicity dispersion of $\sigma(\mbox{[Fe/H]}) = 0.32$\,dex. If the stream is the result of a disrupted system, this metallicity dispersion provides little indication on the progenitor. If the dispersion was smaller, confirming the observations of \citet{wylie-de-boer;et-al_2012}, the globular cluster scenario is  more likely. However, given the multiple stellar populations present in many globular clusters, which can exhibit total cluster dispersions up to X dex (NGC X), Y dex (NGC Y), our dispersion of 0.32\,dex is inconvenient. Since dwarf spheroidal galaxies do not undergo chemical self-enrichment in the same way globular clusters do, they can exhibit significant metallicity dispersions \--- well over a dex, depending on the dwarf total luminosity. On its own, the metallicity of our stream stars does not provide any indication on the cause of the Aquarius stream, or its enrichment environment.
 
-% globular clusters typically have a tight MDF -- explain why
-
-% dSph's show a wide MDF due to X
-
-% there are some exclusions to this rule, most notably omega cen
-
-% mdf of omega cen
-
-% based on dynamics, williams excluded all known globular clusters and dsph's with the exception of omega cen.
-
-% although the MDF appears not to be dissimilar from omega cen, we will later show based on the evidence thus far that the aquarius stream is not disrupted debris from omega cen
-%	+ because as well as having a tight [Fe/H], all well-studied globular clusters (including omega cen) exhibit noteable chemical patterns, which we do not find in these stars.
 
 \subsection{The Na-O Relationship}
 
 % establish the relationship as a true phenomena
 
-Extensive studies looking at stars in globular clusters have revealed variations in light-element abundances, most notably an anti-correlation in sodium and oxygen content \citet[][and references therein]{norris;da_costa_1995,carretta;et-al_2009_na_o}. This chemical pattern has been repeatedly demonstrated in every well-studied globular cluster, although the strength of the anti-correlation varies in each system. Between generations of stars within a globular cluster, oxygen is converted into nitrogen, reducing the overall oxygen abundance. Even though oxygen undergoes internal mixing during its evolution along the giant branch, it is now well established that any observed abundance variations due to such mixing is limited to Li, C, and N. Therefore, the light element anti-correlation required a different astrophysical explanation.
+Extensive studies looking at stars in globular clusters have revealed variations in light-element abundances, most notably an anti-correlation in sodium and oxygen content \citet[][and references therein]{norris;da_costa_1995,carretta;et-al_2009_na_o}. This chemical pattern has been repeatedly demonstrated in every well-studied globular cluster, although the strength of the anti-correlation varies in each system. Between generations of stars within a globular cluster, oxygen is converted into nitrogen, reducing the overall oxygen abundance. Even though oxygen undergoes internal mixing during its evolution along the giant branch, the detection of this chemical pattern in unevolved stars has led to the conclusion that observed abundance variations due to mixing are limited to Li, C, and N. Therefore, the light element anti-correlation required a different astrophysical explanation.
 
-Sodium is mainly produced through through carbon burning in massive stars by the dominant $^{12}\mbox{C}(^{12}\mbox{C}, p)^{23}\mbox{Na}$ process. The final Na abundance is dependent on the neutron excess of the star, which slowly increases during carbon burning due to weak interactions \citep{arnett;truran_1974}. Massive stars ($>8 M_\odot$) eventually deliver their manufactured sodium to the interstellar-medium through SN II events. Because the eventual SN II explosion is devoid of any significant beta-decay processes, the neutron excess of the exploded material is representative of the pre-explosion abundance.  
+Sodium is primarily produced through through carbon burning in massive stars by the dominant $^{12}\mbox{C}(^{12}\mbox{C}, p)^{23}\mbox{Na}$ process. The final Na abundance is dependent on the neutron excess of the star, which slowly increases during carbon burning due to weak interactions \citep{arnett;truran_1974}. Massive stars ($>8 M_\odot$) eventually deliver their manufactured sodium to the interstellar-medium through Sn \textsc{ii} events. Because the eventual Sn \textsc{ii} explosion is devoid of any significant beta-decay processes, the neutron excess of the exploded material is representative of the pre-explosion abundance.  
   
-The explosive material eventually condenses to form the next generation of stars, which will have a net increase in their neutron excess with respect to when their predecessors formed. Since the Na-production rate is correlated with the neutron excess, an overall increase in the total Na and Na-production rate between stellar generations is expected. Thus, an increase in the Na abundance between generations of massive stars is a natural consequence of nucleosynthesis. Sodium content also becomes important for production of Ni during the SN II event (see \S\ref{sec:na-ni}) because $^{23}$Na is the only stable isotope produced in significant quantities during the C- (or O-) burning stages. A small fraction of $^{22}$Na is also forged through proton capture on $^{21}$Ne in the carbon shell, an effect which is enhanced by neutrinos spallating abundant elements like $^{16}$O and $^{20}$Ne, making free protons available for capture \citep{woosley;weaver_1995}.
+The explosive material eventually condenses to form the next generation of stars, which will have a net increase in their neutron excess with respect to when their predecessors formed. Since the Na-production rate is correlated with the neutron excess, an overall increase in the total Na and Na-production rate between stellar generations is expected. Thus, an increase in the Na abundance between generations of massive stars is a natural consequence of nucleosynthesis. Sodium content also becomes important for production of Ni during the Sn \textsc{ii} event (see \S\ref{sec:na-ni}) because $^{23}$Na is the only stable isotope produced in significant quantities during the C- (or O-) burning stages. A small fraction of $^{22}$Na is also forged through proton capture on $^{21}$Ne in the carbon shell, an effect which is enhanced by neutrinos spallating abundant elements like $^{16}$O and $^{20}$Ne, making free protons available for capture \citep{woosley;weaver_1995}.
 
-% discuss three components
-\citet{carretta;et-al_2009_na_o} defined three components of stars the Na-O anti-correlation within a population: primordial, intermediate, and extreme components. The [Na/Fe] and [O/Fe] abundances for a given star defines which component it belongs to. Primordial (first-generation) stars are those with sodium and oxygen abundances which are similar to field stars of the same metallicity. For a well-studied system, stars with the lowest cluster [Na/Fe] abundances are characterised as primordial. An intermediate component \--- the second-generation of stars \--- will have super-solar sodium abundances, and demonstrate a slight depletion in oxygen content. The oxygen exhaustion rate is ultimately dependent on the star-formation history of the cluster environment. The intermediate population is sub-divided based on how much the sodium and oxygen abundances depart from the primordial population: stars with [O/Na]$ > -0.9$ dex are classified as belonging to an extreme component of this Na-O pattern because they differ greatly from the primordial cluster abundance. The extreme O-depletion component has only been observed in a few clusters (preferentially more massive clusters with extended horizontal branches), indicating an long-lasting star-formation history in more massive clusters.
+Oxygen depletion is likely the result of complete CNO burning within the stellar interior. The nucleosynthetic pathways that generate the Na-O anti-correlation are well known. However, the temperatures required to produce these patterns are not expected within the interiors of globular cluster stars. Several hypotheses to explain this missing mechanism have been proposed, including massive intermediate-mass AGB binary stars \citep{de_mink;et-al_2009} and fast-rotating massive stars \citep{decressin;et-al_2007}. While the exact site for which these conditions occur remains under investigation, we can describe the abundance variation as a simple oxygen depletion (or dilution) model with time. Through comparisons with existing globular clusters, we can still draw inferences on the star-formation history of a system from measuring sodium and oxygen in a sample of its stars.
 
+\citet{carretta;et-al_2009_na_o} defined three components of stars exhibiting an inverse Na-O correlation within a population: primordial, intermediate, and extreme components. The [Na/Fe] and [O/Fe] abundances for a given star define which component it belongs to. Primordial (first-generation) stars are those with sodium and oxygen abundances which are similar to field stars of the same metallicity. For a well-studied system, stars with the lowest cluster [Na/Fe] abundances are characterised as primordial. An intermediate component \--- the second-generation of stars \--- will have super-solar sodium abundances, and demonstrate a slight depletion in oxygen content. The oxygen exhaustion rate is ultimately dependent on the star-formation history of the cluster environment. The intermediate population is sub-divided based on how much the sodium and oxygen abundances depart from the primordial population: stars with [O/Na]$ > -0.9$ dex are classified as belonging to an extreme component of this Na-O pattern because they differ greatly from the primordial cluster abundance. The extreme O-depletion component has only been observed in a few clusters (preferentially more massive clusters with extended horizontal branches), indicating an long-lasting star-formation history in more massive clusters.
 
-% Discuss the depletion of oxygen over time. What are the possible astrophysical explanations for this depletion
-Several hypotheses have been proposed in order to account for oxygen depletion between stellar generations, including massive binaries \citep{de_mink;et-al_2009} or fast-rotating massive stars \citep{decressin;et-al_2007}. While the exact procedure is yet to be fully characterized, we can describe the abundance variation as a simple oxygen depletion (or dilution) model with time. Through comparisons with existing globular clusters, we can still draw inferences on the star-formation history of a system from measuring sodium and oxygen in a sample of its stars.
+It is clear that careful consideration must be given when inferring star-formation histories from observed stellar abundances. In addition to the normal care afforded for measuring elemental abundances from high-resolution spectroscopic data, attention must be given to telluric absorption, contamination from nickel blends, as well as NLTE and 3D effects when calculating oxygen abundances. Furthermore, when characterising the oxygen depletion rate -- the strength of the Na-O anti-correlation in a given cluster -- it is vital to sample stars belonging to all three components, where possible. If only a primordial sample of stars in a globular cluster is observed, their [Na/Fe] and [O/Fe] abundances will be indistinguishable from halo stars of a similar metallicity. In such a scenario, any inferred anti-correlation could equally be explained by intrinsic chemical scatter or observational uncertainties.
 
-% Thus if you want to deduce the history of star formation for a group of stars, and deduce whether it has undergone star formation typically seen in globular clusters, you must sample from all components.
+\citet{wylie-de-boer;et-al_2012} measured [Na/Fe] and [O/Fe] abundances for four of their six Aquarius stream members. This research has four stars in common with the \citet{wylie-de-boer;et-al_2012} study, but sodium and oxygen measurements exist for only three stars intersecting both samples, as the data quality for J223811-104126 in the \citet{wylie-de-boer;et-al_2012} study prohibited measuring oxygen. We have measurements for all of our stars, including J223811-104126, for which we ascertained an upper limit from the [O \textsc{i}] lines of [O/Fe] $< 0.5$ dex, and a corrected abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$ from the O \textsc{i} triplet lines. In Figure \ref{fig:o-na} we have plotted theses abundances, including the corrected value for J223811-104126 rather than an upper limit.
 
-It is clear that careful consideration must be given inferring star-formation histories from observed stellar abundances. In addition to the normal care afforded for measuring elemental abundances from high-resolution spectroscopic data, attention must be given to telluric absorption, contamination from nickel blends, as well as NLTE and 3D effects when calculating oxygen abundances. Furthermore, when characterising the oxygen depletion rate -- the strength of the Na-O anti-correlation in a given cluster -- it is vital to sample stars belonging to all three components, where possible. If only a primordial sample of stars in a globular cluster is observed, their [Na/Fe] and [O/Fe] abundances will be indistinguishable from halo stars of a similar metallicity. In such a scenario, any inferred anti-correlation could equally be explained by intrinsic chemical scatter or observational uncertainties.
-
-% Talk about Wylie de boer measurements
-
-\citet{wylie-de-boer;et-al_2012} measured [Na/Fe] and [O/Fe] abundances for four of their six Aquarius stream members. This research has four stars in common with the \citet{wylie-de-boer;et-al_2012} study, but sodium and oxygen measurements exist for only three stars intersecting both samples, as the data quality for X in the \citet{wylie-de-boer;et-al_2012} study prohibited measuring sodium and oxygen. We have measurements for all of our stars, including J223811-104126, for which we ascertained an upper limit from the [O \textsc{i}] lines of [O/Fe] $< 0.5$ dex, and a corrected abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$ from the O \textsc{i} triplet lines. In Figure \ref{fig:o-na} we have plotted theses abundances, including the corrected value for J223811-104126 rather than an upper limit.
 
 % how do our values compare with Wylie de boer
 
-% Is there some explanation for abundance differences?
+% star 		| mine 				| hers
+% C2225316	| 0.09 +/- 0.01 (2)	| 0.00 +/- 0.15
+% C2306265	| 0.18 +/- 0.00 (2)| ...
+% J221821	| 0.08 +/- 0.10 (1)| 0.03 +/- 0.15
+% J223504	| 0.18 +/- 0.07 (3)| 0.28 +/- 0.21
+% J223811	| 0.07 +/- 0.00 (1)| 0.04 +/- 0.15
 
-The \citet{wylie-de-boer;et-al_2012} measurements indicate two stars with solar levels of Na -- identical to field star Na abundances for their metallicity -- and two stars with super-solar sodium content. The sodium-enhanced stars exhibit no depletion of oxygen; the abundances do not demonstrate a classical Na-O anti-correlation. In fact, they have a slight positive relationship: their Na-enhanced stars show an increased oxygen content, contrary to an expected oxygen depletion between stellar generations within a globular cluster.  
 
-% Can these abundance differences be explained by a line-list?
-
-
-% In any case, suppose these stars did originate from a globular cluster. If the entire cluster was well-studied, the primordial component cut-off is described by Caretta as stars which are 4\sigma from the halo abundance at that metallicity. These stars would 
+The \citet{wylie-de-boer;et-al_2012} measurements indicate two stars with solar levels of Na \--- identical to field star Na abundances for their metallicity \--- and two stars with super-solar sodium content: J223504 and J232619.
+We find find J223504 to be Na-enhanced with $\mbox{[Na/Fe]} = 0.18$, slightly lower than the \citet{wylie-de-boer;et-al_2012} value of $0.28 \pm 0.21$\,dex. This discrepancy in [Na/Fe] is the largest difference between the two studies, and still within the uncertainties published by \citet{wylie-de-boer;et-al_2012}. The second star in their study with elevated sodium, J232619, is not in our sample. We find the additional star not present in the \citet{wylie-de-boer;et-al_2012} sample, C2306265, to be sodium enhanced to the same level of J223504 with $\mbox{[Na/Fe]} = 0.18$\,dex.
 
 % [O/Fe], [Na/Fe]
 \begin{figure}[h]
@@ -782,27 +786,40 @@ The \citet{wylie-de-boer;et-al_2012} measurements indicate two stars with solar 
 \end{figure}
 
 
+The sodium-enhanced stars exhibit no depletion of oxygen; their chemistry does not demonstrate a classical Na-O anti-correlation. In fact, they have a slight positive relationship: the Na-enhanced stars in the \citet{wylie-de-boer;et-al_2012} study show an increased oxygen content (within the uncertainties), contrary to an expected oxygen depletion between stellar generations within a globular cluster. With our revised oxygen abundances and two sodium-enhanced stars, we find a very slight positive relationship of X.XX +/- X.XX, and no evidence of a Na-O anti-correlation in the Aquarius stream. 
+
+
+If the Aquarius stream is the result of a disrupted globular cluster, we would still be missing a large part of the picture. Most of the Aquarius stream stars studied to date (either in this sample or the \citet{wylie-de-boer;et-al_2012} study), would be classified as belonging to a `primordial' component having chemistry indistinguishable from halo stars. Identifying more Aquarius stream members belonging to the intermediate component with strong oxygen depletion, or perhaps members of an extreme component, would be strong evidence for a Na-O anti-correlation and a globular cluster origin. Three stream stars identified to date (including two from this sample) could plausibly be classified as members of an intermediate population, with only a slight enhancement in sodium and no oxygen-depletion. Thus, if the strength of any Na-O relationship is to be used to vet potential disrupted hosts for the Aquarius stream, many more stream candidates will need to be identified, and observed with high-resolution.
+
+
+% Can these abundance differences be explained by a line-list?
+
+
+% In any case, suppose these stars did originate from a globular cluster. If the entire cluster was well-studied, the primordial component cut-off is described by Caretta as stars which are 4\sigma from the halo abundance at that metallicity. These stars would 
+
+
+
 
 \subsection{The Al-Mg Relationship}
 
 %The Na-O anti-correlation is likely the result of complete CNO and Ne-Na cycles of proton reactions in globular cluster stars. There is also evidence in some clusters that the Mg-Al nucleosynthesis cycle is also active. 
 
+An inverse relationship between sodium and oxygen is not the only chemical pattern commonly observed in globular clusters. Although not ubiquitous to every system, many clusters exhibit an anti-correlation between aluminium and magnesium abundances. This is perhaps unsurprising, given the nucleosynthetic pathways for aluminium and magnesium. In addition to the CNO cycle operating during hydrogen burning, the Mg-Al chain can also operate under extreme temperatures \citep[$T_6 \sim 3$\,K][]{arnould;et-al_1999}. Aluminium is produced by proton capture of magnesium, beginning with $^{24}$Mg to $^{25}$Al. The lifetime of $\beta$-decay to proton capture allows for the production of unstable $^{27}$Si through proton capture. Seconds later, the isotope decays to $^{27}$Al, completing the $^{27}$Si path of the Mg-Al cycle. The alternative process from $^{25}$Al involves proton capture to $^{26}$Mg, but this process requires much higher temperatures ($T_6 \sim 7$\,K). In fact, although the process operates from temperatures above 30 million K, large Mg-Al abundance variations are not appreciable unless the temperatures reach $T_6 \sim 6.5$\,K. 
 
-Bah. 
+The Mg-Al cycle can explain the observed anti-correlation observed in some globular clusters, and most theoretical models predict such a pattern [get citations from Amanda]. However, the locations where these extreme temperatures can be found are under some debate. Standard models indicate that the interiors of globular cluster stars do not reach sufficient temperatures for the Mg-Al cycle to produce the observed variations. Thus, although the processes for creating these chemical patterns are understood, the exact site and conditions still require explanation.
 
-% what is the site and product of the Mg-Al cycle
+No inverse correlation has been observed in the Aquarius stream stars to date. Given that we do not find a Na-O anti-correlation, it is not surprising that a Mg-Al pattern has not been observed. The Na-O signature is detected in all classical well-studied systems, but the Mg-Al anti-correlation is not always present. \citet{wylie-de-boer;et-al_2012} published magnesium and aluminium abundances for five stars in their Aquarius stream sample. No anti-correlation between the elements is present, and their abundances are not dissimilar from galactic stars. The abundances tabulated in Table \ref{tab:abundances} vary slightly with those presented in the \citet{wylie-de-boer;et-al_2012} sample. Two candidates are in good agreement: J221821 and J223811, albeit the data quality in the \citet{wylie-de-boer;et-al_2012} study did not permit measuring aluminium for J223811. The other two stars common between studies are C2225316 and J223504, which we found to be the most abundant in both magnesium and aluminium. 
 
-% Si is increased over time as well
+While \citet{wylie-de-boer;et-al_2012} find almost no scatter ($\pm0.02$\,dex) in [Mg/Fe] for stars common to both studies, we find C2225316 and J223504 to be almost $+0.20$\,dex higher. The reason for this discrepancy is not obvious, given the stellar parameters between the two studies agree well with the exception of metallicity. In particular, the stellar parameters agree excellently for J223504, but we find $\mbox{[Fe/H]} = -0.68$ instead of the $-0.98$ as found by \citet{wylie-de-boer;et-al_2012}. Of the Mg \textsc{i} profiles measured, only two transitions are common to both line lists: 6318$\lambda$ and 6319$\lambda$. The oscillator strengths vary between studies; in these two lines the $\log{gf}$ differs by $-0.24$ and $-0.27$\,dex respectively (our oscillator strengths are lower). This discrepancy only complicates the matter further, since if all other things being equal, then our abundances ought to be lower than the \citet{wylie-de-boer;et-al_2012} study. 
 
-% what signature of this is seen in globular clusters compared to field stars
-
-% what globular clusters exhibit this phenomena? contrast it to the Na-O cycle
-
-% variations within a cluster in Mg, Al
-
-% what do we see in our Aquarius stars
-
-% the case of C2225316
+% how do our values compare with Wylie de boer
+%							[Mg/Fe]						[Al/Fe]					| [Mg?]	| [Al?]
+% star 		| mine 				| hers			| mine			| hers			| 
+% C2225316	| 0.50 +/- 0.06		| 0.32 +/- 0.05	| 0.68 +/- 0.04	| 0.38 +/- 0.12	| No, + | No, +
+% C2306265	| 0.41 +/- 0.05		| ...			| 0.28 +/- 0.04	| ...			| N/A	| N/A 
+% J221821	| 0.34 +/- 0.05		| 0.30 +/- 0.01	| 0.21 +/- 0.10	| 0.29 +/- 0.12	| Yes +	| Yes -
+% J223504	| 0.49 +/- 0.09		| 0.33 +/- 0.05	| 0.31 +/- 0.05	| 0.21 +/- 0.03	| No +	| No +
+% J223811	| 0.32 +/- 0.01		| 0.30 +/- 0.06	| 0.10 +/- 0.10	| ...			| Yes +	| N/A
 
 
 % Mg-Al
@@ -812,16 +829,25 @@ Bah.
 	\label{fig:mg-al}
 \end{figure}
 
+The [Mg/Fe] and [Al/Fe] abundances found for the five Aquarius stars in this sample are illustrated in Figure \ref{fig:mg-al}. Interestingly, our stars exhibit a strong positive relationship, with a best-fitting slope of $\mbox{[Al/Fe]} = X.XX x \mbox{[Mg/Fe]} + Y.YY$ ($R = Y.YY$). If the exclude C2225316, our chemically peculiar star with enhanced [Al/Fe] relative to the rest of the sample, the slope decreases to $\mbox{[Al/Fe]} = X.XX x \mbox{[Mg/Fe]} + Y.YY$ and the correlation coefficient $R$ increases to Z.ZZ. Even when a Mg-Al anti-correlation is not detected in globular clusters, there is generally some scatter in [Al/Fe] at constant [Mg/Fe] \--- early indications of the nucleosynthetic pattern. No classical globular cluster exhibits a positive correlation.
+
+\# Discuss prediction of positive correlation.
+Some intermediate-mass ($4M_\odot$) AGB models predict a positive correlation between aluminium and magnesium \citet{karakas;et-al}. Under extreme temperatures ($T_6 \sim 300$\,K), substantial $^{25}$Mg and $^{26}$Mg are produced by $\alpha$-capture onto $^{22}$Ne by the $^{22}$Ne($\alpha$,n)$^{25}$Mg and $^{22}$Ne($\alpha$,$\gamma$)$^{26}$Mg reactions respectively. Following deep dredge up, significant $^{25}$Mg and $^{26}$Mg is mixed into the photosphere, more than the quantity of $^{26}$Al produced through the Mg-Al cycle and making up for the depleted Mg that is expensed during the Mg-Al pathway. Thus, a positive relationship between magnesium and aluminium can occur if there has been significant contributions from intermediate mass AGB stars undergoing dredge up. Alternatively, a positive relationship between magnesium and aluminium can occur from SN \textsc{ii} contributions. Distinguishing between these processes requires careful measurements of magnesium isotope abundances $^{24}$Mg (supernovae), $^{25}$Mg and $^{26}$Mg (AGB stars), which is not possible given our $S/N$ or spectral resolution.
+
+\# What does the thick/thin disk look like in these elements?
+
+
+
 \subsection{The Na-Ni Relationship}
 
 % need to say about [alpha/fe] and [na/fe] with distance
-Detailed chemical studies of nearby disk stars have noted a correlation with [Na/Fe] and [Ni/Fe] abundances. This relationship was first hinted in \citet{nissen;schuster_1997}, where the authors found eight stars that were underabundant in [$\alpha$/Fe], [Na/Fe] and [Ni/Fe]. Interestingly, the authors noted that stars at larger galactocentric radii were most deficient in these elements. \citet{fulbright_2000} saw a similar signature: stars with low [Na/Fe] were only found at large ($R_\odot > 20$\,kpc) distances. \citet{nissen;schuster_1997} proposed that since the outer halo is thought to have been built up through the accretion of dSph satellites, then the Na-Ni pattern may be a chemical indicator of merger history in the galaxy.
+Detailed chemical studies of nearby disk stars have noted a correlation with [Na/Fe] and [Ni/Fe] abundances. This relationship was first hinted in \citet{nissen;schuster_1997}, where the authors found eight stars that were underabundant in [$\alpha$/Fe], [Na/Fe] and [Ni/Fe]. Interestingly, the authors noted that stars at larger galactocentric radii were most deficient in these elements. \citet{fulbright_2000} saw a similar signature: stars with low [Na/Fe] were only found at large ($R_\odot > 20$\,kpc) distances. \citet{nissen;schuster_1997} proposed that since the outer halo is thought to have been built up by the accretion of dwarf satellite galaxies, then the Na-Ni pattern may be a chemical indicator of merger history within the galaxy.
 
-With additional data from \citet{nissen;schuster_2011}, the Na-Ni relationship was found to be slightly steeper than originally put forward. The pattern exists only for metal-rich stars $-1.5 < \mbox{[Fe/H]} < -0.5$ dex, and is not seen in metal-poor dSph stars, providing a potentially useful indicator for investigating chemical evolution. 
+With additional data from \citet{nissen;schuster_2011}, the Na-Ni relationship was found to be slightly steeper than originally put forward. The pattern exists only for stars with $-1.5 < \mbox{[Fe/H]} < -0.5$ dex, and is not seen in metal-poor dSph stars, providing a potentially useful indicator for investigating chemical evolution. 
 
 %However, it is crucial to note that although there are only a few dSph stars in the $-1.5 < \mbox{[Fe/H]} < -0.5$ metallicity regime with [Na/Fe], [Ni/Fe] measurements, they agree reasonably well with the galactic trend. 
 
-The correlation between sodium and nickel content is the nucleosynthetic result of neutron capture in massive stars. As previously discussed, the total Na abundance is controlled by the neutron excess, which limits the production of $^{58}$Ni during Sn \textsc{ii} events. When the inevitable supernova begins, the core photodissociates into neutrons and protons, allowing the temporary creation of $^{56}$Ni before it decays to $^{56}$Fe. A limited amount of $^{54}$Fe is also formed, which is the main source of production for the stable $^{58}$Ni isotope through $\alpha$-capture. When the core dissociates, the quantity of $^{54}$Fe (and hence $^{58}$Ni) produced is dependent on the abundance of neutron-rich elements during the explosion. As $^{23}$Na is a relatively plentiful neutron source with respect to other potential sources (like $^{13}$C), the post-supernova $^{58}$Ni abundance is driven by the pre-explosion $^{23}$Na content. Recall that the total Na production primarily depends on the neutron excess. Thus, through populations of massive stars undergoing C-burning, a positive correlation between Na-Ni can be expected. 
+The correlation between sodium and nickel content is the nucleosynthetic result of neutron capture in massive stars. As previously discussed, the total Na abundance is controlled by the neutron excess, which limits the production of $^{58}$Ni during Sn \textsc{ii} events. When the inevitable supernova begins, the core photodissociates into neutrons and protons, allowing the temporary creation of $^{56}$Ni before it decays to $^{56}$Fe. A limited amount of $^{54}$Fe is also formed, which is the main source of production for the stable $^{58}$Ni isotope through $\alpha$-capture. When the core dissociates, the quantity of $^{54}$Fe (and hence $^{58}$Ni) produced is dependent on the abundance of neutron-rich elements during the explosion. As $^{23}$Na is a relatively plentiful neutron source with respect to other potential sources (like $^{13}$C), the post-supernova $^{58}$Ni abundance is driven by the pre-explosion $^{23}$Na content. Recall that the total Na production primarily depends on the neutron excess. Thus, through populations of massive stars undergoing C-burning, a positive correlation between sodium and nickel can be expected. 
 
 %As \citet{Venn;et-al_2004} point out, this pattern can be altered from contributions by type Ia supernova. 
 
@@ -833,66 +859,78 @@ The correlation between sodium and nickel content is the nucleosynthetic result 
 \end{figure}
 
 
-Stars originating in dwarf spheroidal galaxies and globular clusters have very different star formation environments. Consequently, they exhibit chemical patterns that reflect their nucleosynthetic antiquity. Dwarf spheroidal stars do not demonstrate enhanced sodium or nickel, as there has been a relatively negligible linage of massive stars undergoing supernova. In contrast, globular cluster stars do have elevated Na, Ni contributions. This sharp contrast between dwarf spheroidal and globular cluster star chemistry is illustrated in Figure \ref{fig:na-ni}. Given the extended star formation within the Milky Way disk, globular cluster stars and disk stars are indiscernible in the Na/Ni plane: they both show an extended contribution of massive stars. 
+Stars originating in dwarf spheroidal galaxies and globular clusters have very different chemical enrichment environments. Consequently, they exhibit chemistry that reflects their nucleosynthetic antiquity. Dwarf spheroidal stars do not demonstrate enhanced sodium or nickel, as there has been a relatively negligible linage of massive stars undergoing supernova. In contrast, globular cluster stars do have elevated Na, Ni contributions. This sharp contrast between dwarf spheroidal and globular cluster star chemistry is illustrated in Figure \ref{fig:na-ni}. Given the extended star formation within the Milky Way disk, globular cluster stars and disk stars are indiscernible in the Na/Ni plane: they both show an extended contribution of massive stars. 
 
-The most that can be inferred from the Na, Ni abundances of Aquarius stream stars is that their star formation history is less like a dwarf spheroidal environment, and more representative of an environment more like a globular cluster or the MW disk. 
+The most that can be inferred from the Na, Ni abundances of Aquarius stream stars is that their star formation history is less like a dwarf spheroidal environment, and more representative of an environment similar to either a globular cluster, or the disc of the Milky Way. 
 
+
+
+\subsection{The Chemical Distinctiveness of C2225316}
+
+% for a high mass AGB
+%Sr/Ba ~ 0.4
+
+C2225316 exhibits peculiar chemical abundances when compared to the rest of the Aquarius stream candidates in our sample. It is over-abundant in light refractory elements, with $\mbox{[Al/Fe]} = 0.68 \pm 0.04$, $\mbox{[Mg/Fe]} = 0.50$, and $\mbox{[O/Fe] = 0.49}$\,dex. Silicon is enhanced to a level of $\mbox{[Si/Fe]} = 0.72 \pm 0.07$, which is +0.34\,dex more than any other star in our sample. In addition to light element enhancement, C2225316 exhibits a strong barium content of $\mbox{[Ba/Fe]} = 0.70$\,dex. This abundance is well in excess of the halo ($\mbox{[Ba/Fe]} \sim 0.0$), and our other Aquarius stream stars, which vary between $-$0.02 to 0.15\,dex. 
+
+High $s$-process enhancements have been noted for a few disrupted globular clusters that exhibit a wide metallicity range. Most noteably: $\omega$Centurai \citep{Majewski;et-al_2012}, M22 \citep{marinolet-al_2011} and (\# any others?). Like the Aquarius co-moving group, both clusters are relatively close to the sun: $R_\odot = 5.2$\,kpc and 3.2\,kpc, respectively. M22 has a mean metallicity of $\mbox{[Fe/H]} \sim -1.7$, varying between $-2.0 < \mbox{[Fe/H]} < -1.6$\,dex. C2225316 has an $\mbox{[Fe/H]} = -1.26$\,dex, making it unlikely to be associated with M22. However, the high barium content and overall metallicity of C2225316 ($\mbox{[Fe/H]} = -1.26$) suggests there may be an association with $\omega$-Centurai.
+
+Within $\omega$-Centurai, there are three distinguishable sub-populations with various proportions.
+
+\# Comparison of all abundances to omega cen abundances in a plot
+
+\# Plot of majewski 
+
+\citet{majewski;et-al_2012} modelled 
 
 
 \subsection{Possible Progenitors}
 
-Since the Aquarius stream is kinematically coherent, the default assumption is that the system has been accreted.
+Since the Aquarius stream is kinematically coherent, the default assumption is that the system has been accreted. The stream candidates presented here are slightly enhanced in sodium and nickel, suggesting that if a progenitor ever existed then its environment was more like a globular cluster than a dwarf satellite. If the progenitor is a disrupted globular cluster, and all our candidates are members, then it is unique in that it has a wider metallicity distribution than most globular clusters.
+
+However, our chemical analysis does not reveal any inverse Na-O correlation \--- which would be strong evidence for a globular cluster environment. Furthermore, we observe a positive Mg-Al relationship, the same seen by \citet{wylie-de-boer;et-al_2012} and contrary to what would be expected from a globular cluster environment. High resolution, high $S/N$ spectra for the entire stream may be required before such a signature may become apparent. In this section we discuss the possible causes for the Aquarius co-moving group.
+
+Based on a lack of $\alpha$-enhancement and increased Na, Ni content, we exclude the possibility that the Aquarius stream has resulted from a disrupted dwarf satellite.
+
+\subsubsection{$\omega$-Centurai}
+
+In their original discovery paper, \citet{williams;et-al_2011} attempted to exclude possible known progenitors. On the basis of metallicity, distance, proper motions\footnote{We find the proper motions in Table 1 of \citet{williams;et-al_2011} to be mis-associated to incorrect stars. However, this typographical error did not propagate through to the transverse velocity calculations (Williams, M.E.K, private communication).}, transverse velocities and orbital energies, the authors were able to exclude all known Milky Way satellites, with the notable exception of $\omega$-centurai. Although the Aquarius stream metallicity distribution we find is not dissimilar from a known sub-population in $\omega$-centurai, the individual chemical abundances are quite distinct.
 
 
-% their chemistry is indicative of not belonging to a dwarf spheroidal
 
-% open cluster
-
-% Chemistries for various GC trends
-
-% chemistries - [Na/O]
-
-% chemistries - [Al/Mg]
-
-% chemistries - [Ni/Na]
+$\omega$-Centurai members exhibit a strong $s$-process enhancement with overall metallicity. This signature is not observed in our data, with the exception of C2225316, which seems to be chemically distinct from the other Aquarius group candidates.
 
 
-% closest looking globular clusters from Harris catalogue
+
+
+
+Due to our limited sample size, it is impossible to know whether C2225316 is an outlier, or our four other candidates are halo interlopers. Either position is debatable, and each lead to interesting conclusions. If most of our observed candidates are halo members, and C2225316 represents the Aquarius stream chemistry, then an association between Aquarius and $\omega$-Centurai is possible. Alternatively, the stream may indicate first evidence of a minor merger within the Milky Way disc. However, with certainty we can state that most observed Aquarius stream candidates do not exhibit enhanced $s$-process elements, and are therefore unlikely to be associated with $\omega$-Centurai \--- or any other globular cluster.
+
+
+
+
+ 
+
+\subsubsection{Disrupted Disk Stars \--- Signature of a Minor Merger}
+
+\# Velocity distribution wide
+
+\# Spatial distribution wide
+
+\# Chemistry rules out a dSph origin
+
+\# No signs of classical GC chemical patterns
+
+\# The stream chemistry is indistinguishable from disk stars in every aspect
+
+\# Revised distances to each star, transverse motions + orbital energies calculated
+
+\# Monte-carlo simulations demonstrate strongly retrograde stars wrt thick disk + halo
+
+\# Orbital energy pattern aligns exactly with Zolotov+ simulations, but would require a smaller mass of the disrupter (minor merger)
+
+\# Need to discuss disk is unlikely to have had a merger in past 8 Gyr
 
 % could they be displaced thick disk stars?
-
-
-\begin{deluxetable*}{lccccccc}
-\tablecolumns{2}
-\tabletypesize{\scriptsize}
-\tablecaption{Observed Targets\label{tab:observed-targets}}
-\tablehead{
-	\colhead{ID} &
-	\colhead{$\alpha$} &
-	\colhead{$\delta$} &
-	\colhead{Air mass} &
-	\colhead{S/N\tablenotemark{a}} &
-	\colhead{$V_{\mbox{helio}}$} \\
- & (J2000) & (J2000) & & (px$^{-1}$) & (km s$^{-1}$)
-}
-\startdata
-
-
-HD130694  			& 14:50:17.1 & --27:57:41.6 & 1.289 & \nodata & \nodata \\
-HD170642  			& 18:32:21.0 & --39:42:12.8 & 1.464 & \nodata & \nodata \\
-HD180928  			& 19:18:59.6 & --15:32:11.5 & 1.934 & \nodata & \nodata \\
-HD181342  			& 19:21:03.9 & --23:37:09.7 & 1.203 & \nodata & \nodata \\
-HD187111 			& 19:48:39.3 & --12:07:17.8 & 1.281 & \nodata & \nodata \\
-HD210049  			& 22:08:22.8 & --32:59:14.6 & 1.006 & \nodata & \nodata \\
-C2225316-145437  	& 22:25:31.7 & --14:54:39.6 & 1.033 & \nodata & \nodata \\
-J221821-183424 		& 22:18:21.2 & --18:34:28.3 & 1.026 & \nodata & \nodata \\
-J223504-152834 		& 22:35:04.5 & --15:28:34.9 & 1.047 & \nodata & \nodata \\
-J223811-104126 		& 22:38:11.6 & --10:41:29.4 & 1.218 & \nodata & \nodata \\
-C2306265-085103		& 23:06:26.6 & --08:51:04.8 & 1.096 & \nodata & \nodata \\
-HD219615  			& 23:17:10.7 &$+$03:16:51.9 & 1.412 & \nodata & \nodata 
-\enddata
-\tablenotetext{a}{S/N measured at 6000 \AA{} for each target.}
-\end{deluxetable*}
 
 
 
@@ -906,7 +944,7 @@ HD219615  			& 23:17:10.7 &$+$03:16:51.9 & 1.412 & \nodata & \nodata
 
 
 
-% Toombre
+% Toombre #TODO - make this a 4panel in UVW
 \begin{figure}[h]
 	\includegraphics[width=\columnwidth]{./figures/plot-toombre.pdf}
 	\caption{Toombre plot.}
