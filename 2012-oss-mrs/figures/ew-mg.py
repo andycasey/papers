@@ -52,10 +52,13 @@ match_points = np.array([
 ])
 # convert to mA
 
+from scipy.interpolate import splrep, splev
+
 tck = splrep(match_points[:, 0], match_points[:, 1], k=3)
 
 x = np.arange(ax.get_xlim()[0], ax.get_xlim()[1], 0.01)
 y = splev(x, tck)
+
 
 giants = 0
 for gi, ri, ewi in zip(g, r, ew):

@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 # ; ;mag;mag;mag;mag;km/s;km/s;K;[Sun];[Sun];[Sun];[Sun]; ;[Sun];[Sun];"h:m:s";"d:m:s"
 
 
-caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_l_Na_Fe, caretta_Na_Fe, caretta_e_Na_Fe = np.loadtxt('caretta-et-al-2009-O-Na.txt', skiprows=67, delimiter=';', \
-														usecols=(9, 10, 11, 12, 13, 14, 15, ), unpack=True, dtype=str)
+caretta_cluster, caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_l_Na_Fe, caretta_Na_Fe, caretta_e_Na_Fe = np.loadtxt('caretta-et-al-2009-O-Na.txt', skiprows=67, delimiter=';', \
+														usecols=(0, 9, 10, 11, 12, 13, 14, 15, ), unpack=True, dtype=str)
 
 # Replace invalid items with np.nans
 
@@ -25,8 +25,7 @@ def clean(array):
 	return np.array(new_array)
 
 
-caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_Na_Fe, caretta_e_Na_Fe = map(clean, [caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_Na_Fe, caretta_e_Na_Fe])
-
+caretta_cluster, caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_Na_Fe, caretta_e_Na_Fe = map(clean, [caretta_cluster, caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_Na_Fe, caretta_e_Na_Fe])
 
 
 # Get Na and O from files:
@@ -110,3 +109,108 @@ ax2.set_ylim(-0.6, 1.1)
 plt.draw()
 plt.savefig('aquarius-o-na.pdf')
 plt.savefig('aquarius-o-na.eps')
+
+
+
+# Subplots
+
+
+# Mg-Al in sub-plots
+
+
+# Delete 6397 because it has less stars than even our stream sample!
+unique_clusters = np.unique(caretta_cluster)
+idx = list(unique_clusters).index(6397.)
+unique_clusters = np.delete(unique_clusters, idx)
+
+yplots = 5
+xplots = int(np.ceil(float(len(unique_clusters) + 1) / yplots))
+
+xlims = (-0.9, 0.9)
+ylims = (-0.6, 1.1)
+
+fig = plt.figure()
+fig.subplots_adjust(hspace=0, wspace=0,right=0.97,top=0.97,bottom=0.08,left=0.09)
+
+for i, cluster in enumerate(unique_clusters):
+
+	ax = fig.add_subplot(xplots, yplots, i + 1)
+
+	index = np.where(caretta_cluster == cluster)[0]
+
+	cluster_na_fe = np.array(caretta_Na_Fe)[index]
+	cluster_o_fe = np.array(caretta_O_Fe)[index]
+
+	ax.scatter(cluster_o_fe, cluster_na_fe, facecolor='k')
+
+	#A = np.vstack([cluster_na_fe, np.ones(len(cluster_na_fe))]).T
+	#m, c = np.linalg.lstsq(A, cluster_o_fe)[0]
+
+	# Polyfit
+	#p = np.poly1d(np.polyfit(cluster_na_fe, cluster_o_fe, 1))
+
+	x_range = np.array([np.min(cluster_o_fe), np.max(cluster_o_fe)])
+	y_range = np.array([np.min(cluster_na_fe), np.max(cluster_na_fe)])
+
+	#ax.plot(x_range, m * x_range + c, '-', color='#666666')
+	#ax.plot(x_range, p(x_range), '-', color='b')
+
+	ax.set_xlim(xlims)
+	ax.set_xticks([-0.5, 0.0, 0.5])
+
+	ax.set_ylim(ylims)
+	ax.set_yticks([-0.5, 0.0, 0.5, 1.0])
+
+
+	ax.set_xlabel('[O/Fe]')
+	ax.set_ylabel('[Na/Fe]')
+
+	if i % (yplots): 
+		ax.set_ylabel('')
+		ax.set_yticklabels([''] * len(ax.get_yticklabels()))
+	
+	if len(unique_clusters) - i - 1 > xplots:
+
+		ax.set_xlabel('')
+		ax.set_xticklabels([''] * len(ax.get_xticklabels()))
+
+		ax.xaxis.set_visible(False)
+	
+	ax.text(xlims[0] + 0.05 * (xlims[1] - xlims[0]), ylims[0] + 0.05 * (ylims[1] - ylims[0]), 'NGC %i' % (cluster, ), verticalalignment='bottom')
+
+
+# Add 
+ax = fig.add_subplot(xplots, yplots, i + 2)
+ax.scatter(O_Fe, Na_Fe, facecolor='k')
+
+A = np.vstack([O_Fe, np.ones(len(O_Fe))]).T
+m, c = np.linalg.lstsq(A, Na_Fe)[0]
+
+print 'Aquarius', m
+
+x_range = np.array([np.min(O_Fe), np.max(O_Fe)])
+y_range = np.array([np.min(Na_Fe), np.max(Na_Fe)])
+
+ax.plot(x_range, m * x_range + c, '-', color='#666666')
+
+ax.set_xlabel('[O/Fe]')
+ax.set_ylabel('[Na/Fe]')
+
+ax.set_xlim(xlims)
+ax.set_xticks([-0.5, 0.0, 0.5])
+
+ax.set_ylim(ylims)
+ax.set_yticks([-0.5, 0.0, 0.5, 1.0])
+
+
+
+
+if i + 1 % yplots:
+	ax.set_ylabel('')
+	ax.set_yticklabels([''] * len(ax.get_yticklabels()))
+	
+ax.text(xlims[0] + 0.05 * (xlims[1] - xlims[0]), ylims[0] + 0.05 * (ylims[1] - ylims[0]), 'Aquarius', verticalalignment='bottom')
+
+
+plt.savefig('aquarius-o-na-cluster.pdf')
+

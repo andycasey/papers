@@ -85,14 +85,14 @@ for classification, fe_h, mg_h, al_h in reddy_data:
 			mg_h = np.nan
 
 		else:
-			mg_fe = float(mg_h) - float(fe_h)
+			mg_fe = float(mg_h) #- float(fe_h)
 
 
 		if len(al_h) == 0:
 			al_h = np.nan
 
 		else:
-			al_fe = float(al_h) - float(fe_h)
+			al_fe = float(al_h) #- float(fe_h)
 
 
 	if classification == 'Thick disc':
@@ -118,6 +118,25 @@ for classification, fe_h, mg_h, al_h in reddy_data:
 
 
 Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe = [np.array(item) for item in (Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe)]
+
+
+# Caretta et al. 2009
+
+Carretta_Mg_Fe, Carretta_Al_Fe, Carretta_Cluster, Carretta_Fe_H = np.loadtxt('Carretta_2009a.data', delimiter='|', usecols=(-3, -2, 2, -7), dtype=str, unpack=True)
+
+delete_rows = []
+for i in xrange(len(Carretta_Cluster)):
+
+	Mg_Fe = Carretta_Mg_Fe[i].strip()
+	Al_Fe = Carretta_Al_Fe[i].strip()
+
+	if len(Mg_Fe) * len(Al_Fe) == 0: delete_rows.append(i)
+
+Carretta_Cluster = map(float, np.delete(Carretta_Cluster, delete_rows))
+Carretta_Fe_H = map(float, np.delete(Carretta_Fe_H, delete_rows))
+Carretta_Mg_Fe = map(float, np.delete(Carretta_Mg_Fe, delete_rows))
+Carretta_Al_Fe = map(float, np.delete(Carretta_Al_Fe, delete_rows))
+
 
 
 data_files = ['c2225316-14437_abundances.data', 'c2306265-085103_abundances.data', 'j221821-183424_abundances.data', 'j223504-152834_abundances.data', 'j223811-104126_abundances.data']
@@ -160,32 +179,189 @@ A = np.vstack([Mg_Fe, np.ones(len(Mg_Fe))]).T
 m, c = np.linalg.lstsq(A, Al_Fe)[0]
 
 fig = plt.figure()
+fig.subplots_adjust(hspace=0.0, wspace=0.0, left=0.10, right=0.95, bottom=0.10, top=0.95)
+
 
 ax = fig.add_subplot(111)
 
 # Draw reddy
-ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, marker='o', edgecolor='r', facecolor='none')
-ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, marker='o', facecolor='none', edgecolor='g')
-ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='o', facecolor='none', edgecolor='b')
+ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, marker='+', edgecolor='k', facecolor='none', label='Thick disc (Reddy+ 2003)')
+ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, marker='+', facecolor='none', edgecolor='#666666', label='Thin disc (Reddy+ 2003)')
+ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='+', facecolor='none', edgecolor='#cccccc', label='Halo (Reddy+ 2003)')
 
-ax.scatter(Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, marker='o', facecolor='none', edgecolor='m')
-ax.scatter(Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe, marker='o', facecolor='none', edgecolor='orange')
+#ax.scatter(Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, marker='o', facecolor='none', edgecolor='m')
+#ax.scatter(Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe, marker='o', facecolor='none', edgecolor='orange')
 
 #ax.scatter(Reddy_2003_Mg_Fe, Reddy_2003_Al_Fe, marker='o', facecolor='none', edgecolor='#666666')
-ax.scatter(Fulbright_2000_Mg_Fe, Fulbright_2000_Al_Fe, marker='o', facecolor='none', edgecolor='k')
+ax.scatter(Fulbright_2000_Mg_Fe, Fulbright_2000_Al_Fe, marker='o', facecolor='none', edgecolor='#666666', label='Halo & Disc (Fulbright 2000)')
 
-ax.scatter(Mg_Fe, Al_Fe, color='k')
+unique_clusters = list(np.unique(Carretta_Cluster))
+#ax.scatter(Carretta_Mg_Fe, Carretta_Al_Fe, marker='o', c=[unique_clusters.index(cluster) for cluster in Carretta_Cluster], cmap=matplotlib.cm.jet, vmin=0, vmax=len(unique_clusters))
+
+ax.scatter(Mg_Fe, Al_Fe, marker='o', color='k', s=30)
 ax.errorbar(Mg_Fe, Al_Fe, xerr=e_Mg_Fe, yerr=e_Al_Fe, fmt=None, ecolor='k')
 
+# C2225316
+ax.text(0.50 + 0.03, 0.68 + 0.05, 'C2225316-14437', color='k', fontsize=10)
 
 x = np.array([np.min(Mg_Fe), np.max(Mg_Fe)])
-ax.plot(x, m * x + c, 'k-')
+#ax.plot(x, m * x + c, 'k-')
 
 ax.set_xlabel('[Mg/Fe]')
 ax.set_ylabel('[Al/Fe]')
 
-#ax.set_xlim(-0.5, 1.0)
-#ax.set_ylim(-0.5, 1.5)
+#xlims = (-0.4, 0.9)
+#ylims = (-0.4, 1.9)
+
+
+ax.set_xlim(-0.4, 0.9)
+ax.set_ylim(-0.4, 1.9)
+
+ax.set_xticks([0.0, 0.5])
+ax.set_yticks([0.0, 0.5, 1.0, 1.5])
+
+ax.legend(loc=2)
 
 plt.savefig('aquarius-mg-al.eps')
 plt.savefig('aquarius-mg-al.pdf')
+
+fig = plt.figure(figsize=(4, 10))
+fig.subplots_adjust(hspace=0.0, wspace=0.0, left=0.15, right=0.90, bottom=0.05, top=0.95)
+
+
+ax = fig.add_subplot(311)
+ax.set_ylabel('[Al/Fe]')
+ax.xaxis.set_visible(False)
+ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, marker='+', facecolor='none', linewidth=1, edgecolor='k', label='Thick disc')
+ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, marker='+', facecolor='none', linewidth=1, edgecolor='#cccccc', label='Thin disc')
+ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='s', facecolor='none', edgecolor='k', label='Halo')
+ax.scatter(Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, marker='+', facecolor='none', edgecolor='#666666')
+ax.scatter(Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe, marker='x', facecolor='none', edgecolor='k')
+
+
+
+ax.legend(frameon=False)
+l = ax.get_legend()
+
+ax.scatter(Mg_Fe, Al_Fe, marker='*', color='b', s=80)
+#ax.errorbar(Mg_Fe, Al_Fe, xerr=e_Mg_Fe, yerr=e_Al_Fe, fmt=None, ecolor='k')
+
+
+ax = fig.add_subplot(312, sharex=ax, sharey=ax)
+ax.set_ylabel('[Al/Fe]')
+ax.xaxis.set_visible(False)
+ax.scatter(Fulbright_2000_Mg_Fe, Fulbright_2000_Al_Fe, marker='x', edgecolor='k', label='Thick disc \& Halo')
+ax.scatter(Mg_Fe, Al_Fe, marker='*', color='b', s=80)
+
+
+ax = fig.add_subplot(313, sharex=ax, sharey=ax)
+ax.scatter(Carretta_Mg_Fe, Carretta_Al_Fe, c=[unique_clusters.index(cluster) for cluster in Carretta_Cluster], cmap=matplotlib.cm.jet, vmin=0, vmax=len(unique_clusters), edgecolor='k')
+
+ax.scatter(Mg_Fe, Al_Fe, marker='*', color='b', s=80)
+
+ax.set_xlabel('[Mg/Fe]')
+ax.set_ylabel('[Al/Fe]')
+
+ax.set_xlim(-0.4, 0.7)
+ax.set_ylim(-0.4, 1.4)
+ax.set_yticks([-0.5, 0.0, 0.5, 1.0])
+
+
+
+plt.savefig('aquarius-mg-al-2.pdf')
+
+
+# Mg-Al in sub-plots
+Carretta_Cluster = map(float, np.delete(Carretta_Cluster, delete_rows))
+Carretta_Fe_H = map(float, np.delete(Carretta_Fe_H, delete_rows))
+Carretta_Mg_Fe = map(float, np.delete(Carretta_Mg_Fe, delete_rows))
+Carretta_Al_Fe = map(float, np.delete(Carretta_Al_Fe, delete_rows))
+
+fig = plt.figure()
+fig.subplots_adjust(hspace=0, wspace=0,right=0.97,top=0.97,bottom=0.08,left=0.08)
+unique_clusters = np.unique(Carretta_Cluster)
+
+yplots = 5
+xplots = int(np.ceil(float(len(unique_clusters) + 1) / yplots))
+
+xlims = (-0.4, 0.9)
+ylims = (-0.4, 1.9)
+
+for i, cluster in enumerate(unique_clusters):
+
+	ax = fig.add_subplot(xplots, yplots, i + 1)
+
+	index = np.where(Carretta_Cluster == cluster)[0]
+
+	Cluster_Mg_Fe = np.array(Carretta_Mg_Fe)[index]
+	Cluster_Al_Fe = np.array(Carretta_Al_Fe)[index]
+
+	ax.scatter(Cluster_Mg_Fe, Cluster_Al_Fe, facecolor='k')
+
+	A = np.vstack([Cluster_Mg_Fe, np.ones(len(Cluster_Mg_Fe))]).T
+	m, c = np.linalg.lstsq(A, Cluster_Al_Fe)[0]
+
+	# Polyfit
+	p = np.poly1d(np.polyfit(Cluster_Mg_Fe, Cluster_Al_Fe, 1))
+
+	x_range = np.array([np.min(Cluster_Mg_Fe), np.max(Cluster_Mg_Fe)])
+	y_range = np.array([np.min(Cluster_Al_Fe), np.max(Cluster_Al_Fe)])
+
+	ax.plot(x_range, m * x_range + c, '-', color='#666666')
+	ax.plot(x_range, p(x_range), '-', color='b')
+
+
+	ax.set_xlim(xlims)
+	ax.set_xticks([0.0, 0.5])
+
+	ax.set_ylim(ylims)
+	ax.set_yticks([0.0, 0.5, 1.0, 1.5])
+
+	ax.set_xlabel('[Mg/Fe]')
+	ax.set_ylabel('[Al/Fe]')
+
+	if i % (yplots): 
+		ax.set_ylabel('')
+		ax.set_yticklabels([''] * len(ax.get_yticklabels()))
+	
+	if len(unique_clusters) - i - 1 > xplots:
+
+		ax.set_xlabel('')
+		ax.set_xticklabels([''] * len(ax.get_xticklabels()))
+
+		ax.xaxis.set_visible(False)
+	
+	ax.text(xlims[0] + 0.05 * (xlims[1] - xlims[0]), ylims[1] - 0.05 * (ylims[1] - ylims[0]), 'NGC %i' % (cluster, ), verticalalignment='top')
+
+
+# Add 
+ax = fig.add_subplot(xplots, yplots, i + 2)
+ax.scatter(Mg_Fe, Al_Fe, facecolor='k')
+
+A = np.vstack([Mg_Fe, np.ones(len(Mg_Fe))]).T
+m, c = np.linalg.lstsq(A, Al_Fe)[0]
+
+print 'Aquarius', m
+
+x_range = np.array([np.min(Mg_Fe), np.max(Mg_Fe)])
+y_range = np.array([np.min(Al_Fe), np.max(Al_Fe)])
+
+ax.plot(x_range, m * x_range + c, '-', color='#666666')
+
+ax.set_xlabel('[Mg/Fe]')
+ax.set_ylabel('[Al/Fe]')
+
+ax.set_xlim(xlims)
+ax.set_xticks([0.0, 0.5])
+
+ax.set_ylim(ylims)
+ax.set_yticks([0.0, 0.5, 1.0, 1.5])
+
+if i + 1 % yplots:
+	ax.set_ylabel('')
+	ax.set_yticklabels([''] * len(ax.get_yticklabels()))
+	
+ax.text(xlims[0] + 0.05 * (xlims[1] - xlims[0]), ylims[1] - 0.05 * (ylims[1] - ylims[0]), 'Aquarius', verticalalignment='top')
+
+
+plt.savefig('aquarius-mg-al-cluster.pdf')
