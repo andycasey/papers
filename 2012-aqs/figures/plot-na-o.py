@@ -214,3 +214,96 @@ ax.text(xlims[0] + 0.05 * (xlims[1] - xlims[0]), ylims[0] + 0.05 * (ylims[1] - y
 
 plt.savefig('aquarius-o-na-cluster.pdf')
 
+
+
+# Get data from Reddy et al 2005
+reddy_data = np.loadtxt('Reddy_thick_disk_2005.data', delimiter='|', usecols=(1, 18, 21, 20), dtype=str)
+
+Reddy_ThickDisk_Na_Fe = []
+Reddy_ThickDisk_O_Fe = []
+Reddy_ThinDisk_Na_Fe = []
+Reddy_ThinDisk_O_Fe = []
+Reddy_ThickThinDisk_Na_Fe = []
+Reddy_ThickThinDisk_O_Fe = []
+Reddy_Halo_Na_Fe = []
+Reddy_Halo_O_Fe = []
+Reddy_ThickDisk_Halo_Na_Fe = []
+Reddy_ThickDisk_Halo_O_Fe = []
+
+for classification, fe_h, na_h, o_h in reddy_data:
+	
+	classification, fe_h, na_h, o_h = [var.strip() for var in (classification, fe_h, na_h, o_h)]
+
+
+	_Na_Fe, _O_Fe = np.nan, np.nan
+
+	if len(fe_h) == 0:
+		fe_h, na_h, o_h = [np.nan] * 3
+
+	else:
+
+		if len(na_h) == 0:
+			na_h = np.nan
+
+		else:
+			_Na_Fe = float(na_h) #- float(fe_h)
+
+
+		if len(o_h) == 0:
+			o_h = np.nan
+
+		else:
+			_O_Fe = float(o_h) #- float(fe_h)
+
+
+	if classification == 'Thick disc':
+		Reddy_ThickDisk_Na_Fe.append(_Na_Fe)
+		Reddy_ThickDisk_O_Fe.append(_O_Fe)
+
+	elif classification == 'Thin disc':
+		Reddy_ThinDisk_Na_Fe.append(_Na_Fe)
+		Reddy_ThinDisk_O_Fe.append(_O_Fe)
+
+	elif classification == 'Halo':
+		Reddy_Halo_Na_Fe.append(_Na_Fe)
+		Reddy_Halo_O_Fe.append(_O_Fe)
+
+	elif classification == 'Thin/thick disc':
+		Reddy_ThickThinDisk_Na_Fe.append(_Na_Fe)
+		Reddy_ThickThinDisk_O_Fe.append(_O_Fe)
+
+	elif classification == 'Thick disc/halo':
+		Reddy_ThickDisk_Halo_Na_Fe.append(_Na_Fe)
+		Reddy_ThickDisk_Halo_O_Fe.append(_O_Fe)
+
+
+
+Reddy_ThickDisk_O_Fe, Reddy_ThickDisk_Na_Fe, Reddy_ThinDisk_O_Fe, Reddy_ThinDisk_Na_Fe, Reddy_Halo_O_Fe, Reddy_Halo_Na_Fe, Reddy_ThickThinDisk_O_Fe, Reddy_ThickThinDisk_Na_Fe, Reddy_ThickDisk_Halo_O_Fe, Reddy_ThickDisk_Halo_Na_Fe = [np.array(item) for item in (Reddy_ThickDisk_O_Fe, Reddy_ThickDisk_Na_Fe, Reddy_ThinDisk_O_Fe, Reddy_ThinDisk_Na_Fe, Reddy_Halo_O_Fe, Reddy_Halo_Na_Fe, Reddy_ThickThinDisk_O_Fe, Reddy_ThickThinDisk_Na_Fe, Reddy_ThickDisk_Halo_O_Fe, Reddy_ThickDisk_Halo_Na_Fe)]
+
+fig = plt.figure()
+fig.subplots_adjust(hspace=0, wspace=0,right=0.97,top=0.97,bottom=0.08,left=0.10)
+ax = fig.add_subplot(111)
+
+ax.scatter(Reddy_ThickDisk_O_Fe, Reddy_ThickDisk_Na_Fe, marker='+', facecolor='none', linewidth=1, edgecolor='k', label='Thick disc (Reddy+ 2005)')
+ax.scatter(Reddy_ThinDisk_O_Fe, Reddy_ThinDisk_Na_Fe, marker='x', facecolor='none', linewidth=1, edgecolor='k', label='Thin disc (Reddy+ 2005)')
+ax.scatter(Reddy_Halo_O_Fe, Reddy_Halo_Na_Fe, marker='o', facecolor='none', edgecolor='k', label='Halo (Reddy+ 2005)')
+ax.scatter(Reddy_ThickThinDisk_O_Fe, Reddy_ThickThinDisk_Na_Fe, marker='+', facecolor='none', edgecolor='k')
+ax.scatter(Reddy_ThickDisk_Halo_O_Fe, Reddy_ThickDisk_Halo_Na_Fe, marker='o', facecolor='none', edgecolor='k')
+
+#caretta_cluster, caretta_Fe_I, caretta_e_Fe_I, caretta_O_Fe, caretta_e_O_Fe, caretta_Na_Fe, caretta_e_Na_Fe
+
+ax.scatter(caretta_O_Fe, caretta_Na_Fe, marker='+', edgecolor='#cccccc', facecolor='none', zorder=-1, label='GC stars (Carretta+ 2009)')
+
+ax.scatter(O_Fe, Na_Fe, marker='o', facecolor='k', s=40)
+ax.errorbar(O_Fe, Na_Fe, xerr=e_O_Fe, yerr=e_Na_Fe, fmt=None, ecolor='k')
+
+ax.legend(loc=2, prop={'size': 11})
+
+ax.set_xlabel('[O/Fe]')
+ax.set_ylabel('[Na/Fe]')
+
+ax.set_xlim(xlims)
+ax.set_ylim(ylims)
+
+plt.savefig('aquarius-o-na-halo.pdf')
+plt.savefig('aquarius-o-na-halo.eps')

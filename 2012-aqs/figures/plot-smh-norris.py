@@ -57,9 +57,9 @@ ax1.get_yticklabels()[-1].set_visible(False)
 
 ax1.text(5, 10, '$\langle{}\Delta{}W_\lambda\\rangle{}\,=\,-0.64\,\pm\,2.78\,$m${\AA}$', color='k', verticalalignment='center')
 
-ax2.text(5, 150, "$a_0\,=\,%1.2f$\n$a_1\,=\,%1.2f$" % (c, m, ), verticalalignment='top')
+ax2.text(5, 150, "$a_0\,=\,%1.2f$\n$a_1\,=\,%1.2f$\n$N\,=\,%i$" % (c, m, len(smh_ew)), verticalalignment='top')
 
-ax1.set_title('%i lines in HD 140283' % (len(smh_ew), ))
+#ax1.set_title('%i lines in HD 140283' % (len(smh_ew), ))
 
 plt.savefig('smh-norris.pdf')
 plt.savefig('smh-norris.eps')

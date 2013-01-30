@@ -178,8 +178,8 @@ Reddy_ThickDisk_Na_Fe, Reddy_ThickDisk_Ni_Fe, Reddy_ThinDisk_Na_Fe, Reddy_ThinDi
 # Nissen & Schuster 2010
 # Fulbright 2000
 
-text_x = 0.0
-text_y = 0.0
+text_x = 0.45
+text_y = -0.20
 
 fig = plt.figure()
 
@@ -187,27 +187,41 @@ ax = fig.add_subplot(411)
 ax.xaxis.set_visible(False)
 
 ax.scatter(Reddy_2003_Na_Fe, Reddy_2003_Ni_Fe, marker='^', color='k', label='Thick disc')
+ax.legend(loc=2, prop={'size': 9})
+ax.text(text_x, text_y, 'Reddy et al. (2003)', color='k', verticalalignment='bottom', horizontalalignment='right')
 
 
 ax = fig.add_subplot(412, sharex=ax, sharey=ax)
 ax.xaxis.set_visible(False)
 # square, diamond, triangle
-ax.scatter(Reddy_ThickDisk_Na_Fe, Reddy_ThickDisk_Ni_Fe, marker='+', edgecolor='k', facecolor='#666666', label='Thick disc')
-ax.scatter(Reddy_ThickThinDisk_Na_Fe, Reddy_ThickThinDisk_Ni_Fe, marker='^', color='#666666', label='Thick/thin disc')
-ax.scatter(Reddy_ThinDisk_Na_Fe, Reddy_ThinDisk_Ni_Fe, marker='+', edgecolor='k', facecolor='#cccccc', label='Thin disc')
-ax.scatter(Reddy_ThickDisk_Halo_Na_Fe, Reddy_ThickDisk_Halo_Ni_Fe, marker='d', color='k', label='Thick disc/halo')
+ax.scatter(Reddy_ThickDisk_Na_Fe, Reddy_ThickDisk_Ni_Fe, marker='+', edgecolor='k', label='Thick disc')
+#ax.scatter(Reddy_ThickThinDisk_Na_Fe, Reddy_ThickThinDisk_Ni_Fe, marker='^', color='#666666', label='Thick/thin disc')
+ax.scatter(Reddy_ThinDisk_Na_Fe, Reddy_ThinDisk_Ni_Fe, marker='x', edgecolor='k', label='Thin disc')
+#ax.scatter(Reddy_ThickDisk_Halo_Na_Fe, Reddy_ThickDisk_Halo_Ni_Fe, marker='d', color='k', label='Thick disc/halo')
 ax.scatter(Reddy_Halo_Na_Fe, Reddy_Halo_Ni_Fe, marker='o', edgecolor='k', facecolor='none', label='Halo')
+ax.legend(loc=2, prop={'size': 9})
+ax.text(text_x, text_y, 'Reddy et al. (2003)', color='k', verticalalignment='bottom', horizontalalignment='right')
+
 
 ax = fig.add_subplot(413, sharex=ax, sharey=ax)
 ax.xaxis.set_visible(False)
-ax.scatter(Fulbright_Na_Fe, Fulbright_Ni_Fe, marker='o', edgecolor='k', facecolor='none', label='Halo \& disc')
+ax.scatter(Fulbright_Na_Fe, Fulbright_Ni_Fe, marker='o', edgecolor='k', facecolor='none', label='Halo & disc')
+ax.legend(loc=2, prop={'size': 9})
+ax.text(text_x, text_y, 'Fulbright (2000)', color='k', verticalalignment='bottom', horizontalalignment='right')
+
 
 ax = fig.add_subplot(414, sharex=ax, sharey=ax)
 ax.scatter(NS_Na_Fe[thick_disk], NS_Ni_Fe[thick_disk], marker='o', edgecolor='k', facecolor='#666666', label='Thick disc')
-ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], marker='o', edgecolor='k', facecolor='#cccccc', label='Halo low-$\alpha$')
-ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], marker='o', edgecolor='k', facecolor='w', label='Halo high-$\alpha')
+ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], marker='o', edgecolor='k', facecolor='#cccccc', label='Halo low-$\\alpha$')
+ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], marker='o', edgecolor='k', facecolor='w', label='Halo high-$\\alpha$')
+
+ax.legend(loc=2, prop={'size': 9})
+ax.text(text_x, text_y, 'Nissen & Schuster (2010)', color='k', verticalalignment='bottom', horizontalalignment='right')
 
 ax.scatter(Observed_Na_Fe, Observed_Ni_Fe, marker='s', facecolor='b')
+
+ax.set_xlim(-0.5, 0.5)
+ax.set_ylim(-0.25, 0.25)
 
 plt.savefig('na-ni.pdf')
 
