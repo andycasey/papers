@@ -17,10 +17,10 @@
 % [DONE] Na/O comparison with halo
 % [DONE] Mg/Al subplots
 % - Ni/Na plane plot
-% - Add standard stars to observations table
-% - Add standard stars chemical abundances
+% [DONE] Add standard stars to observations table
+% [DONE] Add standard stars chemical abundances
 % - Add in-line text referencing standard star chemical abundances
-% - Uncertainties analysis
+% - Uncertainty analysis
 % [DONE] Equivalent widths significant figures.
 % - Strontium
 % - Carbon
@@ -30,11 +30,9 @@
 % - Orbital energies plot w.r.t Zolotov simulations
 % - Minor merger text
 % - Conclusions
+% - References
 
-% Casey, Keller, Alves-Brito, Frebel, Da Costa, Schlaufman, Karakas, Jacobson, Yu, Freeman
-
-
-\author{Andrew R. Casey\altaffilmark{2,3} and distinguished collaborators}
+\author{Andrew R. Casey\altaffilmark{2,3}, Stefan Keller\altaffilmark{2}, Alan Alves-Brito\altaffilmark{2}, Anna Frebel\altaffilmark{3}, Gary Da Costa\altaffilmark{2}, Kevin Schalufman\altaffilmark{3}, Heather Jacobson\altaffilmark{3}, QinQin Yu\altaffilmark{3}, Amanda Karakas\altaffilmark{2}, David Yong\altaffilmark{2}, Ken Freeman\altaffilmark{2}}
 \altaffiltext{1}{This paper includes data gathered with the 6.5 meter Magellan Telescopes located at Las Campanas Observatory, Chile.}
 \altaffiltext{2}{Research School of Astronomy \& Astrophysics, Australian National University, Mount Stromlo Observatory, via Cotter Rd, Weston, ACT 2611, Australia; acasey@mso.anu.edu.au}
 \altaffiltext{3}{Massachusetts Institute of Technology, Kavli Institute for Astrophysics and Space Research,
@@ -42,17 +40,16 @@
 
 
 \begin{abstract}
-We present a detailed analysis of five Aquarius stream candidate stars observed using the MIKE spectrograph with the Magellan Clay telescope.  Enhanced [Na/Fe] and [Ni/Fe] abundance ratios suggest the co-moving group is not the result of a dwarf satellite galaxy, and that its chemical enrichment environment is more representative of either a globular cluster, or the Milky Way thick disc. However, we find no evidence that the stream is a result of a disrupted cluster. Our data indicate the Aquarius stream has a  metallicity dispersion of $\sigma(\mbox{[Fe/H}]) = 0.32$\,dex. No inverse Na-O correlation is present, and we find a positive Mg-Al relationship. Chemically, the group is indistinguishable from the Milky Way thick disk with the exception of one very interesting candidate, which we hypothesise is tidal debris from $\omega$-Centurai. Assuming all other candidates are Aquarius members, we propose the co-moving group has arisen from a minor merger in the Milky Way's thick disk.
+We present a detailed analysis of five Aquarius stream candidate stars observed using the MIKE spectrograph with the Magellan Clay telescope.  Enhanced [Na/Fe] and [Ni/Fe] abundance ratios suggest the co-moving group is not the result of a dwarf satellite galaxy, and that its chemical enrichment environment is more representative of either a globular cluster, or the Milky Way thick disc. However, we find no evidence that the stream is a result of a classical disrupted globular cluster. Our data indicate the Aquarius stream has a  metallicity dispersion of $\sigma(\mbox{[Fe/H}]) = 0.32$\,dex. No inverse Na-O correlation is present, and we find a positive Mg-Al relationship. Chemically, the group is indistinguishable from the Milky Way thick disk/halo with the exception of one very interesting candidate, which we hypothesise is tidal debris from $\omega$-Centurai. Assuming all other candidates are Aquarius members, we propose the co-moving group has arisen from a minor merger in the Milky Way's thick disk.
 
 \end{abstract}
 
-\keywords{Galaxy: halo, structure --- Individual: Aquarius Stream --- Stars: FGK-giants}
+\keywords{Galaxy: halo, structure}
 
 \section{Introduction}
 Galaxies are hierarchically formed through chaotic mergers of smaller systems. The Milky Way is no exception. The accumulating stellar debris in our own galactic halo provides ongoing evidence for such merging events. As accreting satellites infall onto the galaxy, tidal forces disrupt the dwarf, hurtling stars in leading and trailing directions. Unsurprisingly, the velocities of stars within these `stellar streams' are sensitive to the galactic potential. As such, their phase-space information can collectively constrain the fraction and distribution of accreted matter in the galaxy, the sub-halo mass function, as well as the shape and extent of dark matter in the Milky Way. Moreover, individual chemical abundances can constrain the  precise nucleosynthesis sites where elements are forged, as well as trace the chemical evolution of the galaxy.
 
 % Consider adding a final sentence about the amount of work that has gone into stellar streaams
-
 Wide-field surveys have proved excellent sources for finding stellar streams. Dozens have been identified through photometric selections and matched-filtering techniques, with some to a galactocentric distance of 100\,kpc \citep{belokurov;et-al_2007,drake;et-al_2013}. Indeed, it is clear that a large fraction of the stellar halo has been built up by accretion. However, as \citet{helmi;white_1999} point out, these observing strategies are only successful for identifying streams that are sufficiently distant from the solar neighbourhood. A nearby stream, within $\sim$10\,kpc, will not appear as an over-density, as the stars would be sparsely positioned across the sky. Such substructures would only be detectable by their kinematics, or perhaps precise chemical abundances through a `chemical tagging' approach (e.g. see \citet{freeman;bland-hawthorn_2002}). 
 
 % Talk about RAVE
@@ -114,26 +111,32 @@ We seek to investigate the nature of the Aquarius stream, specifically the recen
 \startdata
 
 \\ \multicolumn{11}{c}{Standard Stars} \\ \hline \\
-HD 41667		& 06:05:03.7 & $-$32:59:36.8	& 2011-03-13	& 1.005	& \dots & \dots & \dots & 314.4	& \dots & 0.8 \\
-HD 44007		& 06:18:48.6 & $-$14:50:44.2 	& 2011-03-13	& 1.033	& \dots & \dots & \dots & --185.9	& 162.9 & 0.6 \\
-HD 136316		& 15:22:17.2 & $-$53:14:13.9	& 2011-03-14	& 1.118	& \dots & \dots & \dots & 61.0		& --37.6 & 0.4 \\
-HD 141531		& 15:49:16.9 & \phn\.09:36:42.5		& 2011-03-14	& 1.309	& \dots & \dots & 350	 & 17.7		& 2.8	& 0.1 \\
-HD 142948		& 16:00:01.6 & $-$53:51:04.1	& 2011-03-14	& 1.107	& \dots & \dots & \dots & 6.8		& \dots & 0.4 \\
+HD 41667		& 06:05:03.7 & $-$32:59:36.8		& 2011-03-13	& 1.005	& 1.0 & 90 		& 340 & 313.6		& 297.1 	& 0.1 \\
+HD 44007		& 06:18:48.6 & $-$14:50:44.2 		& 2011-03-13	& 1.033	& 1.0 & 120		& 280 & $-$187.0	& 161.8 	& 0.1 \\
+HD 76932		& 08:58:44.2 & $-$16:07:54.2		& 2011-03-14	& 1.158	& 1.0 & 25		& 330 & $-$132.6	& 117.8		& 0.1 \\
+HD 136316		& 15:22:17.2 & $-$53:14:13.9		& 2011-03-14	& 1.118	& 0.9 & \dots 	& 400 & 59.8		& $-$38.8 	& 0.1 \\
+HD 141531		& 15:49:16.9 & \phn\.09:36:42.5	& 2011-03-14	& 1.309	& 0.9 & \dots	& 350 & 17.7		& 2.8		& 0.1 \\
+HD 142948		& 16:00:01.6 & $-$53:51:04.1		& 2011-03-14	& 1.107	& 1.0 & \dots 	& 320 & 5.3			& 29.9 		& 0.1 \\
 
 \\ \multicolumn{11}{c}{Program Stars} \\ \hline \\
-C2225316-14437	& 22:25:31.7 & $-$14:54:39.6	& 2011-07-30	& 1.033 & \dots & \dots & 135	 & --168.6	& --156.4 & 0.1 \\
-C2306265-085103	& 23:06:26.6 & $-$08:51:04.8	& 2011-07-30	& 1.096 & \dots & \dots & 100	 & --240.4	& --221.1 & 0.1 \\
-J221821-183424	& 22:18:21.2 & $-$18:34:28.3	& 2011-07-30	& 1.026	& \dots & \dots & 115 	 & --170.2	& --159.5 & 0.1 \\
-J223504-152834	& 22:35:04.5 & $-$15:28:34.9	& 2011-07-30	& 1.047	& \dots & \dots & 135	 & --179.0	& --169.7 & 0.1 \\
-J223811-104126	& 22:38:11.6 & $-$10:41:29.4	& 2011-07-30	& 1.218	& \dots & \dots & 115	 & --250.1	& --235.7 & 0.1 
+C2225316-14437	& 22:25:31.7 & $-$14:54:39.6	& 2011-07-30	& 1.033	& 0.8	& 650 & 135	& $-$168.6	& $-$156.4 & 0.1 \\
+C2306265-085103	& 23:06:26.6 & $-$08:51:04.8	& 2011-07-30	& 1.096	& 1.0	& 650 & 100	& $-$240.4	& $-$221.1 & 0.1 \\
+J221821-183424	& 22:18:21.2 & $-$18:34:28.3	& 2011-07-30	& 1.026	& 0.9 	& 650 & 115	& $-$170.2	& $-$159.5 & 0.1 \\
+J223504-152834	& 22:35:04.5 & $-$15:28:34.9	& 2011-07-30	& 1.047	& 1.0 	& 650 & 130	& $-$179.0	& $-$169.7 & 0.1 \\
+J223811-104126	& 22:38:11.6 & $-$10:41:29.4	& 2011-07-30	& 1.218	& 1.2 	& 650 & 115	& $-$250.1	& $-$235.7 & 0.1 
 
 %HD 136316 % F giant, -1.8, Gratton 2000+, has Na, O abundances
 %HD 141531 % F giant, -1.6, Gratton 2000+, has Na, O abundances
 %HD 44007 % G giant, -1.50, lots of references
 
-% Hd 141431		: -0.96, -1.03 +/- 0.78 (MEK)
+
 
 % V corrections (already applied the first number of each row)
+% HD 41667		: -0.77, -0.79 +/- 0.79
+% HD 44007		: -1.12, -1.12 +/- 0.96
+% HD 136316		: -1.17, -1.25 +/- 0.86
+% HD 141531		: -0.96, -1.03 +/- 0.78
+% HD 142948		: -1.49, -1.49 +/- 0.75
 % J221821     	:   0.30, 0.25 +/- 1.25 (MEK has -154.1, wdb ) -- diff: 5.4  (positive == higher)
 % C2225316		:	0.43, 0.42 +/- 1.13 (MEK has -155.7) -- diff: -0.4 (hers is lower)
 % C2306265		: 	1.14, 1.19 +/- 1.16 (MEK has -221.8) -- diff: -0.7 (hers is lower)
@@ -167,7 +170,7 @@ The radial velocity for each star was determined in a two-step method. An initia
 	\label{fig:line-velocities}
 \end{figure}
 
-With our spectra at near-rest, we measured the equivalent widths of $\sim$200 lines by automatically fitting Gaussian functions to the absorption profiles (see Section \ref{sec:line-measurements}). Fitted Gaussian profiles provide us with a measured equivalent width, the full-width half-maximum (FWHM) and the central wavelength of the profile. Thus, the residual radial velocity can be found from the ratio of the central and rest wavelengths. The final radial velocity for the star is provided by the initial velocity and the mean of $\sim$200 residual line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD 41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and the standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.7 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree quite well with those compiled by \citet{williams;et-al_2011} from the RAVE survey: the mean offset is $\langle\Delta{V_{\rm hel}}\rangle = 2.5 \pm 2.7$\,km\,s$^{-1}$, demonstrating the accuracy of the velocities published in the RAVE catalog.
+With our spectra at near-rest, we measured the equivalent widths of $\sim$200 lines by automatically fitting Gaussian functions to the absorption profiles (see Section \ref{sec:line-measurements}). Fitted Gaussian profiles provide us with a measured equivalent width, the full-width half-maximum (FWHM) and the central wavelength of the profile. Thus, the residual radial velocity can be found from the ratio of the central and rest wavelengths. The final radial velocity for the star is provided by the initial velocity and the mean of $\sim$200 residual line velocity measurements. Figure \ref{fig:line-velocities} shows the line velocities for HD 41667 after being placed at pseudo-rest using our cross-correlation velocity of 314.4\,km s$^{-1}$. As expected, the mean residual offset is small ($-0.75$\,km s$^{-1}$), and the standard deviation is 0.79\,km s$^{-1}$ from 164 line measurements. This provides us with a final measured radial velocity of $313.6 \pm 0.1$\,km s$^{-1}$. This process was performed for all observations. The radial velocities published in Table \ref{tab:observations} are the final values from this two-step method. Heliocentric velocities agree quite well with those compiled by \citet{williams;et-al_2011} from the RAVE survey: the mean offset is $\langle\Delta{V_{\rm hel}}\rangle = 2.5 \pm 2.7$\,km\,s$^{-1}$, demonstrating the accuracy of the velocities published in the RAVE catalog.
 
 
 
@@ -412,7 +415,7 @@ We list the atomic data and measured equivalent widths for transitions used duri
 
 
 \subsection{Model Atmospheres}
-We have employed the ATLAS9 plane-parallel stellar atmospheres of \citet{castelli;kurucz_2003}. These one-dimensional models ignore any centre-to-limb spatial variations, assume hydrostatic equilibrium and no convective overshoot from the photosphere. The stellar parameter spacing between models is 250\,K, 0.5\,dex in surface gravity, 0.5\,dex in [M/H] and 0.1\,dex in [$\alpha$/Fe]. We interpolated the temperature, gas and radiative pressure, electron density and opacities between atmosphere models using the Quickhull algorithm \citep{barber;et-al_1996}. Quickhull is reliant on Delaunay tessellation, which suffers from extremely skewed cells when the grid points vary in size by orders of magnitude -- as $T_{\rm eff}$ values do compared to $\log{g}$ or [X/H]. If unaccounted for, interpolating using such asymmetric cells can result in significant errors in atmospheric properties across all photospheric depths. We scaled each stellar parameter between zero and unity prior to interpolation in order to minimise these effects. During this step, $\log{g}$, [M/H] and [$\alpha$/Fe] values were scaled such that we simultaneously interpolate linearly in $T_{\rm eff}$ and logarithmically in all other parameters.
+We have employed the ATLAS9 plane-parallel stellar atmospheres of \citet{castelli;kurucz_2003}. These one-dimensional models ignore any centre-to-limb spatial variations, assume hydrostatic equilibrium and no convective overshoot from the photosphere. The stellar parameter spacing between models is 250\,K, 0.5\,dex in surface gravity, 0.5\,dex in [M/H] and 0.1\,dex in [$\alpha$/Fe]. We interpolated the temperature, gas and radiative pressure, electron density and opacities between atmosphere models using the Quickhull algorithm \citep{barber;et-al_1996}. Quickhull is reliant on Delaunay tessellation, which suffers from extremely skewed cells when the grid points vary in size by orders of magnitude -- as $T_{\rm eff}$ values do compared to $\log{g}$ or [X/H]. If unaccounted for, interpolating using such asymmetric cells can result in significant errors in atmospheric properties across all photospheric depths. We scaled each stellar parameter between zero and unity prior to interpolation in order to minimise these effects. During this step, $\log{g}$, [M/H] and [$\alpha$/Fe] values were scaled such that we simultaneously interpolate linearly in $T_{\rm eff}$, $\log{g}$ and logarithmically in abundance ratios.
 
 \begin{deluxetable*}{lcccccccccccccc}[h!]
 \tablecolumns{2}
@@ -434,34 +437,42 @@ We have employed the ATLAS9 plane-parallel stellar atmospheres of \citet{castell
 \startdata
 \multicolumn{10}{c}{Standard Stars} \\
 \cline{1-10} \\
-HD41667			& 4630	& 1.70	& 1.66 	& --1.21
-				& 4605	& 1.88	& 1.44	& --1.16
+HD 41667		& 4630	& 1.70	& 1.66 	& $-$1.21
+				& 4605	& 1.88	& 1.44	& $-$1.16
 				& \citet{gratton;et-al_2000} \\
-HD44007			& 4790	& 1.78	& 1.63	& --1.80
-				& 4850	& 2.00 	& 2.20	& --1.71
+HD 44007		& 4790	& 1.78	& 1.63	& $-$1.80
+				& 4850	& 2.00 	& 2.20	& $-$1.71
 				& \citet{fulbright_2000} \\
-HD142948		& 4950	& 2.19	& 1.78	& --0.79
-				& 4713 	& 2.17 	& 1.38	& --0.77
+				
+HD 76932		& 5755 & 3.85 & 1.41 & $-$1.06
+				\\
+
+HD 136316		& 4350 & 0.65 & 1.83 & $-$1.92 \\
+
+HD 141531		& 4295 & 0.60 & 1.86 & $-$1.74 \\
+
+HD 142948		& 4950	& 2.19	& 1.78	& $-$0.79
+				& 4713 	& 2.17 	& 1.38	& $-$0.77
 				& \citet{gratton;et-al_2000} \\
 \\
 
 
 \multicolumn{10}{c}{Program Stars} \\
 \cline{1-10} \\
-C2225316-14437	& 4325				& 1.26				& 1.78				& --1.26	
-				& 4235 $\pm$ 118 	& 1.45 $\pm$ 0.21	& 1.96 $\pm$ 0.11 	& --1.20 $\pm$ 0.14 
+C2225316-14437	& 4325				& 1.26				& 1.78				& $-$1.26	
+				& 4235 $\pm$ 118 	& 1.45 $\pm$ 0.21	& 1.96 $\pm$ 0.11 	& $-$1.20 $\pm$ 0.14 
 				& \citet{wylie-de-boer;et-al_2012} \\
-C2306265-085103	& 4170	& 0.85	& 1.81 	& --1.17
+C2306265-085103	& 4170	& 0.85	& 1.81 	& $-$1.17
 				& \dots	& \dots	& \dots	& \dots
 				& \dots \\	
-J221821-183424	& 4590				& 0.90				& 1.91				& --1.61
-				& 4395 $\pm$ 205 	& 1.45 $\pm$ 0.35 	& 1.96 $\pm$ 0.18 	& --1.15 $\pm$ 0.21
+J221821-183424	& 4590				& 0.90				& 1.91				& $-$1.61
+				& 4395 $\pm$ 205 	& 1.45 $\pm$ 0.35 	& 1.96 $\pm$ 0.18 	& $-$1.15 $\pm$ 0.21
 				& \citet{wylie-de-boer;et-al_2012} \\
-J223504-152834	& 4590				& 2.15 				& 1.45				& --0.68
-				& 4597 $\pm$ 158 	& 2.40 $\pm$ 0.14 	& 1.47 $\pm$ 0.07 	& --0.98 $\pm$ 0.17
+J223504-152834	& 4590				& 2.15 				& 1.45				& $-$0.68
+				& 4597 $\pm$ 158 	& 2.40 $\pm$ 0.14 	& 1.47 $\pm$ 0.07 	& $-$0.98 $\pm$ 0.17
 				& \citet{wylie-de-boer;et-al_2012} \\
-J223811-104126	& 5140				& 2.96				& 1.33				& --1.45
-				& 5646 $\pm$ 147 	& 4.60 $\pm$ 0.15 	& 1.09 $\pm$ 0.11 	& --1.20 $\pm$ 0.20
+J223811-104126	& 5140				& 2.96				& 1.33				& $-$1.45
+				& 5646 $\pm$ 147 	& 4.60 $\pm$ 0.15 	& 1.09 $\pm$ 0.11 	& $-$1.20 $\pm$ 0.20
 				& \citet{wylie-de-boer;et-al_2012} 
 \enddata
 
@@ -616,6 +627,162 @@ Measuring barium requires some careful consideration. The strong resonance lines
 Our standard stars have [Ba/Fe] abundances very typical of the Milky Way halo. Only one of our standard stars, HD 44007, has published [Ba/Fe] abundances from high-resolution spectra. We find HD 44007 to have $\mbox{[Ba/Fe]} = -0.05 \pm 0.04$, which is at the mid-point of existing published measurements from \citet{fulbright_2000} and \citet{burris;et-al_2000} of $-0.27$ and 0.05 dex, respectively. 
 
 With one exception, the Aquarius stream candidates have barium abundances that are quite similar to the stellar halo, ranging between $\mbox{[Ba/Fe]} = -0.02$ to 0.15 dex. The exception is C2225316, which has an anomalously high barium abundance of $\mbox{[Ba/Fe]} = 0.70$ dex. This is ${\sim}$0.70 dex higher than the Milky Way trend at its given $\mbox{[Fe/H]} = -1.26$ dex. Our three Ba \textsc{ii} lines in C2225316 are in excellent agreement: 0.67, 0.68, and 0.72 dex. The 6496\,{\AA} transition in C2225316 has a negligible telluric contribution and was included for this candidate. At least in Al, Si, Cr and Ba content (see sections \ref{sec:aluminium-abundance}, \ref{sec:alpha-elements}, \ref{sec:iron-peak-elements}), C225316 appears to be chemically distinct from the other Aquarius stream stars in our sample. 
+
+
+\begin{deluxetable*}{lccccccclcccccc}
+\tablecolumns{15}
+\tablecaption{Standard Star Abundances\label{tab:standard-star-abundances}}
+\tablehead{
+\colhead{Species} & $N$ & $\log\epsilon(X)$ & $\sigma_\epsilon$ & [X/H] & [X/Fe] & $\sigma$ &&
+\colhead{Species} & $N$ & $\log\epsilon(X)$ & $\sigma_\epsilon$ & [X/H] & [X/Fe] & $\sigma$ 
+}
+\startdata
+\\
+ \multicolumn{7}{c}{HD 41667} & \colhead{} & \multicolumn{7}{c}{HD 44007} \\
+ \cline{1-7} \cline{9-15} \\
+
+
+   O \textsc{i} &   2 &    7.93 &    0.05 & $-$0.76 &    0.45 &    0.04 &&
+   O \textsc{i} &   1 &    7.39 &    0.00 & $-$1.30 &    0.50 &    0.00 \\
+  Na \textsc{i} &   3 &    4.87 &    0.16 & $-$1.37 & $-$0.16 &    0.09 &&
+  Na \textsc{i} &   2 &    4.42 &    0.08 & $-$1.83 & $-$0.03 &    0.06 \\
+  Mg \textsc{i} &   4 &    6.74 &    0.11 & $-$0.86 &    0.35 &    0.05 &&
+  Mg \textsc{i} &   2 &    6.27 &    0.06 & $-$1.33 &    0.47 &    0.04 \\
+  Al \textsc{i} &   4 &    5.12 &    0.11 & $-$1.33 & $-$0.12 &    0.06 &&
+  Al \textsc{i} &   1 &    4.76 &    0.00 & $-$1.69 &    0.11 &    0.00 \\
+  Si \textsc{i} &   5 &    6.52 &    0.05 & $-$0.99 &    0.22 &    0.02 &&
+  Si \textsc{i} &   5 &    6.06 &    0.07 & $-$1.45 &    0.35 &    0.03 \\
+  Ca \textsc{i} &   4 &    5.46 &    0.06 & $-$0.88 &    0.33 &    0.03 &&
+  Ca \textsc{i} &   4 &    4.92 &    0.02 & $-$1.42 &    0.38 &    0.01 \\
+ Sc \textsc{ii} &   6 &    2.12 &    0.13 & $-$1.03 &    0.18 &    0.05 &&
+ Sc \textsc{ii} &   6 &    1.38 &    0.10 & $-$1.77 &    0.02 &    0.04 \\
+  Ti \textsc{i} &   4 &    3.96 &    0.04 & $-$1.00 &    0.21 &    0.02 &&
+  Ti \textsc{i} &   1 &    3.46 &    0.00 & $-$1.49 &    0.31 &    0.00 \\
+ Ti \textsc{ii} &   3 &    4.12 &    0.25 & $-$0.83 &    0.38 &    0.14 &&
+ Ti \textsc{ii} &   4 &    3.52 &    0.15 & $-$1.43 &    0.37 &    0.07 \\
+   V \textsc{i} &   6 &    2.88 &    0.13 & $-$1.05 &    0.16 &    0.05 &&
+   V \textsc{i} &   4 &    2.16 &    0.03 & $-$1.77 &    0.03 &    0.01 \\
+  Cr \textsc{i} &  10 &    4.25 &    0.09 & $-$1.38 & $-$0.17 &    0.03 &&
+  Cr \textsc{i} &  15 &    3.64 &    0.07 & $-$2.00 & $-$0.20 &    0.02 \\
+ Cr \textsc{ii} &   3 &    4.54 &    0.25 & $-$1.10 &    0.11 &    0.14 &&
+ Cr \textsc{ii} &   3 &    3.97 &    0.02 & $-$1.67 &    0.13 &    0.01 \\
+  Mn \textsc{i} &   3 &    3.94 &    0.01 & $-$1.49 & $-$0.28 &    0.01 &&
+  Mn \textsc{i} &   3 &    3.11 &    0.04 & $-$2.32 & $-$0.52 &    0.02 \\
+  Fe \textsc{i} &  61 &    6.29 &    0.12 & $-$1.21 &    0.00 &    0.01 &&
+  Fe \textsc{i} &  51 &    5.70 &    0.13 & $-$1.80 &    0.00 &    0.02 \\
+ Fe \textsc{ii} &  13 &    6.28 &    0.06 & $-$1.22 & $-$0.01 &    0.02 &&
+ Fe \textsc{ii} &  15 &    5.70 &    0.10 & $-$1.80 &    0.00 &    0.02 \\
+  Co \textsc{i} &   3 &    3.75 &    0.11 & $-$1.24 & $-$0.03 &    0.06 &&
+  Co \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Ni \textsc{i} &   7 &    4.95 &    0.12 & $-$1.27 & $-$0.06 &    0.04 &&
+  Ni \textsc{i} &   4 &    4.43 &    0.04 & $-$1.79 &    0.01 &    0.02 \\
+  Cu \textsc{i} &   1 &    2.76 &    0.00 & $-$1.43 & $-$0.22 &    0.00 &&
+  Cu \textsc{i} &   1 &    1.84 &    0.00 & $-$2.35 & $-$0.55 &    0.00 \\
+  Zn \textsc{i} &   2 &    3.33 &    0.08 & $-$1.22 & $-$0.01 &    0.06 &&
+  Zn \textsc{i} &   2 &    2.83 &    0.05 & $-$1.73 &    0.07 &    0.04 \\
+ Ba \textsc{ii} &   2 &    1.08 &    0.05 & $-$1.10 &    0.10 &    0.03 &&
+ Ba \textsc{ii} &   2 &    0.33 &    0.05 & $-$1.85 & $-$0.05 &    0.04 \\
+
+
+\cline{1-7} \cline{9-15} \\
+\\
+\multicolumn{7}{c}{HD 76932} && \multicolumn{7}{c}{HD 136316} \\
+\cline{1-7} \cline{9-15} \\
+
+   O \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
+   O \textsc{i} &   1 &    7.20 &    0.00 & $-$1.49 &    0.43 &    0.00 \\
+  Na \textsc{i} &   3 &    5.33 &    0.04 & $-$0.91 &    0.15 &    0.02 &&
+  Na \textsc{i} &   2 &    4.15 &    0.03 & $-$2.09 & $-$0.17 &    0.02 \\
+  Mg \textsc{i} &   3 &    7.05 &    0.20 & $-$0.55 &    0.51 &    0.12 &&
+  Mg \textsc{i} &   2 &    6.05 &    0.25 & $-$1.54 &    0.38 &    0.17 \\
+  Al \textsc{i} &   4 &    5.44 &    0.06 & $-$1.01 &    0.04 &    0.03 &&
+  Al \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Si \textsc{i} &   5 &    6.74 &    0.05 & $-$0.77 &    0.29 &    0.02 &&
+  Si \textsc{i} &   4 &    5.86 &    0.05 & $-$1.65 &    0.27 &    0.03 \\
+  Ca \textsc{i} &   4 &    5.57 &    0.02 & $-$0.77 &    0.29 &    0.01 &&
+  Ca \textsc{i} &   4 &    4.69 &    0.02 & $-$1.65 &    0.27 &    0.01 \\
+  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
+  Sc \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Sc \textsc{ii} &   6 &    2.23 &    0.11 & $-$0.92 &    0.14 &    0.04 &&
+ Sc \textsc{ii} &   5 &    1.32 &    0.05 & $-$1.83 &    0.09 &    0.02 \\
+  Ti \textsc{i} &   1 &    4.35 &    0.00 & $-$0.60 &    0.46 &    0.00 &&
+  Ti \textsc{i} &   3 &    3.23 &    0.03 & $-$1.72 &    0.20 &    0.02 \\
+ Ti \textsc{ii} &   3 &    4.34 &    0.03 & $-$0.61 &    0.45 &    0.02 &&
+ Ti \textsc{ii} &   4 &    3.52 &    0.14 & $-$1.43 &    0.49 &    0.07 \\
+   V \textsc{i} &   3 &    3.15 &    0.13 & $-$0.78 &    0.28 &    0.08 &&
+   V \textsc{i} &   5 &    1.88 &    0.06 & $-$2.05 & $-$0.13 &    0.03 \\
+  Cr \textsc{i} &  15 &    4.44 &    0.06 & $-$1.20 & $-$0.14 &    0.01 &&
+  Cr \textsc{i} &  12 &    3.52 &    0.05 & $-$2.12 & $-$0.20 &    0.02 \\
+ Cr \textsc{ii} &   3 &    4.75 &    0.03 & $-$0.89 &    0.17 &    0.02 &&
+ Cr \textsc{ii} &   2 &    3.83 &    0.01 & $-$1.81 &    0.11 &    0.00 \\
+  Mn \textsc{i} &   3 &    4.06 &    0.03 & $-$1.37 & $-$0.31 &    0.02 &&
+  Mn \textsc{i} &   3 &    3.09 &    0.02 & $-$2.34 & $-$0.42 &    0.01 \\
+  Fe \textsc{i} &  51 &    6.44 &    0.10 & $-$1.06 &    0.00 &    0.01 &&
+  Fe \textsc{i} &  62 &    5.58 &    0.11 & $-$1.92 &    0.00 &    0.01 \\
+ Fe \textsc{ii} &  13 &    6.45 &    0.07 & $-$1.05 &    0.01 &    0.02 &&
+ Fe \textsc{ii} &  14 &    5.58 &    0.12 & $-$1.92 &    0.00 &    0.03 \\
+  Co \textsc{i} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata &&
+  Co \textsc{i} &   3 &    3.15 &    0.06 & $-$1.84 &    0.08 &    0.03 \\
+  Ni \textsc{i} &   5 &    5.27 &    0.02 & $-$0.95 &    0.11 &    0.01 &&
+  Ni \textsc{i} &   5 &    4.23 &    0.10 & $-$1.99 & $-$0.07 &    0.04 \\
+  Cu \textsc{i} &   1 &    2.84 &    0.00 & $-$1.35 & $-$0.29 &    0.00 &&
+  Cu \textsc{i} &   1 &    1.75 &    0.00 & $-$2.44 & $-$0.52 &    0.00 \\
+  Zn \textsc{i} &   2 &    3.58 &    0.04 & $-$0.97 &    0.08 &    0.02 &&
+  Zn \textsc{i} &   2 &    2.69 &    0.04 & $-$1.87 &    0.05 &    0.02 \\
+ Ba \textsc{ii} &   1 &    1.16 &    0.00 & $-$1.02 &    0.04 &    0.00 &&
+ Ba \textsc{ii} &   1 &    0.29 &    0.00 & $-$1.89 &    0.03 &    0.00 \\
+
+
+\cline{1-7} \cline{9-15} \\
+\\
+\multicolumn{7}{c}{HD 141531} && \multicolumn{7}{c}{HD 142948} \\
+\cline{1-7} \cline{9-15} \\
+
+
+   O \textsc{i} &   2 &    7.29 &    0.01 & $-$1.40 &    0.35 &    0.01 &&
+   O \textsc{i} &   2 &    8.39 &    0.03 & $-$0.29 &    0.49 &    0.02 \\
+  Na \textsc{i} &   2 &    4.23 &    0.05 & $-$2.01 & $-$0.26 &    0.04 &&
+  Na \textsc{i} &   3 &    5.62 &    0.13 & $-$0.62 &    0.16 &    0.07 \\
+  Mg \textsc{i} &   2 &    6.25 &    0.14 & $-$1.35 &    0.40 &    0.10 &&
+  Mg \textsc{i} &   3 &    7.27 &    0.12 & $-$0.33 &    0.45 &    0.07 \\
+  Al \textsc{i} &   2 &    4.69 &    0.10 & $-$1.76 & $-$0.02 &    0.07 &&
+  Al \textsc{i} &   4 &    5.88 &    0.08 & $-$0.58 &    0.21 &    0.04 \\
+  Si \textsc{i} &   5 &    5.98 &    0.10 & $-$1.53 &    0.22 &    0.04 &&
+  Si \textsc{i} &   5 &    7.02 &    0.05 & $-$0.49 &    0.29 &    0.02 \\
+  Ca \textsc{i} &   4 &    4.84 &    0.02 & $-$1.50 &    0.25 &    0.01 &&
+  Ca \textsc{i} &   4 &    5.75 &    0.01 & $-$0.59 &    0.19 &    0.01 \\
+ Sc \textsc{ii} &   4 &    1.50 &    0.04 & $-$1.65 &    0.10 &    0.02 &&
+ Sc \textsc{ii} &   6 &    2.59 &    0.11 & $-$0.56 &    0.22 &    0.04 \\
+  Ti \textsc{i} &   4 &    3.30 &    0.07 & $-$1.65 &    0.10 &    0.03 &&
+  Ti \textsc{i} &   4 &    4.42 &    0.09 & $-$0.53 &    0.25 &    0.04 \\
+ Ti \textsc{ii} &   4 &    3.69 &    0.08 & $-$1.27 &    0.48 &    0.04 &&
+ Ti \textsc{ii} &   3 &    4.40 &    0.21 & $-$0.55 &    0.23 &    0.12 \\
+   V \textsc{i} &   5 &    2.06 &    0.08 & $-$1.87 & $-$0.12 &    0.04 &&
+   V \textsc{i} &   5 &    3.26 &    0.11 & $-$0.67 &    0.11 &    0.05 \\
+  Cr \textsc{i} &  12 &    3.66 &    0.07 & $-$1.98 & $-$0.23 &    0.02 &&
+  Cr \textsc{i} &  13 &    4.69 &    0.15 & $-$0.95 & $-$0.17 &    0.04 \\
+ Cr \textsc{ii} &   2 &    4.00 &    0.01 & $-$1.63 &    0.11 &    0.01 &&
+ Cr \textsc{ii} &   3 &    4.85 &    0.03 & $-$0.79 & $-$0.01 &    0.02 \\
+  Mn \textsc{i} &   3 &    3.21 &    0.04 & $-$2.22 & $-$0.47 &    0.02 &&
+  Mn \textsc{i} &   3 &    4.50 &    0.03 & $-$0.93 & $-$0.15 &    0.02 \\
+  Fe \textsc{i} &  54 &    5.75 &    0.06 & $-$1.75 &    0.00 &    0.01 &&
+  Fe \textsc{i} &  61 &    6.72 &    0.10 & $-$0.78 &    0.00 &    0.01 \\
+ Fe \textsc{ii} &  13 &    5.78 &    0.04 & $-$1.72 &    0.03 &    0.01 &&
+ Fe \textsc{ii} &  13 &    6.69 &    0.06 & $-$0.81 & $-$0.03 &    0.02 \\
+  Co \textsc{i} &   3 &    3.26 &    0.07 & $-$1.73 &    0.01 &    0.04 &&
+  Co \textsc{i} &   3 &    4.44 &    0.09 & $-$0.55 &    0.23 &    0.05 \\
+  Ni \textsc{i} &   7 &    4.43 &    0.12 & $-$1.79 & $-$0.04 &    0.05 &&
+  Ni \textsc{i} &   5 &    5.61 &    0.05 & $-$0.61 &    0.17 &    0.02 \\
+  Cu \textsc{i} &   1 &    1.99 &    0.00 & $-$2.20 & $-$0.46 &    0.00 &&
+  Cu \textsc{i} &   1 &    3.58 &    0.00 & $-$0.61 &    0.17 &    0.00 \\
+  Zn \textsc{i} &   2 &    2.73 &    0.04 & $-$1.83 & $-$0.08 &    0.03 &&
+  Zn \textsc{i} &   2 &    3.91 &    0.05 & $-$0.65 &    0.13 &    0.04 \\
+ Ba \textsc{ii} &   1 &    0.43 &    0.00 & $-$1.75 & $-$0.01 &    0.00 &&
+ Ba \textsc{ii} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata
+
+\enddata
+\end{deluxetable*}
+
 
 \begin{deluxetable*}{lccccccclcccccc}
 \tablecolumns{15}
@@ -835,7 +1002,7 @@ It is clear that careful consideration must be given when inferring star-formati
 	\label{fig:o-na}
 \end{figure*}
 
-\citet{wylie-de-boer;et-al_2012} measured [Na/Fe] and [O/Fe] abundances for four of their six Aquarius stream members. This research has four stars in common with the \citet{wylie-de-boer;et-al_2012} study, but sodium and oxygen measurements exist for only three stars intersecting both samples, as the data quality for J223811-104126 in the \citet{wylie-de-boer;et-al_2012} study prohibited measuring oxygen. We have measurements for all of our stars, including J223811-104126, for which we ascertained an upper limit from the [O \textsc{i}] lines of [O/Fe] $< 0.5$ dex, and a corrected abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$ from the O \textsc{i} triplet lines. In Figure \ref{fig:o-na} we have plotted theses abundances, including the corrected value for J223811-104126 rather than an upper limit.
+\citet{wylie-de-boer;et-al_2012} measured [Na/Fe] and [O/Fe] abundances for four of their six Aquarius stream members. This research has four stars in common with the \citet{wylie-de-boer;et-al_2012} study, but sodium and oxygen measurements exist for only three stars intersecting both samples, as the data quality for J223811-104126 in the \citet{wylie-de-boer;et-al_2012} study prohibited measuring oxygen. We have measurements for all of our stars, including J223811-104126, for which we ascertained an upper limit from the [O \textsc{i}] lines of [O/Fe] $< 0.5$ dex, and an inferred abundance of $\mbox{[O/Fe]} = 0.14 \pm 0.08$ from the O \textsc{i} triplet lines. In Figure \ref{fig:o-na} we have plotted theses abundances, including the corrected value for J223811-104126 rather than an upper limit.
 
 
 % how do our values compare with Wylie de boer
@@ -846,8 +1013,6 @@ It is clear that careful consideration must be given when inferring star-formati
 % J221821	| 0.08 +/- 0.10 (1)| 0.03 +/- 0.15
 % J223504	| 0.18 +/- 0.07 (3)| 0.28 +/- 0.21
 % J223811	| 0.07 +/- 0.00 (1)| 0.04 +/- 0.15
-
-
 
 
 The \citet{wylie-de-boer;et-al_2012} measurements indicate two stars with solar levels of Na \--- identical to field star Na abundances for their metallicity \--- and two stars with super-solar sodium content: J223504 and J232619.
@@ -929,9 +1094,7 @@ The correlation between sodium and nickel content is the nucleosynthetic result 
 \end{figure}
 
 
-Stars originating in dwarf spheroidal galaxies and globular clusters have very different chemical enrichment environments. Consequently, both types of systems exhibit chemistry that reflects their nucleosynthetic antiquity. Dwarf spheroidal stars do not demonstrate enhanced sodium or nickel content with respect to iron, as there has been a relatively negligible linage of massive stars undergoing supernova. In contrast, globular cluster stars do have elevated [Na/Fe], [Ni/Fe] signatures. This sharp contrast between dwarf spheroidal and globular cluster star chemistry is illustrated in Figure \ref{fig:na-ni}. Given the extended star formation within the Milky Way disk, globular cluster stars and disk stars are indiscernible in the Na/Ni plane: they both show an extended contribution of massive stars. 
-
-The most that can be inferred from the Na, Ni abundances of Aquarius stream stars is that their enrichment environment is less like a dSph galaxy, and more representative of a globular cluster, or the disc of the Milky Way. 
+Stars originating in dwarf spheroidal galaxies and globular clusters have very different chemical enrichment environments. Consequently, both types of systems exhibit chemistry that reflects their nucleosynthetic antiquity. Dwarf spheroidal stars do not demonstrate enhanced sodium or nickel content with respect to iron, as there has been a relatively negligible linage of massive stars undergoing supernova. In contrast, globular cluster stars do have elevated [Na/Fe], [Ni/Fe] signatures. This sharp contrast between dwarf spheroidal and globular cluster star chemistry is illustrated in Figure \ref{fig:na-ni}. Given the extended star formation within the Milky Way disk, globular cluster stars and disk stars are indiscernible in the Na/Ni plane: they both show an extended contribution of massive stars. The most that can be inferred from the Na, Ni abundances of Aquarius stream stars is that their enrichment environment is less like a dSph galaxy, and more representative of a globular cluster, or the disc of the Milky Way. 
 
 
 
@@ -963,7 +1126,7 @@ However, our chemical analysis does not reveal any inverse Na-O correlation \---
 
 \subsubsection{$\omega$-Centurai}
 
-In their original discovery paper, \citet{williams;et-al_2011} attempted to exclude possible known progenitors. On the basis of metallicity, distance, proper motions\footnote{We find the proper motions in Table 1 of \citet{williams;et-al_2011} to be mis-associated to incorrect stars. However, this  error was typographical; it did not affect the transverse velocity calculations (Williams, M.E.K, private communication).}, transverse velocities and orbital energies, the authors were able to exclude all known Milky Way satellites, with the notable exception of $\omega$-Centurai. Although the Aquarius stream metallicity distribution we find is not dissimilar from a known sub-population in $\omega$-centurai, the individual chemical abundances are quite distinct. $\omega$-Centurai members exhibit a strong $s$-process enhancement with overall metallicity. This signature is not observed in our data, with the exception of C2225316, which seems to be chemically distinct from the other Aquarius group candidates.
+In their original discovery paper, \citet{williams;et-al_2011} attempted to exclude possible known progenitors. On the basis of metallicity, distance, proper motions\footnote{The proper motions in Table 1 of \citet{williams;et-al_2011} are mis-associated to incorrect stars. However, this error was typographical; it did not affect the transverse velocity calculations (Williams, M.E.K, private communication).}, transverse velocities and orbital energies, the authors were able to exclude all known Milky Way satellites, with the notable exception of $\omega$-Centurai. Although the Aquarius stream metallicity distribution we find is not dissimilar from a known sub-population in $\omega$-centurai, the individual chemical abundances are quite distinct. $\omega$-Centurai members exhibit a strong $s$-process enhancement with overall metallicity. This signature is not observed in our data, with the exception of C2225316, which seems to be chemically distinct from the other Aquarius group candidates.
 
 Due to our limited sample size, it is impossible to know whether C2225316 is an outlier, or our four other candidates are halo interlopers. Either position is debatable, and both lead to interesting interpretations. If most of our observed candidates are halo members, and C2225316 represents the Aquarius stream chemistry, then an association between Aquarius and $\omega$-Centurai is possible. 
 
@@ -1010,9 +1173,14 @@ Due to our limited sample size, it is impossible to know whether C2225316 is an 
 	\label{fig:toombre}
 \end{figure}
 
+
 \section{Conclusions}
 \label{sec:conclusions}
 \# Conclusions
+
+
+\acknowledgements
+A.R.C. acknowledges the financial support through the Australian Research Council Laureate Fellowship 0992131, and from the Australian Prime Minister's Endeavour Award Research Fellowship, which has facilitated his research at MIT. This publication makes use of data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.
 
 
 %\facilities{Magellan:Clay}
