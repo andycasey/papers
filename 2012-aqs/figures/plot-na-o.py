@@ -297,13 +297,18 @@ ax.scatter(caretta_O_Fe, caretta_Na_Fe, marker='+', edgecolor='#cccccc', facecol
 ax.scatter(O_Fe, Na_Fe, marker='o', facecolor='k', s=40)
 ax.errorbar(O_Fe, Na_Fe, xerr=e_O_Fe, yerr=e_Na_Fe, fmt=None, ecolor='k')
 
-ax.legend(loc=2, prop={'size': 11})
+#ax.legend(loc=2, prop={'size': 11})
 
 ax.set_xlabel('[O/Fe]')
 ax.set_ylabel('[Na/Fe]')
 
+
 ax.set_xlim(xlims)
+ax.set_xticks([-0.5, 0.0, 0.5])
+
 ax.set_ylim(ylims)
+ax.set_yticks([-0.5, 0.0, 0.5, 1.0])
+
 
 plt.savefig('aquarius-o-na-halo.pdf')
 plt.savefig('aquarius-o-na-halo.eps')
