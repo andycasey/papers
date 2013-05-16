@@ -4,11 +4,11 @@ import numpy as np
 from specutils import Spectrum1D
 
 accompaning_texts = [
-        "C2225316-14437\t4325 / 1.26 / $-$1.26",
-        "C2306265-085103\t4170 / 0.85 / $-$1.17",
-        "J221821-183424\t4590 / 0.90 / $-$1.61",
-        "J223504-152834\t4590 / 2.15 / $-$0.68",
-        "J22381-104126\t5140 / 2.96 / $-$1.45"
+        "C2225316-14437\t\t\t4365 / 1.25 / $-$1.22",
+        "C2306265-085103\t\t\t4225 / 0.85 / $-$1.13",
+        "J221821-183424\t\t\t4630 / 0.88 / $-$1.58",
+        "J223504-152834\t\t\t4650 / 2.16 / $-$0.63",
+        "J223811-104126\t\t\t5190 / 2.93 / $-$1.63"
         ]
 
 spectrum_filenames = ['c2225316-14437_rest.fits', 'c2306265-085103_rest.fits', 'j221821-183424_rest.fits', 'j223504-152834_rest.fits', 'j22381-104126_rest.fits']
@@ -27,10 +27,11 @@ accompaning_texts = accompaning_texts_
 
 xlims = [6540, 6600]
 #xlims = [6150, 6160]
+xlims = [4835, 4885]
 
 text_x_offset = 2
 text_y_offset = 0.10
-text_fontsize = 9
+text_fontsize = 11
 
 label_fontsize = 10
 
@@ -44,9 +45,10 @@ for i, (accompaning_text, spectrum_filename) in enumerate(zip(accompaning_texts,
     spectrum = Spectrum1D.load(spectrum_filename)
 
     ax.plot(spectrum.disp, spectrum.flux + i, 'k')
-    lhs_text, rhs_text = accompaning_text.split('\t')
-    ax.text(xlims[0] + text_x_offset, text_y_offset + 1 + i, lhs_text, fontsize=text_fontsize, horizontalalignment='left')
-    ax.text(xlims[1] - text_x_offset, text_y_offset + 1 + i, rhs_text, fontsize=text_fontsize, horizontalalignment='right')
+    #lhs_text, rhs_text = accompaning_text.split('\t')
+    #ax.text(xlims[0] + text_x_offset, text_y_offset + 1 + i, lhs_text, fontsize=text_fontsize, horizontalalignment='left')
+    #ax.text(xlims[1] - text_x_offset, text_y_offset + 1 + i, rhs_text, fontsize=text_fontsize, horizontalalignment='right')
+    ax.text(xlims[0] + text_x_offset, text_y_offset + i + 1, accompaning_text, fontsize=text_fontsize, horizontalalignment='left')
 
 
 ax.set_xlabel('Wavelength, $\lambda$ (${\AA}$)', fontsize=label_fontsize)
@@ -56,5 +58,5 @@ ax.get_yticklabels()[0].set_visible(False)
 ax.set_xlim(*xlims)
 ax.set_ylim(0, i + 1.5)
 
-plt.savefig('spectra-h-alpha.eps')
-plt.savefig('spectra-h-alpha.pdf')
+plt.savefig('spectra-sample.eps')
+plt.savefig('spectra-sample.pdf')

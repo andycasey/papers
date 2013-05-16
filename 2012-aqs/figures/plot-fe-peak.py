@@ -80,14 +80,15 @@ print "[Cr/Fe] = ", Cr_Fe
 print "[Mn/Fe] = ", Mn_Fe
 
 # Bounds
-xlim = np.array([-1.8, -0.4])
-ylim_Sc = [-0.8, 0.8]
-ylim_V = [-0.8, 0.8]
-ylim_Cr = [-0.8, 0.8]
-ylim_Mn = [-0.8, 0.8]
+xlim = np.array([-1.7, -0.5])
+ylim_Sc = [-0.1, 0.4]
+ylim_V = [-0.1, 0.5]
+ylim_Cr = [-0.5, 0.1]
+ylim_Mn = [-0.7, 0.6]
 
 
 fig = plt.figure()
+fig.subplots_adjust(left=0.10,bottom=0.10,right=0.95, top=0.95, hspace=0.0)
 
 # Scantium
 ax = fig.add_subplot(411)
@@ -107,6 +108,8 @@ ax.set_xlim(xlim)
 ax.set_ylim(ylim_Sc)
 ax.set_xticklabels([])
 ax.set_ylabel('[Sc/Fe]')
+ax.set_yticks([0.0, 0.2, 0.4])
+
 
 
 # Vandium
@@ -127,6 +130,7 @@ ax.set_xlim(xlim)
 ax.set_ylim(ylim_V)
 ax.set_xticklabels([])
 ax.set_ylabel('[V/Fe]')
+ax.set_yticks([0.0, 0.2, 0.4])
 
 
 # Cromium
@@ -148,6 +152,7 @@ ax.set_ylim(ylim_Cr)
 
 ax.set_ylabel('[Cr/Fe]')
 ax.set_xlabel('[Fe/H]')
+ax.set_yticks([-0.4, -0.2, 0.0])
 
 
 # Manganese
@@ -169,6 +174,8 @@ ax.set_ylim(ylim_Mn)
 
 ax.set_ylabel('[Mn/Fe]')
 ax.set_xlabel('[Fe/H]')
+ax.set_yticks([-0.60, -0.4, -0.20, 0.0, 0.2, 0.4])
+
 
 
 

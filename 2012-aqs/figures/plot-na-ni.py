@@ -225,3 +225,61 @@ ax.set_ylim(-0.25, 0.25)
 
 plt.savefig('na-ni.pdf')
 
+
+# Get globular cluster data
+ngc_288_na, ngc_288_ni = np.loadtxt('shetrone_keane_2000_ngc288.txt', comments='#', usecols=(6,13, ), unpack=True)
+ngc_362_na, ngc_362_ni = np.loadtxt('shetrone_keane_2000_ngc362.txt', comments='#', usecols=(6, 13, ), unpack=True)
+m3_na, m3_ni = np.loadtxt('sneden_2004_m3.txt', comments='#', usecols=(2, 14, ), unpack=True)
+
+# Get the dSph data
+_fornax_na, _fornax_na_err, _fornax_ni, _fornax_ni_err = np.loadtxt('letarte_2010_fornax.data', delimiter=';', usecols=(2, 3, 29, 30, ), dtype=str, unpack=True)
+
+fornax_na = []
+fornax_ni = []
+
+for a, b, c, d in zip(_fornax_na, _fornax_na_err, _fornax_ni, _fornax_ni_err):
+
+	a, b, c, d = [item.strip() for item in (a,b,c,d)]
+
+	if len(a) > 0 and len(c) > 0:
+		a, c = map(float, (a, c))
+		fornax_na.append(a)
+		fornax_ni.append(c)
+
+
+# Draw globular cluster data and dsph
+fig = plt.figure()
+ax = fig.add_subplot(111)
+
+# Draw globular clusters
+ax.scatter(ngc_288_na, ngc_288_ni, marker='^', edgecolor='b', facecolor='none', label='NGC 288 (Shetrone & Keane, 2000)')
+ax.scatter(ngc_362_na, ngc_362_ni, marker='o', edgecolor='k', facecolor='none', label='NGC 362 (Shetrone & Keane, 2000)')
+ax.scatter(m3_na, m3_ni, marker='s', edgecolor='r', facecolor='none', label='M3 (Sneden et al. 2004)')
+
+# Draw fornax
+ax.scatter(fornax_na, fornax_ni, marker='v', edgecolor='g', facecolor='none', label='Fornax (Letarte et al. 2010)')
+
+# Draw halo (Nissen & Schuster)
+ax.scatter(NS_Na_Fe[thick_disk], NS_Ni_Fe[thick_disk], marker='+', edgecolor='k')
+ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], marker='+', edgecolor='k')
+ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], marker='+', edgecolor='k', label='Halo/Disc (Nissen & Schuster, 2011)')
+
+# Add the observed
+ax.errorbar(Observed_Na_Fe, Observed_Ni_Fe, xerr=[0.10] * len(Observed_Na_Fe), yerr=[0.10] * len(Observed_Ni_Fe), ecolor='k', fmt=None)
+ax.scatter(Observed_Na_Fe, Observed_Ni_Fe, marker='*', edgecolor='k', facecolor='k', s=80)
+
+
+ax.set_xlabel('[Na/Fe]')
+ax.set_ylabel('[Ni/Fe]')
+
+ax.set_xlim(-1.0, 0.5)
+ax.set_ylim(-0.5, 0.5)
+
+ax.legend(loc=2, prop={'size': 11})
+plt.savefig('gc-dsph-na-ni.eps')
+plt.savefig('gc-dsph-na-ni.pdf')
+
+plt.savefig('gc-dsph-na-ni.png')
+
+
+

@@ -202,7 +202,7 @@ ax.scatter(Mg_Fe, Al_Fe, marker='o', color='k', s=30)
 ax.errorbar(Mg_Fe, Al_Fe, xerr=e_Mg_Fe, yerr=e_Al_Fe, fmt=None, ecolor='k')
 
 # C2225316
-ax.text(0.50 + 0.03, 0.68 + 0.05, 'C2225316-14437', color='k', fontsize=10)
+ax.text(0.50 + 0.05, 0.68 + 0.07, 'C2225316-14437', color='k', fontsize=10)
 
 x = np.array([np.min(Mg_Fe), np.max(Mg_Fe)])
 #ax.plot(x, m * x + c, 'k-')
