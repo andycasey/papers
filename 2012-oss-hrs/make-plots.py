@@ -1,313 +1,175 @@
-import os
-import numpy as np
 
-import matplotlib.pyplot as plt
+from load_data import *
 
-def load_abundances(filename, minimum_uncertainty=0.05):
-    """Loads the [X/H] and [X/Fe] abundance ratios and uncertainties
-    for a single star from the filename provided."""
+font = {'family' : 'normal',
+        'weight' : 'normal',
+        'size'   : 17}
 
-    if not os.path.exists(filename):
-        raise IOError("file does not exist (%s)" % (filename, ))
+matplotlib.rc('font', **font)
 
-    if not np.isfinite(minimum_uncertainty) or minimum_uncertainty < 0:
-        raise ValueError("minimum uncertainty must be a positive finite value")
+program_stars_scatter_args = {
+    "facecolor": "w",
+    "marker": "s",
+    "edgecolor": "k",
+    "lw": 2,
+    "zorder": 10,
+    "s": 50
+}
 
-    abundances = {}
-    uncertainties = {}
-    limits = {}
+program_stars_not_OSS_scatter_args = {
+    "marker": "x",
+    "zorder": 10,
+    "edgecolor": "k",
+    "s": 50 
+}
 
-    with open(filename, "r") as fp:
-        content = fp.read().split("\n")
-
-        for line in content:
-            if line.startswith("#") or line.startswith("%") or len(line) == 0: continue
-
-            line = line.replace("&", "").replace("_nodata", "nan").rstrip("\\").rstrip("&")
-            if line.split()[0] == "C":
-                element, transition = ("C", "(CH)", )
-                n_lines, log_eps, sigma_eps, x_on_h, x_on_fe, uncertainty = line.split()[2:]
-                limit = False
-
-            else:
-                line_split = line.split()
-                if len(line_split) > 6:
-                    element, transition, n_lines, log_eps, sigma_eps, x_on_h, x_on_fe, uncertainty = line_split
-                    limit = False
-
-                else:
-                    element, transition, n_lines, log_eps, x_on_h, x_on_fe = line_split
-                    uncertainty, sigma_eps = ('0.15', 'nan', )
-                    limit = True
-
-                    if not "<" in log_eps:
-
-                        print filename, element
-                        assert "<" in log_eps
+standard_stars_scatter_args = {
+    "marker": "o",
+    "s": 50,
+    "lw": 2,
+    "facecolor": "#666666",
+    "zorder": 10,
+    "edgecolor": "k"
+}
 
 
-            # Clean up transition
-            transition = transition.strip('_textsc{}')
-            species_repr = '%s %s' % (element, transition, )
-
-            # Fix types
-            n_lines = int(n_lines)
-            log_eps, sigma_eps, x_on_h, x_on_fe, uncertainty = map(np.float, [item.replace("$", "").replace("<", "") for item in [log_eps, sigma_eps, x_on_h, x_on_fe, uncertainty]])
-
-            # x_on_h
-            abundances['%s/H' % (species_repr, )] = x_on_h
-            abundances['%s/Fe' % (species_repr, )] = x_on_fe
-
-            limits['%s/H' % (species_repr, )] = limit
-            limits['%s/Fe' % (species_repr, )] = limit
-            
-            uncertainties['%s/H' % (species_repr, )] = np.max([uncertainty, minimum_uncertainty])
-            uncertainties['%s/Fe' % (species_repr, )] = np.max([uncertainty, minimum_uncertainty])
-
-    return (abundances, uncertainties, limits)
+def plot_ngc2419(ax):
 
 
-hd76932, hd122563, hd44007, hd41667, hd136316, hd141531, hd142948, oss3, oss6, oss8, oss14, oss18 = \
-    [load_abundances(filename) for filename in ["%s.abundances" % (star, ) for star in "hd76932, hd122563, hd44007, hd41667, hd136316, hd141531, hd142948, oss-1, oss-2, oss-3, oss-4, oss-5".split(", ")]]
+    color = '#8b8b8b'
+    cohen_scatter_args = {
+        "marker": "^",
+        "edgecolor": color,
+        "facecolor": "w",
+        "s": 50,
+        "zorder": 10,
+    }
 
-# Useful
-abundance, uncertainty, limit = (0, 1, 2)
+    mucciarelli_scatter_args = {
+        "marker": "v",
+        "edgecolor": color,
+        "facecolor": "w",
+        "s": 50,
+        "zorder": 10,
+    }
 
-program_stars = (oss3, oss6, oss8, oss14, oss18, )
-standard_stars = (hd44007, hd41667, hd76932, hd122563, hd136316, hd141531, hd142948, )
+    mucciarelli_headers = 'ID Teff logg vt [Fe/H] [Fe/H]_err [Mg/Fe] [Mg/Fe]_err [K/Fe] [K/Fe]_err [Ti/Fe] [Ti/Fe]_err [Ca/Fe] [Ca/Fe]_err'
+
+    mg_fe, mg_fe_err, k_fe, k_fe_err = range(4)
+    mucciarelli_columns = ['[Mg/Fe]', '[Mg/Fe]_err', '[K/Fe]', '[K/Fe]_err']
+
+    mucciarelli_column_indices = [mucciarelli_headers.split().index(item) for item in mucciarelli_columns]
+    mucciarelli = np.loadtxt('ngc2419-mucciarelli.txt', usecols=mucciarelli_column_indices)
+
+    ax.errorbar(mucciarelli[:, mg_fe], mucciarelli[:, k_fe], xerr=mucciarelli[:, mg_fe_err], yerr=mucciarelli[:, k_fe_err], fmt=None, lw=1, ecolor=color, zorder=-1)
+    ax.scatter(mucciarelli[:, mg_fe], mucciarelli[:, k_fe], **mucciarelli_scatter_args)
+
+    # Cohen data
+    cohen = np.loadtxt('ngc2419-cohen.txt', usecols=(1,2,3,4, ))
+
+    ax.errorbar(cohen[:, mg_fe], cohen[:, k_fe], xerr=cohen[:, mg_fe_err], yerr=cohen[:, k_fe_err], fmt=None, lw=1, ecolor=color, zorder=-1)
+    ax.scatter(cohen[:, mg_fe], cohen[:, k_fe], **cohen_scatter_args)
+
+    ax.set_ylabel('[K/Fe]')
+    ax.set_xlabel('[Mg/Fe]')
 
 
-# [alpha elements/Fe] vs [Fe/H]
-fig = plt.figure()
 
-ylim = (-0.10, 0.75)
-xlim = (-3.1, -0.6)
-yticks = [0.0, 0.2, 0.4, 0.6]
-elements = "Mg I, Ca I, Ti II".split(", ")
+def plot_A_B(element_a, element_b, ax, standard_stars, program_stars, program_stars_not_OSS, ylim=None, limscale=0.10):
 
-for i, element in enumerate(elements):
-    if i > 0:
-        ax = fig.add_subplot(len(elements) + 1, 1, i + 1, sharex=ax)
-
-    else:
-        ax = fig.add_subplot(len(elements) + 1, 1, i + 1)
-        fig.subplots_adjust(hspace=0)
-
-
-    ax.errorbar(
-        [star[abundance]['Fe I/H']  for star in program_stars],
-        [star[abundance]['%s/Fe' % element] for star in program_stars],
-        xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
-        yerr=[star[uncertainty]['%s/Fe' % element]  for star in program_stars],
-        fmt=None,
-        zorder=-1,
-        ecolor='k',
-        lolims=[star[limit]['%s/Fe'% element] for star in program_stars]
-        )
+    print [star[abundance]['%s/Fe' % element_a] for star in program_stars],
+    print [star[abundance]['%s/Fe' % element_b] for star in program_stars],
+        
 
     ax.scatter(
-        [star[abundance]['Fe I/H']  for star in program_stars],
-        [star[abundance]['%s/Fe' % element] for star in program_stars],
-        facecolor='b',
-        zorder=10,
-        )
-
-    ax.errorbar(
-        [star[abundance]['Fe I/H']  for star in standard_stars],
-        [star[abundance]['%s/Fe' % element] for star in standard_stars],
-        xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
-        yerr=[star[uncertainty]['%s/Fe' % element]  for star in standard_stars],
-        fmt=None,
-        zorder=-1,
-        ecolor='k',
-        lolims=[star[limit]['%s/Fe'% element] for star in standard_stars]
-        )
+        [star[abundance]['%s/Fe' % element_a] for star in program_stars],
+        [star[abundance]['%s/Fe' % element_b] for star in program_stars],
+        **program_stars_scatter_args)
 
     ax.scatter(
-        [star[abundance]['Fe I/H']  for star in standard_stars],
-        [star[abundance]['%s/Fe' % element] for star in standard_stars],
-        facecolor='r',
-        zorder=10,
-        )
-
-    ax.axhline(0.0, xmin=-10, xmax=10, c='k', linestyle=':')
-
-    ax.xaxis.set_visible(False)
-    ax.set_xlim(xlim)
-    ax.set_ylim(ylim)
-    ax.set_yticks(yticks)
-    ax.set_ylabel('[%s/Fe]' % element)
-
-
-# [Alpha/Fe]
-ax = fig.add_subplot(len(elements) + 1, 1, len(elements) + 1)
-
-#fig = plt.figure()
-#ax = fig.add_subplot(111)
-
-prog_alpha = []
-prog_fe = []
-prog_alpha_err = []
-prog_fe_err = []
-
-for star in program_stars:
-    prog_alpha.append((star[abundance]['Mg I/Fe'] + star[abundance]['Ca I/Fe'] + star[abundance]['Ti II/Fe'])/3.)
-    prog_fe.append(star[abundance]['Fe I/H'])
-
-    prog_alpha_err.append(pow(pow(star[uncertainty]['Mg I/Fe'], 2) + pow(star[uncertainty]['Ca I/Fe'], 2) + pow(star[uncertainty]['Ti II/Fe'], 2), 0.5))
-    prog_fe_err.append(star[uncertainty]['Fe I/H'])
-
-std_alpha = []
-std_fe = []
-std_alpha_err = []
-std_fe_err = []
-
-for star in standard_stars:
-    std_alpha.append((star[abundance]['Mg I/Fe'] + star[abundance]['Ca I/Fe'] + star[abundance]['Ti II/Fe'])/3.)
-    std_fe.append(star[abundance]['Fe I/H'])
-
-    std_alpha_err.append(pow(pow(star[uncertainty]['Mg I/Fe'], 2) + pow(star[uncertainty]['Ca I/Fe'], 2) + pow(star[uncertainty]['Ti II/Fe'], 2), 0.5))
-    std_fe_err.append(star[uncertainty]['Fe I/H'])
-
-ax.errorbar(std_fe, std_alpha, xerr=std_fe_err, yerr=std_alpha_err, ecolor='k', fmt=None, zorder=-1)
-ax.errorbar(prog_fe, prog_alpha, xerr=prog_fe_err, yerr=prog_alpha_err, ecolor='k', fmt=None, zorder=-1)
-
-ax.scatter(prog_fe, prog_alpha, facecolor='b', label='program',zorder=10,)
-ax.scatter(std_fe, std_alpha, facecolor='r', label='std',zorder=10,)
-
-print "Standard [Fe/H]", std_fe
-print "Standard alpha", std_alpha
-
-print "Program [Fe/H]", prog_fe
-print "Program alpha", prog_alpha
-ax.set_xlim(xlim)
-ax.set_ylim(ylim)
-ax.set_yticks(yticks)
-ax.axhline(0.0, xmin=-10, xmax=10, c='k', linestyle=':')
-
-ax.set_xlabel('[Fe/H]')
-ax.set_ylabel('[$\\alpha$/Fe]')
-
-plt.savefig('alpha-fe.pdf')
-
-
-# Fe-peak vs [Fe/H]
-fig = plt.figure()
-
-ylim = (-0.65, 0.65)
-yticks = (-0.4, 0.0, 0.4)
-xlim = (-3.1, -0.6)
-elements = "V I, Cr I, Mn I, Co I, Ni I, Cu I, Zn I".split(", ")
-
-"""
-  V _textsc{I} &   2 &    2.34 &    0.16 & $-$1.59 & $-$0.01 &    0.11 \
-  Cr _textsc{I} &  17 &    3.90 &    0.13 & $-$1.74 & $-$0.16 &    0.03 \
- Cr _textsc{II} &   3 &    4.27 &    0.04 & $-$1.37 &    0.21 &    0.02 \
-  Mn _textsc{I} &   5 &    3.59 &    0.19 & $-$1.84 & $-$0.26 &    0.08 \
-  Fe _textsc{I} &  61 &    5.92 &    0.15 & $-$1.58 &    0.00 &    0.02 \
- Fe _textsc{II} &  12 &    5.93 &    0.16 & $-$1.57 &    0.01 &    0.05 \
-  Co _textsc{I} &   4 &    3.45 &    0.16 & $-$1.54 &    0.04 &    0.08 \
-  Ni _textsc{I} &  21 &    4.59 &    0.17 & $-$1.63 & $-$0.05 &    0.04 \
-  Cu _textsc{I} &   1 &    1.72 &    0.00 & $-$2.47 & $-$0.89 &    0.00 \
-  Zn _textsc{I} &   1 &    2.94 &    0.00 & $-$1.62 & $-$0.04 &    0.00 \
- Sr _textsc{II} &   2 &    0.52 &    0.36 & $-$2.35 & $-$0.77 &    0.25 \
-  Y _textsc{II} &   1 & $<$0.12 &         &$<-$2.09 &$<-$0.51 &         \
-% Zr _textsc{II} &   0 & _nodata & _nodata & _nodata & _nodata & _nodata \
- Ba _textsc{II} &   2 &    0.14 &    0.22 & $-$2.04 & $-$0.46 &    0.16 \
- La _textsc{II} &   1 &   -0.07 &    0.00 & $-$1.17 &    0.41 &    0.00 \
- Nd _textsc{II} &   1 &    0.13 &    0.00 & $-$1.29 &    0.29 &    0.00 \
- Eu _textsc{II} &   1 &$<-$0.62 &         &$<-$1.14 & $<$0.44 &         \
-"""
-for i, element in enumerate(elements):
-    if i > 0:
-        ax = fig.add_subplot(len(elements), 1, i + 1)
-
-    else:
-        ax = fig.add_subplot(len(elements), 1, i + 1)
-        fig.subplots_adjust(hspace=0)
-
-    ax.scatter(
-        [star[abundance]['Fe I/H']  for star in program_stars],
-        [star[abundance]['%s/Fe' % element] for star in program_stars],
-        facecolor='b',
-        zorder=10,
-        )
-
-    ax.scatter(
-        [star[abundance]['Fe I/H']  for star in standard_stars],
-        [star[abundance]['%s/Fe' % element] for star in standard_stars],
-        facecolor='r',
-        zorder=10,
-        )
-
-    #ylim = ax.get_ylim()
-    if element.strip() == "Cu I":
-        ylim_thisax = (-1.1, 1.1)
-        print "This one is Cu I"
-
-    else:
-        ylim_thisax = (ylim[0], ylim[1])
-
-    limits = [star[limit]['%s/Fe'% element] for star in program_stars]
-    ax.errorbar(
-        [star[abundance]['Fe I/H']  for star in program_stars],
-        [star[abundance]['%s/Fe' % element] for star in program_stars],
-        xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
-        yerr=[[star[uncertainty]['%s/Fe' % element] if not is_limit else 0.2 * np.diff(ylim_thisax) for star, is_limit in zip(program_stars, limits)], [star[uncertainty]['%s/Fe' % element] if not is_limit else 0 for star, is_limit in zip(program_stars, limits)]],
-        fmt=None,
-        zorder=-1,
-        ecolor='k',
-        lolims=limits
-        )
-
-    limits = [star[limit]['%s/Fe'% element] for star in standard_stars]
-    ax.errorbar(
-        [star[abundance]['Fe I/H']  for star in standard_stars],
-        [star[abundance]['%s/Fe' % element] for star in standard_stars],
-        xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
-        yerr=[[star[uncertainty]['%s/Fe' % element] if not is_limit else 0.2 * np.diff(ylim_thisax) for star, is_limit in zip(standard_stars, limits)], [star[uncertainty]['%s/Fe' % element] if not is_limit else 0 for star, is_limit in zip(standard_stars, limits)]],
-        fmt=None,
-        zorder=-1,
-        ecolor='k',
-        lolims=[star[limit]['%s/Fe'% element] for star in standard_stars]
-        )
+        [star[abundance]['%s/Fe' % element_a] for star in program_stars_not_OSS],
+        [star[abundance]['%s/Fe' % element_b] for star in program_stars_not_OSS],
+        **program_stars_not_OSS_scatter_args)
     
-    ax.axhline(0.0, xmin=-10, xmax=10, c='k', linestyle=':')
+    ax.scatter(
+        [star[abundance]['%s/Fe' % element_a] for star in standard_stars],
+        [star[abundance]['%s/Fe' % element_b] for star in standard_stars],
+        **standard_stars_scatter_args
+        )
 
-    ax.xaxis.set_visible(False)
-    ax.set_xlim(xlim)
-    ax.set_ylim(ylim_thisax)
-    if element.strip() == "Cu I":
-        ax.set_yticks([-0.8, -0.4, 0.0, 0.4, 0.8])
-    else:
-        ax.set_yticks(yticks)
-    ax.set_ylabel('[%s/Fe]' % element)
 
-# Final plot should have an x-axis
-ax.xaxis.set_visible(True)
-ax.set_xlabel('[Fe/H]')
+    if ylim is None:
+        ylim = ax.get_ylim()
 
-plt.savefig('fe-peak.pdf')
+    # Program stars
 
-# Ba/Y
+    # A limit = lower limit
+    # B limit = upper limit
+    # A limit + B limit = 
 
-def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
+    ax.errorbar(
+        [star[abundance]['%s/Fe' % element_a] for star in program_stars],
+        [star[abundance]['%s/Fe' % element_b] for star in program_stars],
+        xerr=[star[uncertainty]['%s/Fe' % element_a] for star in program_stars],
+        yerr=[star[uncertainty]['%s/Fe' % element_b] for star in program_stars],
+        fmt=None,
+        zorder=-1,
+        lw=2,
+        ecolor='k'
+        )
+
+
+
+    # Standard stars
+
+    ax.errorbar(
+        [star[abundance]['%s/Fe' % element_a] for star in standard_stars],
+        [star[abundance]['%s/Fe' % element_b] for star in standard_stars],
+        xerr=[star[uncertainty]['%s/Fe' % element_a] for star in standard_stars],
+        yerr=[star[uncertainty]['%s/Fe' % element_b] for star in standard_stars],
+        fmt=None,
+        zorder=-1,
+        lw=2,
+        ecolor='k',
+        )
+
+
+
+def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars, program_stars_not_OSS, ylim=None, limscale=0.05):
 
     ax.scatter(
         [star[abundance]['Fe I/H'] for star in program_stars],
         [star[abundance]['%s/H' % element_a] - star[abundance]['%s/H' % element_b] for star in program_stars],
-        facecolor='b',
-        zorder=10
+        **program_stars_scatter_args
         )
 
+    ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars_not_OSS],
+        [star[abundance]['%s/H' % element_a] - star[abundance]['%s/H' % element_b] for star in program_stars_not_OSS],
+        **program_stars_not_OSS_scatter_args
+        )
+
+    '''
     ax.scatter(
         [star[abundance]['Fe I/H'] for star in program_stars],
         [star[abundance]['%s/H' % element_a] - star[abundance]['%s/H' % element_b] for star in program_stars],
         facecolor='b',
-        zorder=10
+        zorder=10,
+        s=50
         )
 
-    ylim = ax.get_ylim()
+    ax.scatter(
+        hx,
+        hy,
+        facecolor='none',
+        edgecolor='k',
+        zorder=-1,
+        s=130,
+        )
+    '''
+
+    if ylim is None:
+        ylim = ax.get_ylim()
 
     # Program stars
 
@@ -322,22 +184,23 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
     for A_limit, B_limit, yerr in zip(
         [star[limit]['%s/H' % element_a] for star in program_stars],
         [star[limit]['%s/H' % element_b] for star in program_stars],
-        [pow(pow(star[uncertainty]['%s/H' % element_a], 2) + pow(star[uncertainty]['%s/H' % element_b], 2), 0.5) for star in program_stars]
+        [(np.array(star[uncertainty]['%s/H' % element_a]) + np.array(star[uncertainty]['%s/H' % element_b]))/2. for star in program_stars]
         ):
+
         if A_limit and not B_limit:
             # lower limit
             lolimits.append(True)
             uplimits.append(False)
 
             yup.append(0)
-            ydown.append(0.05 * np.diff(ylim))
+            ydown.append(limscale * np.diff(ylim))
 
         elif B_limit and not A_limit:
             # Upper limit
             uplimits.append(True)
             lolimits.append(False)
 
-            yup.append(0.05 * np.diff(ylim))
+            yup.append(limscale * np.diff(ylim))
             ydown.append(0)
 
 
@@ -350,7 +213,7 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
 
         else:
             yup.append(0)
-            ydown.append(yerr)
+            ydown.append(limscale * np.diff(ylim))
 
             uplimits.append(False)
             lolimits.append(True)
@@ -362,6 +225,7 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
         yerr=(ydown, yup),
         fmt=None,
         zorder=-1,
+        lw=2,
         ecolor='k',
         lolims=lolimits,
         uplims=uplimits,
@@ -382,14 +246,14 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
     for A_limit, B_limit, yerr in zip(
         [star[limit]['%s/H' % element_a] for star in standard_stars],
         [star[limit]['%s/H' % element_b] for star in standard_stars],
-        [pow(pow(star[uncertainty]['%s/H' % element_a], 2) + pow(star[uncertainty]['%s/H' % element_b], 2), 0.5) for star in standard_stars]):
+        [(star[uncertainty]['%s/H' % element_a] + star[uncertainty]['%s/H' % element_b])/2 for star in standard_stars]):
         if A_limit and not B_limit:
             # lower limit
             lolimits.append(True)
             uplimits.append(False)
 
             yup.append(0)
-            ydown.append(0.05 * np.diff(ylim))
+            ydown.append(limscale * np.diff(ylim))
 
 
         elif B_limit and not A_limit:
@@ -397,7 +261,7 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
             uplimits.append(True)
             lolimits.append(False)
 
-            yup.append(0.05 * np.diff(ylim))
+            yup.append(limscale * np.diff(ylim))
             ydown.append(0)
 
 
@@ -410,7 +274,7 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
 
         else:
             yup.append(0)
-            ydown.append(yerr)
+            ydown.append(limscale * np.diff(ylim))
 
             uplimits.append(False)
             lolimits.append(True)
@@ -423,6 +287,7 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
         fmt=None,
         zorder=-1,
         ecolor='k',
+        lw=2,
         lolims=lolimits,
         uplims=uplimits,
         )
@@ -430,101 +295,350 @@ def plot_X_Y(element_a, element_b, ax, standard_stars, program_stars):
     ax.scatter(
         [star[abundance]['Fe I/H'] for star in standard_stars],
         [star[abundance]['%s/H' % element_a] - star[abundance]['%s/H' % element_b] for star in standard_stars],
-        facecolor='r',
-        zorder=10
+        **standard_stars_scatter_args
         )
 
-    ax.axhline(0, xmin=-10, xmax=10, c='k', linestyle=':')
+    
 
-    ax.set_xlim(xlim)
-    ax.set_ylim(ylim)
-    ax.set_xlabel('[Fe/H]')
-    ax.set_ylabel('[%s/%s]' % (element_a.split()[0], element_b.split()[0], ))
+venn_data = get_venn_data('Venn_2004_Erratum.data')
 
 
+# [ALPHA/FE]
 
-# [Y/Fe]
-fig = plt.figure()
+# [Alpha/Fe]::[Mg/Fe]
+xlim = (-4, 0.5)
+ylim = (-0.5, 1.0)
 
-fig.subplots_adjust(hspace=0)
-ax = fig.add_subplot(511)
-plot_X_Y('Y II', 'Fe I', ax, standard_stars, program_stars)
-ax.xaxis.set_visible(False)
+xticks = []
+yticks = [-0.4, 0., 0.4, 0.8]
 
-# [Ba/Fe]
-ax = fig.add_subplot(512)
-plot_X_Y('Ba II', 'Fe I', ax, standard_stars, program_stars)
-ax.xaxis.set_visible(False)
+#fig = plt.figure()
+fig = plt.figure(figsize=(8.625, 12.462))
 
-# [La/Fe]
-ax = fig.add_subplot(513)
-plot_X_Y('La II', 'Fe I', ax, standard_stars, program_stars)
-ax.xaxis.set_visible(False)
+fig.subplots_adjust(hspace=0.05, right=0.95, top=0.95)
 
-# [Eu/Fe]
-ax = fig.add_subplot(514)
-plot_X_Y('Eu II', 'Fe I', ax, standard_stars, program_stars)
-ax.xaxis.set_visible(False)
-
-# [Sr/Fe]
-ax = fig.add_subplot(515)
-plot_X_Y('Sr II', 'Fe I', ax, standard_stars, program_stars)
-# Sr II not affected much by non-LTE -- of the order +/- 0.05 dex
-plt.savefig('heavy-Fe.pdf')
-
-
-# [Y/Eu]
-fig = plt.figure()
-fig.subplots_adjust(hspace=0)
 ax = fig.add_subplot(411)
-plot_X_Y('Y II', 'Eu II', ax, standard_stars, program_stars)
+plot_venn_data(venn_data, ax, '[Fe/H]', '[Mg/Fe]')
+ax.plot(xlim, [0, 0], 'k:', zorder=-1)
+ax.plot([0, 0], ylim, 'k:', zorder=-1)
 ax.xaxis.set_visible(False)
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+ax.set_yticks(yticks)
 
-# [Ba/Eu]
+ax.errorbar(
+    [star[abundance]['Fe I/H'] for star in program_stars],
+    [star[abundance]['Mg I/Fe'] for star in program_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
+    yerr=[star[uncertainty]['Mg I/Fe']  for star in program_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Mg I/Fe'] for star in program_stars]
+    )
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars],
+        [star[abundance]['Mg I/Fe'] for star in program_stars],
+        **program_stars_scatter_args
+        )
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars_not_OSS],
+        [star[abundance]['Mg I/Fe'] for star in program_stars_not_OSS],
+        **program_stars_not_OSS_scatter_args
+        )
+
+
+ax.errorbar(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Mg I/Fe'] for star in standard_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
+    yerr=[star[uncertainty]['Mg I/Fe']  for star in standard_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Mg I/Fe'] for star in standard_stars]
+    )
+
+ax.scatter(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Mg I/Fe'] for star in standard_stars],
+    **standard_stars_scatter_args
+    )
+
+
+
+
+# [Alpha/Fe]::[Ca/Fe]
 ax = fig.add_subplot(412)
-plot_X_Y('Ba II', 'Eu II', ax, standard_stars, program_stars)
+plot_venn_data(venn_data, ax, '[Fe/H]', '[Ca/Fe]')
+ax.plot(xlim, [0, 0], 'k:', zorder=-1)
+ax.plot([0, 0], ylim, 'k:', zorder=-1)
 ax.xaxis.set_visible(False)
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+ax.set_yticks(yticks)
 
-# [La/Eu]
+ax.errorbar(
+    [star[abundance]['Fe I/H'] for star in program_stars],
+    [star[abundance]['Ca I/Fe'] for star in program_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
+    yerr=[star[uncertainty]['Ca I/Fe']  for star in program_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Ca I/Fe'] for star in program_stars]
+    )
+
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars],
+        [star[abundance]['Ca I/Fe'] for star in program_stars],
+        **program_stars_scatter_args
+        )
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars_not_OSS],
+        [star[abundance]['Ca I/Fe'] for star in program_stars_not_OSS],
+        **program_stars_not_OSS_scatter_args
+        )
+
+
+ax.errorbar(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Ca I/Fe'] for star in standard_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
+    yerr=[star[uncertainty]['Ca I/Fe']  for star in standard_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Ca I/Fe'] for star in standard_stars]
+    )
+
+ax.scatter(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Ca I/Fe'] for star in standard_stars],
+    **standard_stars_scatter_args
+    )
+
+
+
+# [Alpha/Fe]::[Ti/Fe]
 ax = fig.add_subplot(413)
-plot_X_Y('La II', 'Eu II', ax, standard_stars, program_stars)
+plot_venn_data(venn_data, ax, '[Fe/H]', '[Ti/Fe]')
+ax.plot(xlim, [0, 0], 'k:', zorder=-1)
+ax.plot([0, 0], ylim, 'k:', zorder=-1)
 ax.xaxis.set_visible(False)
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+ax.set_yticks(yticks)
+
+ax.errorbar(
+    [star[abundance]['Fe I/H'] for star in program_stars],
+    [star[abundance]['Ti II/Fe'] for star in program_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
+    yerr=[star[uncertainty]['Ti II/Fe']  for star in program_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Ti II/Fe'] for star in program_stars]
+    )
+
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars],
+        [star[abundance]['Ti II/Fe'] for star in program_stars],
+        **program_stars_scatter_args
+        )
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars_not_OSS],
+        [star[abundance]['Ti II/Fe'] for star in program_stars_not_OSS],
+        **program_stars_not_OSS_scatter_args
+        )
+
+
+ax.errorbar(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Ti II/Fe'] for star in standard_stars],
+    xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
+    yerr=[star[uncertainty]['Ti II/Fe']  for star in standard_stars],
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Ti II/Fe'] for star in standard_stars]
+    )
+
+ax.scatter(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    [star[abundance]['Ti II/Fe'] for star in standard_stars],
+    **standard_stars_scatter_args
+    )
+
+
+
+# [Alpha/Fe]::[alpha/Fe]
+ax = fig.add_subplot(414)
+y_data = (venn_data['[Ca/Fe]'] + venn_data['[Mg/Fe]'] + venn_data['[Ti/Fe]'])/3.
+plot_venn_data(venn_data, ax, '[Fe/H]', y_data=y_data)
+ax.plot(xlim, [0, 0], 'k:', zorder=-1)
+ax.plot([0, 0], ylim, 'k:', zorder=-1)
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+ax.set_yticks(yticks)
+
+
+
+
+program_y_data = np.array([star[abundance]['Mg I/Fe'] for star in program_stars]) \
+    + np.array([star[abundance]['Ca I/Fe'] for star in program_stars]) \
+    + np.array([star[abundance]['Ti II/Fe'] for star in program_stars])
+program_y_data /= 3.
+
+program_y_err = np.array([star[uncertainty]['Mg I/Fe'] for star in program_stars]) \
+    + np.array([star[uncertainty]['Ca I/Fe'] for star in program_stars]) \
+    + np.array([star[uncertainty]['Ti II/Fe'] for star in program_stars])
+program_y_err /= 3.
+
+
+
+
+standard_y_data = np.array([star[abundance]['Mg I/Fe'] for star in standard_stars]) \
+    + np.array([star[abundance]['Ca I/Fe'] for star in standard_stars]) \
+    + np.array([star[abundance]['Ti II/Fe'] for star in standard_stars])
+standard_y_data /= 3.
+
+standard_y_err = np.array([star[uncertainty]['Mg I/Fe'] for star in standard_stars]) \
+    + np.array([star[uncertainty]['Ca I/Fe'] for star in standard_stars]) \
+    + np.array([star[uncertainty]['Ti II/Fe'] for star in standard_stars])
+standard_y_err /= 3.
+
+
+ax.errorbar(
+    [star[abundance]['Fe I/H'] for star in program_stars],
+    program_y_data,
+    xerr=[star[uncertainty]['Fe I/H']   for star in program_stars],
+    yerr=program_y_err,
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2
+    )
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars],
+        program_y_data,
+        **program_stars_scatter_args
+        )
+
+program_y_data = np.array([star[abundance]['Mg I/Fe'] for star in program_stars_not_OSS]) \
+    + np.array([star[abundance]['Ca I/Fe'] for star in program_stars_not_OSS]) \
+    + np.array([star[abundance]['Ti II/Fe'] for star in program_stars_not_OSS])
+program_y_data /= 3.
+
+ax.scatter(
+        [star[abundance]['Fe I/H'] for star in program_stars_not_OSS],
+        program_y_data,
+        **program_stars_not_OSS_scatter_args
+        )
+
+
+
+ax.errorbar(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    standard_y_data,
+    xerr=[star[uncertainty]['Fe I/H']   for star in standard_stars],
+    yerr=standard_y_err,
+    fmt=None,
+    zorder=-1,
+    ecolor='k',
+    lw=2,
+    lolims=[star[limit]['Ti II/Fe'] for star in standard_stars]
+    )
+
+ax.scatter(
+    [star[abundance]['Fe I/H']  for star in standard_stars],
+    standard_y_data,
+    **standard_stars_scatter_args
+    )
+
+
+ax.set_ylabel('[(Mg+Ca+Ti)/3Fe]')
+plt.savefig('alpha-Fe.pdf')
+plt.savefig('alpha-Fe.png')
+
+
 
 # [Ba/Y]
-ax = fig.add_subplot(414)
-plot_X_Y('Ba II', 'Y II', ax, standard_stars, program_stars)
-ax.xaxis.set_visible(False)
-
-
-# S-process
+xlim = (-4, 0.5)
+ylim = (-1, 1.5)
 fig = plt.figure()
+fig.subplots_adjust(hspace=0.05, right=0.95, top=0.95)
+
 ax = fig.add_subplot(111)
-plot_X_Y('Ba II', 'Sr II', ax, standard_stars, program_stars)
-#elements = "Ba II - Sr II, Ba II, Sr II, La II, Eu II".split(", ")
+plot_venn_data(venn_data, ax, '[Fe/H]', '[Ba/Fe]-[Y/Fe]')
+ax.plot(xlim, [0, 0], 'k:', zorder=-10)
+ax.plot([0, 0], ylim, 'k:', zorder=-10)
+
+plot_X_Y('Ba II', 'Y II', ax, standard_stars, program_stars, program_stars_not_OSS, ylim=ylim)
+
+ax.set_xlabel('[Fe/H]')
+ax.set_ylabel('[Ba/Y]')
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+
+plt.savefig('Ba-Y.pdf')
+plt.savefig('Ba-Y.png')
 
 
-
-# [Na, Ni]
+# [Na/Fe] vs [Ni/Fe]
+xlim = (-1, 0.5)
+ylim = (-0.5, 0.5)
 fig = plt.figure()
+fig.subplots_adjust(hspace=0.05, right=0.95, top=0.95)
+
 ax = fig.add_subplot(111)
+plot_venn_data(venn_data, ax, '[Na/Fe]', '[Ni/Fe]')
+ax.plot(xlim, [0, 0], 'k:', zorder=-10)
+ax.plot([0, 0], ylim, 'k:', zorder=-10)
 
-
-
-ax.scatter(
-    [star[abundance]['Na I/Fe']  for star in standard_stars],
-    [star[abundance]['Ni I/Fe'] for star in standard_stars],
-    facecolor='r',
-    zorder=10,
-    )
-
-
-ax.scatter(
-    [star[abundance]['Na I/Fe']  for star in program_stars],
-    [star[abundance]['Ni I/Fe'] for star in program_stars],
-    facecolor='b',
-    zorder=10,
-    )
+plot_A_B('Na I', 'Ni I', ax, standard_stars, program_stars, program_stars_not_OSS, ylim=ylim)
 
 ax.set_xlabel('[Na/Fe]')
 ax.set_ylabel('[Ni/Fe]')
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+plt.savefig('Na-Ni.pdf')
+plt.savefig('Na-Ni.png')
+
+
+# [Mg/K]
+
+
+
+fig = plt.figure()
+fig.subplots_adjust(hspace=0.05, right=0.95, top=0.95)
+
+ax = fig.add_subplot(111)
+plot_ngc2419(ax)
+plot_A_B('Mg I', 'K I', ax, standard_stars, program_stars, program_stars_not_OSS, ylim=ylim)
+xlim = ax.get_xlim()
+ylim = ax.get_ylim()
+
+ax.plot(xlim, [0, 0], 'k:', zorder=-10)
+ax.plot([0, 0], ylim, 'k:', zorder=-10)
+ax.set_xlim(xlim)
+ax.set_ylim(ylim)
+
+plt.savefig('Mg-K.pdf')
+plt.savefig('Mg-K.png')
+
+
 
