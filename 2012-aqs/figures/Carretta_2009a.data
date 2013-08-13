@@ -1,7 +1,7 @@
 #
 #   VizieR Astronomical Server vizier.cfa.harvard.edu
 #    Date: 2013-01-10T05:27:37 [V1.97 (28-Nov-2012)]
-#   In case of problem, please report to:	question@simbad.u-strasbg.fr
+#   In case of problem  please report to:	question@simbad.u-strasbg.fr
 #
 #
 #Coosys	J2000:	eq_FK5 J2000
@@ -12,9 +12,9 @@
 #-oc.form=dec
 #-out.max=unlimited
 #-out.add=_r
-#-out.add=_RAJ,_DEJ
+#-out.add=_RAJ _DEJ
 #-sort=_r
-#-nav=cat:J/A+A/505/139&tab:{J/A+A/505/139/stars}&key:source=J/A+A/505/139/stars&HTTPPRM:&-ref=VIZ50ee50e47802&-out.max=50&-out.form=HTML Table&-out.add=_r&-out.add=_RAJ,_DEJ&-sort=_r&-oc.form=sexa&-meta.foot=1&-meta=1&-meta.ucd=2&-file=.&-meta=1&-usenav=1&
+#-nav=cat:J/A+A/505/139&tab:{J/A+A/505/139/stars}&key:source=J/A+A/505/139/stars&HTTPPRM:&-ref=VIZ50ee50e47802&-out.max=50&-out.form=HTML Table&-out.add=_r&-out.add=_RAJ _DEJ&-sort=_r&-oc.form=sexa&-meta.foot=1&-meta=1&-meta.ucd=2&-file=.&-meta=1&-usenav=1&
 #-c.eq=J2000
 #-c.r=  2
 #-c.u=arcmin
@@ -45,12 +45,12 @@
 
 #RESOURCE=yCat_35050139
 #Name: J/A+A/505/139
-#Title: Abundances of red giants in 17 globular clusters (Carretta+, 2009)
+#Title: Abundances of red giants in 17 globular clusters (Carretta+  2009)
 #Table	J_A_A_505_139_stars:
 #Name: J/A+A/505/139/stars
-#Title: ID, positions, magnitudes, RVs, atmospheric parameters and abundances for stars in 17 GCs {\em(tables 3, 4 and 9 of paper; error fixed on 2011-07-06)}
-#Column	_RAJ2000	(F10.6)	Right ascension (FK5, Equinox=J2000.0) (computed by VizieR, not part of the original data)	[ucd=pos.eq.ra]
-#Column	_DEJ2000	(F10.6)	Declination (FK5, Equinox=J2000.0) (computed by VizieR, not part of the original data)	[ucd=pos.eq.dec]
+#Title: ID  positions  magnitudes  RVs  atmospheric parameters and abundances for stars in 17 GCs {\em(tables 3  4 and 9 of paper; error fixed on 2011-07-06)}
+#Column	_RAJ2000	(F10.6)	Right ascension (FK5  Equinox=J2000.0) (computed by VizieR  not part of the original data)	[ucd=pos.eq.ra]
+#Column	_DEJ2000	(F10.6)	Declination (FK5  Equinox=J2000.0) (computed by VizieR  not part of the original data)	[ucd=pos.eq.dec]
 #Column	NGC	(I4)	NGC number \linkRole{mean errors}	[ucd=meta.id.parent]
 #Column	ID	(I7)	Star ID	[ucd=meta.id;meta.main]
 #Column	RAJ2000	(A12)	Right ascension (J2000.0)	[ucd=pos.eq.ra;meta.main]

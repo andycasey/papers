@@ -185,24 +185,36 @@ fig.subplots_adjust(hspace=0.0, wspace=0.0, left=0.10, right=0.95, bottom=0.10, 
 ax = fig.add_subplot(111)
 
 # Draw reddy
-ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, marker='+', edgecolor='k', facecolor='none', label='Thick disc (Reddy+ 2003)')
-ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, marker='+', facecolor='none', edgecolor='#666666', label='Thin disc (Reddy+ 2003)')
-ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='+', facecolor='none', edgecolor='#cccccc', label='Halo (Reddy+ 2003)')
+ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, s=50, marker='+', edgecolor='k', facecolor='none', label='Thick disc (Reddy et al. 2003)')
+ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, s=50,  marker='+', facecolor='none', edgecolor='#666666', label='Thin disc (Reddy et al. 2003)')
+ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, s=50,  marker='x', facecolor='none', edgecolor='#666666', label='Halo (Reddy et al. 2003)')
 
 #ax.scatter(Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, marker='o', facecolor='none', edgecolor='m')
 #ax.scatter(Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe, marker='o', facecolor='none', edgecolor='orange')
 
 #ax.scatter(Reddy_2003_Mg_Fe, Reddy_2003_Al_Fe, marker='o', facecolor='none', edgecolor='#666666')
-ax.scatter(Fulbright_2000_Mg_Fe, Fulbright_2000_Al_Fe, marker='o', facecolor='none', edgecolor='#666666', label='Halo & Disc (Fulbright 2000)')
+ax.scatter(Fulbright_2000_Mg_Fe, Fulbright_2000_Al_Fe, s=50,  marker='x', facecolor='k', edgecolor='k', label='Halo & Disc (Fulbright 2000)')
 
 unique_clusters = list(np.unique(Carretta_Cluster))
 #ax.scatter(Carretta_Mg_Fe, Carretta_Al_Fe, marker='o', c=[unique_clusters.index(cluster) for cluster in Carretta_Cluster], cmap=matplotlib.cm.jet, vmin=0, vmax=len(unique_clusters))
 
-ax.scatter(Mg_Fe, Al_Fe, marker='o', color='k', s=30)
-ax.errorbar(Mg_Fe, Al_Fe, xerr=e_Mg_Fe, yerr=e_Al_Fe, fmt=None, ecolor='k')
 
+# 6752
+fe_6752, mg_6752, al_6752 = np.loadtxt('ngc6752.data', skiprows=1, usecols=(-6, -2, -1), unpack=True)
+
+mg_fe_6752 = (mg_6752 - 7.6) - (fe_6752 - 7.5)
+al_fe_6752 = (al_6752 - 6.45) - (fe_6752 - 7.5)
+
+ax.scatter(mg_fe_6752, al_fe_6752, edgecolor='k', facecolor='w', s=50, label='NGC 6752 (Yong et al. 2003)')
+#ax.scatter(np.array(Carretta_Mg_Fe)[idx], np.array(Carretta_Al_Fe)[idx], edgecolor='k', facecolor='w', s=50)
+#ax.scatter(np.array(Carretta_Mg_Fe), np.array(Carretta_Al_Fe), marker='x', c='#666666', s=50)
+
+
+ax.errorbar(Mg_Fe, Al_Fe, xerr=e_Mg_Fe, yerr=e_Al_Fe, fmt=None, ecolor='k', lw=1.2, zorder=-32)
+
+ax.scatter(Mg_Fe, Al_Fe, marker='*', facecolor=aquarius_colors, edgecolor='k', lw=1.2, s=500, zorder=10)
 # C2225316
-ax.text(0.50 + 0.05, 0.68 + 0.07, 'C2225316-14437', color='k', fontsize=10)
+#ax.text(0.50 + 0.05, 0.68 + 0.07, 'C2225316-14437', color='k', fontsize=10)
 
 x = np.array([np.min(Mg_Fe), np.max(Mg_Fe)])
 #ax.plot(x, m * x + c, 'k-')
@@ -214,13 +226,14 @@ ax.set_ylabel('[Al/Fe]')
 #ylims = (-0.4, 1.9)
 
 
-ax.set_xlim(-0.4, 0.9)
-ax.set_ylim(-0.4, 1.9)
+ax.set_xticks([0.0, 0.2, 0.4, 0.6, 0.8])
+ax.set_yticks([-0.4, 0.0, 0.4, 0.8, 1.2])
 
-ax.set_xticks([0.0, 0.5])
-ax.set_yticks([0.0, 0.5, 1.0, 1.5])
 
-ax.legend(loc=2)
+ax.set_xlim(-0.12, 0.6)
+ax.set_ylim(-0.4, 1.2)
+
+ax.legend(loc=2, prop={'size': 11})
 
 plt.savefig('aquarius-mg-al.eps')
 plt.savefig('aquarius-mg-al.pdf')
@@ -234,7 +247,7 @@ ax.set_ylabel('[Al/Fe]')
 ax.xaxis.set_visible(False)
 ax.scatter(Reddy_ThickDisk_Mg_Fe, Reddy_ThickDisk_Al_Fe, marker='+', facecolor='none', linewidth=1, edgecolor='k', label='Thick disc')
 ax.scatter(Reddy_ThinDisk_Mg_Fe, Reddy_ThinDisk_Al_Fe, marker='+', facecolor='none', linewidth=1, edgecolor='#cccccc', label='Thin disc')
-ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='s', facecolor='none', edgecolor='k', label='Halo')
+ax.scatter(Reddy_Halo_Mg_Fe, Reddy_Halo_Al_Fe, marker='s', facecolor='k', edgecolor='k', label='Halo')
 ax.scatter(Reddy_ThickThinDisk_Mg_Fe, Reddy_ThickThinDisk_Al_Fe, marker='+', facecolor='none', edgecolor='#666666')
 ax.scatter(Reddy_ThickDisk_Halo_Mg_Fe, Reddy_ThickDisk_Halo_Al_Fe, marker='x', facecolor='none', edgecolor='k')
 

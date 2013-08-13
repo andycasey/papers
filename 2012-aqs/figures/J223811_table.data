@@ -1,0 +1,35 @@
+# Element        Num.  log(X)    sigma(X)  [X/H]     [X/Fe]    Uncertainty
+   O \textsc{I} &   1 &    8.27 &    0.00 & $-$0.42 &    0.15 &    0.13 \\
+  Na \textsc{I} &   1 &    4.89 &    0.00 & $-$1.35 &    0.08 &    0.11 \\
+  Mg \textsc{I} &   2 &    6.51 &    0.03 & $-$1.09 &    0.34 &    0.10 \\
+  Al \textsc{I} &   2 &    5.13 &    0.13 & $-$1.32 &    0.11 &    0.12 \\
+  Si \textsc{I} &   3 &    6.42 &    0.04 & $-$1.09 &    0.34 &    0.10 \\
+   K \textsc{I} &   1 &    4.50 &    0.00 & $-$0.53 &    0.90 &    0.14 \\
+  Ca \textsc{I} &   4 &    5.32 &    0.03 & $-$1.02 &    0.41 &    0.08 \\
+  Sc \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Sc \textsc{II} &   6 &    1.72 &    0.14 & $-$1.43 & $-$0.12 &    0.12 \\
+  Ti \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Ti \textsc{II} &   4 &    3.79 &    0.09 & $-$1.16 &    0.27 &    0.13 \\
+   V \textsc{I} &   1 &    2.45 &    0.00 & $-$1.48 & $-$0.05 &    0.10 \\
+  Cr \textsc{I} &  12 &    4.10 &    0.06 & $-$1.54 & $-$0.11 &    0.09 \\
+ Cr \textsc{II} &   3 &    4.34 &    0.07 & $-$1.30 &    0.12 &    0.17 \\
+  Mn \textsc{I} &   3 &    3.58 &    0.04 & $-$1.85 & $-$0.51 &    0.04 \\
+  Fe \textsc{I} &  33 &    6.07 &    0.06 & $-$1.43 & $-$0.00 &    0.12 \\
+ Fe \textsc{II} &   9 &    6.04 &    0.07 & $-$1.46 & $-$0.03 &    0.12 \\
+  Co \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Ni \textsc{I} &   2 &    4.84 &    0.04 & $-$1.38 &    0.05 &    0.08 \\
+  Cu \textsc{I} &   1 &    1.96 &    0.00 & $-$1.79 & $-$0.80 &    0.09 \\
+  Zn \textsc{I} &   2 &    3.15 &    0.05 & $-$1.41 &    0.02 &    0.13 \\
+  Rb \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Sr \textsc{I} &   1 &    1.23 &    0.00 & $-$1.64 & $-$0.21 &    0.10 \\
+ Sr \textsc{II} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+  Y \textsc{II} &   6 &    0.76 &    0.06 & $-$1.45 & $-$0.02 &    0.10 \\
+  Zr \textsc{I} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Zr \textsc{II} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Ba \textsc{II} &   2 &    0.70 &    0.03 & $-$1.48 &    0.03 &    0.13 \\
+ La \textsc{II} &   0 & \nodata & \nodata & \nodata & \nodata & \nodata \\
+ Ce \textsc{II} &   2 &   -0.07 &    0.02 & $-$1.65 & $-$0.22 &    0.10 \\
+ Nd \textsc{II} &   1 &   -0.25 &    0.00 & $-$1.67 & $-$0.24 &    0.11 \\
+ Eu \textsc{II} &   1 &   -0.55 &    0.00 & $-$1.07 &    0.36 &    0.12 \\
+
+

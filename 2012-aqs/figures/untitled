@@ -1,0 +1,63 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Get Na and O from files:
+filenames = ['c2225316-14437_abundances.data', 'c2306265-085103_abundances.data', 'j221821-183424_abundances.data', 'j223504-152834_abundances.data', 'j223811-104126_abundances.data']
+
+
+# Make sure 'Fe I' is one of the species
+species_to_plot = ['Sc II', 'V I', 'Cr I', 'Mn I', 'Fe I']
+
+abundances = np.zeros((len(filenames), len(species_to_plot)))
+uncertainties = np.zeros((len(filenames), len(species_to_plot)))
+
+# Fill with nan's as default
+abundances[:, :] = np.nan
+uncertainties[:, :] = np.nan
+
+
+for i, filename in enumerate(filenames):
+
+    data = np.loadtxt(filename, dtype=str, usecols=(0, 1, -6, -4, -2, ))
+
+    for j, species in enumerate(species_to_plot):
+
+        full_species = [' '.join(row) for row in data[:, :2]]
+
+        idx = full_species.index(species)
+
+        abundance, uncertainty = map(float, [value.replace('$', '').replace('\\', '').replace('nodata', 'nan') for value in data[idx, 3:5]])
+
+        abundances[i, j] = abundance
+        uncertainties[i, j] = uncertainty
+
+
+fig = plt.figure()
+
+xlim = np.array([-1.8, -0.4])
+
+Fe_I_index = species.index('Fe I')
+
+for i, species in enumerate(species_to_plot):
+
+    if species == 'Fe I': continue
+
+    axes = fig.add_subplot(len(species_to_plot) - 1, 1, i + 1, sharex=axes if i > 0 else None)
+
+    x_data, y_data = abundances[:, Fe_I_index], abundances[:, i]
+    x_error, y_error = uncertainties[:, Fe_I_index], uncertainties[:, i]
+
+    axes.scatter(x_data, y_data, color='k')
+    axes.errorbar(x_data, y_data, xerr=x_error, yerr=y_error, fmt=None, ecolor='k')
+
+    A = np.vstack([x_data, np.ones(len(x_data))]).T
+    m, c = np.linalg.lstsq(A, y_data)[0]
+
+    print "%s = %1.2f x [Fe I/H] + %1.2f" % (species, m, c)
+
+    axes.set_xticklabels([])
+    axes.set_ylabel('[%s/Fe]' % (species, ))
+
+axes.set_xlim(xlim)
+axes.set_xlabel('[Fe/H]')
+

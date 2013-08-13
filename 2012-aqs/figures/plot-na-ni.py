@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+aquarius_colors = ['c', 'g', 'm', 'r', 'b']
 # Get Na and O from files:
 data_files = ['c2225316-14437_abundances.data', 'c2306265-085103_abundances.data', 'j221821-183424_abundances.data', 'j223504-152834_abundances.data', 'j223811-104126_abundances.data']
 
@@ -249,31 +251,37 @@ for a, b, c, d in zip(_fornax_na, _fornax_na_err, _fornax_ni, _fornax_ni_err):
 
 # Draw globular cluster data and dsph
 fig = plt.figure()
+
+fig.subplots_adjust(hspace=0.0, wspace=0.0, left=0.10, right=0.95, bottom=0.10, top=0.95)
+
 ax = fig.add_subplot(111)
 
 # Draw globular clusters
-ax.scatter(ngc_288_na, ngc_288_ni, marker='^', edgecolor='b', facecolor='none', label='NGC 288 (Shetrone & Keane, 2000)')
-ax.scatter(ngc_362_na, ngc_362_ni, marker='o', edgecolor='k', facecolor='none', label='NGC 362 (Shetrone & Keane, 2000)')
-ax.scatter(m3_na, m3_ni, marker='s', edgecolor='r', facecolor='none', label='M3 (Sneden et al. 2004)')
+ax.scatter(ngc_288_na, ngc_288_ni, s=50, marker='^', edgecolor='k', facecolor='none', label='NGC 288 (Shetrone & Keane, 2000)')
+ax.scatter(ngc_362_na, ngc_362_ni, s=50, marker='o', edgecolor='k', facecolor='none', label='NGC 362 (Shetrone & Keane, 2000)')
+ax.scatter(m3_na, m3_ni, marker='s', s=50, edgecolor='k', facecolor='none', label='M3 (Sneden et al. 2004)')
 
 # Draw fornax
-ax.scatter(fornax_na, fornax_ni, marker='v', edgecolor='g', facecolor='none', label='Fornax (Letarte et al. 2010)')
+ax.scatter(fornax_na, fornax_ni, marker='v', s=50, edgecolor='k', facecolor='k', label='Fornax (Letarte et al. 2010)')
 
 # Draw halo (Nissen & Schuster)
-ax.scatter(NS_Na_Fe[thick_disk], NS_Ni_Fe[thick_disk], marker='+', edgecolor='k')
-ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], marker='+', edgecolor='k')
-ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], marker='+', edgecolor='k', label='Halo/Disc (Nissen & Schuster, 2011)')
+ax.scatter(NS_Na_Fe[thick_disk], NS_Ni_Fe[thick_disk], s=50, marker='+', edgecolor='k', lw=1.2)
+ax.scatter(NS_Na_Fe[low_alpha], NS_Ni_Fe[low_alpha], s=50, marker='+', edgecolor='k', lw=1.2)
+ax.scatter(NS_Na_Fe[high_alpha], NS_Ni_Fe[high_alpha], s=50, marker='+', edgecolor='k', label='Halo/Disc (Nissen & Schuster, 2011)', lw=1.2)
 
 # Add the observed
-ax.errorbar(Observed_Na_Fe, Observed_Ni_Fe, xerr=[0.10] * len(Observed_Na_Fe), yerr=[0.10] * len(Observed_Ni_Fe), ecolor='k', fmt=None)
-ax.scatter(Observed_Na_Fe, Observed_Ni_Fe, marker='*', edgecolor='k', facecolor='k', s=80)
+ax.errorbar(Observed_Na_Fe, Observed_Ni_Fe, xerr=e_Observed_Na_Fe, yerr=e_Observed_Ni_Fe, ecolor='k', fmt=None, lw=1.2, zorder=-10)
+ax.scatter(Observed_Na_Fe, Observed_Ni_Fe, marker='*', edgecolor='k', facecolor=aquarius_colors, s=500, lw=1.2, zorder=32)
 
 
 ax.set_xlabel('[Na/Fe]')
 ax.set_ylabel('[Ni/Fe]')
 
 ax.set_xlim(-1.0, 0.5)
-ax.set_ylim(-0.5, 0.5)
+ax.set_ylim(-0.4, 0.2)
+
+ax.set_yticks([-0.4, -0.2, 0.0, 0.2])
+ax.set_xticks([-0.8, -0.4, 0.0, 0.4])
 
 ax.legend(loc=2, prop={'size': 11})
 plt.savefig('gc-dsph-na-ni.eps')
